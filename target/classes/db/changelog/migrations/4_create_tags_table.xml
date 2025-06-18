@@ -1,0 +1,40 @@
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+   <changeSet id="4_create_tags_table" author="henrotaym">
+        <createTable tableName="tags">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" primaryKeyName="pk_tags"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <createTable tableName="game_tag">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" primaryKeyName="pk_game_tag"/>
+            </column>
+            <column name="game_id" type="BIGINT">
+                <constraints nullable="false" />
+            </column>
+            <column name="tag_id" type="BIGINT">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="game_id"
+            baseTableName="game_tag"
+            constraintName="fk_game_tag_game_id"
+            referencedColumnNames="id"
+            referencedTableName="games"
+        />
+        <addForeignKeyConstraint baseColumnNames="tag_id"
+            baseTableName="game_tag"
+            constraintName="fk_game_tag_tag_id"
+            referencedColumnNames="id"
+            referencedTableName="tags"
+        />
+   </changeSet>
+</databaseChangeLog>

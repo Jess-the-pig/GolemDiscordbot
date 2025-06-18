@@ -1,0 +1,29 @@
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+   <changeSet id="2_create_covers_table" author="henrotaym">
+        <createTable tableName="covers">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" primaryKeyName="pk_covers"/>
+            </column>
+            <column name="url" type="VARCHAR(1000)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addColumn
+            tableName="games">
+            <column name="cover_id" type="BIGINT">
+                <constraints nullable="true" unique="true"/>
+            </column>
+        </addColumn>
+        <addForeignKeyConstraint baseColumnNames="cover_id"
+            baseTableName="games"
+            constraintName="fk_cover_id"
+            referencedColumnNames="id"
+            referencedTableName="covers"
+        />
+   </changeSet>
+</databaseChangeLog>
