@@ -3,7 +3,7 @@
   <groupId>Golem</groupId>
   <artifactId>api</artifactId>
   <versioning>
-    <lastUpdated>20250619075003</lastUpdated>
+    <lastUpdated>20250619085704</lastUpdated>
     <snapshot>
       <localCopy>true</localCopy>
     </snapshot>
@@ -11,12 +11,12 @@
       <snapshotVersion>
         <extension>pom</extension>
         <value>0.0.1-SNAPSHOT</value>
-        <updated>20250619075003</updated>
+        <updated>20250619085704</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>jar</extension>
         <value>0.0.1-SNAPSHOT</value>
-        <updated>20250619075003</updated>
+        <updated>20250619085704</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>

@@ -6,7 +6,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.4.5</version>
-		<relativePath/> <!-- lookup parent from repository -->
+ <!-- lookup parent from repository -->
 	</parent>
 	<groupId>Golem</groupId>
 	<artifactId>api</artifactId>
@@ -110,6 +110,9 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
+    				<compilerArgs>
+      					<arg>--enable-preview</arg>
+    				</compilerArgs>
 					<annotationProcessorPaths>
 						<path>
 							<groupId>org.projectlombok</groupId>
