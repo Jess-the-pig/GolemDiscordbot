@@ -1,8 +1,1 @@
-/workspaces/GolemDiscordbot/src/main/java/Golem/api/ApiApplication.java
-/workspaces/GolemDiscordbot/src/main/java/Golem/api/CommandRegistrar.java
-/workspaces/GolemDiscordbot/src/main/java/Golem/api/GlobalCommandRegistrar.java
-/workspaces/GolemDiscordbot/src/main/java/Golem/api/commands/GreetCommand.java
-/workspaces/GolemDiscordbot/src/main/java/Golem/api/commands/PingCommand.java
-/workspaces/GolemDiscordbot/src/main/java/Golem/api/commands/SlashCommand.java
-/workspaces/GolemDiscordbot/src/main/java/Golem/api/listener/HelloMessageListener.java
-/workspaces/GolemDiscordbot/src/main/java/Golem/api/listeners/SlashCommandListener.java
+/opt/apps/app/src/main/java/Golem/api/ApiApplication.java

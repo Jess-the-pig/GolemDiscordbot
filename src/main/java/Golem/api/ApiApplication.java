@@ -5,9 +5,9 @@ import discord4j.core.GatewayDiscordClient;
 import discord4j.core.object.presence.ClientActivity;
 import discord4j.core.object.presence.ClientPresence;
 import discord4j.rest.RestClient;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
@@ -18,17 +18,18 @@ public class ApiApplication {
     }
 
     // Injection du token depuis une variable d'environnement ou application.properties
-    @Value("${token}")
+    @Value("MTM2MTQxMzA4MzEyMTMxOTkzNg.GBB_5Z.EPOz9LqwKWJTU7zzS-hMcW1ROoeoXsozDWhtfI")
     private String token;
 
     @Bean
     public GatewayDiscordClient gatewayDiscordClient() {
         return DiscordClientBuilder.create(token)
-            .build()
-            .gateway()
-            .setInitialPresence(ignore -> ClientPresence.online(ClientActivity.listening("to /commands")))
-            .login()
-            .block();
+                .build()
+                .gateway()
+                .setInitialPresence(
+                        ignore -> ClientPresence.online(ClientActivity.listening("to /commands")))
+                .login()
+                .block();
     }
 
     @Bean
@@ -36,4 +37,3 @@ public class ApiApplication {
         return client.getRestClient();
     }
 }
-
