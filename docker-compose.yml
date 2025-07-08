@@ -12,6 +12,7 @@ services:
       - "${APP_PORT_FORWARD}:${APP_PORT}"
     volumes:
       - ./:/opt/apps/app
+      - mvn_deps:/opt/apps/maven/repository
     env_file:
       - .env
     networks:
@@ -19,9 +20,9 @@ services:
       - accessible
     labels:
       - traefik.enable=true
-      - traefik.http.routers.games.rule=Host(`golem.jessthepig.ip-ddns.com`)
+      - traefik.http.routers.games.rule=Host(`games.henrotaym.ip-ddns.com`)
       - traefik.http.routers.games.tls=true
-  database:
+  mysql:
     image: "mysql/mysql-server:8.0"
     ports:
       - "${DB_PORT_FORWARD}:${DB_PORT}"

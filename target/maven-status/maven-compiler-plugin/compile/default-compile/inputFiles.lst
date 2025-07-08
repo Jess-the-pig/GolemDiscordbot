@@ -1,1 +1,5 @@
 /opt/apps/app/src/main/java/Golem/api/ApiApplication.java
+/opt/apps/app/src/main/java/Golem/api/DiscordBotConfig.java
+/opt/apps/app/src/main/java/Golem/api/DiscordBotService.java
+/opt/apps/app/src/main/java/Golem/api/Ping.java
+/opt/apps/app/src/main/java/Golem/api/SimpleBot.java
