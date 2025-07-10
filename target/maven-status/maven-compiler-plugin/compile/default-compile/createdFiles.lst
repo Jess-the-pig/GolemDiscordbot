@@ -1,0 +1,9 @@
+Golem/api/services/RegisterSlashCommands.class
+Golem/api/utils/BotStatus.class
+Golem/api/ApiApplication.class
+Golem/api/commands/helloCommand.class
+Golem/api/services/CommandDispatcher.class
+Golem/api/commands/ICommand.class
+Golem/api/commands/pingCommand.class
+Golem/api/services/DiscordBotService.class
+Golem/api/configurations/CommandConfig.class
