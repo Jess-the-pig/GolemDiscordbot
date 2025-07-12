@@ -1,0 +1,7 @@
+# Ignorer le socket MySQL (fichier spécial)
+mysql-socket/mysqld.sock
+
+# Ignorer d'autres fichiers temporaires ou volumes Docker (optionnel)
+*.pid
+*.sock
+*.log

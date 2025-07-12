@@ -1,0 +1,27 @@
+# This file has been generated using '.gitattributes Generator'.
+# You can generate yours at http://ihopepeace.github.io/gitattributes_generator
+
+
+# Explicitly declare text files that should be normalized and converted
+# to native line endings on checkout.
+
+# Declare files that should have CRLF line endings on checkout.
+
+# Declare files that should have LF line endings on checkout.
+
+
+
+# Declare files that are truly binary and shouldn't be modified.
+
+# Forcer LF sur tous les scripts shell
+*.sh text eol=lf
+
+# Forcer LF sur les fichiers de propriétés
+*.custom text eol=lf
+
+# Ignorer le socket mysql
+mysql-socket/mysqld.sock -text -diff -merge -crlf
+
+# Si tu veux forcer LF sur tous les fichiers sauf certains, tu peux aussi faire :
+# * text=auto eol=lf
+
