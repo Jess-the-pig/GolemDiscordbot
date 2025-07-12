@@ -5,13 +5,13 @@ import reactor.core.publisher.Mono;
 
 public class pingCommand implements ICommand {
 
-    @Override
-    public String getName() {
-        return "ping";
-    }
+  @Override
+  public String getName() {
+    return "ping";
+  }
 
-    @Override
-    public Mono<Void> handle(ChatInputInteractionEvent event) {
-        return event.reply("🏓Pong!");
-    }
+  @Override
+  public Mono<Void> handle(ChatInputInteractionEvent event) {
+    return event.reply("🏓Pong!");
+  }
 }
