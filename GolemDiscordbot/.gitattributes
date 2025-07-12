@@ -23,5 +23,5 @@
 mysql-socket/mysqld.sock -text -diff -merge -crlf
 
 # Si tu veux forcer LF sur tous les fichiers sauf certains, tu peux aussi faire :
-# * text=auto eol=lf
+* text=auto eol=lf
 
