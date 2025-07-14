@@ -8,11 +8,9 @@ import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-@RequiredArgsConstructor
 @Service("discordBotServiceV2")
 public class DiscordBotService {
 
@@ -24,6 +22,12 @@ public class DiscordBotService {
   private GatewayDiscordClient client;
   private final CommandDispatcher dispatcher;
   private final RegisterSlashCommands registerSlashCommands;
+
+  public DiscordBotService(
+      CommandDispatcher dispatcher, RegisterSlashCommands registerSlashCommands) {
+    this.dispatcher = dispatcher;
+    this.registerSlashCommands = registerSlashCommands;
+  }
 
   // Méthode appelée lors de l'initialisation du service (après la construction de l'objet)
   @PostConstruct

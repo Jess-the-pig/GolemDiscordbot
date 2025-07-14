@@ -62,6 +62,11 @@ RUN if ! getent group ${GID} > /dev/null; then \
     if ! getent passwd ${UID} > /dev/null; then \
     useradd -u ${UID} -g ${GID} -m -s /bin/bash app; fi
 
+# 🔧 Préparer les dossiers avec les bonnes permissions
+RUN mkdir -p /opt/apps/app/target /opt/apps/maven/repository && \
+    chown -R ${UID}:${GID} /opt/apps/app /opt/apps/maven
+
+# ⬇️ Utilisateur non-root à partir d'ici
 USER ${UID}:${GID}
 
 WORKDIR /opt/apps/maven/repository

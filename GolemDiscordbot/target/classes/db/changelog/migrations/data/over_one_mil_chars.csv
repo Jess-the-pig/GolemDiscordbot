@@ -1,0 +1,1002 @@
+id,char_id,name,base_hp,stats_1,stats_2,stats_3,stats_4,stats_5,stats_6,background,race,class_starting,class_starting_level,subclass_starting,class_other,subclass_other,total_level,feats,inventory,date_modified,notes_len,gold
+0,1,Molster,8,11,22,11,17,20,12,Urban Bounty Hunter,Aarakocra,Artificer,4,,,,4,,"Adamantine Chain Shirt/Cloak of Protection/Goggles of Night/Periapt of Proof against Poison/Ring of Mind Shielding/Staff of Power/Studded Leather, +1/Studded Leather/Rapier/Crossbow Bolts",2022-09-12T19:13:03.29Z,17,305.0
+1,3,Prailak,103,12,17,18,14,16,16,Charlatan,Tiefling,Warlock,20,The Great Old One,,,20,"Spell Sniper (Bard, Sorcerer, Warlock)/Infernal Constitution","Bag of Holding/Iron Flask/Studded Leather, +3/Wand of the War Mage, +3/Rod of the Pact Keeper, +3/Illusionist's Bracers/Dungeon Key 4/Cloak of Displacement/Ring of Spell Storing",2021-12-07T21:25:36.9Z,60,0.0
+2,8,Aurilanax,76,18,10,16,13,13,16,City Watch / Investigator,Bugbear,Paladin,7,Oath of the Crown,,,7,,Shield,2021-01-21T16:50:35Z,0,0.0
+3,10,Gamndell Banglebon,127,10,14,16,16,15,18,Clan Crafter,Gnome,Warlock,2,,Bard/Cleric/Wizard,School of Illusion,16,,Give/Studded Leather/Dagger/Light Hammer/Ink (1 ounce bottle)/Ink Pen/Parchment (one sheet),2020-08-06T16:05:07Z,65,4951.06
+4,19,Bellek Bouncer,52,10,10,15,12,14,10,Sailor,Half-Orc,Cleric,6,Life Domain,,,6,,Shield/Plate/Mace/Potion of Healing,2020-05-15T04:47:59Z,0,0.0
+5,44,Yehudi,41,15,8,14,16,13,16,Far Traveler,Firbolg,Monk,5,Way of the Long Death,,,5,,Shield,2022-11-08T02:58:57.507Z,157,5.0
+6,45,Rockhand,82,18,14,17,7,8,13,Outlander,Goliath,Barbarian,11,Path of the Wild Soul (archived),,,11,Dual Wielder,"Amulet of Proof against Detection and Location/Bag of Holding/Cloak of Protection/Eyes of the Eagle/Flame Tongue Greatsword/Ring of Animal Influence/Greataxe, +1/Warhammer, +1/Potion of Giant Size/Handaxe/Handaxe/Javelin/Backpack/Bedroll/Mess Kit/Tinderbox/Torch/Rations (1 day)/Waterskin/Rope, Hempen (50 feet)/Hunting Trap/Clothes, Traveler's",2020-12-03T21:38:23.06Z,354,10305.75
+7,48,Atherinnyia 'Rinn' Teshurr,62,8,14,13,17,12,15,Noble,Elf,Wizard,13,School of Evocation,Sorcerer,Draconic Bloodline,15,Resilient (Constitution),"Circlet of Blasting/Robe of Stars/Potion of Healing (Greater)/Dagger, +1/Heward's Handy Haversack/Staff of Defense/Shortbow/Arrows/Crystal/Pouch/Quiver/Quiver/Quiver/Robes/Signet Ring/Spellbook",2022-10-31T07:40:18.41Z,2765,73.42
+8,54,Althovion,58,12,15,15,13,15,16,Charlatan,Human,Sorcerer,14,Shadow Magic,,,14,Resilient (Dexterity)/Ritual Caster (Wizard),"Bag of Holding/Circlet of Blasting/Cloak of the Manta Ray/Lantern of Revealing/Necklace of Fireballs/Staff of Fire/Wand of Magic Detection/Potion of Healing (Greater)/Crossbow, Light, +1/Dagger, +1/Sending Stones/Spell Gem (Obsidian)/Spell Gem (Bloodstone)/Wand of Viscid Globs/Case, Map or Scroll/Clothes, Common/Crossbow Bolts/Crystal/Healer's Kit/Potion of Healing/Pouch/Spell Gem (Diamond)",2021-09-21T06:33:28Z,3336,522.84
+9,59,Veelan Pheer'ii,12,10,14,14,10,12,13,Far Traveler,Genasi,Fighter,5,Champion,Rogue,Thief,8,,"Censer of Controlling Air Elementals/Shield, +1/Armor of Lightning Resistance, Breastplate/Rapier, +2/Helm of the Subsistent Watcher/Abacus/Dungeoneer's Pack",2018-06-29T15:37:47Z,13,10.0
+10,62,Griv Ungart,12,8,14,12,14,14,10,Clan Crafter,Dwarf,Rogue,1,,,,1,,"Crossbow, hand",2018-06-29T15:37:47Z,0,100.0
+11,70,Alexander Stonecutter,18,14,15,12,13,8,10,Charlatan,Dwarf,Rogue,3,Thief,,,3,,"Rope of Climbing/Crossbow, Heavy, +1/Chain Shirt/Dagger/Dagger/Dagger/Dagger/Dagger/Rapier/Warhammer/Crossbow Bolts/Ink Pen/Parchment (one sheet)/Ball Bearings (bag of 1,000)/Backpack/Block and Tackle/Candle/Clothes, Traveler's/Flask or Tankard/Forgery Kit/Mirror, Steel/Oil (flask)/Playing Card Set/Sealing Wax/Torch/Potion of Healing",2021-07-23T20:49:44Z,0,202.1
+12,104,Primalis Thule,12,10,14,10,11,14,17,Folk Hero,Aasimar,Bard,1,,,,1,,Leather/Dagger/Rapier/Entertainer's Pack ,2018-06-29T15:37:47Z,346,0.0
+13,124,Tomeilicus 'Gramps' Mistletoes ,82,8,14,14,15,12,8,,Gnome,Wizard,20,School of Abjuration,,,20,,"Cape of the Mountebank/Cubic Gate/Figurine of Wondrous Power (Bronze Griffon)/Manual of Bodily Health/Portable Hole/Potion of Water Breathing/Robe of the Archmagi/Staff of Power/Tome of Clear Thought/Figurine of Wondrous Power (Obsidian Steed)/Potion of Healing (Superior)/Potion of Healing (Supreme)/Tome of the Stilled Tongue/Component Pouch/Backpack/Ink (1 ounce bottle)/Ink Pen/Parchment (one sheet)/Little Bag of Sand/Spellbook/Clothes, Common/Longsword/Greatsword/Cold Weather Gear",2021-12-17T05:02:12.353Z,636,8999.0
+14,126,Nesalli Thethissi,100,8,14,13,12,10,15,Gladiator,Tiefling,Warlock,17,The Fiend,Sorcerer,Divine Soul,20,Resilient (Intelligence),"Broom of Flying/Cape of the Mountebank/Cubic Gate/Potion of Water Breathing/Robe of the Archmagi/Staff of the Magi/Tome of Clear Thought/Tome of Leadership and Influence/Manual of Iron Golems/Potion of Healing (Greater)/Potion of Healing (Superior)/Potion of Healing (Supreme)/Potion of Force Resistance/Rod of the Pact Keeper, +3/Daern's Instant Fortress/Potion of Psychic Resistance/Clothes, Fine/Pouch/Rope, Hempen (50 feet)/Thieves' Tools/Waterskin",2021-07-01T14:09:22Z,5568,2077.83
+15,129,Naxos,12,15,13,14,12,8,10,,Goliath,Barbarian,1,,,,1,,Berserker Greataxe/Vicious Javelin,2018-06-29T21:26:30.53Z,0,0.0
+16,135,Ostran Thorngage,48,10,8,15,10,15,13,Mercenary Veteran,Halfling,Cleric,9,Tempest Domain,,,9,Observant,Gauntlets of Ogre Power/Mace of Disruption/Winged Boots/Shield/Splint/Sling/Sling Bullets/Backpack/Amulet/Alms Box/Warhammer/Blanket/Rations (1 day)/Tinderbox/Waterskin/Playing Card Set/Candle/Block of Incense/Censer/Vestments,2022-10-18T05:40:12.567Z,904,1065.5
+17,136,Hollis Moonbow,124,10,15,12,12,12,12,Folk Hero,Elf,Ranger,20,Hunter,,,20,,"Necklace of Prayer Beads/Ring of Invisibility/Arrows, +1/Longbow, +2/Bracers of the Assassin/Studded Leather of Shadow Aura/Dagger/Longsword/Longbow/Clothes, Common/Quiver/Explorer's Pack",2020-01-08T15:02:57.29Z,0,0.0
+18,151,Birdbarian,12,12,13,11,14,11,13,Sage,Aarakocra,Barbarian,5,Path of the Berserker,,,5,,,2018-06-29T15:37:47Z,17,0.0
+19,152,Zanark,33,8,8,8,8,8,8,Acolyte,Dragonborn,Rogue,6,Mastermind,,,6,,Wand of Winter,2021-08-07T19:36:44Z,0,0.0
+20,169,Elduan Thann III,60,10,15,13,12,8,14,Waterdhavian Noble,Human,Rogue,3,Swashbuckler,Fighter,Battle Master,10,Dual Wielder,"Cape of the Mountebank/Robe of Eyes/Rapier, +2/Studded Leather/Dagger/Dagger/Shortbow/Rapier/Arrows/Backpack/Clothes, Fine/Potion of Healing/Pouch/Dagger/Dagger/Dagger/Dagger/Dagger/Dagger/Dagger/Dagger/Chalk (1 piece)/Hammer/Piton/Rope, Hempen (50 feet)/Signet Ring/Tinderbox/Waterskin/Thieves' Tools/String/Clothing, cold weather/Potion of Heroism/Spell Scroll (5th Level)/Potion of Invulnerability",2022-10-18T05:21:34.893Z,498,10000.0
+21,185,Skidorion,22,14,13,10,15,12,8,Soldier,Half-Elf,Wizard,5,,,,5,,Staff of Charming/Sun Bow/Dagger,2022-11-03T04:02:47.55Z,0,0.0
+22,186,Guardian,46,15,8,15,10,12,15,Soldier,Warforged Adaptable,Paladin,6,Oath of Devotion,,,6,,"Longsword, +1/Shield/Plate/Ascender/Winch/Sundial/Leacher's Emerald/Javelin/Crossbow, light/Halberd/Lance/Crossbow Bolts/Backpack/Chain (10 feet)/Grappling Hook/Ram, Portable/Smith's Tools",2020-05-04T01:15:11.46Z,0,52286.71
+23,194,Farnsworth Farnsworth Farnsworth,41,10,14,15,10,13,17,,Halfling,Bard,9,College of Lore,,,9,,Studded Leather/Rapier,2018-06-29T15:37:47Z,16,0.0
+24,197,Reginald Hawke,12,0,0,0,0,0,0,,Human,Fighter,7,,,,7,,,2018-06-29T15:37:47Z,0,0.0
+25,206,Petie's Character,12,0,0,0,0,0,0,,Genasi,Barbarian,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+26,229,Sev Wolfheart,28,15,14,14,10,10,8,Soldier,Human,Fighter,4,Champion,,,4,Dual Wielder,"Potion of Water Breathing/Longsword, +1/Shield/Chain Mail/Splint/Handaxe/Handaxe/Spear/Battleaxe/Flask or Tankard/Dungeoneer's Pack/Dice Set",2018-06-29T15:37:47Z,784,484.0
+27,230,Physty,13,8,14,12,10,13,15,Criminal / Spy,Elf,Rogue,2,,,,2,,"Leather/Dagger/Dagger/Shortbow/Rapier/Abacus/Clothes, Common/Crowbar/Burglar's Pack",2018-06-29T15:37:47Z,0,0.0
+28,242,Ictoa The Oathebreaker ,9,11,15,15,14,15,17,,Human,Sorcerer,3,Draconic Bloodline,,,3,,"Dagger/Dagger/Crossbow, light/Crossbow Bolts/Component Pouch/Dungeoneer's Pack",2020-08-22T21:46:02Z,0,95.0
+29,244,Bob,6,8,13,14,12,10,15,Sage,Human,Sorcerer,1,Draconic Bloodline,,,1,Grappler,"Dagger/Dagger/Crossbow, light/Crossbow Bolts/Explorer's Pack/Rod",2018-06-29T15:37:47Z,0,0.0
+30,257,Lander,18,14,10,14,13,18,10,Sage,Human,Cleric,3,Knowledge Domain,,,3,War Caster,"Scale Mail/Shield/Mace/Crossbow, light/Crossbow Bolts/Backpack/Clothes, Common/Amulet/Ink (1 ounce bottle)/Bedroll/Mess Kit/Paper (one sheet)/Rations (1 day)/Rope, Hempen (50 feet)/Tinderbox/Torch/Waterskin",2022-06-07T22:02:43.38Z,914,109.0
+31,260,Calyra,8,14,15,16,9,14,15,Criminal / Spy,Halfling,Rogue,1,,,,1,,"Leather/Dagger/Dagger/Shortbow/Rapier/Arrows/Backpack/Ball Bearings (bag of 1,000)/Bell/Candle/Clothes, Common/Crowbar/Hammer/String/Piton/Lantern, Hooded/Oil (flask)/Rations (1 day)/Tinderbox/Waterskin/Rope, Hempen (50 feet)/Thieves' Tools",2018-06-29T15:37:47Z,0,15.0
+32,262,Canis Treya,12,0,0,0,0,0,0,,Human,Cleric,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+33,354,Noelani Marlowe,12,0,0,0,0,0,0,,Genasi,Druid,3,Circle of the Land (Forest),,,3,,,2018-06-29T15:37:47Z,0,0.0
+34,2242,Toron Telsor,46,14,12,14,8,8,15,Noble,Human,Paladin,7,Oath of Devotion,,,7,Grappler,Oil of Etherealness/Ioun Stone of Strength/Double Edge/Mace of Tithing/Shield/Chain Mail/Splint/Longsword/Javelin,2018-06-29T15:37:47Z,1261,0.0
+35,2243,Lucinious,28,11,16,13,17,13,15,Entertainer,Tiefling,Bard,5,College of Lore,,,5,Actor,"Spell Scroll (1st Level)/Dagger of Returning/Studded Leather/Dagger/Rapier/Clothes, Costume/Robes/Entertainer's Pack /Dice Set/Playing Card Set/Flute/Lute/Pan Flute",2021-07-02T06:54:00Z,3974,225.0
+36,2435,Corrin Underfoot,8,17,16,14,14,15,18,Folk Hero,Halfling,Bard,1,,,,1,,Leather/Dagger/Rapier/Entertainer's Pack /Lute/Pan Flute,2020-07-16T16:25:53Z,1564,100.0
+37,2444,Welf,12,13,8,14,12,10,15,Folk Hero,Goliath,Bard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+38,2484,Cade Thorngage,12,8,15,13,12,14,10,Folk Hero,Halfling,Ranger,1,,,,1,,"Leather/Dagger/Crossbow, light/Shortsword/Explorer's Pack",2018-06-29T15:37:47Z,4,15.0
+39,2485,Lil_kamini's Character,12,0,0,0,0,0,0,Sage,Human,Sorcerer,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+40,2510,Sai Amastacia,10,9,12,14,15,10,12,Sage,Elf,Wizard,2,School of Evocation,,,2,,"Longsword/Quarterstaff/Dart/Ink (1 ounce bottle)/Ink Pen/Clothes, Common/Clothes, Fine/Component Pouch/Spellbook/Scholar's Pack",2020-04-13T19:38:35.473Z,1252,130.0
+41,2515,Sigurd,12,0,0,0,0,0,0,,Human,Fighter,3,Champion,,,3,,,2018-06-29T15:37:47Z,0,0.0
+42,2555,CW3_Clare's Character,38,0,0,0,0,0,0,,Human,Rogue,7,,,,7,,,2019-02-23T18:21:15.487Z,0,0.0
+43,2601,Varg,12,8,8,8,8,8,8,,Goliath,Ranger,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+44,2636,Saeranna Tallithe,12,0,0,0,0,0,0,,Genasi,Ranger,9,Hunter,,,9,,,2022-03-11T20:31:01.713Z,0,0.0
+45,2640,Erin,8,13,8,14,10,15,12,Acolyte,Halfling,Cleric,1,Life Domain,,,1,,"Shield/Chain Mail/Mace/Crossbow, light/Crossbow Bolts/Priest's Pack/Reliquary",2018-06-29T15:37:47Z,0,0.0
+46,2700,"Mort ""Eagle-Eye"" Serenz",12,8,8,8,8,8,8,,Human,Ranger,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+47,2705,Ravoskan,12,12,15,13,10,14,8,Folk Hero,Dragonborn,Cleric,5,Life Domain,,,5,,"Chain Mail, +1",2018-06-29T15:37:47Z,0,0.0
+48,2778,Dokut Eciam,12,0,0,0,0,0,0,,Tiefling,Warlock,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+49,2779,Olutar,12,0,0,0,0,0,0,,Dwarf,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+50,2782,Garulen Talespinner,12,13,10,12,11,12,15,,Dwarf,Bard,1,,,,1,,Leather/Handaxe/Lyre,2018-06-29T15:37:47Z,511,0.0
+51,2806,Owe,18,10,13,14,10,15,10,Sage,Genasi,Druid,3,Circle of the Land (Coast),,,3,,"Shield/Chain Mail/Mace/Crossbow, light/Priest's Pack",2018-06-29T15:37:47Z,0,135.0
+52,2808,Gimblejam Smallington 3rd,12,0,0,0,15,0,0,,Gnome,Wizard,15,School of Evocation,,,15,,,2018-06-29T15:37:47Z,0,0.0
+53,2841,Randy Savage,12,0,0,0,0,0,0,,Dwarf,Paladin,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+54,2842,Kyros,12,7,12,12,14,15,15,Acolyte,Half-Elf,Cleric,4,Life Domain,,,4,,"Scale Mail/Shield/Spear/Backpack/Bedroll/Blanket/Clothes, Common/Component Pouch/Paper (one sheet)/Robes/Playing Card Set",2018-06-29T15:37:47Z,101,136.0
+55,2873,Barb,12,15,13,14,10,12,8,Folk Hero,Gnome,Barbarian,1,,,,1,,Handaxe/Javelin/Greataxe/Explorer's Pack,2018-06-29T15:37:47Z,0,0.0
+56,2894,Twyrcel,124,14,18,16,15,17,15,Folk Hero,Half-Elf,Ranger,17,Hunter,,,17,,"Studded Leather, +3/Vorpal Scimitar/Shortsword, +3/Leather/Shortsword/Shortsword/Longbow/Shovel/Explorer's Pack/Carpenter's Tools/Disguise Kit",2021-02-16T16:44:49Z,1274,0.0
+57,2898,Qyburn Rhayns,72,14,15,13,8,10,12,Soldier,Human,Ranger,8,Beast Master,Rogue,Assassin,12,,"Arrow of Slaying/Cloak of Displacement/Elemental Gem (Blue Sapphire)/Gauntlets of Ogre Power/Goggles of Night/Dagger, +1/Longbow, +1/Studded Leather/Leather/Longsword/Handaxe/War Pick/Longbow/Arrows/Backpack/Crowbar/Hammer/Piton/Torch/Tinderbox/Rations (1 day)/Waterskin/Rope, Hempen (50 feet)/Playing Card Set/Clothes, Common/Grappling Hook/Pouch/Thieves' Tools/Potion of Healing/Disguise Kit/Ball Bearings (bag of 1,000)/Backpack",2022-08-06T00:59:16.633Z,2740,9264.11
+58,2903,Mierah Dawnchaser,12,0,0,0,0,0,0,,Elf,Monk,11,,,,11,,,2018-06-29T15:37:47Z,0,0.0
+59,2954,Greml Ironborn,12,15,14,15,8,10,8,Soldier,Dwarf,Barbarian,1,,Fighter,,3,,Shield/Handaxe/Handaxe/Warhammer,2018-06-29T15:37:47Z,6,87.0
+60,2988,Kaal'Axiuus,18,18,18,17,11,16,19,Acolyte,Dragonborn,Monk,1,,,,1,,Quarterstaff,2018-06-29T15:37:47Z,0,7.6
+61,3055,Niavara Nailo,8,15,17,12,10,14,14,Sage,Elf,Monk,1,,,,1,,"Dagger/Dart/Ink (1 ounce bottle)/Backpack/Bedroll/Clothes, Common/Mess Kit/Rations (1 day)/Rope, Hempen (50 feet)/Tinderbox/Torch/Waterskin/Small Knife",2022-06-20T01:24:18.017Z,394,95.6
+62,3061,KingKebab's Character,12,0,0,0,0,0,0,,Half-Elf,Warlock,1,The Fiend,,,1,,,2018-06-29T15:37:47Z,0,0.0
+63,3126,Thorbino's Character,12,8,8,8,8,8,8,,Human,Rogue,1,,,,1,Grappler,,2018-06-29T15:37:47Z,0,0.0
+64,3138,Test,10,11,8,10,12,16,11,Folk Hero,Elf,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+65,3279,Cricket Diggsberry,10,15,13,14,10,12,8,Soldier,Halfling,Fighter,3,,,,3,,Shield/Chain Mail/Longsword/Handaxe/Handaxe/Explorer's Pack,2018-08-02T01:21:21.683Z,0,0.0
+66,3385,Julian Blackthorne,12,8,12,13,15,14,10,Sage,Human,Wizard,6,School of Evocation,,,6,,,2018-06-29T15:37:47Z,0,0.0
+67,3386,Morgran Battlehammer,87,18,8,15,6,13,16,Noble,Dwarf,Paladin,13,Oath of Devotion,Warlock,The Celestial,14,Shield Master,"Dust of Disappearance/Eversmoking Bottle/Gem of Brightness/Potion of Healing/Ring of Evasion/Ring of Spell Storing/Potion of Healing (Superior)/Flame Longsword, +1/Mithral Plate of Flame/Animated Shield of Protection/The Battlehammer/Signet Ring/Bomb",2021-07-15T23:36:05Z,200,6420.3
+68,3388,Switch of the Shadows,12,10,14,8,13,12,15,Folk Hero,Genasi,Rogue,1,,,,1,,"Leather/Dagger/Dagger/Shortbow/Shortsword/Arrows/Clothes, Common/Pot, Iron/Shovel/Tinker's Tools/Thieves' Tools",2022-09-21T00:45:35.88Z,4,10.0
+69,3389,Kotojo D. Zujo,12,8,8,8,8,8,8,,Elf,Rogue,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+70,3392,Aloth,12,0,0,0,0,0,0,,Human,Wizard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+71,3449,SternerStuff's Character,12,0,0,0,0,0,0,,Dwarf,Barbarian,6,,,,6,,,2018-06-29T15:37:47Z,0,0.0
+72,3450,Ozkir,12,8,15,13,12,14,10,,Dwarf,Monk,3,Way of the Open Hand,,,3,,"Quarterstaff/Dart/Case, Map or Scroll/Clothes, Common/Dungeoneer's Pack",2018-06-29T15:37:47Z,0,85.0
+73,3452,Dooby,8,8,13,14,12,10,15,Sage,Half-Elf,Warlock,1,The Fiend,,,1,,"Leather/Dagger/Dagger/Quarterstaff/Crossbow, light/Crossbow Bolts/Scholar's Pack/Rod",2018-06-29T15:37:47Z,0,0.0
+74,3456,Lagimar,12,8,8,8,8,8,8,,Dragonborn,Sorcerer,1,Draconic Bloodline,,,1,,,2018-06-29T15:37:47Z,0,0.0
+75,3459,Andy,12,10,15,13,10,10,14,,Half-Elf,Bard,1,,,,1,,Leather/Dagger/Rapier/Entertainer's Pack /Lute,2018-06-29T15:37:47Z,0,0.0
+76,3462,Lagoon,15,8,10,6,12,15,15,Soldier,Genasi,Monk,1,,Sorcerer/Bard/Barbarian,Draconic Bloodline/College of Lore/Path of the Berserker,5,,,2018-06-29T15:37:47Z,0,0.0
+77,3477,Morlar,104,7,11,13,12,12,11,Soldier,Aarakocra,Bard,13,College of Lore,,,13,,,2018-06-29T15:37:47Z,0,0.0
+78,3523,Erindal Windsong,12,13,8,14,10,15,12,,Elf,Cleric,3,Life Domain,,,3,,,2018-06-29T15:37:47Z,0,0.0
+79,3559,Jimmy Dungard,12,10,15,14,10,10,13,Criminal / Spy,Halfling,Fighter,1,,,,1,,"Chain Mail/Crossbow, light/Scimitar/Scimitar/Crossbow Bolts/Clothes, Common/Crowbar/Potion of Healing/Pouch/Dungeoneer's Pack/Clothing, cold weather",2020-09-19T01:37:06Z,520,0.0
+80,3562,Test,120,13,12,10,3,11,13,Folk Hero,Tiefling,Sorcerer,20,Draconic Bloodline,,,20,Grappler/Svirfneblin Magic,,2018-06-29T15:37:47Z,0,0.0
+81,3572,"Gwaeddan ""Gwen"" Sternhammer",12,0,0,0,0,0,0,,Dwarf,Paladin,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+82,3575,Walkas,6,12,15,13,10,14,8,Acolyte,Dwarf,Monk,1,,,,1,,Dart/Shortsword/Explorer's Pack,2018-06-29T15:37:47Z,0,0.0
+83,3584,Draconismaximus's Character,24,18,18,18,18,18,18,Sage,Human,Wizard,4,,,,4,Svirfneblin Magic,,2018-06-29T15:37:47Z,0,0.0
+84,3605,Tick Tary Tanner,82,10,14,8,15,12,13,,Gnome,Wizard,20,School of Illusion,,,20,Lucky/Resilient (Charisma)/Ritual Caster (Druid),"Amulet of Health/Bag of Holding/Potion of Animal Friendship/Potion of Hill Giant Strength/Robe of the Archmagi/Staff of Power/Tome of Clear Thought/Tome of Leadership and Influence/Tome of Understanding/Potion of Healing (Greater)/Potion of Healing (Superior)/Potion of Healing (Supreme)/Potion of Cold Resistance/Spell Scroll (2nd Level)/Spell Scroll (3rd Level)/Spell Scroll (4th Level)/Spell Scroll (5th Level)/Spell Scroll (7th Level)/Spell Scroll (8th Level)/Ink (1 ounce bottle)/Ink Pen/Potion of Poison Resistance/Potion of Invulnerability/Elixir of Health/Net/Abacus/Bedroll/Ball Bearings (bag of 1,000)/Mirror of the Past/Tome of the Stilled Tongue/Cloak of Many Fashions/Pistol/Dagger/Dagger/Pipe of Smoke Monsters/Book/Saddle of the Cavalier/Potion of Vitality/Soul Coin/Spellbook/Totem/Sealing Wax/Signet Ring/Magnifying Glass/Case, Map or Scroll/Paper (one sheet)/Cartographer's Tools/Oil (flask)/Scale, Merchant's/Fishing Tackle/Waterskin/Blanket/Mess Kit/Pot, Iron/Jug or Pitcher/Hunting Trap/Tent, Two-Person/Clothes, Traveler's/Dice Set/Dragonchess Set/Playing Card Set/Three-Dragon Ante Set/Spyglass/Grappling Hook/Rope, Silk (50 feet)/Manacles/Caltrops (bag of 20)/Whetstone/Healer's Kit/Crowbar/Shovel/Hammer, Sledge/Pick, Miner's/Ram, Portable/Bell/Candle/Chalk (1 piece)/Hourglass/Pouch/Sack/Antitoxin/Saddle, Exotic/Horn/Calligrapher's Supplies/Sack/Sack",2021-01-24T20:39:31Z,15732,203652.28
+85,3679,Keakian,12,0,0,0,0,0,0,,Halfling,Rogue,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+86,3681,Rev,38,8,13,12,15,10,14,Sage,Human,Wizard,9,School of Evocation,,,9,,Quarterstaff/Spellbook/Scholar's Pack/Rod,2018-07-03T20:31:41.01Z,0,0.0
+87,3697,Tarqen,12,10,18,10,12,14,15,Criminal / Spy,Tiefling,Rogue,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+88,3698,Bevina,28,11,13,11,13,12,18,Criminal / Spy,Dwarf,Druid,5,Circle of the Land (Mountain),,,5,Grappler,,2018-06-29T15:37:47Z,0,0.0
+89,3702,Shade,18,16,16,15,13,14,13,Criminal / Spy,Tiefling,Rogue,3,Assassin,,,3,,"Dagger/Dagger/Shortbow/Rapier/Arrows/Case, Map or Scroll/Clothes, Common/Pouch/Quiver/Burglar's Pack/Thieves' Tools",2018-06-29T15:37:47Z,29,10.0
+90,3707,Auberon,12,0,0,0,0,0,0,,Half-Elf,Paladin,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+91,3713,Mordecai,23,14,10,14,10,18,8,Acolyte,Human,Cleric,8,Life Domain,,,8,,Shield/Chain Mail/Dagger/Quarterstaff/Sling/Net/Priest's Pack,2019-10-11T02:13:17.02Z,0,0.0
+92,3714,Qiwalyn,46,10,9,10,9,8,10,Soldier,Elf,Barbarian,18,Path of the Berserker,,,18,,,2018-06-29T15:37:47Z,0,0.0
+93,3719,Nesmorn,142,9,12,9,6,9,12,Criminal / Spy,Dragonborn,Paladin,17,Oath of Devotion,Warlock/Ranger,The Fiend/Hunter,20,Grappler/Svirfneblin Magic,,2018-06-29T15:37:47Z,0,0.0
+94,3742,Araralei,12,0,0,0,0,0,0,,Aarakocra,Monk,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+95,3757,Punt Speedchunk,12,0,0,0,0,0,0,,Dragonborn,Barbarian,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+96,3759,Adra,12,8,14,13,10,12,15,Noble,Aarakocra,Bard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+97,3787,Siku Sangilak,12,8,14,10,14,10,15,Sage,Dragonborn,Bard,3,College of Lore,Rogue,Thief,6,,Studded Leather/Shortsword/Shortsword/Explorer's Pack/Lute,2018-06-29T15:37:47Z,0,15.0
+98,3835,Regenault von Carringworth,12,0,0,0,0,0,0,,Human,Sorcerer,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+99,3853,Shirali,20,12,16,10,12,14,7,Criminal / Spy,Dragonborn,Monk,3,Way of the Open Hand,,,3,,Dagger/Dart/Robes/Explorer's Pack/Thieves' Tools,2018-06-29T15:37:47Z,0,16.0
+100,3878,Noremin,12,12,16,11,12,8,9,,Human,Rogue,1,,,,1,Grappler,,2018-06-29T15:37:47Z,0,0.0
+101,3903,BussyBop,12,8,13,12,10,14,15,Noble,Dragonborn,Sorcerer,1,Draconic Bloodline,,,1,,Dagger/Dagger/Quarterstaff/Crystal,2018-06-29T15:37:47Z,0,25.0
+102,3909,Snowlio's Character,12,0,0,0,0,0,0,,Halfling,Sorcerer,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+103,3961,Overron Quartz,10,11,10,13,15,12,12,Folk Hero,Half-Elf,Ranger,1,,,,1,,"Adamantine Scale Mail/Longbow, +1/Shortsword, +1/Shortsword, +1/Quiver/Dungeoneer's Pack",2022-06-23T21:36:38.883Z,434,0.0
+104,3965,Flamelogan Random,80,11,12,14,11,13,10,Criminal / Spy,Human,Fighter,11,Champion,,,11,Grappler/Svirfneblin Magic,,2018-06-29T15:37:47Z,0,0.0
+105,4002,Peren Tide,12,0,0,0,0,0,0,,Genasi,Druid,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+106,4003,Jarnaar,12,15,13,14,10,12,8,Folk Hero,Dragonborn,Barbarian,1,,,,1,,Handaxe/Javelin/Greataxe/Explorer's Pack,2018-06-29T15:37:47Z,0,0.0
+107,4008,Rhociar,8,13,8,14,10,15,12,Acolyte,Dragonborn,Cleric,1,Life Domain,,,1,,"Shield/Chain Mail/Mace/Crossbow, light/Crossbow Bolts/Priest's Pack/Reliquary",2018-06-29T15:37:47Z,0,0.0
+108,4068,Amon,8,10,14,12,13,8,15,Entertainer,Half-Orc,Bard,1,,,,1,,Leather/Dagger/Rapier/Entertainer's Pack /Lute,2018-06-29T15:37:47Z,0,0.0
+109,4083,Khamsin al-Huzuzi bin Nasim,12,12,15,13,10,14,8,Acolyte,Genasi,Monk,3,Way of the Open Hand,,,3,,,2018-07-20T04:56:23.587Z,816,0.0
+110,4085,Hex,8,8,13,14,12,10,15,Sage,Half-Elf,Warlock,4,The Fiend,,,4,,"Leather/Dagger/Dagger/Quarterstaff/Crossbow, light/Crossbow Bolts/Scholar's Pack/Rod",2018-06-29T15:37:47Z,0,0.0
+111,4090,Lenna Amakiir,12,6,16,16,12,16,16,Sage,Elf,Warlock,8,,,,8,,,2018-06-29T15:37:47Z,0,0.0
+112,4092,Maltrochio,8,12,13,12,13,12,13,,Human,Bard,1,,,,1,,"Leather/Dagger/Rapier/Backpack/Drum/Bedroll/Candle/Clothes, Costume/Rations (1 day)/Waterskin/Disguise Kit",2021-08-16T19:03:10Z,0,0.0
+113,4100,Kelivar,103,10,15,13,10,15,8,Hermit,Human,Monk,20,Way of the Kensei,,,20,Mobile/Sentinel,Amulet of Health/Cloak of Displacement/Gem of Seeing/Goggles of Night/Manual of Quickness of Action/Potion of Speed/Scarab of Protection/Staff of Striking/Tome of Understanding/Belt of Storm Giant Strength/Potion of Healing (Greater)/Potion of Healing (Superior)/Potion of Healing (Supreme)/Quarterstaff/Dart/Backpack/Explorer's Pack/Woodcarver's Tools/Whip/Serenity (Whip +3)/Potion of Vitality/Longbow/Ring of Fire Resistance,2021-12-12T02:50:57.2Z,12,24843.0
+114,4157,defenske's Character,12,12,15,8,10,14,0,Acolyte,Human,Monk,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+115,4160,Haqorel,12,15,12,13,10,14,8,,Genasi,Monk,15,,Barbarian,,20,,,2018-06-29T15:37:47Z,0,0.0
+116,4170,Kaladin Blade,12,0,0,0,0,0,0,,Human,Warlock,1,The Fiend,,,1,Grappler,,2018-06-29T15:37:47Z,0,0.0
+117,4178,Ilivek,12,19,15,14,11,12,13,Acolyte,Goliath,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+118,4221,"Captian Michael ""Rune"" Greycove",30,8,13,13,15,12,12,Sailor,Human,Wizard,8,School of Evocation,,,8,War Caster/Resilient (Constitution),"Bracers of Defense/Cloak of Protection/Wand of Magic Missiles/Wand of the War Mage, +1/Potion of Healing (Greater)/Wand of Winter/Yallek Rhim's Ring of Spell Storing/Quarterstaff/Crossbow, light/Crossbow Bolts/Backpack/Bedroll/Case, Map or Scroll/Mess Kit/Tinderbox/Torch/Rations (1 day)/Waterskin/Rope, Silk (50 feet)/Rope, Hempen (50 feet)/Lantern, Bullseye/Clothes, Common/Arcane Focus/Clothes, Traveler's/Component Pouch",2022-04-06T15:56:51.89Z,10745,40877.0
+119,4263,stygaingrey's Character,12,8,15,8,13,12,15,,Tiefling,Warlock,1,The Fiend,,,1,,,2018-06-29T15:37:47Z,0,0.0
+120,4266,Xarvull,12,15,15,15,8,8,8,Noble,Genasi,Barbarian,1,,,,1,,Greataxe,2018-06-29T15:37:47Z,0,0.0
+121,4273,Saairi,53,13,13,16,16,17,15,,Dragonborn,Druid,11,Circle of the Moon,,,11,Observant,Wave of the Stormforge,2018-06-29T15:37:47Z,0,0.0
+122,4283,Searil Zkwizgaaril,34,8,15,14,10,10,14,Courtier,Half-Elf,Sorcerer,8,Draconic Bloodline,,,8,,"Immovable Rod/Pearl of Power/Potion of Climbing/Ring of Protection/Wand of Magic Missiles/Cloak of Many Fashions/Gnomish Staff of Empowerment, +1/Dagger/Quarterstaff/Backpack/Bedroll/Clothes, Fine/Flask or Tankard/Mess Kit/Torch/Rations (1 day)/Waterskin/Rope, Hempen (50 feet)/Potion of Healing",2022-09-14T01:26:42.09Z,2828,454.88
+123,4285,Jasp,43,12,14,10,11,12,14,Charlatan,Elf,Rogue,20,Thief,,,20,Elven Accuracy/Fey Teleportation,"Bag of Holding/Cloak of Displacement/Immovable Rod/Oil of Sharpness/Potion of Hill Giant Strength/Potion of Mind Reading/Potion of Poison/Potion of Water Breathing/Wand of Magic Detection/Defender Shortsword/Ioun Stone of Agility/Ioun Stone of Regeneration/Leather, +2/Shortbow/Burglar's Pack/Thieves' Tools/Studded Leather/Cloak of the Kraken/Shortsword of Slaying/Alchemy Jug/Shag Cloak of the Magic Plane/Potion of Fire Resistance/Gloves of Thievery/Dagger, +2/Cloak of Levitation/Vorpal Scimitar/Shortsword, +1/Potion of Healing/Lute/Potion of Necrotic Resistance/Potion of Healing (Greater)/Coin of the Warrior's Gamble/Seven unusual coins/Floating glowing globe",2022-08-29T16:57:37.62Z,6606,34832.0
+124,4308,Vassal of The Owl,12,10,15,10,10,15,8,,Human,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+125,4337,Solis,12,0,0,0,0,0,0,,Tiefling,Paladin,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+126,4357,Skiips,12,15,13,14,10,12,8,Folk Hero,Goliath,Barbarian,1,,,,1,,Handaxe/Javelin/Greataxe/Explorer's Pack,2018-06-29T15:37:47Z,0,0.0
+127,4364,Kin,12,10,17,17,15,8,14,Criminal / Spy,Half-Elf,Rogue,1,,,,1,,Bag of Holding/Boots of Speed/Cloak of the Bat/Glamoured Studded Leather/Ring of Free Action,2018-06-29T15:37:47Z,0,0.0
+128,4406,Polina Kartoshka,68,14,10,14,8,15,10,Noble,Human,Cleric,13,Death Domain,,,13,Heavily Armored,"Mace of Disruption/Necklace of Prayer Beads/Winged Boots/Figurine of Wondrous Power (Obsidian Steed)/Adamantine Plate/Potion of Healing (Greater)/Shield, +3/Spell Scroll (5th Level)/Dagger/Backpack/Clothes, Traveler's/Bedroll/Manacles/Rope, Hempen (50 feet)/Waterskin/Amulet",2022-10-18T07:52:26.287Z,1715,10350.5
+129,4407,Silas Fleetfoot,78,13,18,14,13,18,12,Outlander,Halfling,Monk,15,Way of Shadow,,,15,Mobile/Tough,Bracers of Defense/Ring of Animal Influence/Ring of Free Action/Slippers of Spider Climbing/Staff of Striking,2018-06-29T15:37:47Z,0,0.0
+130,4416,Prigrax,20,7,18,9,9,16,12,Folk Hero,Dragonborn,Ranger,3,Hunter,,,3,,,2018-06-29T15:37:47Z,0,0.0
+131,4424,Eric42's Character,12,15,8,8,8,8,8,,Human,Paladin,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+132,4426,Dharmong,12,10,16,14,17,12,10,Sage,Tiefling,Wizard,6,School of Evocation,,,6,,,2018-06-29T15:37:47Z,0,0.0
+133,4427,Sewan,24,14,10,14,14,12,11,Criminal / Spy,Dwarf,Barbarian,3,Path of the Berserker,,,3,,,2018-06-29T15:37:47Z,0,0.0
+134,4432,Greenleaf's Character,12,15,16,16,12,18,11,Acolyte,Dwarf,Druid,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+135,4434,Baden McBhurg,12,0,0,0,0,0,0,,Human,Bard,5,College of Lore,,,5,,,2018-06-30T03:09:33.64Z,0,0.0
+136,4439,Derzan,8,0,0,0,0,0,0,,Genasi,Warlock,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+137,4451,Test,12,15,13,14,12,10,8,Soldier,Human,Fighter,5,Champion,,,5,Grappler,,2018-06-29T15:37:47Z,0,0.0
+138,4457,Dresden Zacariden,12,8,12,10,14,15,16,Acolyte,Half-Elf,Monk,1,,,,1,,Quarterstaff,2018-06-29T15:37:47Z,1286,0.0
+139,4459,Aaron Frost,13,8,10,14,12,15,13,Noble,Elf,Cleric,2,Life Domain,,,2,,"Scale Mail/Shield/Shield/Dagger/Dagger/Mace/Quarterstaff/Shortbow/Crossbow Bolts/Backpack/Bedroll/Clothes, Common/Clothes, Fine/Scholar's Pack/Component Pouch/Mess Kit/Tinderbox/Torch/Rations (1 day)/Waterskin/Rope, Hempen (50 feet)/Amulet/Signet Ring/Potion of Healing",2018-06-29T15:37:47Z,41,50.0
+140,4463,Kaidrien's Character,12,0,0,0,0,0,0,,Human,Warlock,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+141,4466,Arnagorn Findlehorn,12,15,10,14,8,12,13,Soldier,Half-Elf,Paladin,2,,,,2,,Shield/Chain Mail/Handaxe/Warhammer/Explorer's Pack,2021-10-11T14:49:50.627Z,562,10.0
+142,4468,Glahp,43,14,13,15,8,12,10,Soldier,Half-Orc,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+143,4477,Guy Vexille,12,0,0,0,0,0,0,,Human,Rogue,6,Thief,Fighter,,7,Grappler,,2018-06-29T15:37:47Z,0,0.0
+144,4478,Kidshakinground's Character,12,0,0,0,0,0,0,,Human,Warlock,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+145,4491,Griggs,12,12,16,14,17,8,12,Criminal / Spy,Human,Wizard,1,,,,1,Grappler,,2018-06-29T15:37:47Z,0,0.0
+146,4505,Reddarich Lanoue,8,8,15,11,12,10,15,Noble,Half-Elf,Bard,1,,,,1,,Studded Leather/Rapier/Backpack,2018-06-29T15:37:47Z,0,0.0
+147,4507,TrevorDusablon's Character,12,8,14,12,13,12,14,Sage,Tiefling,Warlock,1,The Fiend,,,1,,Studded Leather/Dagger,2019-05-26T21:39:37.077Z,0,0.0
+148,4512,Zoril Vamenos,12,0,0,0,0,0,0,,Tiefling,Ranger,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+149,4513,Zyn,12,10,15,12,12,14,9,,Genasi,Monk,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+150,4526,Thess's Character,12,0,0,0,0,0,0,,Human,Paladin,1,,,,1,Grappler,,2018-06-29T15:37:47Z,0,0.0
+151,4533,Mazjerai's Character,12,0,0,0,0,0,0,,Genasi,Sorcerer,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+152,4534,Barwrin Asterith,12,16,8,16,18,10,8,Sage,Dwarf,Wizard,20,,,,20,,"Dwarven Thrower/Belt of Storm Giant Strength/Plate, +3/Shield, +3",2018-06-29T15:37:47Z,0,0.0
+153,4551,honorablediscord's Character,12,16,10,16,10,17,14,Acolyte,Dwarf,Cleric,1,Life Domain,,,1,,,2018-06-29T15:37:47Z,0,0.0
+154,4553,Keyan,22,15,12,14,8,13,10,Waterdhavian Noble,Human,Fighter,3,Rune Knight,,,3,Polearm Master,"Chain Mail/Handaxe/Handaxe/Greatsword/Halberd/Backpack/Bedroll/Clothes, Fine/Mess Kit/Rations (1 day)/Rope, Hempen (50 feet)/Signet Ring/Tinderbox/Torch/Waterskin",2020-11-26T05:12:00Z,57,45.0
+155,4556,Zaltex's Character,12,16,18,16,10,11,12,Soldier,Halfling,Barbarian,1,,,,1,,Greataxe,2018-06-29T15:37:47Z,0,0.0
+156,4558,Bartok IronClap,12,10,8,14,12,15,13,Soldier,Genasi,Cleric,7,Life Domain,,,7,,"Armor of Lightning Resistance, Breastplate/Maul, +2",2018-06-29T15:37:47Z,0,0.0
+157,4565,Artemis,164,10,16,15,12,18,11,Outlander,Dragonborn,Druid,20,Circle of the Moon,,,20,Lucky/Mage Slayer/Mobile/War Caster/Resilient (Constitution),"Amulet of Proof against Detection and Location/Belt of Dwarvenkind/Belt of Hill Giant Strength/Boots of Elvenkind/Potion of Diminution/Studded Leather Armor +1/Carpet of Flying (6 ft. x 9 ft.)/Ioun Stone of Mastery/Potion of Healing (Superior)/Potion of Poison Resistance/Shield, +3/Staff of the Woodlands/Censer of Thaumaturgy/Claws of Draconic Might/Epic Tier Dragon/Belt of Acid Resistance/Belt of Belt Slots/Bandolier of Flame/Belt of Bonding/Belt of Draconic Resistance/Belt of Many Pouches/Belt of Temporal Fixing/Cloak of Very Much Protection/Wildheart Armour of Mastery, +2/Jade Circlet /Magical Pop Rocks/Potion Makers  Recipies Cards/Rod of Narrative Convenience/Many Many Gems/Rod to the Second Layer of Hell/Diamond/Dust of the Aplifier/Planar Binding Gem/Poppies/Draconic Engagement Ring/Rod of the Feywild/Rod to the Elemental Plane of Fire/Gem-Encrusted Bowl /Potion of Mirror Image /Herbalism Kit/Potion of Healing/Rod to the Unknown/Cloak of Proof of detection and location/Assorted Gems (Mostly Rubies)/Brittany Spores Goo/Rod to the Markets/Bag of Snowy Diamond Dust",2020-10-27T11:33:04Z,1525,330356.34
+158,4566,Juste's Character,12,15,12,14,8,10,13,,Goliath,Paladin,3,Oath of Devotion,,,3,,,2018-06-29T15:37:47Z,0,0.0
+159,4576,Belros Aeron,21,15,16,13,15,14,11,Criminal / Spy,Elf,Rogue,3,,,,3,,Studded Leather/Dagger/Dagger/Dagger,2018-06-29T15:37:47Z,0,0.0
+160,4581,Akarin Avolkaas ,40,17,10,14,9,12,14,Acolyte,Dragonborn,Paladin,6,Oath of Devotion,,,6,,"Longsword, +1/Shield/Chain Mail/Javelin/Greatsword/Backpack/Blanket/Candle/Clothes, Common/Rations (1 day)/Tinderbox/Waterskin/Emblem/Holy Symbol/Vestments/Alms Box/Block of Incense/Censer",2020-07-07T04:40:34Z,67,80.0
+161,4582,Thymar,12,15,14,9,6,10,14,Noble,Human,Bard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+162,4584,Nimbus,10,13,13,13,12,12,17,,Dragonborn,Sorcerer,2,Draconic Bloodline,,,2,,"Dagger/Crossbow, light/Blanket/Case, Map or Scroll/Clothes, Common/Dungeoneer's Pack/Herbalism Kit/Staff",2018-06-29T15:37:47Z,67,95.0
+163,4593,Stealthkyo,12,12,12,12,12,14,12,,Aarakocra,Druid,1,,,,1,,"Leather, +1",2018-06-29T15:37:47Z,0,0.0
+164,4597,madyona414's Character,12,14,10,14,11,12,12,Folk Hero,Dwarf,Barbarian,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+165,4602,Ereviss,10,10,14,14,12,13,10,Urban Bounty Hunter,Elf,Ranger,1,,,,1,,Leather/Shortsword/Shortsword/Longbow/Arrows/Pouch/Rations (1 day)/Waterskin,2020-12-01T04:12:10Z,0,20.0
+166,4606,Nineball's Character,12,14,8,13,10,12,15,,Dragonborn,Paladin,1,,,,1,,Shield/Chain Mail/Javelin/Warhammer/Priest's Pack,2018-06-29T15:37:47Z,0,0.0
+167,4611,Igveous Norixus,12,14,11,14,16,10,12,Sage,Dragonborn,Wizard,2,School of Evocation,,,2,,,2018-06-29T15:37:47Z,0,0.0
+168,4615,malkds's Character,12,0,0,0,0,0,0,,Tiefling,Warlock,6,,,,6,,,2018-06-29T15:37:47Z,0,0.0
+169,4620,Ira Locke,12,0,0,0,0,0,0,,Half-Elf,Bard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+170,4622,Felmin,12,11,12,12,10,13,15,Sage,Half-Elf,Warlock,1,The Fiend,,,1,,,2018-06-29T15:37:47Z,0,0.0
+171,4626,Sutha,12,13,15,12,13,14,19,Noble,Half-Orc,Rogue,5,,,,5,,"Leather/Crossbow, hand/Dagger/Dagger/Rapier/Case, Crossbow Bolt/Clothes, Fine/Signet Ring/Burglar's Pack/Thieves' Tools",2018-06-29T15:37:47Z,54,135.0
+172,4627,Sorarsh,12,14,12,15,10,13,8,Folk Hero,Goliath,Barbarian,5,Path of the Berserker,,,5,,"Hide/Handaxe/Handaxe/Javelin/Greataxe/Clothes, Common/Pot, Iron/Explorer's Pack/Cook's Utensils",2018-06-29T15:37:47Z,0,10.0
+173,4635,Soranna Eternal,12,0,0,0,0,0,0,,Human,Wizard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+174,4638,Naddar Myastan,12,18,16,12,10,14,13,,Dragonborn,Fighter,5,,,,5,,,2018-06-29T15:37:47Z,0,2560.0
+175,4645,ShinyFlareons's Character,12,14,16,16,12,14,10,Soldier,Half-Orc,Barbarian,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+176,4649,Metalpnx,12,8,15,14,12,10,13,,Halfling,Fighter,1,,,,1,,"Amulet of Health/Amulet of the Planes/Apparatus of the Crab/Adamantine Half Plate/Adamantine Plate/Armor of Acid Resistance, Breastplate",2018-06-29T15:37:47Z,0,0.0
+177,4652,Xavian,12,10,13,8,14,12,15,Acolyte,Half-Elf,Warlock,2,The Fiend,,,2,,"Leather/Dagger/Dagger/Quarterstaff/Crossbow, light/Scholar's Pack",2020-07-16T04:08:50Z,1094,0.0
+178,4654,Odin's Character,12,12,14,13,15,10,8,Sage,Dwarf,Druid,1,,,,1,,,2021-10-21T18:14:53.1Z,0,0.0
+179,4659,The Rickster,12,8,12,13,15,12,12,Soldier,Human,Wizard,1,,,,1,Svirfneblin Magic,"Dagger/Clothes, Common/Component Pouch/Spellbook/Explorer's Pack",2018-06-29T15:37:47Z,52,32.3
+180,4663,samothleb's Character,12,8,13,14,15,12,10,Sage,Human,Wizard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+181,4669,Kaidrien's Character,12,16,9,15,8,10,16,Noble,Human,Warlock,1,The Fiend,,,1,,,2018-06-29T15:37:47Z,0,0.0
+182,4675,Grub Hubbard,12,0,0,0,0,0,0,,Half-Orc,Barbarian,3,Path of the Berserker,Cleric,Life Domain,6,,Shield,2018-06-29T15:37:47Z,0,0.0
+183,4683,bevedog's Character,12,0,0,0,0,0,0,,Tiefling,Warlock,1,The Fiend,,,1,,,2018-06-29T15:37:47Z,0,0.0
+184,4684,Ebrey,40,13,14,10,11,11,15,Acolyte,Elf,Warlock,5,The Fiend,,,5,Svirfneblin Magic,,2018-06-29T15:37:47Z,0,0.0
+185,4695,Sumoril,12,8,12,10,13,14,15,Noble,Dragonborn,Sorcerer,10,Draconic Bloodline,,,10,,"Boots of Striding and Springing/Ring of Mind Shielding/Clothes, Traveler's",2018-06-29T15:37:47Z,0,0.0
+186,4698,Ekemon Reis,12,0,0,0,0,0,0,,Tiefling,Bard,7,College of Lore,,,7,,,2018-06-29T15:37:47Z,0,0.0
+187,4702,Calissa Lifewhisper,82,8,15,13,15,12,8,Sage,Human,Wizard,17,School of Evocation,Fighter,,19,Alert/Elemental Adept (Cold)/Resilient (Constitution),"Belt of Dwarvenkind/Potion of Heroism/Ring of Spell Storing/Horn of Valhalla (Iron)/Potion of Healing (Greater)/Potion of Healing (Supreme)/Shield, +2/Spell Scroll (5th Level)/Spell Scroll (9th Level)/Cloak of Invisibility/Half Plate/Crystal/Potion of Healing/Antitoxin",2022-01-03T18:58:03.927Z,227,58947.0
+188,4704,Gad,12,14,10,12,15,13,8,Acolyte,Dwarf,Druid,2,Circle of the Land (Forest),,,2,,"Shield, +1/Shield/Leather/Dagger/Dagger/Quarterstaff/Crossbow, light/Backpack/Bedroll/Blanket/Clothes, Common/Mess Kit/Rations (1 day)/Explorer's Pack/Tinderbox/Torch/Waterskin/Rope, Hempen (50 feet)/Robes/Herbalism Kit",2018-06-29T15:37:47Z,0,0.0
+189,4715,Arclite Evenstar,12,16,9,16,9,14,18,Knight,Half-Elf,Paladin,2,,,,2,,"Shield/Chain Mail/Longsword/Javelin/Backpack/Clothes, Fine/Signet Ring/Amulet/Bedroll/Mess Kit/Rations (1 day)/Rope, Hempen (50 feet)/Tinderbox/Torch/Waterskin",2022-03-03T21:11:12.287Z,2,47.1
+190,4716,Zamfir,28,8,14,15,10,8,15,Folk Hero,Human,Bard,5,College of Lore,,,5,Svirfneblin Magic,,2021-09-11T07:08:11Z,0,0.0
+191,4724,Valybar,6,8,12,11,15,14,11,Sage,Elf,Wizard,3,School of Evocation,,,3,,Dagger/Quarterstaff/Robes/Spellbook/Scholar's Pack/Rod,2018-06-29T15:37:47Z,0,80.0
+192,4730,Malarth,10,15,13,14,10,12,8,Soldier,Half-Orc,Fighter,1,,,,1,,Shield/Chain Mail/Longsword/Handaxe/Handaxe/Explorer's Pack,2018-06-29T15:37:47Z,0,0.0
+193,4731,Toren Blackforge,12,15,14,14,10,9,9,Soldier,Dwarf,Fighter,1,,,,1,,Shield/Chain Mail/Handaxe/Handaxe/Battleaxe/Explorer's Pack,2018-06-29T15:37:47Z,1043,75.0
+194,4735,Belden Hawkblade,10,15,14,13,10,12,8,Soldier,Human,Fighter,3,Champion,,,3,Grappler,Shield/Chain Mail/Longsword/Handaxe/Handaxe/Explorer's Pack,2021-11-16T22:42:37.817Z,0,0.0
+195,4739,Nox Von Vestarius,12,8,14,14,8,12,15,Criminal / Spy,Tiefling,Sorcerer,4,Draconic Bloodline,,,4,,Cloak of Protection/Cloak of Protection,2018-06-29T15:37:47Z,0,0.0
+196,4740,Inigo Montoya,46,18,15,15,10,15,17,Soldier,Human,Paladin,8,Oath of Vengeance,,,8,Great Weapon Master/Mage Slayer/Polearm Master,"Cloak of Protection/Goggles of Night/Periapt of Wound Closure/Ring of Spell Storing/Slippers of Spider Climbing/Winged Boots/Plate, +1/Potion of Healing (Greater)/Glaive, +1/Shield/Longsword/Potion of Healing/Rations (1 day)",2019-11-12T01:49:49.637Z,98,2660.5
+197,4754,Domco's Character,12,13,15,12,10,14,8,Acolyte,Elf,Ranger,1,,,,1,,Studded Leather,2018-06-29T15:37:47Z,0,0.0
+198,4755,Ronaarth,12,13,13,14,9,15,8,Folk Hero,Genasi,Druid,1,,,,1,,"Leather/Quarterstaff/Scimitar/Pot, Iron/Shovel/Explorer's Pack",2018-06-29T15:37:47Z,4,10.0
+199,4757,Angus Lianon,55,18,13,13,8,9,10,Folk Hero,Goliath,Barbarian,5,Path of the Berserker,Rogue/Monk/Sorcerer,Thief/Way of the Open Hand/Draconic Bloodline,20,Grappler/Svirfneblin Magic,,2018-06-29T15:37:47Z,0,0.0
+200,4760,Krontekag the Magnificent,12,11,13,12,15,13,9,Sage,Human,Wizard,5,School of Evocation,,,5,,"Wand of the War Mage, +1/Dagger/Spellbook/Scholar's Pack/Wand",2020-05-05T21:51:37Z,0,0.0
+201,4765,Bear,12,17,14,13,8,9,13,Urchin,Dwarf,Barbarian,1,,,,1,,"Shield/Handaxe/Handaxe/Battleaxe/Warhammer/Parchment (one sheet)/Ball Bearings (bag of 1,000)/Blanket/Crowbar/Manacles/Mirror, Steel/Ram, Portable/Rations (1 day)/Explorer's Pack/Robes/Disguise Kit/Rope, Hempen (50 feet)/Thieves' Tools",2021-02-04T10:35:03Z,0,0.0
+202,4766,Fingers,28,8,14,13,15,10,12,Noble,Elf,Rogue,5,,,,5,,Studded Leather/Dagger/Rapier/Longbow,2018-06-29T15:37:47Z,0,0.0
+203,4768,Zaleria,73,8,14,14,10,15,10,Sage,Elf,Cleric,14,Life Domain,,,14,,"Breastplate, +1/Ring of Warmth/Shield, +1/Shortsword, +1",2020-04-14T20:16:47.35Z,26,0.0
+204,4775,Ravorinn,12,15,12,14,10,11,10,Soldier,Human,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+205,4776,"Keothi ""Blindeye"" Ogolakanu",100,15,16,15,8,12,8,Outlander,Goliath,Barbarian,10,Path of the Totem Warrior,,,10,,"Battleaxe of Leeching/Shield/Handaxe/Javelin/Maul/Clothes, Traveler's/Hunting Trap/Staff",2022-03-03T14:44:05.923Z,237,0.0
+206,4778,Ebrias,12,12,10,10,14,15,11,Sage,Dragonborn,Druid,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+207,4779,BananaNut's Character,12,12,17,16,14,12,18,,Tiefling,Warlock,1,The Fiend,,,1,,,2018-06-29T15:37:47Z,0,0.0
+208,4788,Ragmus,12,15,15,15,15,15,15,Sage,Human,Fighter,1,,,,1,Grappler,,2018-06-29T15:37:47Z,0,0.0
+209,4793,Fawcettp's Character,12,10,14,13,8,12,15,Noble,Half-Elf,Warlock,6,The Fiend,,,6,,"Bag of Holding/Armor of Lightning Resistance, Studded Leather/Vicious Spear",2018-06-29T15:37:47Z,0,0.0
+210,4795,Grayballs Deepboi,52,10,14,15,16,13,12,Sage,Gnome,Wizard,10,School of Divination,,,10,Not AT WILL Telekinesis,"Ring of Warmth/Staff of Fire/Wand of Magic Missiles/Winged Boots/Gloves of Thievery/20 Gold Worth of Magic Spellcasting Paper/1-5 lbs of Junk/Gems/Dagger/Backpack/Clothes, Common/Signal Whistle/Spellbook/Small Knife/Staff/Little Bag of Sand/Thieves' Tools/Oil of Slipperiness/Potion of Healing (Greater)/Potion of Healing (Superior)/Spell Scroll (5th Level)/Book/Ink (1 ounce bottle)/Ink Pen/Parchment (one sheet)/Climber's Kit/Jug or Pitcher/Mess Kit/Potion of Healing/Rope, Hempen (50 feet)/Bloodstone/Citrine",2022-10-19T00:44:45.667Z,134,1765.1
+211,4797,Jimthechook's Character,12,0,0,0,0,0,0,,Human,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+212,4798,Diana Zophiel Gabriella Althea,12,10,13,12,14,8,15,Sage,Half-Elf,Warlock,5,,,,5,,,2018-06-29T15:37:47Z,0,0.0
+213,4801,Jeroneth,73,8,14,14,12,10,14,Criminal / Spy,Tiefling,Warlock,14,The Fiend,,,14,,"Bracers of Defense/Ring of Protection/Rapier, +1/Dagger/Dagger/Quarterstaff/Crossbow, light/Crystal/Explorer's Pack/Herbalism Kit",2018-06-29T15:37:47Z,0,16642.0
+214,4811,Moraxes's Character,12,15,14,12,8,13,10,,Dwarf,Ranger,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+215,4812,Flick,12,14,17,16,15,17,14,Soldier,Elf,Ranger,5,Hunter,,,5,,,2018-06-29T15:37:47Z,0,0.0
+216,4818,Karaj,12,17,16,15,11,13,10,Folk Hero,Aarakocra,Barbarian,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+217,4826,Lorcan Eldath,12,20,20,20,20,20,20,Acolyte,Elf,Paladin,1,,,,1,,Chain Mail/Javelin/Spear/Spear/Explorer's Pack,2021-11-23T01:59:19.333Z,0,0.0
+218,4830,Gimme Bones,12,20,15,26,16,15,15,,Goliath,Barbarian,1,,,,1,,"Adamantine Chain Shirt/Adamantine Breastplate/Adamantine Chain Mail/Adamantine Plate/Elemental Gem (Yellow Diamond)/Maul, +1/Abacus/Acid (vial)/Potion of Healing",2018-06-29T15:37:47Z,0,3000.0
+219,4837,Gimble Garrick,6,10,14,11,15,4,10,Criminal / Spy,Gnome,Wizard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+220,4839,Bastien LaMontagne,12,13,8,12,14,10,15,Noble,Half-Elf,Warlock,1,The Fiend,,,1,,Backpack,2018-06-29T15:37:47Z,0,0.0
+221,4846,"Donnegar ""Don-Don"" Donnelsen",28,14,8,14,10,12,14,Soldier,Dwarf,Paladin,4,Oath of Devotion,,,4,Inspiring Leader,"Shield/Chain Mail/Javelin/Warhammer/Backpack/Bedroll/Clothes, Common/Mess Kit/Rations (1 day)/Rope, Hempen (50 feet)/Tinderbox/Torch/Waterskin/Emblem",2018-06-29T15:37:47Z,38,10.0
+222,4852,Tykas,28,10,14,12,10,12,15,Far Traveler,Genasi,Warlock,5,The Great Old One,,,5,,"Frost Brand Longsword/Studded Leather/Dagger/Revolver/Backpack/Crowbar/Hammer/Piton/Rations (1 day)/Rope, Hempen (50 feet)/Tinderbox/Torch/Waterskin",2021-10-15T18:39:27.663Z,0,0.0
+223,4856,ALLMAN,57,13,13,11,12,13,13,Criminal / Spy,Human,Barbarian,1,,Rogue/Cleric/Sorcerer/Wizard/Warlock/Bard/Druid/Fighter/Paladin,Knowledge Domain/Storm Sorcery/The Hexblade,10,,,2020-11-19T19:03:16Z,0,0.0
+224,4857,Hostilius Colt,12,0,0,0,0,0,0,,Human,Cleric,7,Life Domain,,,7,,,2018-06-29T15:37:47Z,0,0.0
+225,4860,Jale Fredore,12,10,15,11,14,12,10,Criminal / Spy,Tiefling,Rogue,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+226,4861,Dorn Gnollwood,12,12,13,13,13,11,13,Acolyte,Human,Paladin,3,Oath of Devotion,,,3,Grappler,Longsword,2018-06-29T15:37:47Z,0,0.0
+227,4871,Karmar,12,0,0,0,0,0,0,,Elf,Barbarian,6,,,,6,,,2018-06-29T15:37:47Z,0,0.0
+228,4872,Ceiteach Mac GiollaBridhe,12,14,15,13,10,12,8,Acolyte,Human,Monk,1,,,,1,Grappler,,2018-06-29T15:37:47Z,0,0.0
+229,4873,AlecSteelToo's Character,12,10,19,15,14,12,13,,Elf,Rogue,1,,,,1,,Abacus,2018-06-29T15:37:47Z,0,0.0
+230,4884,Hylan Brach,34,14,11,16,8,10,14,Criminal / Spy,Dwarf,Sorcerer,8,Divine Soul,,,8,,Dwarven Thrower,2021-10-15T18:39:27.683Z,0,0.0
+231,4889,Venfina,12,8,13,14,12,10,15,Criminal / Spy,Halfling,Warlock,2,The Fiend,,,2,,Studded Leather/Longsword/Shortbow,2021-07-01T17:27:12Z,0,0.0
+232,4894,Rintin,12,17,11,16,11,14,13,Noble,Dragonborn,Paladin,5,Oath of Devotion,,,5,Grappler,,2018-06-29T15:37:47Z,0,0.0
+233,4900,Brinise,12,15,10,14,8,12,13,Acolyte,Dwarf,Paladin,8,Oath of Devotion,,,8,,Chain Mail/Greataxe,2018-06-29T15:37:47Z,0,0.0
+234,4908,Gilby Turen,12,13,19,15,17,13,9,Criminal / Spy,Gnome,Rogue,1,,,,1,,"Potion of Clairvoyance/Potion of Clairvoyance/Ring of Animal Influence/Ring of Animal Influence/Leather, +1/Dagger, +2/Crossbow, hand/Dagger/Dagger/Shortsword/Candle/Rope, Hempen (50 feet)/Burglar's Pack/Thieves' Tools/Dice Set",2018-06-29T15:37:47Z,0,968.2
+235,4911,Aluwalyn,12,15,14,13,8,12,10,Soldier,Goliath,Fighter,12,Champion,,,12,Grappler,"Boots of Striding and Springing/Cloak of Elvenkind/Studded Leather, +2/Halberd, +3",2018-06-29T15:37:47Z,0,0.0
+236,4913,Fonkin,12,8,15,11,15,12,10,Sage,Gnome,Wizard,6,School of Evocation,,,6,,Dagger/Component Pouch/Spellbook,2018-07-27T03:07:37.917Z,0,0.0
+237,4920,Aria,13,12,15,14,12,14,13,Sage,Shifter (UA),Druid,2,Circle of the Stars (archived),,,2,,"Leather/Dagger/Scimitar/Backpack/Bedroll/Clothes, Common/Mess Kit/Rations (1 day)/Rope, Hempen (50 feet)/Tinderbox/Torch/Waterskin/Druidic Focus",2020-10-02T01:00:09Z,129,10.0
+238,4934,Berendir,12,13,14,16,17,11,14,Sage,Half-Elf,Wizard,1,,,,1,,"Dagger/Longsword/Quarterstaff/Ink (1 ounce bottle)/Ink Pen/Bedroll/Clothes, Common/Component Pouch/Mess Kit/Potion of Healing/Pouch/Rations (1 day)/Spellbook/Tinderbox/Torch/Waterskin/Scholar's Pack",2018-06-29T15:37:47Z,1270,16.0
+239,4938,Ellan,12,13,8,14,10,15,12,Acolyte,Dwarf,Cleric,3,,,,3,,,2018-06-29T15:37:47Z,0,0.0
+240,4939,Myrthas Creed,19,12,17,13,12,15,12,Criminal / Spy,Half-Elf,Ranger,2,,Rogue,,3,,"Leather/Shortsword/Shortsword/Longbow/Arrows/Clothes, Common/Crowbar/Grappling Hook/Rope, Hempen (50 feet)/Dungeoneer's Pack",2018-06-29T15:37:47Z,390,73.0
+241,4940,Pesyola,10,16,14,5,16,15,12,Noble,Human,Cleric,2,Life Domain,,,2,Grappler,,2018-06-29T15:37:47Z,0,0.0
+242,4950,Qeldhall,8,8,13,14,10,15,12,Sage,Gnome,Druid,1,,,,1,,Shield/Leather/Scimitar/Explorer's Pack/Sprig of Mistletoe,2018-06-29T15:37:47Z,0,0.0
+243,4952,Axel,12,15,11,15,8,10,12,Recon Sniper [HB],Human,Barbarian,1,,Fighter,,3,Grappler,"Bag of Holding/Arrows, +1/Tower Shield [HB]/Deck of Loots [HB]/Deck of Loots [HB]/Bag of Holding - Test/Arrows/Divine Intervention Card [HB]",2022-04-05T06:11:57.973Z,0,0.0
+244,4956,CaptainCastration's Character,12,14,8,12,12,13,14,Soldier,Human,Fighter,1,,,,1,Grappler,Scale Mail/Shield/Longsword/Dungeoneer's Pack,2018-06-29T15:37:47Z,0,0.0
+245,4963,Test Char #1,12,18,0,18,18,18,18,,Dragonborn,Barbarian,1,,Fighter,,20,,,2018-06-29T15:37:47Z,0,0.0
+246,4973,Azura,12,0,0,0,0,0,0,,Elf,Bard,7,,,,7,,,2018-06-29T15:37:47Z,0,0.0
+247,4980,Dolbek,12,12,11,15,9,18,11,Acolyte,Dwarf,Cleric,11,Life Domain,,,11,,"Boots of Elvenkind/Cloak of Displacement/Cloak of Elvenkind/Dust of Sneezing and Choking/Dust of Sneezing and Choking/Dust of Sneezing and Choking/Necklace of Adaptation/Potion of Animal Friendship/Potion of Water Breathing/Robe of Useful Items/Tome of Understanding/Wand of Binding/Adamantine Chain Mail/Splint, +3/Warhammer/Brewer's Supplies/Ball Bearings (bag of 1,000)/Mirror, Steel/Potion of Healing (Greater)/Healer's Kit/Scale Mail/Emblem",2018-06-29T15:37:47Z,0,12496.14
+248,4984,Kyojin,42,15,14,13,10,12,8,Sage,Dragonborn,Monk,6,Way of the Open Hand,,,6,,"Amulet of Health/Quarterstaff, +2/Arrows/Backpack",2018-06-29T15:37:47Z,0,0.0
+249,4988,seldon's Character,12,8,8,8,8,15,8,,Dwarf,Cleric,1,Life Domain,,,1,,,2018-06-29T15:37:47Z,0,0.0
+250,4992,Oakley Travers,12,14,16,10,13,13,17,Criminal / Spy,Human,Bard,12,College of Lore,,,12,,,2018-06-29T15:37:47Z,0,0.0
+251,4994,Thaime Ioborn,80,18,14,15,10,14,17,Soldier,Dragonborn,Fighter,8,Champion,Barbarian,,10,,"Plate/Longsword/Longsword/Acid (vial)/Grappling Hook/Rope, Hempen (50 feet)/Cartographer's Tools/Navigator's Tools",2018-06-29T15:37:47Z,0,0.0
+252,5007,Quent Hoodlow,12,15,10,15,10,11,10,Folk Hero,Half-Orc,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+253,5014,Bran Dawnstrider,73,9,15,11,8,15,13,Acolyte,Human,Monk,9,Way of the Sun Soul,Cleric,Light Domain,14,Tough,"Bag of Holding/Cloak of Protection/Winged Boots/Shortsword, +1/Quarterstaff/Dart/Backpack/Clothes, Common/Crowbar/Hammer/Piton/Rations (1 day)/Rope, Hempen (50 feet)/Waterskin/Tinderbox/Torch/Amulet",2018-10-11T19:04:40.423Z,300,6822.0
+254,5022,Galaron,12,10,15,8,13,12,14,Criminal / Spy,Halfling,Rogue,5,Thief,,,5,,,2018-06-29T15:37:47Z,0,0.0
+255,5025,Coat,6,6,15,13,13,11,14,Acolyte,Human,Bard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+256,5033,Falafel,12,13,16,13,13,15,10,,Elf,Monk,5,Way of the Open Hand,,,5,,"Cloak of Elvenkind/Shortsword, +1",2018-06-29T15:37:47Z,0,35.0
+257,5037,Shaka Barugo,37,10,17,14,11,13,18,,Halfling,Bard,12,College of Lore,,,12,War Caster,Iron Bands of Binding/Oathbow/Elemental Gem (Emerald)/Ring of Cold Resistance/Studded Leather/Shortsword/Drum/Flute/Viol,2020-07-13T07:43:27Z,714,3052.9
+258,5040,Geoff,12,12,15,13,8,14,10,,Human,Ranger,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+259,5043,Darkjonin's Character,12,15,14,13,10,12,8,Soldier,Human,Fighter,3,,,,3,,,2018-06-29T15:37:47Z,0,0.0
+260,5055,Silver Beard,52,13,15,14,10,8,12,Mercenary Veteran,Half-Orc,Fighter,8,Battle Master,Barbarian,,9,,"Shield/Chain Mail/Pelt/Crossbow, light/Crossbow Bolts/Backpack/Crowbar/Hammer/Piton/Rations (1 day)/Rope, Hempen (50 feet)/Tinderbox/Torch/Waterskin",2021-08-12T02:18:35Z,82,10.0
+261,5058,Tiffany,12,14,15,13,12,10,8,Folk Hero,Elf,Ranger,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+262,5062,Acanthus Aemaeth Vallmaunt,12,8,13,14,12,10,15,,Half-Elf,Warlock,1,The Fiend,,,1,,,2018-06-29T15:37:47Z,0,0.0
+263,5070,Umpa's Character,12,18,10,10,16,16,16,Folk Hero,Human,Druid,3,,,,3,,,2018-07-31T10:35:33.187Z,0,0.0
+264,5075,Jolie Youngblight,10,15,14,13,12,10,8,Folk Hero,Human,Fighter,1,,,,1,,"Shield/Leather/Longsword/Crossbow, light/Longbow/Arrows/Crossbow Bolts/Backpack/Bedroll/Clothes, Common/Mess Kit/Pot, Iron/Rations (1 day)/Rope, Hempen (50 feet)/Shovel/Tinderbox/Torch/Waterskin/Mason's Tools",2022-11-15T09:54:05.053Z,0,10.0
+265,5080,AzerDime,12,8,10,14,13,12,15,Sage,Tiefling,Sorcerer,1,Draconic Bloodline,,,1,,,2018-06-29T15:37:47Z,0,0.0
+266,5084,Odysseus's Character,12,0,0,0,0,0,0,,Halfling,Paladin,2,,Warlock,,5,,,2018-06-29T15:37:47Z,0,0.0
+267,5099,Ungrun Rockseeker,63,14,12,13,10,15,8,Soldier,Dwarf,Cleric,12,Life Domain,,,12,Resilient (Constitution),"Arrow-Catching Shield/Rope of Entanglement/Chain Mail, +2/Mace, +1/Warhammer, +1/diamond/misty step diamond/Dagger/Handaxe/Handaxe/Backpack/Clothes, Fine/Component Pouch/Crowbar/Rope, Hempen (50 feet)/Pouch/Signet Ring/Decanter of Endless Water/Tome of Understanding/Potion of Healing (Superior)/Hammer/Piton/Rations (1 day)/Mason's Tools/Vestments/Crampons/Ball Bearings (bag of 1,000)/Caltrops (bag of 20)/Chalk (1 piece)/Holy Water (flask)/Perfume (vial)/Tinderbox/Playing Card Set",2022-10-29T04:59:38.147Z,640,0.0
+268,5104,DisgracedSphere's Character,12,0,0,0,0,0,0,,Human,Rogue,1,,,,1,Grappler,,2018-06-29T15:37:47Z,0,0.0
+269,5113,Pyre,28,13,8,9,7,10,10,Folk Hero,Genasi,Monk,5,,,,5,Skilled,Dwarven Thrower/Robe of the Archmagi/Staff of the Magi/Shortbow/Warhammer,2019-09-16T19:12:04.523Z,0,0.0
+270,5115,bolo ,12,10,14,12,13,8,15,Folk Hero,Half-Elf,Bard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+271,5140,Kerash,6,12,15,13,10,14,8,Acolyte,Half-Orc,Monk,1,,,,1,,Dart/Shortsword/Explorer's Pack,2018-06-29T15:37:47Z,0,0.0
+272,5141,Jocelyn Fletcher,12,12,18,15,14,12,17,,Human,Rogue,1,,,,1,,"Leather/Dagger/Dagger/Shortbow/Rapier/Clothes, Fine/Burglar's Pack/Disguise Kit/Forgery Kit/Thieves' Tools",2018-06-29T15:37:47Z,0,0.0
+273,5147,Kreena,12,10,15,14,8,8,15,Soldier,Human,Paladin,5,,Rogue,,10,,Scale Mail/Shortsword/Shortsword,2018-06-29T15:37:47Z,0,0.0
+274,5157,Caliban,12,15,14,13,12,8,10,Noble,Human,Fighter,6,Champion,,,6,,,2018-06-29T15:37:47Z,0,0.0
+275,5162,Rex,12,0,0,0,0,0,0,,Human,Monk,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+276,5165,Malle,12,8,14,10,13,15,12,Sage,Half-Elf,Druid,3,,,,3,,Studded Leather/Quarterstaff/Explorer's Pack,2018-06-29T15:37:47Z,0,0.0
+277,5175,CawCaw's Character,12,0,0,0,0,0,0,,Human,Ranger,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+278,5177,Balon Coppershield,12,14,14,14,11,7,14,Criminal / Spy,Dragonborn,Barbarian,4,Path of the Berserker,,,4,,,2018-06-29T15:37:47Z,0,0.0
+279,5181,Hennessey,10,13,6,11,12,6,7,Folk Hero,Aarakocra,Ranger,1,,,,1,,Chain Mail,2018-06-29T15:37:47Z,0,0.0
+280,5200,Test Rouge Dude,12,0,0,0,0,0,0,,Halfling,Rogue,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+281,5208,Ukrek,12,14,12,15,9,12,10,Soldier,Half-Orc,Barbarian,1,,,,1,,Greatsword,2018-06-29T15:37:47Z,0,0.0
+282,5210,Therliann,12,12,10,14,8,15,13,Acolyte,Dragonborn,Cleric,1,Life Domain,,,1,,,2018-06-29T15:37:47Z,0,0.0
+283,5211,whiver,12,8,15,12,14,14,8,Noble,Genasi,Monk,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+284,5212,Banthar Kelly,12,0,0,0,0,0,0,,Human,Warlock,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+285,5214,Logico,12,14,15,13,12,10,8,,Elf,Ranger,4,Hunter,,,4,,"Dagger, +1/Leather/Dagger/Dagger/Longbow/Blanket/Clothes, Common/Explorer's Pack",2018-06-29T15:37:47Z,0,0.0
+286,5222,Ivar Sabertooth,12,10,15,13,14,8,12,Noble,Half-Orc,Rogue,1,,,,1,,"Studded Leather/Dagger/Crossbow, light/Rapier/Burglar's Pack",2018-06-29T15:37:47Z,0,155.0
+287,5223,Alywalyn,24,8,8,8,8,8,8,Sage,Gnome,Druid,5,Circle of the Land (Underdark),,,5,,,2018-06-29T15:37:47Z,0,0.0
+288,5224,Vaxo Romanov,12,16,12,15,12,15,16,Soldier,Half-Elf,Paladin,1,,,,1,,Chain Mail/Longsword,2018-06-29T15:37:47Z,0,0.0
+289,5231,Dan712's Character,12,10,15,10,10,10,15,,Halfling,Bard,4,College of Lore,,,4,,,2018-06-29T15:37:47Z,0,0.0
+290,5238,Leolamin,12,8,10,12,14,13,15,,Dragonborn,Warlock,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+291,5247,Ostooth,12,15,13,14,12,8,10,Criminal / Spy,Half-Orc,Fighter,1,,,,1,,Chain Mail/Dagger/Dagger/Greataxe/Maul,2018-06-29T15:37:47Z,0,0.0
+292,5249,Damash ,12,12,15,14,8,10,13,,Dragonborn,Rogue,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+293,5257,Ryjinn,18,10,15,12,8,14,13,Acolyte,Dragonborn,Monk,3,Way of the Open Hand,,,3,,Quarterstaff/Dart,2018-06-29T15:37:47Z,0,18.0
+294,5258,Pananer,12,14,8,13,12,15,10,Sage,Half-Orc,Cleric,1,Life Domain,,,1,,,2018-06-29T15:37:47Z,0,0.0
+295,5263,Jay,50,11,12,12,12,12,10,Folk Hero,Genasi,Cleric,7,Life Domain,,,7,,,2018-06-29T15:37:47Z,0,0.0
+296,5268,Haakon Jarrick,12,0,0,0,0,0,0,,Goliath,Fighter,2,,,,2,,,2018-06-29T15:37:47Z,0,0.0
+297,5271,Smirk,12,0,0,0,0,0,0,,Halfling,Ranger,3,,,,3,,,2018-06-29T15:37:47Z,0,0.0
+298,5274,Timison Briarholdt,32,10,16,12,12,14,16,,Halfling,Rogue,4,,,,4,,"Studded Leather/Dagger/Shortbow/Rapier/Clothes, Costume/Grappling Hook/Lantern, Hooded/Mirror, Steel/Explorer's Pack/Thieves' Tools",2018-06-29T15:37:47Z,615,216.09
+299,5275,Shcnitzel (Ignacia Pubulous),12,11,12,12,11,11,16,Acolyte,Half-Orc,Warlock,6,,,,6,Svirfneblin Magic,,2018-06-29T15:37:47Z,0,0.0
+300,5281,Vesial,12,16,12,17,12,11,15,Soldier,Dragonborn,Paladin,1,,,,1,,Shield/Chain Mail/Longsword/Javelin/Explorer's Pack,2018-06-29T15:37:47Z,0,0.0
+301,5286,Caelthara Galalinde,12,12,15,14,10,13,8,Criminal / Spy,Elf,Ranger,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+302,5291,Chris David,103,12,8,10,6,3,14,Noble,Aarakocra,Bard,20,College of Lore,,,20,Dual Wielder,Adamantine Breastplate/Jar of Bees/Jar of Bees/Vessel of Pure Magic/Wythis' Stone Gear/Moutain's Carapace Cape/Scythes of Wythis/Chaos Orb Rapier/Nautical Knuckles/Proven Coin/Blood of Chaos/Deck of Chaos/Wand of Chaos/Shortsword/Glasses of Nerdicon/Wand of Swarming Ducks/Shadowood Knuckle/Unbroken Proven Shield/Book of Misspelling/Potion of Via/Heretic's Blade/Potion of New Self/Quillblade +1/Cocaine/Balabajube's Nail Polish/Procrasterock,2018-06-29T15:37:47Z,0,0.0
+303,5299,ChongoBongo's Character,12,15,8,14,10,13,12,,Goliath,Barbarian,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+304,5301,lirit Nightfall,22,8,14,13,15,12,10,Sage,Elf,Wizard,5,Bladesinging,,,5,,"Ring of Fire Resistance/Studded Leather/Dagger/Crossbow, light/Rapier/Longbow/Arrows/Crossbow Bolts/Backpack/Bedroll/Case, Crossbow Bolt/Chalk (1 piece)/Clothes, Common/Spellbook/Quiver/Orb/Mess Kit/Tinderbox/Torch/Rations (1 day)/Waterskin/Rope, Hempen (50 feet)",2018-10-15T20:45:18.003Z,19,582.95
+305,5302,Arya,12,15,10,13,10,10,14,Soldier,Half-Elf,Paladin,1,,,,1,,Shield/Chain Mail/Longsword/Greatsword/Explorer's Pack,2018-06-29T15:37:47Z,18,10.0
+306,5307,Tenebris Brightcrow,12,0,0,0,0,0,0,,Tiefling,Bard,5,College of Lore,,,5,,,2018-06-29T15:37:47Z,0,0.0
+307,5308,Koran Dun,12,8,16,12,10,10,16,,Tiefling,Sorcerer,3,Draconic Bloodline,,,3,,,2018-06-29T22:24:22.03Z,0,0.0
+308,5314,Moloch,12,8,15,14,10,10,14,Soldier,Tiefling,Warlock,2,The Fiend,,,2,,,2018-06-29T15:37:47Z,0,0.0
+309,5315,Vyraexii's Character,12,18,18,14,14,12,13,Noble,Elf,Ranger,1,,,,1,,Longsword/Shortsword/Longbow/Arrows,2018-06-29T15:37:47Z,0,0.0
+310,5316,Seldar Everlight,58,15,12,15,10,16,12,Acolyte,Human,Cleric,11,Light Domain,,,11,Observant/War Caster,"Bag of Holding/Goggles of Night/Mace of Disruption/Robe of Scintillating Colors/Stone of Good Luck (Luckstone)/Ring of Psychic Resistance/Shield/Breastplate/Mace/Crossbow, light/Crossbow Bolts/Backpack/Bedroll/Mess Kit/Rope, Hempen (50 feet)/Tinderbox/Rations (1 day)/Torch",2020-10-06T01:17:22Z,78,13181.67
+311,5322,Носиасса,12,15,8,13,12,8,15,,Dragonborn,Warlock,10,The Fiend,,,10,,,2018-09-10T07:31:04.62Z,0,0.0
+312,5327,Lia Carric,107,13,15,12,10,14,8,Outlander,Elf,Ranger,20,Hunter,,,20,Athlete/Dual Wielder,"Boots of Elvenkind/Bracers of Archery/Cloak of Elvenkind/Elven Chain/Headband of Intellect/Ring of Mind Shielding/Sun Blade/Wand of Wonder/Wings of Flying/Studded Leather, +3/Spell Scroll (5th Level)/Vorpal Longsword/Longbow, +1/Longsword, +1/Rapier/Driftglobe/Rod of Resurrection/Longbow, +3/Quiver of Ehlonna/Trident, +1/Moonblade",2018-06-29T15:37:47Z,0,3908.0
+313,5329,Grada,6,12,11,9,11,15,9,Noble,Elf,Rogue,1,,,,1,,Shortsword/Abacus/Acid (vial),2018-06-29T15:37:47Z,86,0.0
+314,5345,Oriret,12,0,0,0,0,0,0,,Human,Warlock,1,The Fiend,,,1,,,2018-06-29T15:37:47Z,0,0.0
+315,5348,Bheltharn,12,9,13,14,17,9,12,,Human,Wizard,3,,,,3,Grappler,Dagger/Spellbook/Staff,2018-06-29T15:37:47Z,0,0.0
+316,5352,Bree Thorngage,33,13,15,12,8,14,10,Outlander,Halfling,Monk,6,Way of the Open Hand,,,6,,"Bracers of Defense/Gloves of Missile Snaring/Goggles of Night/Dagger, +1/Mace, +1/Javelin/Spear/Clothes, Common",2020-11-06T17:35:20Z,79,5149.0
+317,5361,Recursive's Character,12,8,10,13,15,14,12,Sage,Tiefling,Wizard,6,School of Evocation,,,6,,,2018-06-29T15:37:47Z,0,0.0
+318,5380,Hercules,12,17,15,16,10,10,10,Soldier,Human,Barbarian,5,Path of the Berserker,,,5,,"Greatsword, +1/Greatsword, +1",2018-06-29T15:37:47Z,0,0.0
+319,5386,Therius Vrago,56,8,13,12,10,14,16,,Tiefling,Bard,9,College of Lore,,,9,,Studded Leather/Shield,2018-06-29T15:37:47Z,0,0.0
+320,5397,Vyukris,12,15,17,12,11,14,10,Folk Hero,Genasi,Ranger,14,Hunter,,,14,,,2018-06-29T15:37:47Z,0,0.0
+321,5399,Val'iek Shadow,12,10,13,8,15,12,14,Criminal / Spy,Human,Rogue,6,Thief,,,6,Svirfneblin Magic,Amulet of the Planes/Bag of Holding/Bag of Tricks/Cloak of Arachnida/Dagger of Venom/Glamoured Studded Leather/Diplomat's Pack/Disguise Kit,2018-06-29T15:37:47Z,0,0.0
+322,5400,Ilondris Aldaveil,99,10,14,12,12,17,8,Noble,Elf,Ranger,6,Hunter,Cleric/Fighter/Rogue,War Domain/Arcane Archer,17,Observant/Sharpshooter/Resilient (Wisdom),"Dust of Sneezing and Choking/Headband of Intellect/Tome of Understanding/Arrows, +1/Potion of Healing (Greater)/Longbow, +1/Mithral Plate/Shield/Shortsword/Shortsword/Clothes, Fine/Holy Water (flask)/Quiver/Explorer's Pack/Signet Ring/Dice Set/Rope, Hempen (50 feet)",2020-11-18T01:05:44Z,2518,77.0
+323,5407,Vito Ito,124,15,10,13,10,10,14,Criminal / Spy,Half-Elf,Paladin,20,Oath of the Ancients,,,20,,Holy Avenger Greatsword/Adamantine Plate/Dagger/Handaxe/Explorer's Pack/Reliquary,2021-01-21T13:08:51Z,0,0.0
+324,5408,Keth Kursek,12,10,13,12,8,14,15,Acolyte,Half-Orc,Monk,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+325,5411,Tarron Le'Cryk,12,8,14,14,10,12,14,Acolyte,Half-Elf,Sorcerer,3,Draconic Bloodline,,,3,,,2018-06-29T15:37:47Z,0,0.0
+326,5413,Tham Amakiir,34,8,14,13,15,12,10,Sage,Elf,Wizard,8,,,,8,,Bag of Holding/Ring of Spell Storing/Rapier,2018-06-29T15:37:47Z,0,0.0
+327,5424,Ducky Character,12,15,12,14,13,10,8,Soldier,Dragonborn,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+328,5426,Dirth,12,8,14,14,12,15,8,,Elf,Cleric,1,,,,1,,Chain Mail/Shortsword,2018-06-29T15:37:47Z,0,0.0
+329,5440,Bakaras,26,8,14,14,15,10,10,Criminal / Spy,Feral Tiefling,Wizard,6,School of Enchantment,,,6,,"Winged Boots/Spell Scroll (2nd Level)/Spell Scroll (3rd Level)/Dagger/Clothes, Common/Crowbar/Pouch/Spellbook/Explorer's Pack/Wand",2021-07-02T06:37:40Z,2830,332.88
+330,5443,Ascend,8,10,10,10,14,13,11,Acolyte,Genasi,Druid,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+331,5445,PaulAtredis's Character,12,15,13,14,12,10,8,Soldier,Human,Barbarian,1,,,,1,Grappler,,2018-06-29T15:37:47Z,0,0.0
+332,5446,Carnil Sỳnfemir,12,8,15,14,15,10,8,Soldier,Elf,Wizard,13,School of Evocation,,,13,Svirfneblin Magic,,2018-06-29T15:37:47Z,0,0.0
+333,5456,Kreeja,12,11,11,12,14,13,13,Sage,Aarakocra,Druid,1,,,,1,,"Leather/Dagger/Scimitar/Ink (1 ounce bottle)/Clothes, Common/Explorer's Pack",2018-06-29T15:37:47Z,58,10.0
+334,5460,Garf Furypawn,42,16,14,17,6,6,12,Soldier,Goliath,Barbarian,6,,,,6,Grappler,Backpack,2018-06-29T15:37:47Z,0,0.0
+335,5464,Alvyn Archlight Garrick,8,0,0,0,0,0,0,,Gnome,Cleric,3,,,,3,,,2018-06-29T15:37:47Z,0,0.0
+336,5472,Boris's Character,12,15,13,10,14,12,8,,Human,Ranger,4,,,,4,Grappler,"Adamantine Chain Shirt/Adamantine Breastplate/Adamantine Breastplate/Adamantine Chain Mail/Armor of Fire Resistance, Hide/Armor of Fire Resistance, Hide/Abacus/Acid (vial)",2018-06-29T15:37:47Z,0,0.0
+337,5479,Alchos Ohme,63,10,18,16,12,13,14,Urban Bounty Hunter,Genasi,Rogue,6,Swashbuckler,Fighter,Rune Knight (archived),11,Dual Wielder/Skilled,"Cloak of Protection/Glamoured Studded Leather/Ring of Psychic Resistance/Scimitar, +1/Scimitar, +1/Dagger of Blindsight/Leather/SPHERULE OF SURVIVAL/Dagger/Acid (vial)/Burglar's Pack",2020-12-14T07:08:14Z,26,0.0
+338,5488,Joshua Dacre,12,10,16,13,11,10,17,,Human,Bard,10,College of Lore,,,10,,,2018-06-29T15:37:47Z,0,0.0
+339,5498,joff,6,11,10,12,14,10,10,Sage,Human,Rogue,1,,,,1,Grappler,,2018-06-29T15:37:47Z,0,0.0
+340,5500,Shen Long,53,14,16,14,9,15,10,Acolyte,Dragonborn,Monk,10,Way of the Open Hand,,,10,,"Dart/Shortsword/Clothes, Common/Pouch/Explorer's Pack",2018-06-29T15:37:47Z,0,45.55
+341,5505,Antony de Vries,12,18,13,15,11,15,17,,Human,Paladin,1,,,,1,,"Plate, +3",2018-06-29T15:37:47Z,0,0.0
+342,5506,Hawk,12,15,10,13,8,12,14,Soldier,Half-Elf,Paladin,1,,,,1,,Shield/Chain Mail/Longsword/Javelin/Priest's Pack,2018-06-29T15:37:47Z,0,0.0
+343,5516,ThauN'Lightfire,12,15,12,14,8,10,13,Soldier,Dragonborn,Fighter,1,,,,1,,"Animated Shield/Armor of Force Resistance, Padded",2018-06-29T15:37:47Z,0,0.0
+344,5518,Azuriel Boltsinger,12,15,8,12,10,13,14,Acolyte,Dragonborn,Paladin,2,,,,2,,Shield/Chain Mail/Longsword/Spear/Greatsword/Amulet,2018-06-29T15:37:47Z,17,0.0
+345,5526,jekar,22,8,13,12,15,14,10,Outlander,Genasi,Wizard,5,School of Evocation,,,5,Spell Sniper (Wizard),"Headband of Intellect/Potion of Fire Breath/Quarterstaff/Crystal/Backpack/Bedroll/Clothes, Traveler's/Hunting Trap/Mess Kit/Potion of Healing/Rations (1 day)/Rope, Hempen (50 feet)/Spellbook/Tinderbox/Torch/Waterskin/Staff",2018-07-07T02:28:52.253Z,34,453.0
+346,5530,Raghk Kimbatuul,45,15,8,13,10,12,14,Noble,Dragonborn,Paladin,7,Oath of Devotion,,,7,,"Potion of Invisibility/Driftglobe/Holy Symbol of Ravenkind/Shield/Chain Mail/Warhammer/Backpack/Bedroll/Case, Map or Scroll/Clothes, Fine/Lantern, Hooded/Mess Kit/Oil (flask)/Explorer's Pack/Sealing Wax/Dragonchess Set/Signet Ring/Amulet/Tinderbox/Torch/Rations (1 day)/Waterskin",2020-06-22T19:33:59Z,419,211.0
+347,5532,Brother Brolin,12,15,8,13,10,12,14,Noble,Human,Paladin,1,,,,1,,"Longsword, +1/Shield/Chain Mail/Longsword/Javelin",2018-06-29T15:37:47Z,0,0.0
+348,5534,Pyros,31,14,9,14,13,11,16,Hermit,Tiefling,Sorcerer,9,Draconic Bloodline,,,9,War Caster/Dragon Hide,"Amulet of Proof against Detection and Location/Potion of Poison Resistance/Sending Stones/Bag of Folding/Cinderblast's Talon/Staff of Defense/Dagger/Blanket/Case, Map or Scroll/Clothes, Common/Clothes, Traveler's/Crowbar/Hammer/Signet Ring/Spellbook/Piton/Torch/Tinderbox/Waterskin/Rope, Hempen (50 feet)/Herbalism Kit/Healer's Kit/Rations (1 day)",2020-10-25T00:09:52Z,369,1018.5
+349,5541,Eadric Of Carford,21,8,14,13,15,10,12,Noble,Human,Wizard,5,School of Evocation,,,5,,"Elven Chain/Potion of Flying/Potion of Water Breathing/Dagger/Quarterstaff/Abacus/Clothes, Fine/Signet Ring/Spellbook/Scholar's Pack/Wand",2018-06-29T15:37:47Z,4,25.0
+350,5545,Xyrdove,12,0,0,0,0,0,0,,Tiefling,Sorcerer,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+351,5553,Ocean,12,12,14,14,10,17,13,,Genasi,Druid,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+352,5557,Raz651's Character,12,15,12,14,8,13,10,Acolyte,Dragonborn,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+353,5559,Do Oh ,6,8,13,14,12,10,15,Sage,Dragonborn,Sorcerer,1,Draconic Bloodline,,,1,,"Dagger/Dagger/Crossbow, light/Crossbow Bolts/Explorer's Pack/Rod",2018-06-29T15:37:47Z,0,0.0
+354,5561,Brillyn Sulkris,16,10,14,12,11,13,16,Acolyte,Aasimar,Warlock,3,The Celestial,,,3,,"Leather/Dagger/Dagger/Quarterstaff/Crossbow, light/Crossbow Bolts/Book/Ink (1 ounce bottle)/Ink Pen/Parchment (one sheet)/Backpack/Clothes, Common/Reliquary/Little Bag of Sand/Small Knife/Vestments",2021-02-10T01:53:38Z,33,15.0
+355,5565,Nogard Nrob,100,17,14,15,10,16,11,Sailor,Human,Fighter,16,Battle Master,,,16,Polearm Master/Shield Master/Tavern Brawler/Tough/Fighting Initiate/Piercer/Skill Expert,"Bag of Holding/Cloak of Protection/Decanter of Endless Water/Shield of Missile Attraction/Spear of Backbiting/Mizzium Armor, Plate",2022-04-27T05:32:56.107Z,0,0.0
+356,5567,Beowulf,12,0,0,0,0,0,0,,Human,Druid,1,,,,1,Grappler,,2018-06-29T15:37:47Z,0,0.0
+357,5568,Fillimore Higgins,12,15,13,14,10,12,8,Folk Hero,Dragonborn,Barbarian,4,Path of the Berserker,,,4,,Shield/Handaxe/Javelin/Greataxe/Explorer's Pack,2018-06-29T15:37:47Z,0,0.0
+358,5570,Kia,12,19,14,14,14,14,14,Sage,Gnome,Paladin,5,Oath of Devotion,Warlock,The Fiend,6,Grappler,,2018-06-29T15:37:47Z,0,0.0
+359,5576,Nethdoris,12,10,15,10,12,11,14,Criminal / Spy,Human,Rogue,1,,,,1,,Leather/Dagger/Dagger/Shortbow/Shortsword/Burglar's Pack/Thieves' Tools,2018-06-29T15:37:47Z,0,0.0
+360,5590,Rouk,12,0,0,0,0,0,0,,Aarakocra,Fighter,6,,Rogue,,9,,,2018-06-29T15:37:47Z,0,0.0
+361,5597,T'nerrin Quickwit,12,8,15,14,12,14,8,Sage,Gnome,Fighter,8,,,,8,Svirfneblin Magic,,2018-06-29T15:37:47Z,22,0.0
+362,5606,Hölg,22,11,14,14,16,12,10,Sage,Half-Orc,Wizard,5,School of Evocation,,,5,,"Dagger/Dagger/Quarterstaff/Crossbow, light/Case, Map or Scroll/Clothes, Traveler's/Component Pouch/Pouch/Pouch/Sack/Sack/Spellbook/Explorer's Pack/Donkey (or Mule)/Saddlebags/Ink (1 ounce bottle)/Ink Pen/Ball Bearings (bag of 1,000)/Caltrops (bag of 20)",2021-10-16T06:16:41.9Z,50,579.2
+363,5607,Isofyx,12,8,10,14,12,15,13,Sage,Half-Elf,Druid,1,,,,1,,Shield/Leather/Scimitar,2018-06-29T15:37:47Z,0,0.0
+364,5609,Keifer,12,12,15,13,14,14,14,,Half-Elf,Warlock,5,,,,5,,Studded Leather,2018-06-29T15:37:47Z,0,0.0
+365,5621,Mattrick's Character,12,8,15,14,10,14,10,Sage,Genasi,Monk,5,Way of the Open Hand,,,5,,Tome of Understanding,2018-06-29T15:37:47Z,0,0.0
+366,5626,verinelghinyrr,12,8,13,15,10,10,15,Criminal / Spy,Half-Elf,Sorcerer,1,Draconic Bloodline,,,1,,,2018-06-29T15:37:47Z,0,0.0
+367,5632,Shabimaycry's Character,12,15,13,14,10,12,8,Folk Hero,Dragonborn,Fighter,8,Champion,,,8,Grappler,Adamantine Breastplate,2018-06-29T15:37:47Z,0,0.0
+368,5653,Adxina,12,8,10,12,14,13,15,Folk Hero,Halfling,Warlock,1,The Fiend,,,1,,Studded Leather/Shortsword,2018-06-29T15:37:47Z,0,0.0
+369,5655,Xilaerys,12,16,16,14,12,16,13,Acolyte,Human,Monk,1,,Fighter/Sorcerer/Ranger/Rogue/Warlock/Bard/Barbarian,Draconic Bloodline/The Fiend,8,Svirfneblin Magic,"Amulet of the Planes/Bag of Holding/Bracers of Defense/Cloak of the Bat/Decanter of Endless Water/Ring of Free Action/Flame Tongue Shortsword/Ioun Stone of Regeneration/Dagger, +3/Longbow, +3/Dungeoneer's Pack",2018-06-29T15:37:47Z,0,0.0
+370,5658,cinnamontoastken's Character,76,19,13,17,14,14,17,Noble,Human,Paladin,12,,,,12,Grappler,"Flame Tongue Greatsword/Adamantine Plate/Plate, +2",2022-07-24T14:28:50.783Z,0,0.0
+371,5660,Ramarx's Character,12,0,0,0,0,0,0,,Goliath,Warlock,1,The Fiend,,,1,,,2018-06-29T15:37:47Z,0,0.0
+372,5670,Perge Staebaek,12,15,14,15,8,10,8,Soldier,Human,Fighter,5,Champion,Barbarian,,6,,"Shield, +1/Breastplate/Longsword/Explorer's Pack",2020-08-08T04:05:29Z,0,0.0
+373,5681,Drexnas's Character,12,0,0,0,0,0,0,,Human,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+374,5682,Mojo Bronzarc,12,8,14,12,13,12,14,Sage,Human,Bard,1,,,,1,,"Armor of Cold Resistance, Leather",2018-06-29T15:37:47Z,0,0.0
+375,5689,NPC,12,11,18,14,15,16,18,Criminal / Spy,Human,Rogue,13,Thief,,,13,Grappler,,2018-06-29T15:37:47Z,0,0.0
+376,5703,Aether,12,0,0,0,0,0,0,,Elf,Monk,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+377,5707,Derek Braunanvil,12,0,0,0,0,0,0,,Dwarf,Cleric,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+378,5710,Drazsz's Character,12,0,0,0,0,0,0,,Elf,Fighter,5,,,,5,Grappler,,2018-06-29T15:37:47Z,0,0.0
+379,5712,Hrok,12,13,14,15,8,10,12,,Human,Fighter,5,Champion,,,5,Grappler,,2018-06-29T15:37:47Z,0,0.0
+380,5713,Guigotim's,12,13,14,14,10,9,13,,Elf,Ranger,1,,,,1,,"Animated Shield/Armor of Cold Resistance, Plate/Longbow",2018-06-29T15:37:47Z,0,0.0
+381,5717,Fook,6,8,13,14,12,10,15,Sage,Elf,Sorcerer,1,Draconic Bloodline,,,1,,"Dagger/Dagger/Crossbow, light/Crossbow Bolts/Explorer's Pack/Rod",2018-06-29T15:37:47Z,0,0.0
+382,5720,Beardgace,6,4,4,11,9,13,10,Acolyte,Genasi,Wizard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+383,5723,Crafaelor,23,8,13,15,10,12,14,Sage,Half-Elf,Warlock,4,The Great Old One,,,4,,"Potion of Flying/Ring of Force Resistance/Quarterstaff, +1/Studded Leather/Leather/Dagger/Dagger/Dagger/Dagger/Crossbow, light/Crossbow Bolts/Backpack/Clothes, Common/Orb/Crowbar/Hammer/Piton/Torch/Tinderbox/Rations (1 day)/Waterskin/Rope, Hempen (50 feet)/Potion of Healing/Midnight Tears (Ingested)",2018-07-09T02:13:26.94Z,274,3897.0
+384,5724,Kal Vonduriel,12,9,14,18,17,14,18,Sage,Tiefling,Sorcerer,1,Draconic Bloodline,,,1,,,2018-06-29T15:37:47Z,0,0.0
+385,5728,Lucian Ravencastle,53,10,15,10,13,14,10,Criminal / Spy,Human,Rogue,12,Thief,,,12,,"Bag of Holding/Cloak of Protection/Dagger of Venom/Ring of Lightning Resistance/Studded Leather/Shortbow/Rapier/Clothes, Common/Crowbar/Lantern, Hooded/Oil (flask)/Pouch/Rope, Silk (50 feet)/Poisoner's Kit/Thieves' Tools/Disguise Kit/Spyglass/Waterskin",2018-06-29T15:37:47Z,15,21000.0
+386,5752,Hurr1came's Character,12,8,14,13,10,12,15,Acolyte,Halfling,Sorcerer,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+387,5753,Dax Fellborn,10,11,16,12,16,16,15,Criminal / Spy,Dragonborn,Wizard,2,School of Evocation,,,2,,"Dagger/Quarterstaff/Backpack/Clothes, Fine/Component Pouch/Mess Kit/Rations (1 day)/Rope, Hempen (50 feet)/Spellbook/Tinderbox/Torch/Waterskin/Disguise Kit/Forgery Kit",2018-06-29T15:37:47Z,0,2.0
+388,5761,Luheengo,31,16,20,20,11,14,16,Sage,Genasi,Monk,5,Way of the Open Hand,,,5,,,2021-01-27T07:11:02Z,0,0.0
+389,5762,Tazriz Darksnark,100,12,14,15,13,8,10,Inheritor,Kobold,Fighter,16,Eldritch Knight,,,16,Resilient (Dexterity),"Cloak of the Manta Ray/Portable Hole/Rod of Alertness/Winged Boots/Rapier, +1/Studded Leather/Rapier/Backpack/Clothes, Traveler's/Manual of Quickness of Action/Stone of Controlling Earth Elementals/Enduring Spellbook/Shortbow/Arrows/Book/Bedroll/Case, Map or Scroll/Clothes, Traveler's/Rope, Hempen (50 feet)/Potion of Animal Friendship/Figurine of Wondrous Power (Obsidian Steed)/Potion of Healing (Greater)/Potion of Fire Resistance/Ruby of the War Mage/Potion of Healing/Waterskin/Wand",2022-10-29T04:58:48.48Z,6057,7330.5
+390,5765,Flicker of the Shadows,67,9,17,11,14,12,17,Sage,Tabaxi,Monk,10,Way of the Kensei,,,10,Sentinel/Magic Initiate (Wizard),"Arrow of Slaying/Gauntlets of Ogre Power/Handy Haversack/Periapt of Health/Periapt of Health/Veil of the Shadows/Dragonhide Belt, +1/Crossbow of Magic Missile/Phoenix Blade Katana/Javelin/Scimitar/Longbow/Arrows/Explorer's Pack/Decanter of Endless Water/Potion of Healing (Greater)/Stack of Papers /Case of Rare Pigments /Unknown Gem Material/Holy Water (flask)/Potion of Healing/Disguise Kit/Disguise Kit",2022-11-09T03:17:17.703Z,1854,14291.7
+391,5776,Vizaru's Character,12,15,10,13,8,12,14,Noble,Human,Fighter,1,,,,1,Grappler,,2018-06-29T15:37:47Z,0,0.0
+392,5786,Murmur,12,15,13,14,8,12,10,Soldier,Genasi,Fighter,3,Champion,,,3,,"Mace, +1/Shield/Splint",2018-06-29T15:37:47Z,0,0.0
+393,5788,Carver,12,9,20,15,14,11,8,Criminal / Spy,Halfling,Rogue,1,,,,1,,Studded Leather/Dagger/Dagger/Shortbow/Shortsword/Dungeoneer's Pack/Thieves' Tools,2018-06-29T15:37:47Z,0,120.0
+394,5790,Apple Frittwitch,12,8,14,10,12,13,15,Sage,Human,Warlock,1,The Fiend,,,1,,,2018-06-29T15:37:47Z,0,0.0
+395,5796,Ivellios Kontos ,29,15,16,15,14,14,16,,Elf,Paladin,3,Oath of Devotion,,,3,,Shield/Chain Mail/Longsword/Warhammer,2018-06-29T15:37:47Z,0,0.0
+396,5799,Vicross Swiftsworn,55,12,14,13,10,10,14,Entertainer,Half-Elf,Bard,8,College of Lore,Paladin,,10,,"Amulet of Health/Breastplate, +1/Eyes of the Eagle/Gauntlets of Ogre Power/Longbow, +1/Ring of Archery Fighting Style/Leather/Dagger/Shortbow/Greatsword/Rapier/Quiver/Entertainer's Pack /Lute/Lyre",2021-09-08T17:31:02Z,10,0.0
+397,5800,Orugul,12,15,15,15,8,8,8,Folk Hero,Half-Orc,Barbarian,4,Path of the Berserker,,,4,,,2020-12-02T19:50:52Z,0,0.0
+398,5803,Akenara,42,13,10,14,8,15,12,Acolyte,Dwarf,Cleric,7,Light Domain,Fighter,Eldritch Knight,10,,Bag of Holding/Necklace of Prayer Beads/Restorative Ointment/Restorative Ointment/Potion of Healing (Greater)/Spell Scroll (3rd Level)/Spell Scroll (4th Level)/Spell Scroll (5th Level)/Mithral Scale Mail/Potion of Vitality/Sun Hammer/Blue Dragonskin Cloak/Mystery Key/Healer's Kit/Mason's Tools/Potion of Healing/Oil (flask)/Alchemist's Fire (flask)/Explorer's Pack/Enhanced Spellguard Shield/Handaxe,2021-07-01T16:41:28Z,1612,301.12
+399,5804,Dha'Vic M'Taal,12,15,18,15,14,18,15,Criminal / Spy,Elf,Rogue,1,,,,1,,Boots of Elvenkind,2018-06-29T15:37:47Z,0,0.0
+400,5805,Noros,12,14,12,15,12,11,8,Folk Hero,Half-Orc,Barbarian,5,Path of the Berserker,,,5,,"Gauntlets of Ogre Power/Battleaxe, +1/Shield/Javelin/Rations (1 day)/Explorer's Pack/Riding Horse",2018-06-29T15:37:47Z,0,0.0
+401,5806,dardenbattleaxe's Character,12,0,0,0,0,0,0,,Dwarf,Barbarian,12,,,,12,,,2018-06-29T15:37:47Z,0,0.0
+402,5811,Thorin Frostbeard,30,13,10,15,12,14,8,Acolyte,Dwarf,Cleric,6,Life Domain,,,6,Grappler,Shield/Chain Mail/Battleaxe,2018-06-29T15:37:47Z,0,0.0
+403,5841,Linne Steele,58,17,14,17,17,12,10,Criminal / Spy,Human,Fighter,5,Eldritch Knight,Wizard,School of Abjuration,11,Medium Armor Master/Observant,"Gloves of Swimming and Climbing/Pipes of the Sewers/Ring of Djinni Summoning/Ring of Protection/Sun Blade/Half Plate, +1/Greatsword, +1/Longbow/Arrows/Backpack/Case, Map or Scroll/Chalk (1 piece)/Climber's Kit/Magnifying Glass/Rope, Hempen (50 feet)/Grappling Hook/Spellbook/Component Pouch/Crowbar/Hammer/Piton/Tinderbox/Rations (1 day)/Waterskin",2021-05-07T02:02:49Z,161,0.0
+404,5848,Krae,8,12,10,14,8,15,13,Outlander,Human,Druid,1,,,,1,,Shield/Leather/Quarterstaff,2018-06-29T15:37:47Z,0,0.0
+405,5852,Drizzt Daermon N'A'Shezbaernon,37,10,12,13,15,6,14,Acolyte,Human,Ranger,10,Hunter,,,10,Grappler/Svirfneblin Magic,,2018-06-29T15:37:47Z,0,0.0
+406,5862,xryanrussellx's Character,12,10,12,11,13,15,13,Sage,Elf,Druid,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+407,5868,Darkain,33,13,17,12,14,7,12,Criminal / Spy,Dwarf,Rogue,6,Thief,,,6,,Leather/Dagger/Dagger/Shortbow/Rapier/Burglar's Pack/Thieves' Tools,2021-08-19T17:58:12Z,0,0.0
+408,5875,Sir Papi Will de la Catacumba,12,0,0,0,0,0,0,,Elf,Ranger,4,,,,4,,,2018-06-29T15:37:47Z,0,0.0
+409,5884,Tyrone Kara Ejderha,54,15,14,13,10,12,8,Soldier,Goliath,Barbarian,7,Path of the Berserker,,,7,,"Bag of Beans/Boots of Elvenkind/Ring of Protection/Ring of Water Walking/Ring of Fire Resistance/Sickle, +1/Javelin/Crossbow, light/Greatsword/Backpack/Bedroll/Clothes, Common/Mess Kit/Tinderbox/Torch/Rations (1 day)/Waterskin/Rope, Hempen (50 feet)",2018-09-21T01:54:08.63Z,1406,1230.76
+410,5889,Magnus Vaebner,12,15,13,13,8,15,10,Acolyte,Halfling,Cleric,1,Life Domain,,,1,,Shield/Chain Mail/Quarterstaff,2018-06-29T15:37:47Z,0,0.0
+411,5890,Yuzuki Seo,22,13,15,13,11,8,13,,Tiefling,Bard,4,College of Lore,,,4,,Dulcimer,2018-06-29T15:37:47Z,76,0.0
+412,5894,Gelza ,12,10,12,15,13,17,19,Acolyte,Tiefling,Warlock,1,The Fiend,,,1,,,2018-06-29T15:37:47Z,0,0.0
+413,5902,Leto,12,15,12,14,8,13,10,,Human,Sorcerer,1,Draconic Bloodline,,,1,Grappler,,2018-06-29T15:37:47Z,0,0.0
+414,5906,awkweird's Character,12,15,10,14,13,12,8,Soldier,Dwarf,Fighter,1,,,,1,,Adamantine Chain Mail,2018-06-29T15:37:47Z,0,0.0
+415,5923,La'ven Bocote,16,10,16,12,12,13,12,Far Traveler,Elf,Ranger,2,,,,2,,,2018-12-28T03:36:12.53Z,0,0.0
+416,5924,dikeme's Character,12,0,0,0,0,0,0,,Dragonborn,Fighter,5,,Ranger,,8,,,2018-06-29T15:37:47Z,0,0.0
+417,5927,Orcutsk,12,15,8,12,12,12,11,Soldier,Half-Orc,Fighter,1,,,,1,,Shield/Plate/Battleaxe,2018-06-29T15:37:47Z,0,0.0
+418,5929,"Leanann ""Redemption"" Chaldreen",12,18,13,16,14,16,17,Soldier,Tiefling,Paladin,1,,,,1,,Shield/Chain Mail/Javelin/Warhammer/Backpack/Mess Kit/Tinderbox/Waterskin/Dice Set/Amulet,2018-06-29T15:37:47Z,448,150.0
+419,5937,Manus Haffee,12,15,13,15,8,8,12,Folk Hero,Dwarf,Barbarian,2,,,,2,,,2018-06-29T15:37:47Z,0,0.0
+420,5938,Garin Irongut,12,18,15,18,11,12,12,,Dwarf,Barbarian,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+421,5945,Ilifir,12,15,12,13,10,8,14,Sage,Half-Elf,Warlock,3,The Fiend,,,3,,Leather/Dagger/Dagger/Quarterstaff/Greatsword/Shortsword,2018-06-29T15:37:47Z,0,0.0
+422,5946,Mors Arkalis,76,8,15,12,9,11,14,Charlatan,Tiefling,Rogue,11,Swashbuckler,Fighter,Champion,14,Sentinel/Skilled,"Ring of Regeneration/Studded Leather, +1/Sunsword/Vial of Poisoned Wine/Dagger/Dagger/Dagger/Dagger/Dagger/Shortsword/Shortsword/Backpack/Ball Bearings (bag of 1,000)/String/Bell/Candle/Crowbar/Hammer/Piton/Lantern, Hooded/Oil (flask)/Rations (1 day)/Tinderbox/Waterskin/Thieves' Tools/Clothes, Fine/Disguise Kit/Vial/Holy Symbol/Whetstone/Stake (Wooden)",2021-09-18T01:16:51Z,71,51.61
+423,5967,Graxus,12,15,12,13,11,12,10,Folk Hero,Dragonborn,Barbarian,1,,,,1,,"Longbow, +2/Shield/Hide/Spear",2018-06-29T15:37:47Z,0,0.0
+424,5975,Heiner,10,15,13,14,10,12,8,Soldier,Dwarf,Fighter,1,,,,1,,Shield/Chain Mail/Handaxe/Handaxe/Battleaxe/Explorer's Pack,2018-06-29T15:37:47Z,0,0.0
+425,5985,czarbss's Character,82,8,8,8,8,8,8,,Aarakocra,Wizard,20,,,,20,,Ring of Shooting Stars/Ioun Stone of Mastery,2020-06-04T20:42:42Z,0,0.0
+426,5999,Alana,12,8,8,8,8,8,8,Soldier,Elf,Rogue,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+427,6003,Test001,12,8,15,13,10,14,12,,Elf,Monk,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+428,6006,Walfbar,40,6,13,12,14,12,14,Sage,Half-Elf,Sorcerer,7,Draconic Bloodline,,,7,,,2018-06-29T15:37:47Z,0,0.0
+429,6007,Austral,12,8,13,12,15,10,14,Sage,Genasi,Wizard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+430,6010,Gilgamet,12,12,16,18,18,17,17,Criminal / Spy,Gnome,Druid,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+431,6022,Zradhall,46,12,14,15,10,8,17,Noble,Dragonborn,Sorcerer,8,Draconic Bloodline,Paladin,,10,,"Cape of the Mountebank/Pearl of Power/Ring of Spell Storing/Ring of Swimming/Flame Tongue Longsword/Mithral Half Plate/Dagger/Dagger/Crossbow, light/Crossbow Bolts/Explorer's Pack/Rod",2020-03-23T16:09:23.593Z,0,0.0
+432,6028,Verarhen Norodel,28,0,0,0,0,0,0,,Elf,Druid,5,Circle of the Land (Swamp),,,5,,,2018-06-29T15:37:47Z,0,0.0
+433,6030,Percival,12,8,10,12,14,13,15,Acolyte,Tiefling,Warlock,1,The Fiend,,,1,,"Armor of Acid Resistance, Leather/Dagger/Staff",2018-06-29T15:37:47Z,0,0.0
+434,6032,Tuls Leah,12,0,0,0,0,0,0,,Tiefling,Cleric,3,,,,3,,,2018-06-29T15:37:47Z,0,0.0
+435,6040,Xaegan Deathwhisper,66,20,15,15,20,13,10,Soldier,Dragonborn,Fighter,8,Champion,,,8,,"Robe of Useful Items/Shield/Chain Mail/Dagger/Dagger/Warhammer/Longbow/Component Pouch/Ladder (10 foot)/Lantern, Bullseye/Mirror, Steel/Pole (10-foot)/Ram, Portable/Rowboat/Mastiff/Rope, Hempen (50 feet)/Sack/Spellbook/Playing Card Set/Sack/Mastiff",2018-06-29T15:37:47Z,758,1538.8
+436,6045,Moxen's Character,12,8,14,12,13,15,10,Sage,Aarakocra,Monk,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+437,6046,Tiberius Selmy,113,15,10,13,8,12,14,,Half-Elf,Paladin,15,Oath of Vengeance,,,15,Sentinel/Shield Master,"Stone of Good Luck (Luckstone)/Dragon Slayer Longsword +2/Flamma/Shield/Plate/Javelin/Backpack/Clothes, Common/Pouch/Emblem/Bedroll/Rations (1 day)/Rope, Hempen (50 feet)/Waterskin/Holy Water (flask)/Mess Kit",2022-01-05T02:03:10.517Z,67,0.5
+438,6070,Rhaegar,54,8,14,12,14,10,14,Noble,Draconic Races (Archived),Wizard,15,School of Evocation,,,15,Resilient (Constitution),"Cloak of Protection/Robe of the Archmagi/Wand of the War Mage, +1/Ioun Stone of Reserve/Potion of Healing (Greater)/Hands of Castor",2021-06-16T04:04:38Z,43,440.7
+439,6076,Coen Crowell,12,8,10,14,13,12,15,,Human,Sorcerer,3,,Warlock,,5,,,2018-06-29T15:37:47Z,0,0.0
+440,6083,Doseth,12,13,10,14,12,8,15,Noble,Tiefling,Warlock,1,The Fiend,,,1,,,2018-06-29T15:37:47Z,0,0.0
+441,6084,Daerris Elanorin,12,13,15,13,11,13,8,Folk Hero,Elf,Ranger,1,,,,1,,"Amulet of Health/Belt of Hill Giant Strength/Boots of Elvenkind/Bracers of Archery/Efficient Quiver/Gloves of Swimming and Climbing/Oathbow/Ring of Animal Influence/Ring of Invisibility/Arrows, +3/Giant Slayer Shortsword/Luck Blade Shortsword/Mithral Scale Mail/Candle/Clothes, Traveler's/Dice Set/Explorer's Pack/Fishing Tackle/Hunting Trap/Lantern, Hooded/Rations (1 day)/Rope, Silk (50 feet)/Waterskin/Woodcarver's Tools/Pouch/Tent, Two-Person/Whetstone",2018-06-29T15:37:47Z,0,0.0
+442,6093,Gwan,12,8,12,13,14,10,15,Criminal / Spy,Halfling,Bard,1,,,,1,,"Leather/Dagger/Rapier/Clothes, Common/Crowbar/Entertainer's Pack /Lute",2018-06-29T15:37:47Z,0,15.0
+443,6094,Arisen,12,10,15,13,10,10,14,Soldier,Half-Elf,Warlock,5,The Fiend,,,5,,Adamantine Half Plate/Holy Avenger Longsword,2018-06-29T15:37:47Z,0,0.0
+444,6100,Neer Otarel,12,13,15,12,10,13,10,Soldier,Human,Fighter,5,,Rogue,,7,,,2018-06-29T15:37:47Z,0,0.0
+445,6104,Mike Smith,12,12,14,11,12,8,15,Criminal / Spy,Dwarf,Bard,1,,,,1,,"Leather/Dagger/Rapier/Clothes, Common/Crowbar/Entertainer's Pack /Lute",2018-06-29T15:37:47Z,4,15.0
+446,6108,Lightbringer Veyara Eloh,70,15,10,15,10,8,13,Soldier,Aasimar,Paladin,11,Oath of the Ancients,,,11,Sentinel/Tough,"Gem of Seeing/Ring of Free Action/Armor of Acid Resistance, Chain Mail/Moonblade/Dawnbringer/Shield/Splint/Society of Brilliance Pendant/Javelin/Explorer's Pack/Emblem",2020-12-14T07:18:31Z,376,1016.0
+447,6118,Grerona,57,14,11,14,10,13,15,Sage,Dwarf,Druid,8,Circle of the Land (Desert),,,8,Grappler,,2018-06-29T15:37:47Z,0,0.0
+448,6120,Sabek,12,0,0,0,0,0,0,Soldier,Dragonborn,Barbarian,14,Path of the Berserker,,,14,,"Winged Boots/Greataxe, +2/Greataxe, +2/Longbow, +2/Net/Net/Manacles/Explorer's Pack",2018-06-29T15:37:47Z,0,4802.0
+449,6132,Razukan's Character,12,0,0,0,0,0,0,,Human,Wizard,1,,,,1,Svirfneblin Magic,,2018-06-29T15:37:47Z,0,0.0
+450,6136,Ka'tarn,10,12,15,15,12,15,8,Acolyte,Elf,Cleric,1,Life Domain,,,1,,"Shield/Leather/Dagger/Mace/Crossbow, light/Bedroll/Blanket/Candle/Case, Map or Scroll/Clothes, Common/Tinderbox/Waterskin/Herbalism Kit/Reliquary",2018-06-29T15:37:47Z,0,14.0
+451,6137,GreekFrost83's Character,12,0,0,0,0,0,0,,Halfling,Wizard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+452,6144,Stern Silverfield,82,8,14,13,10,12,15,,Elf,Wizard,20,,,,20,,,2018-06-29T15:37:47Z,0,0.0
+453,6162,Keyan,12,13,8,15,12,14,10,Noble,Human,Paladin,1,,,,1,,Shield/Lance,2018-06-29T15:37:47Z,0,0.0
+454,6169,Astragoth's Character,12,15,8,13,14,12,10,Noble,Gnome,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+455,6183,Dungus Bunmuffins,12,15,13,14,12,10,8,Outlander,Dwarf,Barbarian,6,Path of the Totem Warrior,,,6,Tough,"Whelm/Shield/Handaxe/Handaxe/Javelin/Battleaxe/Greataxe/Clothes, Traveler's/Flask or Tankard/Pole (10-foot)/Potion of Healing/Rope, Hempen (50 feet)/Torch",2019-05-04T21:51:13.477Z,61,368.53
+456,6196,Gaerphanis,6,8,13,14,15,10,12,Sage,Elf,Wizard,1,,,,1,,Quarterstaff/Spellbook/Scholar's Pack/Rod,2018-06-29T15:37:47Z,0,0.0
+457,6199,Erdan,12,10,8,14,12,13,15,,Elf,Sorcerer,5,,,,5,,,2018-06-29T15:37:47Z,0,0.0
+458,6202,Gerrick,12,13,6,13,13,12,17,Acolyte,Tiefling,Paladin,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+459,6208,Zuniz,94,11,14,11,14,17,11,Folk Hero,Elf,Ranger,10,Hunter,Barbarian,Path of the Berserker,15,Svirfneblin Magic,,2018-06-29T15:37:47Z,0,0.0
+460,6211,Bilben,12,14,8,15,10,13,12,Soldier,Human,Fighter,5,Champion,,,5,,"Battleaxe, +2/Breastplate",2018-06-29T15:37:47Z,0,0.0
+461,6215,t1,12,15,10,14,10,10,13,Folk Hero,Goliath,Barbarian,1,,,,1,,Handaxe/Javelin/Greataxe/Explorer's Pack,2018-06-29T15:37:47Z,0,0.0
+462,6220,s,8,10,14,12,13,8,15,Entertainer,Genasi,Bard,1,,,,1,,Leather/Dagger/Rapier/Entertainer's Pack /Lute,2018-06-29T15:37:47Z,0,0.0
+463,6223,Aratar,12,10,11,10,14,12,15,,Human,Bard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+464,6226,Erky Oneshoe,12,10,18,16,15,11,18,Soldier,Gnome,Sorcerer,5,Draconic Bloodline,,,5,,"Ring of Warmth/Dagger/Dagger/Crossbow, light/Crossbow Bolts/Backpack/Bedroll/Clothes, Common/Mess Kit/Pouch/Rations (1 day)/Rope, Hempen (50 feet)/Tinderbox/Playing Card Set/Torch/Waterskin",2020-10-18T19:50:21Z,14,13.5
+465,6235,Gajoda,48,14,8,13,10,15,12,Sage,Human,Cleric,9,Life Domain,,,9,Grappler,Longsword,2020-08-26T17:52:00Z,0,0.0
+466,6236,Barin,49,13,10,14,14,14,18,Sage,Aasimar,Warlock,8,The Great Old One,,,8,Keen Mind/Lucky,Robe of Scintillating Colors/Studded Leather/Dagger/Dagger/Dagger/Handaxe/Book/Ink (1 ounce bottle)/Ink Pen/Parchment (one sheet)/Backpack/Little Bag of Sand/Small Knife/Arcane Focus,2021-06-04T17:23:16Z,7,10.0
+467,6237,Ranohk,65,8,13,14,10,15,12,Faction Agent,Human,Druid,12,Circle of the Shepherd,,,12,Lucky/War Caster/Resilient (Constitution),"Studded Leather/Scale Mail/Shield/Earwig/Ant/Spider/Gurkenglas/Obsidian stone/Shoes/Bed roll/Rope (100 feet)/Climbing iron/Sending Shell/Healing elixir/Magische Holztiere (Hags)/Quarterstaff/Backpack/Clothes, Traveler's/Waterskin/Chalk (1 piece)/Herbalism Kit/Rations (1 day)/Clothes, Fine/Figurine of Wondrous Power (Farm Animals)",2022-06-11T00:35:58.51Z,4833,0.0
+468,6240,jackdabeast7's Character,12,8,8,15,15,15,8,,Elf,Wizard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+469,6250,Galedur,12,0,0,0,0,0,0,,Dragonborn,Paladin,5,Oath of Devotion,,,5,,,2018-06-29T15:37:47Z,0,0.0
+470,6256,Mephistopheles,12,0,0,0,0,0,0,,Tiefling,Cleric,1,Life Domain,,,1,,,2018-06-29T15:37:47Z,0,0.0
+471,6270,Garric,82,13,17,15,17,15,11,Sage,Human,Wizard,20,School of Necromancy,,,20,Athlete/Resilient (Dexterity)/Attunement,"Bracers of Defense/Robe of the Archmagi/Staff of the Magi/Staff of the Master Necromancer/Shadowglass Dagger/Quarterstaff/Clothes, Fine/Robes/Spellbook/Scholar's Pack",2022-07-28T17:31:25.12Z,0,0.0
+472,6274,Uugu buunu,53,16,9,11,14,11,18,Noble,Half-Orc,Ranger,2,,Rogue/Wizard,Thief/School of Evocation,14,Grappler,,2018-06-29T15:37:47Z,0,0.0
+473,6278,Andis Vinte,15,15,10,14,9,17,6,Soldier,Human,Cleric,2,Life Domain,,,2,,"Shield/Chain Mail/Handaxe/Warhammer/Healer's Kit/Rope, Silk (50 feet)/Explorer's Pack",2018-06-29T15:37:47Z,0,0.0
+474,6286,Noah Argents,12,8,15,13,14,10,12,,Aarakocra,Rogue,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+475,6291,Samthelamb99's Character,35,12,17,13,11,13,10,Sage,Half-Elf,Monk,6,Way of the Open Hand,,,6,,,2018-06-29T15:37:47Z,0,0.0
+476,6294,"Theodorin ""IronWolf"" Menthivshrrg (Son of Wolf)",53,14,12,15,14,15,12,Hermit,Dwarf,Druid,8,Circle of the Land (Forest),Cleric,Tempest Domain,10,Keen Mind/War Caster,"Brooch of Shielding/Deck of Illusions/Headband of Intellect/Horn of Blasting/Potion of Poison/Wand of Secrets/Potion of Healing (Greater)/Spell Scroll (1st Level)/Spell Scroll (2nd Level)/Staff of Defense/Pipe of Smoke Monsters/Cloak of Entanglement/Holy Symbol of Berronar/Explorer's Pack/Holy Water (flask)/Handaxe/Shield/Rope, Hempen (50 feet)/Scimitar/Leather/Backpack/Bedroll/Mess Kit/Tinderbox/Torch/Rations (1 day)/Waterskin/Wooden Staff/Blanket/Clothes, Common/Herbalism Kit/Alchemist's Supplies/Shortsword/Shortsword/Flask or Tankard/Potion of Healing/Periapt of Wild Shape/Scroll of Comprehend Languages/Sending stone",2021-07-14T16:10:59Z,2987,66.0
+477,6305,Assen,12,15,0,14,0,0,0,,Dragonborn,Fighter,5,Champion,,,5,,,2018-06-29T15:37:47Z,0,0.0
+478,6307,Talehot,12,10,12,12,13,11,15,Acolyte,Half-Elf,Warlock,3,,,,3,,"Leather/Dagger/Dagger/Quarterstaff/Crossbow, light/Crossbow Bolts/Component Pouch/Scholar's Pack",2018-06-29T15:37:47Z,4,145.0
+479,6308,vinibiso's Character,12,16,12,10,6,8,12,Soldier,Half-Elf,Paladin,3,Oath of Devotion,,,3,,,2018-06-29T15:37:47Z,0,0.0
+480,6310,Roterica,12,10,12,13,14,15,8,Sage,Dwarf,Druid,8,,,,8,,"Armor of Cold Resistance, Hide/Quarterstaff, +1",2018-06-29T15:37:47Z,0,0.0
+481,6316,Wizrobe,12,0,0,0,0,0,0,,Human,Wizard,1,,,,1,Grappler,,2018-06-29T15:37:47Z,0,0.0
+482,6317,Cornelis Bloom,62,8,15,10,15,13,10,Sage,Gnome,Wizard,15,Order of Scribes (archived),,,15,,Bag of Holding/Hat of Disguise/Hat of saint gideon (Working Copy)/Amethyst Lodestone/Lodestone Scarab/Crystal/Spellbook/Ink (1 ounce bottle)/Ink Pen,2022-09-01T11:50:20.913Z,0,0.0
+483,6319,Vamperious's Character,12,0,0,0,0,0,0,,Human,Wizard,15,,,,15,,,2018-06-29T15:37:47Z,0,0.0
+484,6320,Rick,12,14,13,12,10,15,8,Soldier,Dwarf,Cleric,1,Life Domain,,,1,,"Shield/Chain Mail/Light Hammer/Warhammer/Warhammer/Backpack/Blanket/Candle/Clothes, Common/Rations (1 day)/Tinderbox/Waterskin/Smith's Tools/Alms Box/Block of Incense/Censer/Vestments/Emblem/Playing Card Set",2018-06-29T15:37:47Z,19,70.0
+485,6336,Flint,13,8,14,14,10,15,10,Criminal / Spy,Kenku,Druid,2,,,,2,,"Leather/Shortbow/Scimitar/Backpack/Bedroll/Clothes, Common/Crowbar/Mess Kit/Rations (1 day)/Rope, Hempen (50 feet)/Tinderbox/Torch/Waterskin/Wooden Staff",2019-11-22T08:33:26.773Z,0,15.0
+486,6337,LexTP's Character,12,0,0,0,0,0,0,,Human,Ranger,5,Hunter,,,5,Grappler,,2018-06-29T15:37:47Z,0,0.0
+487,6340,Taran,12,8,15,14,13,10,12,Criminal / Spy,Halfling,Rogue,5,,Bard,College of Lore,8,,,2018-06-29T15:37:47Z,0,0.0
+488,6341,Fernando,12,15,12,12,11,13,16,Sage,Half-Elf,Paladin,3,Oath of Devotion,,,3,,"Shield, +1/Chain Mail, +1/Mace/Morningstar/Bedroll/Rope, Hempen (50 feet)/Tinderbox/Waterskin/Lute/Amulet",2018-06-29T15:37:47Z,13,67.0
+489,6345,Angelina,56,8,9,15,12,13,11,Acolyte,Human,Wizard,11,School of Evocation,,,11,Svirfneblin Magic,,2018-06-29T15:37:47Z,0,0.0
+490,6350,Jak Ironmark,12,0,18,0,0,0,0,,Human,Rogue,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+491,6370,Arden Pavaliir,38,8,16,15,17,10,13,Entertainer,Elf,Rogue,7,Thief,,,7,,"Sneaky Dagger, +1/Leather/Chain Shirt/Dagger/Dagger/Rapier/Longbow/Arrows/Clothes, Costume/Explorer's Pack/Thieves' Tools/Lute",2018-06-29T21:45:54.657Z,493,129.99
+492,6376,Eldon Underfoot,12,10,15,13,8,14,12,Soldier,Halfling,Monk,7,Way of the Open Hand,,,7,,Spear,2018-06-29T15:37:47Z,0,0.0
+493,6377,Guill's Character,12,10,15,14,12,13,8,Criminal / Spy,Tiefling,Ranger,1,,,,1,,Leather,2018-06-29T15:37:47Z,0,0.0
+494,6379,Nox Evermillion,41,10,17,12,8,15,16,Criminal / Spy,Feral Tiefling,Monk,8,Way of the Four Elements,,,8,Mobile,Ring of Mind Shielding/Potion of Healing (Greater)/Vicious Shortsword/Potion of Healing/Explorer's Pack/Playing Card Set/Thieves' Tools/Flute,2019-02-10T18:43:43.83Z,95,22.0
+495,6381,Sam Rivershield,21,12,14,13,12,14,8,,Human,Ranger,3,Hunter,,,3,,Scale Mail/Shield/Dagger/Shortsword/Longbow/Arrows/Dungeoneer's Pack,2018-06-29T15:37:47Z,0,230.51
+496,6386,Braennora,12,10,12,13,8,14,15,,Half-Elf,Bard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+497,6387,Ignacio Valdez,8,15,13,14,8,12,10,Gladiator,Human,Cleric,1,Light Domain,,,1,Tavern Brawler,"Blessing of Annam/Blessing of Stronmaus/Scale Mail/Shield/Mace/Mace/Whip/Backpack/Blanket/Candle/Clothes, Costume/Rations (1 day)/Tinderbox/Alms Box/Block of Incense/Censer/Vestments/Waterskin/Holy Symbol",2021-07-11T19:40:05.21Z,13,15.0
+498,6394,Gandalf's Character,12,12,15,14,13,10,8,Noble,Elf,Wizard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+499,6395,Aranil,12,16,14,12,10,10,9,,Elf,Ranger,3,,,,3,,,2018-06-29T15:37:47Z,0,0.0
+500,6406,Yasin,12,14,15,13,10,8,12,Noble,Half-Elf,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+501,6407,revnant's Character,12,8,12,10,14,13,15,Criminal / Spy,Tiefling,Warlock,1,The Fiend,,,1,,"Leather/Dagger/Dagger/Mace/Crossbow, light",2018-06-29T15:37:47Z,12,0.0
+502,6410,Thorak,12,14,15,13,10,8,12,Soldier,Goliath,Barbarian,1,,,,1,,"Flail/Hammer, Sledge",2018-06-29T15:37:47Z,0,0.0
+503,6412,ragnar,12,13,15,12,8,12,8,,Elf,Monk,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+504,6419,E'lir Remy Lightfinger,12,12,18,16,13,14,18,Folk Hero,Half-Elf,Bard,1,,,,1,,,2018-06-29T15:37:47Z,2353,0.0
+505,6422,Edmundo,8,0,0,0,0,0,0,Folk Hero,Human,Bard,1,,,,1,,"Leather/Dagger/Greatclub/Backpack/Bedroll/Candle/Clothes, Common/Clothes, Costume/Pot, Iron/Rations (1 day)/Shovel/Waterskin/Disguise Kit/Lute",2018-06-30T06:21:47.45Z,0,10.0
+506,6428,Tarhun Delmirev,12,10,14,15,14,13,15,Noble,Dragonborn,Bard,8,College of Lore,Cleric,Life Domain,9,,"Studded Leather/Shield/Longsword/Crossbow, light/Drum/Viol",2022-08-21T18:53:35.013Z,6566,0.0
+507,6442,Zinquinal,12,7,14,13,13,11,3,Noble,Human,Warlock,3,The Fiend,,,3,Grappler,,2018-06-29T15:37:47Z,0,0.0
+508,6443,Quartzblade's Character,12,0,0,0,0,0,0,,Human,Bard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+509,6445,Baryver,12,8,15,14,10,12,13,Criminal / Spy,Human,Fighter,1,,,,1,,Rapier,2018-06-29T15:37:47Z,0,0.0
+510,6449,jqmfg1's Character,12,0,0,0,0,0,0,,Elf,Ranger,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+511,6454,The_Abominable_DM's Character,12,8,14,12,15,14,8,Noble,Human,Wizard,1,,,,1,,Alchemist's Fire (flask),2018-06-29T15:37:47Z,0,0.0
+512,6455,Fordroc Embersheild,62,8,14,14,12,8,15,Charlatan,Dragonborn,Bard,11,College of Lore,Sorcerer,Draconic Bloodline,12,,"Book/Ink (1 ounce bottle)/Ink Pen/Parchment (one sheet)/Backpack/Clothes, Common/Spellbook/Little Bag of Sand/Small Knife",2018-09-15T05:54:46.813Z,0,10.0
+513,6460,Ailwin Orixidor,12,8,14,10,11,10,13,Noble,Elf,Ranger,1,,,,1,,Leather/Shortsword/Shortsword/Longbow/Arrows/Explorer's Pack,2018-06-29T15:37:47Z,929,0.0
+514,6474,SomeBeardieGeordie's Character,12,0,0,0,0,0,0,,Dwarf,Fighter,5,Champion,,,5,Grappler,,2018-06-29T15:37:47Z,0,0.0
+515,6477,FireWitch91's Character,12,0,0,0,0,0,0,,Human,Rogue,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+516,6482,Trexorb,160,18,18,18,18,18,18,Acolyte,Human,Cleric,20,Life Domain,,,20,Grappler/Svirfneblin Magic,Armor of Invulnerability/Holy Avenger Longsword,2018-06-29T15:37:47Z,0,200.0
+517,6484,Cecil,103,13,15,13,13,11,13,Acolyte,Human,Monk,20,Way of the Open Hand,,,20,,Boots of Speed/Bracers of Defense/Cloak of Protection/Fists of Fury/Shortsword/Barrel/Explorer's Pack/Alchemist's Supplies,2018-06-29T15:37:47Z,0,0.0
+518,6503,Thyvir,12,8,10,12,15,13,14,,Tiefling,Cleric,1,Life Domain,,,1,,,2018-06-29T15:37:47Z,0,0.0
+519,6505,Pimace,36,12,12,3,14,8,12,Acolyte,Elf,Cleric,5,Life Domain,,,5,,,2020-07-08T16:36:12Z,0,0.0
+520,6507,Caligula,12,10,15,13,13,10,12,Soldier,Human,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+521,6511,Kierren Quintin Adole III first of his name and leader of the party,12,0,0,0,0,0,0,,Elf,Cleric,6,,,,6,,,2018-06-29T15:37:47Z,0,0.0
+522,6513,Silas Bladewhisk,12,12,18,14,10,9,18,Acolyte,Human,Bard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+523,6514,Braig,12,8,15,10,8,15,14,Folk Hero,Human,Monk,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+524,6519,Arcas Lykaois Tianus,12,12,14,9,19,16,11,Sage,Human,Wizard,8,,,,8,,,2021-12-26T22:31:33.523Z,0,0.0
+525,6525,Daeqen,12,14,11,14,10,12,12,Soldier,Dragonborn,Fighter,1,,,,1,,"Shield/Chain Mail/Dagger/Crossbow, light/Greatsword/Shortsword/Crossbow Bolts/Clothes, Common/Dungeoneer's Pack/Dice Set",2018-06-29T15:37:47Z,48,10.0
+526,6532,Jebediah Lackman,12,13,15,14,10,12,8,Folk Hero,Human,Fighter,3,Battle Master,,,3,,"Longsword, +1/Studded Leather/Crossbow, light/Greatsword/Longbow/Backpack/Bedroll/Clothes, Common/Mess Kit/Pot, Iron/Pouch/Rations (1 day)/Shovel/Tinderbox/Torch/Waterskin/Carpenter's Tools",2020-03-30T16:44:27.537Z,1139,0.0
+527,6535,devigel_67's Character,12,10,10,10,10,14,15,,Elf,Warlock,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+528,6537,Rumble,101,13,8,12,5,7,16,Folk Hero,Dwarf,Ranger,14,Hunter,,,14,Grappler/Svirfneblin Magic,,2018-06-29T15:37:47Z,0,0.0
+529,6566,Nina littlefoot,12,0,0,0,0,0,0,,Halfling,Cleric,7,Trickery Domain,,,7,Sentinel,,2018-06-29T15:37:47Z,0,0.0
+530,6569,Ezelmar Goldshield,12,0,0,0,0,0,0,Noble,Human,Rogue,1,,,,1,,Studded Leather/Rapier,2018-06-29T15:37:47Z,0,0.0
+531,6581,Jim,12,8,14,13,15,10,12,,Human,Wizard,1,,,,1,Svirfneblin Magic,,2018-06-29T15:37:47Z,0,0.0
+532,6584,Crimdahl Aldaveil ,70,17,13,17,10,15,18,Acolyte,Half-Elf,Paladin,11,Oath of Devotion,,,11,War Caster/Resilient (Constitution),Shield of Missile Attraction/Adamantine Plate/Defender Longsword/Book of Exalted Deeds/Shield/Javelin/Explorer's Pack/Reliquary,2021-01-06T03:18:09Z,21,2500.0
+533,6596,The Dude,12,15,16,15,11,16,14,Folk Hero,Human,Monk,1,,,,1,,,2018-07-13T02:10:13.413Z,0,0.0
+534,6601,Muldain,12,15,13,14,8,12,10,Soldier,Human,Fighter,1,,,,1,,Shield/Chain Mail/Longsword/Longbow,2018-06-29T15:37:47Z,0,0.0
+535,6604,Thaddeus Hammerlock,121,17,9,13,10,13,11,Noble,Human,Paladin,20,Oath of Vengeance,,,20,Diplomat,"Boots of Striding and Springing/Crystal Ball/Chain Mail, +1/Potion of Healing (Greater)/Potion of Healing (Superior)/Potion of Fire Resistance/Shortsword, +1/Moon Blade/Shield of Esanihen's Protection/Scarf of Semi-Reliable Invisbility/Moonrise, the Sword of Esanihen's Judgment/Explorer's Pack",2020-12-23T06:04:03Z,1760,1184.0
+536,6612,Falk Thunderrunner,78,10,3,13,8,18,16,Criminal / Spy,Human,Sorcerer,9,Draconic Bloodline,Fighter,Champion,20,Grappler/Svirfneblin Magic,,2018-06-29T15:37:47Z,0,0.0
+537,6615,Felda,22,8,5,3,12,14,14,Folk Hero,Gnome,Monk,8,Way of the Open Hand,,,8,,,2018-06-29T15:37:47Z,0,0.0
+538,6617,bodjo's Character,12,10,16,14,7,12,14,Sage,Dwarf,Bard,2,,Monk,Way of the Open Hand,6,,,2018-06-29T15:37:47Z,0,0.0
+539,6626,Hendirk Jendyr,12,13,16,11,16,15,15,Noble,Elf,Ranger,1,,,,1,,Studded Leather/Rapier/Longbow,2018-06-29T15:37:47Z,0,0.0
+540,6628,Ilewalyn,12,8,12,14,15,13,10,Noble,Genasi,Wizard,10,School of Evocation,,,10,,,2018-06-29T15:37:47Z,0,0.0
+541,6638,Cora Hiltople,12,13,14,15,8,12,10,Folk Hero,Halfling,Fighter,1,,Barbarian,,2,,Studded Leather/Shortbow/Shortsword/Shortsword/Dungeoneer's Pack,2018-06-29T15:37:47Z,0,9.5
+542,6639,Dunlin Rose,8,10,14,12,13,8,15,Sage,Human,Bard,1,,,,1,,Leather/Dagger/Rapier/Potion of Healing/Entertainer's Pack /Lute,2019-01-20T17:54:34.987Z,0,0.0
+543,6650,Bromix,30,9,12,13,10,10,17,Hermit,Dragonborn,Sorcerer,7,Draconic Bloodline,,,7,,"Robe of Eyes/Winged Boots/Potion of Healing (Greater)/Cloak of Bromix/Wand of Light Healing/Wand of Scorching Ray/Imbralyn's Restorative Ointment/Dagger/Quarterstaff/Backpack/Bedroll/Blanket/Clothes, Common/Rations (1 day)/Component Pouch/Mess Kit/Tinderbox/Torch/Waterskin/Rope, Hempen (50 feet)/Herbalism Kit",2018-06-29T15:37:47Z,167,3135.0
+544,6659,Test Gen,12,15,8,13,10,12,14,Folk Hero,Dragonborn,Paladin,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+545,6664,lambdaeagle's Character,12,13,15,14,10,12,8,Folk Hero,Elf,Ranger,1,,,,1,,Studded Leather/Longsword,2018-06-29T15:37:47Z,0,0.0
+546,6672,Balrin,12,12,14,12,12,13,11,Folk Hero,Half-Elf,Ranger,1,,,,1,,"Scale Mail, +1/Shortbow/Shortsword",2018-06-29T15:37:47Z,0,0.0
+547,6685,Bhardus,12,0,0,0,0,0,0,,Gnome,Warlock,5,The Fiend,,,5,Svirfneblin Magic,,2018-06-29T15:37:47Z,0,0.0
+548,6698,Arser,84,17,5,3,16,13,9,Soldier,Aarakocra,Monk,20,Way of the Open Hand,,,20,Grappler,,2018-06-29T15:37:47Z,0,0.0
+549,6700,Go'lash,12,15,13,14,10,8,12,Gladiator,Half-Orc,Fighter,3,Champion,,,3,,Shield/Chain Mail/Handaxe/Handaxe/Greataxe/Explorer's Pack,2021-03-18T15:18:45Z,73,52.0
+550,6710,Kale,12,13,12,14,8,15,10,Acolyte,Genasi,Cleric,1,Life Domain,,,1,,,2018-06-29T15:37:47Z,0,0.0
+551,6713,ShogunWolflux's Character,12,0,0,0,0,0,0,,Dwarf,Cleric,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+552,6720,tonyhogan91's Character,12,0,0,0,0,0,0,,Human,Monk,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+553,6723,Bwarf,104,16,11,12,13,11,14,Sage,Dwarf,Barbarian,4,Path of the Berserker,Sorcerer/Fighter,Draconic Bloodline/Champion,20,Svirfneblin Magic,,2018-06-29T15:37:47Z,0,0.0
+554,6727,One Tusk,12,15,14,14,10,8,14,,Half-Orc,Barbarian,6,,Rogue,,7,,Gauntlets of Ogre Power/Gauntlets of Ogre Power/Dagger/Greataxe/Explorer's Pack,2018-06-29T15:37:47Z,0,0.0
+555,6732,Firestone Walker,12,15,14,13,8,10,12,Soldier,Human,Barbarian,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+556,6734,Obbi,1,8,0,0,0,0,18,,Halfling,Sorcerer,4,,Bard,,5,,,2018-06-29T15:37:47Z,0,0.0
+557,6736,Blake Malem,12,0,0,0,0,0,0,,Human,Fighter,12,,Sorcerer,,16,,,2018-06-29T15:37:47Z,0,0.0
+558,6737,Harvey,6,8,13,14,15,10,12,Sage,Gnome,Wizard,20,,,,20,,Quarterstaff/Spellbook/Scholar's Pack/Rod,2018-06-29T15:37:47Z,0,0.0
+559,6742,Roka,26,8,14,10,15,12,13,Criminal / Spy,Elf,Wizard,5,School of Illusion,,,5,,Longsword/Abacus/Staff,2018-06-29T15:37:47Z,1979,18.11
+560,6745,Jetathor's Character,12,0,0,0,0,0,0,,Human,Monk,1,,,,1,Grappler,,2018-06-29T15:37:47Z,0,0.0
+561,6747,Test ,12,15,10,15,10,12,9,Folk Hero,Human,Fighter,3,Champion,,,3,Grappler,,2018-06-29T15:37:47Z,0,0.0
+562,6748,Nyril Galanodel,54,9,16,16,13,11,13,,Elf,Wizard,13,Bladesinging,,,13,,"Dust of Disappearance/Potion of Healing (Greater)/Sending Stones/Call of the Ocean/Studded Leather/Rapier/Crystal/Clothes, Traveler's/Potion of Healing/Spellbook/Scholar's Pack/Navigator's Tools",2022-02-19T01:45:58.103Z,345,577.1
+563,6755,Test Barbarian,12,14,13,15,8,10,12,Soldier,Human,Barbarian,1,,,,1,Grappler,,2018-06-29T15:37:47Z,0,0.0
+564,6756,Leroy Drankens,12,15,13,13,8,11,13,Folk Hero,Dwarf,Barbarian,5,Path of the Berserker,,,5,Grappler,"Potion of Healing (Greater)/Shield/Half Plate/Warhammer/Crossbow, heavy/Bedroll/Piton/Potion of Healing/Rope, Hempen (50 feet)/Explorer's Pack",2021-10-20T22:29:03.51Z,0,100.0
+565,6757,Torrin Myastan,18,13,8,14,10,15,12,Cloistered Scholar,Dragonborn,Cleric,3,Life Domain,,,3,,"Cloak of Protection/Decanter of Endless Water/Eversmoking Bottle/Wand of Fireballs/Potion of Healing (Superior)/Lightbringer/Magic Tankard/Bahamut's Moonshot/A Master's Grimoire for Passing Rites of the Dead/Shield/Leather/Plate/Dagger/Rapier/Chest/Playing Card Set/Priest's Pack/Holy Symbol/Potion of Healing/Holy Water (flask)/Lute/Horn/Manacles/Ink (1 ounce bottle)/Ink Pen/Case, Map or Scroll/Clothes, Fine/Lamp/Oil (flask)/Paper (one sheet)/Perfume (vial)/Sealing Wax/Soap",2022-11-15T18:10:45.04Z,1540,3000.0
+566,6760,Korask,12,12,15,14,10,13,8,Criminal / Spy,Elf,Ranger,1,,,,1,,"Leather/Shortsword/Shortsword/Longbow/Arrows/Clothes, Common/Crowbar/Quiver/Explorer's Pack",2018-06-29T15:37:47Z,0,165.0
+567,6761,Wil Hartwood,124,15,10,13,8,10,15,Noble,Human,Paladin,20,Oath of Devotion,,,20,Shield Master/Tough/Resilient (Constitution),"Javelin of Lightning/Manual of Bodily Health/Ring of Free Action/Ring of Spell Storing/Rod of Alertness/Tome of Clear Thought/Tome of Leadership and Influence/Belt of Fire Giant Strength/Holy Avenger Longsword/Plate, +2/Shield, +3/Longsword, +3/Longsword/Warhammer/Javelin/Explorer's Pack",2020-04-12T21:45:43.723Z,0,0.0
+568,6763,Galen Armande,12,0,0,0,0,0,0,,Genasi,Warlock,1,The Fiend,,,1,,,2018-06-29T15:37:47Z,0,0.0
+569,6768,Thawne of the Wood,12,12,15,13,8,14,10,,Human,Ranger,1,,,,1,Grappler,,2018-06-29T15:37:47Z,0,0.0
+570,6776,Solidaster,8,3,12,12,15,9,15,Criminal / Spy,Human,Cleric,1,Life Domain,,,1,Grappler,,2018-06-29T15:37:47Z,0,0.0
+571,6784,Gwynmura,12,8,12,13,14,10,15,Folk Hero,Genasi,Ranger,15,Hunter,Fighter,Champion,20,Grappler,,2018-06-29T15:37:47Z,0,0.0
+572,6791,TomCala's Character,12,17,18,12,10,14,8,Folk Hero,Aarakocra,Monk,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+573,6804,MerlynEmrys's Character,12,12,15,15,8,13,8,Soldier,Genasi,Barbarian,1,,,,1,,Shield/Longsword/Handaxe/Handaxe/Javelin/Explorer's Pack,2018-06-29T15:37:47Z,0,0.0
+574,6805,Del Varis,43,10,16,12,10,15,13,Urchin,Elf,Monk,6,Way of Shadow,Warlock,The Great Old One,8,Fighting Initiate,,2021-04-02T17:55:04Z,0,0.0
+575,6807,Glen Yarbrough,16,12,17,16,13,13,18,Sage,Half-Elf,Bard,2,,,,2,,"Leather/Rapier/Ink (1 ounce bottle)/Ink Pen/Clothes, Common/Entertainer's Pack /Lute",2018-06-29T15:37:47Z,75,90.0
+576,6812,Tchelu's Character,16,11,15,12,10,14,10,Folk Hero,Elf,Ranger,2,,,,2,,"Oathbow/Armor of Cold Resistance, Leather/Scale Mail/Shortsword/Shortsword/Longbow/Arrows/Backpack/Bedroll/Clothes, Common/Mess Kit/Pot, Iron/Rations (1 day)/Tinderbox/Torch/Waterskin/Rope, Hempen (50 feet)/Carpenter's Tools/Shovel",2021-04-24T02:41:52Z,0,10.0
+577,6816,Faeyra,12,12,10,15,14,8,13,Folk Hero,Genasi,Monk,5,Way of the Open Hand,,,5,,,2018-06-29T15:37:47Z,0,0.0
+578,6817,Bondelle,12,0,0,0,0,0,0,,Dwarf,Ranger,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+579,6819,pseudomocha's Character,12,0,0,0,0,0,0,,Human,Barbarian,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+580,6820,Waesgeiros,10,13,15,8,8,13,14,Acolyte,Elf,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+581,6825,Quilfyire,12,8,14,14,10,12,14,Criminal / Spy,Elf,Rogue,5,Thief,,,5,,Leather/Dagger/Dagger/Shortbow/Rapier/Dungeoneer's Pack,2021-08-28T02:06:55.157Z,0,0.0
+582,6829,Garonir,12,0,0,0,0,0,0,Soldier,Dwarf,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+583,6831,Anderson Silva,12,12,12,12,12,12,12,Acolyte,Human,Cleric,2,Life Domain,Wizard,,4,,"Chain Mail/Quarterstaff/Backpack/Bedroll/Clothes, Traveler's/Mess Kit/Rations (1 day)/Rope, Hempen (50 feet)/Spellbook/Tinderbox/Waterskin",2018-09-12T17:57:46.18Z,0,0.0
+584,6832,Korey's Character,87,10,17,15,17,17,14,,Elf,Wizard,14,Bladesinging,Sorcerer/Druid,Storm Sorcery/Circle of the Land (Mountain),20,,Studded Leather/Quarterstaff/Rapier,2021-09-24T00:16:14Z,0,0.0
+585,6870,Gormack,12,14,12,16,12,16,10,,Goliath,Druid,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+586,6885,Alfer Grom,12,14,15,13,12,10,8,,Human,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+587,6888,Chuurluukku  Sunvaarkriid,56,15,18,16,14,17,18,Mercenary Veteran,Lizardfolk,Rogue,10,Scout,,,10,Durable/Mending Affinity,"Goggles of Night/Slippers of Spider Climbing/Dagger/Dagger/Shortbow/Shortsword/Arrows/Backpack/Ball Bearings (bag of 1,000)/Bedroll/Chalk (1 piece)/Healer's Kit/Mess Kit/Tinderbox/Torch/Rations (1 day)/Waterskin/Rope, Hempen (50 feet)/Thieves' Tools/Dice Set/Signal Whistle/Whetstone/Potion of Healing/Malice (Inhaled)/Pale Tincture (Ingested)",2018-07-18T19:00:52.807Z,82,50.49
+588,6900,Boongschnanger's Character,12,0,0,0,0,0,0,,Half-Elf,Bard,9,,,,9,,,2018-06-29T15:37:47Z,0,0.0
+589,6911,Athena,120,15,12,13,8,10,14,Folk Hero,Half-Elf,Bard,10,College of Lore,,,10,,Luck Blade Rapier,2018-06-29T15:37:47Z,0,153680.0
+590,6913,Marshall's Magic Barbarian,12,15,10,12,10,11,14,Folk Hero,Goliath,Barbarian,3,,Wizard,,4,,Handaxe/Handaxe/Javelin/Greataxe/Explorer's Pack,2018-06-29T15:37:47Z,0,0.0
+591,6915,Galen Armande,18,16,11,14,10,10,18,Criminal / Spy,Genasi,Warlock,7,The Fiend,,,7,,Pact Weapon (Greataxe)/Leather/Spear/Dungeoneer's Pack,2018-06-29T15:37:47Z,34,26.0
+592,6920,Karina,12,10,15,12,9,10,15,Noble,Elf,Warlock,4,,Rogue,,7,,,2018-06-29T15:37:47Z,0,0.0
+593,6921,Zesty's Character,12,0,0,0,0,0,0,,Goliath,Bard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+594,6932,"Grussel ""Grus"" Tosscobble (Old)",13,11,14,12,10,10,15,,Halfling,Rogue,3,Thief,,,3,,Ratbane/Leather/Dagger/Shortbow/Arrows/Burglar's Pack/Thieves' Tools,2018-08-06T08:50:21.75Z,2244,603.5
+595,6935,Rasputinx,44,18,18,18,7,12,15,Soldier,Dragonborn,Barbarian,4,,,,4,,Halberd,2018-06-29T15:37:47Z,0,0.0
+596,6940,Anastasia Amastacia,12,0,0,0,0,0,0,,Half-Elf,Bard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+597,6943,Ralozeiros,12,12,15,13,8,14,10,,Elf,Rogue,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+598,6948,Ushibirith,28,16,12,16,14,10,5,Acolyte,Dragonborn,Paladin,4,Oath of Devotion,,,4,,,2018-06-29T15:37:47Z,0,0.0
+599,6951,Shaniqua Stumbleduck,12,0,0,0,0,0,0,,Gnome,Warlock,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+600,6965,Slartibartfast,12,18,16,17,12,12,9,Soldier,Dragonborn,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+601,6968,Milo Tosscobble,12,0,0,0,0,0,0,,Halfling,Bard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+602,6969,Saiya's Character,12,15,13,14,8,10,12,Noble,Genasi,Fighter,6,,,,6,,,2018-06-29T15:37:47Z,0,0.0
+603,6970,Pyriex,63,8,14,14,8,12,15,Haunted One,Dragonborn,Warlock,12,The Fiend,,,12,,"Dagger/Dagger/Crossbow, light/Crossbow Bolts/Explorer's Pack/Rod",2019-06-30T06:58:33.533Z,0,0.0
+604,6971,"bless you, palidram <3",8,8,13,15,12,10,14,Sage,Half-Elf,Warlock,1,The Great Old One,,,1,,"Leather/Dagger/Dagger/Quarterstaff/Crossbow, light/Crossbow Bolts/Book/Ink (1 ounce bottle)/Ink Pen/Parchment (one sheet)/Backpack/Clothes, Common/Orb/Little Bag of Sand/Small Knife",2021-07-21T02:41:24Z,129,20.0
+605,6973,Dengar,8,9,13,9,15,15,10,Noble,Human,Rogue,1,,,,1,,"Leather/Crossbow, hand/Dagger/Crossbow Bolts/Case, Crossbow Bolt",2021-07-07T09:19:38.543Z,0,0.0
+606,6980,Kit,12,9,14,15,16,10,14,,Gnome,Wizard,7,,,,7,,,2018-06-29T15:37:47Z,8,0.0
+607,6990,Galbwynn,12,12,15,12,11,12,11,,Half-Elf,Ranger,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+608,6991,Santo Arnost,58,16,17,15,12,10,17,Noble,Human,Rogue,10,Swashbuckler,,,10,Dual Wielder,"Rapier, +1/Arnost Studded Leather of the Last Stand/Leather/Dagger/Dagger/Shortbow/Rapier/Climber's Kit/Clothes, Fine/Sealing Wax/Signet Ring/Dice Set/Thieves' Tools/Riding Horse",2022-08-03T15:24:32.58Z,847,7561.030000000002
+609,6995,Jahry,40,17,12,13,12,17,18,Soldier,Elf,Paladin,5,Oath of Devotion,,,5,,"Shield, +1/Chain Mail, +1/Plate, +1/Greatsword, +1/Mace/Explorer's Pack/Emblem",2018-06-29T15:37:47Z,0,320.0
+610,7005,Rakeen,12,13,15,13,9,10,12,Criminal / Spy,Human,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+611,7012,Danton Truthwing,24,9,10,14,15,10,12,Noble,Human,Sorcerer,10,Draconic Bloodline,,,10,,,2018-06-29T15:37:47Z,0,0.0
+612,7013,Blink Billybonk,73,12,14,16,14,18,10,Hermit,Gnome,Druid,10,Circle of the Land (Forest),,,10,,"Bag of Holding/Boots of the Winterlands/Wand of the War Mage, +1/Wind Fan/Scale Mail, +1/Potion of Healing (Greater)/Wand of the War Mage, +2/Elixir of Health/Infusion: Mind Sharpener/Pièce de Fey pour le Troll/Mace of illusion/Quarterstaff/Backpack/Clothes, Traveler's/Potion of Healing/Riding Horse/Druidic Focus/Hide, +1/Pillow of good rest/Hide/Mace/Bedroll/Mess Kit/Rations (1 day)/Rope, Hempen (50 feet)/Tinderbox/Torch/Waterskin/Herbalism Kit/Potion of Fire Resistance/Potion of Invulnerability",2021-10-22T00:05:20.46Z,424,3377.75
+613,7014,Zorchar,12,16,14,11,9,9,16,Acolyte,Human,Warlock,1,,,,1,,Breastplate/Greatsword,2018-06-29T15:37:47Z,4,0.0
+614,7025,Kartaugh,12,15,11,15,10,10,10,Soldier,Human,Fighter,1,,,,1,,Chain Mail,2018-06-29T15:37:47Z,0,0.0
+615,7029,Ufegyra,106,13,10,11,13,12,11,Noble,Gnome,Druid,15,Circle of the Land (Forest),,,15,,,2018-06-29T15:37:47Z,0,0.0
+616,7043,Veras,12,10,15,12,8,15,11,Criminal / Spy,Half-Elf,Monk,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+617,7044,Fhuren,106,15,8,13,10,12,14,Sailor,Dragonborn,Paladin,17,Oath of the Ancients,,,17,,"Boots of Speed/Defender Greatsword/Dwarven Plate/Necklace of Prayer Beads/Shield, +1/Belt of Fire Giant Strength/Warhammer, +2/Waythe/Shield/Chain Mail/Handaxe/Handaxe/Warhammer/Backpack/Bedroll/Mess Kit/Tinderbox/Torch/Rations (1 day)/Waterskin/Rope, Hempen (50 feet)",2021-07-07T21:16:44.187Z,0,0.0
+618,7054,tehredshirt's Character,12,15,13,14,10,8,12,Criminal / Spy,Aarakocra,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+619,7061,Balasar,80,14,10,14,8,10,15,Acolyte,Dragonborn,Paladin,8,Oath of Devotion,,,8,,,2018-06-29T15:37:47Z,0,0.0
+620,7064,Orangutan Joe,12,12,14,15,13,13,10,Sage,Elf,Monk,1,,,,1,,Quarterstaff/Quarterstaff/Quarterstaff,2018-06-29T15:37:47Z,15,0.0
+621,7066,Fake character,12,10,12,19,19,13,18,Acolyte,Tiefling,Warlock,1,The Fiend,,,1,,,2018-06-29T15:37:47Z,0,0.0
+622,7068,Malachi,12,8,11,14,9,16,14,Acolyte,Tiefling,Cleric,1,Life Domain,,,1,,Shield/Chain Mail/Dagger/Mace/Priest's Pack,2018-06-29T15:37:47Z,0,0.0
+623,7087,test paladin,30,13,11,10,9,12,12,Acolyte,Dragonborn,Paladin,5,Oath of Devotion,,,5,,,2018-06-29T15:37:47Z,0,0.0
+624,7093,Oledar,18,13,13,13,13,12,6,Soldier,Elf,Sorcerer,3,Draconic Bloodline,,,3,,,2018-06-29T15:37:47Z,0,0.0
+625,7094,Mila Sharynai,12,13,17,12,14,11,14,,Human,Rogue,1,,,,1,Grappler,,2018-06-29T15:37:47Z,0,0.0
+626,7099,Low-key,23,10,14,12,13,8,15,Entertainer,Tiefling,Bard,4,,,,4,,Shield/Leather/Dagger/Rapier/Entertainer's Pack /Lute,2018-06-29T15:37:47Z,0,0.0
+627,7106,Thagmar Rhinetusk,12,15,13,14,10,12,8,Soldier,Dragonborn,Fighter,1,,,,1,,Adamantine Plate,2018-06-29T15:37:47Z,0,0.0
+628,7107,Lux Lisbon,12,10,15,14,10,13,10,,Aarakocra,Ranger,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+629,7108,Helkasys,8,0,0,0,0,0,0,,Human,Monk,1,,,,1,Firearm Specialist,,2018-06-29T15:37:47Z,0,0.0
+630,7110,Marcus,12,10,15,11,10,15,10,Sage,Human,Monk,3,Way of the Open Hand,,,3,Grappler,,2018-06-29T15:37:47Z,0,0.0
+631,7111,Tsar,12,17,15,15,13,13,10,Soldier,Half-Orc,Barbarian,1,,,,1,,"Shortbow/Greataxe/Clothes, Common",2018-06-29T15:37:47Z,0,0.0
+632,7114,Garm,12,13,14,12,8,15,10,Soldier,Dwarf,Ranger,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+633,7118,Dirk Hames,12,0,0,0,0,0,0,,Human,Sorcerer,20,Draconic Bloodline,,,20,,,2018-06-29T15:37:47Z,0,0.0
+634,7121,agentxcell's Character,12,0,0,0,0,0,0,,Halfling,Bard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+635,7122,Test Character,12,0,0,0,0,0,0,,Tiefling,Warlock,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+636,7128,Azure,12,14,8,12,10,15,13,Acolyte,Genasi,Cleric,1,,,,1,,"Shield/Chain Mail/Mace/Crossbow, light/Crossbow Bolts/Acid (vial)/Priest's Pack",2018-06-29T15:37:47Z,0,0.0
+637,7133,Jergle Maraphat,12,12,15,12,11,8,14,Criminal / Spy,Half-Elf,Fighter,3,Champion,Rogue,Thief,10,,"Boots of Speed/Staff of Charming/Luck Blade Shortsword/Leather, +3",2018-06-29T15:37:47Z,108,0.0
+638,7134,Shayezara,12,14,14,12,8,10,14,Soldier,Dwarf,Sorcerer,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+639,7141,Anderion Salthiel,12,0,0,0,0,0,0,,Elf,Rogue,4,,Fighter,,12,,,2018-06-29T15:37:47Z,0,0.0
+640,7144,Erin,8,8,13,14,10,15,12,Sage,Elf,Druid,1,,,,1,,Shield/Leather/Scimitar/Explorer's Pack/Sprig of Mistletoe,2022-06-29T19:23:14.533Z,0,0.0
+641,7145,Timbleweet,26,11,10,12,12,12,12,Acolyte,Halfling,Rogue,10,Thief,,,10,,,2018-06-29T15:37:47Z,0,0.0
+642,7148,1witch69's Character ,12,13,14,15,12,10,8,Acolyte,Dragonborn,Druid,2,Circle of the Land (Forest),,,2,,,2018-06-29T15:37:47Z,0,0.0
+643,7157,Atlantisdex's Character,12,15,13,14,12,8,10,Soldier,Goliath,Barbarian,12,Path of the Berserker,,,12,,,2018-06-29T15:37:47Z,0,0.0
+644,7163,Spankghetti's Character,12,8,13,12,14,12,14,,Half-Elf,Sorcerer,1,Draconic Bloodline,,,1,,,2018-06-29T15:37:47Z,0,0.0
+645,7166,relan,12,13,12,10,8,14,15,Criminal / Spy,Gnome,Warlock,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+646,7171,Lei,12,10,15,12,8,13,14,,Half-Elf,Monk,11,Way of the Open Hand,,,11,,,2018-06-29T15:37:47Z,0,0.0
+647,7175,Ghavhik Bonescarver Elantho,21,14,14,15,8,12,8,,Goliath,Barbarian,2,,,,2,,"Javelin/Spear/Maul/Clothes, Traveler's/Hunting Trap/Explorer's Pack/Staff",2018-06-29T15:37:47Z,0,135.0
+648,7182,Horwin,32,15,9,12,13,6,11,Criminal / Spy,Halfling,Cleric,7,Life Domain,,,7,Svirfneblin Magic,,2018-06-29T15:37:47Z,0,0.0
+649,7186,Cryfall's Character,12,0,0,0,0,0,0,,Human,Ranger,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+650,7203,Quaros,16,16,15,12,9,15,12,Noble,Gnome,Druid,1,,Fighter/Monk,Champion/Way of the Open Hand,5,,,2018-06-29T15:37:47Z,0,0.0
+651,7208,Elfar,12,0,0,0,0,0,0,,Human,Bard,1,,,,1,Grappler,,2018-06-29T15:37:47Z,0,0.0
+652,7212,Hanniel,12,16,11,14,14,13,11,Soldier,Human,Fighter,1,,,,1,Grappler,Shield/Chain Mail/Longsword/Handaxe/Handaxe/Explorer's Pack,2018-06-29T15:37:47Z,22,150.0
+653,7217,Ri'Dorn,12,12,18,16,13,14,18,Noble,Half-Elf,Bard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+654,7219,Tymanther Balasar Tyr-blessed,8,16,13,14,13,17,13,Knight of the Order,Dragonborn,Cleric,1,War Domain,,,1,,"Shield/Chain Shirt/Crossbow, hand/Warhammer/Net/Net/Net/Net/Net/Case, Crossbow Bolt/Case, Crossbow Bolt/Pole (10-foot)/Robes/Explorer's Pack/Signet Ring",2018-12-28T00:25:36.167Z,0,0.0
+655,7224,Ria,12,10,14,13,8,13,17,Acolyte,Elf,Bard,1,,,,1,,,2018-06-29T15:37:47Z,1331,0.0
+656,7228,Uvila,12,12,15,13,11,15,12,Soldier,Genasi,Monk,5,Way of the Open Hand,,,5,,,2018-06-29T15:37:47Z,0,0.0
+657,7232,Elyjo Withersby Head,12,13,18,15,7,14,16,Soldier,Human,Paladin,8,Oath of Devotion,,,8,,"Cube of Force/Wand of Secrets/Shield/Leather/Chain Mail/Dagger/Dagger/Dagger/Longsword/Crossbow, light/Rapier",2018-06-29T15:37:47Z,0,0.0
+658,7237,Rhoggar,28,10,14,18,7,6,7,Folk Hero,Dragonborn,Monk,3,Way of the Open Hand,Bard,College of Lore,7,,,2018-06-29T15:37:47Z,0,0.0
+659,7238,Avak Stormsoul,12,0,0,0,0,0,0,,Dragonborn,Cleric,1,Life Domain,,,1,,,2018-06-29T15:37:47Z,0,0.0
+660,7241,Meritir,12,15,13,13,11,9,12,Acolyte,Half-Elf,Monk,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+661,7255,Tangrim,12,10,14,12,11,15,10,Sage,Genasi,Druid,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+662,7258,Randgrago Archling,11,12,15,12,15,12,15,,Human,Rogue,3,,,,3,,"Potion of Lightning Resistance/Crossbow, hand/Dagger/Dagger/Shortbow/Shortsword/Arrows/Crossbow Bolts/Ball Bearings (bag of 1,000)/Bedroll/Bell/Bottle, Glass/Candle/Thieves' Tools/Chalk (1 piece)/Grappling Hook/Lamp/Signal Whistle/Disguise Kit/Crowbar/Hammer/Piton/Lantern, Hooded/Oil (flask)/Rations (1 day)/Tinderbox/Rope, Hempen (50 feet)/Quiver/Case, Crossbow Bolt/Case, Crossbow Bolt/Case, Crossbow Bolt/Case, Crossbow Bolt/Case, Crossbow Bolt",2018-06-29T15:37:47Z,773,60.86
+663,7266,Perfectly Normal Will,12,0,0,0,0,0,0,,Human,Warlock,10,The Fiend,,,10,,,2018-06-29T15:37:47Z,0,0.0
+664,7269,Urithos,17,15,14,10,14,12,13,Noble,Tiefling,Wizard,2,School of Evocation,Monk/Barbarian/Bard,Way of the Open Hand/Path of the Berserker/College of Lore,7,,,2018-06-29T15:37:47Z,0,0.0
+665,7270,Pimblebottom,24,4,13,13,12,14,5,Sage,Dragonborn,Barbarian,1,,Fighter/Warlock/Rogue,Champion/The Fiend/Thief,7,,,2018-06-29T15:37:47Z,0,0.0
+666,7272,killerdsd's Character,12,0,0,0,0,0,0,,Elf,Druid,10,,,,10,,,2018-06-29T15:37:47Z,0,0.0
+667,7274,Vincenzo,10,18,12,12,15,13,13,Noble,Halfling,Paladin,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+668,7275,B'ash K'lang,33,14,14,10,11,3,7,Noble,Half-Orc,Bard,6,College of Lore,,,6,Magic Initiate (Bard),"Frostscythe/Leather/Dagger/Shortbow/Backpack/Waterskin/Bedroll/Candle/Clothes, Costume/Clothes, Fine/Rations (1 day)/Signet Ring/Disguise Kit/Dulcimer",2021-11-29T16:08:35.583Z,20,25.0
+669,7278,VengefulOne's Character,12,8,15,10,13,12,14,,Halfling,Rogue,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+670,7281,Sylvanar,12,8,15,14,10,8,15,Folk Hero,Half-Elf,Bard,4,,,,4,,Leather/Rapier,2020-09-23T13:12:06.123Z,0,0.0
+671,7282,Axel,12,17,14,17,7,10,12,Criminal / Spy,Dwarf,Barbarian,1,,,,1,,Handaxe/Javelin/Greataxe/Warhammer/Explorer's Pack,2018-06-29T15:37:47Z,77,0.0
+672,7286,Gedwynjed2's Character,12,8,15,12,10,14,13,Folk Hero,Aarakocra,Monk,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+673,7289,Clay,12,15,12,14,10,9,12,Soldier,Genasi,Fighter,3,Champion,,,3,,,2018-06-29T15:37:47Z,0,0.0
+674,7292,sdf,33,13,7,10,8,11,12,Noble,Human,Bard,6,College of Lore,,,6,Grappler,,2018-06-29T15:37:47Z,0,0.0
+675,7297,Cogswell Silversprocket,12,8,12,14,15,13,10,Sage,Gnome,Wizard,1,,,,1,,,2018-12-13T21:29:10.423Z,0,0.0
+676,7299,Anomynous's Character,12,0,0,0,0,0,0,,Elf,Monk,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+677,7304,Qinlar,12,8,8,8,8,8,8,,Human,Rogue,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+678,7306,Valamin,12,10,15,13,10,14,10,Criminal / Spy,Aarakocra,Ranger,2,,,,2,,Scale Mail/Shortsword/Shortsword/Longbow/Arrows/Quiver/Dungeoneer's Pack,2018-06-29T15:37:47Z,0,15.0
+679,7318,Daphid,12,13,12,14,10,15,8,,Goliath,Barbarian,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+680,7320,Thae-Ra,10,15,12,15,8,11,10,Soldier,Human,Fighter,1,,,,1,Svirfneblin Magic,Shield/Chain Mail/Longsword/Handaxe/Handaxe/Explorer's Pack,2018-06-29T15:37:47Z,0,0.0
+681,7324,CrazyRope's Character,12,10,15,11,10,15,10,Sage,Dwarf,Monk,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+682,7326,Artemis Panacaea,26,13,8,14,12,15,10,Acolyte,Human,Cleric,3,Life Domain,,,3,,Chain Mail/Maul,2018-06-29T15:37:47Z,0,0.0
+683,7329,Rhog,12,15,13,14,10,12,8,,Dragonborn,Fighter,7,Champion,,,7,,"Greatsword, +1/Mithral Plate",2018-06-29T15:37:47Z,0,0.0
+684,7339,JBriz's Character,12,18,16,20,15,15,14,Soldier,Goliath,Barbarian,1,,,,1,,Armor of Invulnerability/Bag of Holding/Boots of Levitation/Bracers of Defense/Defender Greatsword/Belt of Storm Giant Strength/Adamantine Breastplate,2018-06-29T15:37:47Z,0,0.0
+685,7343,Onix's Character,12,0,0,0,0,0,0,,Goliath,Barbarian,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+686,7344,ShahAb,12,0,0,0,0,0,0,,Elf,Druid,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+687,7347,Solange Crowsteam,12,15,13,14,10,8,12,Soldier,Human,Fighter,1,,,,1,,"Shield/Chain Mail/Dagger/Longsword/Crossbow, light/Crossbow Bolts/Clothes, Common/Explorer's Pack/Playing Card Set",2018-06-29T15:37:47Z,165,179.5
+688,7349,Cadmium Dillinger,12,11,14,12,12,14,18,,Human,Warlock,8,,,,8,,"Dagger/Dagger/Dagger/Dagger/Dagger/Clothes, Traveler's/Soap/Painter's Supplies/Dice Set/Wand",2018-06-29T15:37:47Z,0,0.0
+689,7356,Crabby's Character,12,15,0,14,0,0,0,,Human,Fighter,6,,,,6,,,2018-06-29T15:37:47Z,0,0.0
+690,7357,wn395's Character,12,0,0,0,0,0,0,,Halfling,Bard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+691,7361,Tiren,12,9,18,10,15,10,15,Criminal / Spy,Half-Elf,Rogue,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+692,7367,Aeolus,49,13,17,13,8,16,13,Noble,Aarakocra,Ranger,6,Hunter,Rogue,,7,,"Bracers of Archery/Longbow, +1/Studded Leather/Dagger/Spear/Longbow/Arrows/Ink (1 ounce bottle)/Ink Pen/Case, Map or Scroll/Component Pouch/Quiver/Sealing Wax/Explorer's Pack",2018-07-13T05:49:13.277Z,338,0.0
+693,7370,cameraobscura83's Character,12,0,0,0,0,0,0,,Elf,Warlock,1,The Fiend,,,1,,,2018-06-29T15:37:47Z,0,0.0
+694,7371,Shava of the Northern Fist,12,10,15,13,8,14,12,Acolyte,Elf,Monk,1,,,,1,,Shortbow/Shortsword,2018-06-29T15:37:47Z,0,0.0
+695,7377,Belphegor,12,12,14,16,11,19,19,Acolyte,Human,Paladin,1,,,,1,Grappler,,2018-06-29T15:37:47Z,0,0.0
+696,7387,Bran Sturmwind,12,15,8,14,8,10,15,Soldier,Human,Paladin,5,,Warlock,,7,,,2018-06-29T15:37:47Z,0,0.0
+697,7395,Fep,40,13,14,12,11,15,8,Soldier,Halfling,Monk,5,Way of the Open Hand,,,5,,"Bracers of Defense/Spear/Backpack/Blanket/Clothes, Traveler's/Grappling Hook/Healer's Kit/Rations (1 day)/Rope, Hempen (50 feet)/Tinderbox/Torch/Waterskin/Whetstone/Glassblower's Tools",2018-06-29T15:37:47Z,4,20.75
+698,7396,Kabark,12,15,13,14,8,10,12,Folk Hero,Dragonborn,Monk,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+699,7397,Orion Stormshadow,12,0,0,0,0,0,0,,Halfling,Bard,6,College of Lore,Rogue,,7,,,2018-06-29T15:37:47Z,0,0.0
+700,7402,Aritian Brightflame,12,0,0,0,0,0,0,,Tiefling,Warlock,1,The Fiend,,,1,,,2018-06-29T15:37:47Z,0,0.0
+701,7405,Barleen Edros,12,15,14,12,11,10,10,Noble,Dwarf,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+702,7407,RJHPerkins's Character,12,16,14,15,10,10,12,Soldier,Goliath,Barbarian,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+703,7416,Lyra,34,8,14,15,10,13,12,Criminal / Spy,Elf,Ranger,5,Hunter,,,5,Sharpshooter,"Leather/Shortsword/Shortsword/Longbow/Arrows/Backpack/Bedroll/Clothes, Common/Crowbar/Mess Kit/Rations (1 day)/Rope, Hempen (50 feet)/Tinderbox/Torch/Waterskin",2021-05-19T06:25:39Z,0,195.0
+704,7418,Ellis,78,15,10,13,10,8,15,Sailor,Human,Bard,10,College of Valor,Warlock,The Archfey,15,Lucky/Shield Master,"Mithral Plate/Lyre of the Archfey Court/COPY_OF_Book of Ancient Secrets /Shield/Dagger/Club/Shortsword/Clothes, Fine/Pouch/Rope, Silk (50 feet)/Entertainer's Pack ",2021-07-25T19:42:57Z,1186,272.2
+705,7429,SKOZ's Character,12,15,13,14,10,12,8,,Goliath,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+706,7443,Horry,12,8,15,13,14,10,12,Criminal / Spy,Halfling,Rogue,5,Thief,,,5,,Studded Leather/Dagger,2018-06-29T15:37:47Z,0,0.0
+707,7445,uveemebe's Character,12,8,10,15,15,10,13,,Gnome,Wizard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+708,7452,Flymand,8,12,15,13,10,14,8,Acolyte,Aarakocra,Monk,1,,,,1,,Dart/Shortsword/Explorer's Pack,2018-06-29T15:37:47Z,0,0.0
+709,7464,Reinwald Mirthguard,10,15,13,14,10,12,8,Soldier,Human,Fighter,1,,,,1,,Shield/Chain Mail/Longsword/Handaxe/Handaxe/Explorer's Pack,2018-06-29T15:37:47Z,0,0.0
+710,7467,almost LoneHunter,12,9,15,14,15,11,11,Soldier,Goliath,Ranger,2,,,,2,,Leather/Handaxe/Handaxe/Longbow/Arrows,2018-06-29T15:37:47Z,0,0.0
+711,7470,Augun Highhand Anakalugate,12,17,15,15,7,13,11,Soldier,Goliath,Fighter,3,Champion,,,3,,,2018-06-29T15:37:47Z,0,0.0
+712,7477,DaceZyr12's Character,12,0,0,0,0,0,0,,Aarakocra,Monk,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+713,7484,Test Character,12,0,0,0,0,0,0,,Half-Elf,Fighter,1,,Bard,,20,,,2018-06-29T15:37:47Z,0,0.0
+714,7486,Grimwold,12,8,13,10,15,15,10,Sage,Human,Wizard,1,,,,1,,"Dagger/Bedroll/Component Pouch/Lantern, Bullseye/Magnifying Glass/Oil (flask)/Rations (1 day)/Spellbook/Waterskin/Scholar's Pack",2018-06-29T15:37:47Z,0,16.15
+715,7487,Rando Cardrissian,56,9,14,15,13,6,12,Sage,Aarakocra,Monk,17,Way of the Open Hand,,,17,,"Leather, +3/Quarterstaff, +3",2018-06-29T15:37:47Z,0,0.0
+716,7492,Wukong,12,10,15,14,8,15,8,Sage,Genasi,Monk,1,,,,1,,Dart/Shortsword/Explorer's Pack,2018-06-29T15:37:47Z,0,13.0
+717,7500,themadryan's Character,12,15,10,15,8,11,12,Folk Hero,Dwarf,Barbarian,1,,,,1,,Maul,2018-06-29T15:37:47Z,0,0.0
+718,7506,Adrik Battlehammer,76,16,14,16,16,14,14,Sailor,Dwarf,Fighter,10,Eldritch Knight,Wizard,Tempest Theurg,14,Dual Wielder/War Caster,"Bag of Holding/Gem of Seeing/Portable Hole/Battleaxe, +1/Belt of Cloud Giant Strength/Chain Shirt, +3/Potion of Healing (Greater)/Dagger, +1/Whelm/Cloak of Resistance/Hammer of Shanatar/Giant Slayer/Enduring Spellbook/Component Pouch/Handaxe/Handaxe/Backpack/Mess Kit/Tinderbox/Torch/Rations (1 day)/Waterskin/Rope, Hempen (50 feet)/Climber's Kit/Bell/Bottle, Glass/Case, Map or Scroll/Sack/Crystal/Healer's Kit/Potion of Healing/Handaxe/Handaxe/Adrik's Spellbook",2021-02-11T09:23:51Z,404,13701.0
+719,7509,Therin Moonblade,12,12,17,14,15,16,10,Acolyte,Elf,Monk,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+720,7511,Bo Deg,8,10,14,12,13,8,15,Entertainer,Human,Bard,1,,,,1,Grappler,Leather/Dagger/Rapier/Entertainer's Pack /Lute,2020-03-19T13:11:38.913Z,0,0.0
+721,7512,Hunter Spark,99,10,15,10,11,15,10,Soldier,Elf,Monk,20,Way of the Open Hand,,,20,,,2018-06-29T15:37:47Z,0,0.0
+722,7513,Promotius's Character,12,15,12,15,11,10,8,Folk Hero,Human,Barbarian,1,,,,1,Grappler,Scale Mail/Glaive/Explorer's Pack,2018-06-29T15:37:47Z,0,0.0
+723,7515,Iorvroth,10,11,7,4,12,16,9,Folk Hero,Dragonborn,Paladin,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+724,7526,Meriele Galanodel,43,10,17,14,11,10,18,,Half-Elf,Bard,8,College of Lore,Warlock,,9,,"Bag of Holding/Cloak of Elvenkind/Ring of Protection/Ioun Stone of Reserve/Studded Leather/Leather/Dagger/Rapier/Backpack/Bedroll/Candle/Clothes, Costume/Rations (1 day)/Waterskin/Disguise Kit/Lute",2018-09-07T21:48:57.867Z,0,0.0
+725,7533,Eben,12,8,15,13,15,12,8,Sage,Human,Wizard,1,,,,1,Grappler,,2018-06-29T15:37:47Z,0,0.0
+726,7535,Jynnas,12,10,14,15,8,15,8,Soldier,Dragonborn,Cleric,1,Life Domain,,,1,,,2018-06-29T15:37:47Z,0,0.0
+727,7536,jrsteen's Character,12,15,14,14,8,12,8,,Genasi,Barbarian,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+728,7537,Cor'vin,86,10,15,16,11,16,7,Outlander,Elf,Druid,16,Circle of the Moon,,,16,Lucky/War Caster,"Circlet of Blasting/Periapt of Proof against Poison/Ring of Mind Shielding/Ring of the Ram/Rod of Alertness/Shield, +1/Staff of Healing/Studded Leather, +1/Ring of Fire Resistance/Longbow, +1/Sending Stones/Bottled Breath/Claws of the Umber Hulk/Studded Leather/Backpack/Bedroll/Mess Kit/Tinderbox/Torch/Rations (1 day)/Waterskin/Rope, Hempen (50 feet)/Herbalism Kit/Sickle/Ironfang/Wand of Smiles",2021-04-11T11:50:59Z,3496,591.0
+729,7542,Nestamon's Character,12,15,10,15,10,12,9,Soldier,Dwarf,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+730,7553,mandusdm's Character,12,0,0,0,0,0,0,,Human,Wizard,1,,,,1,Grappler,,2018-06-29T15:37:47Z,0,0.0
+731,7557,Edlyn Heordak,12,14,8,14,12,18,10,Acolyte,Dwarf,Cleric,14,Life Domain,,,14,,"Bag of Tricks/Belt of Dwarvenkind/Handy Haversack/Mithral Chain Mail/Warhammer, +2/Shield/Crossbow, light/Crossbow Bolts",2018-07-20T16:45:56.223Z,0,0.0
+732,7560,Linialomdil's Character,12,0,0,0,0,0,0,,Dwarf,Sorcerer,1,Draconic Bloodline,,,1,,,2018-06-29T15:37:47Z,0,0.0
+733,7561,Ibitis's Character,12,10,18,16,12,14,16,Noble,Human,Rogue,1,,,,1,Grappler,,2018-06-29T15:37:47Z,0,0.0
+734,7564,Atanvar,12,10,15,14,12,13,8,Criminal / Spy,Elf,Ranger,20,Hunter,,,20,,"Amulet of Proof against Detection and Location/Bag of Holding/Iron Flask/Ring of Invisibility/Ring of Mind Shielding/Armor of Necrotic Resistance, Padded/Torch/Vial",2018-06-29T15:37:47Z,20,25501.0
+735,7567,Uvogin,8,8,13,14,10,15,12,Sage,Elf,Druid,10,,,,10,,Shield/Leather/Scimitar/Explorer's Pack/Sprig of Mistletoe,2018-06-29T15:37:47Z,0,0.0
+736,7576,Sir Archibald Brexton,12,15,10,15,8,10,13,Noble,Human,Paladin,1,,,,1,,Shield/Splint/Longsword/Javelin/Greatsword/Explorer's Pack,2018-06-29T15:37:47Z,0,0.0
+737,7578,yr,8,10,14,12,13,8,15,Entertainer,Dwarf,Bard,1,,,,1,,Leather/Dagger/Rapier/Entertainer's Pack /Lute,2018-06-29T15:37:47Z,0,0.0
+738,7591,Xellos,6,8,13,14,15,10,12,Sage,Dragonborn,Wizard,1,,,,1,,Quarterstaff/Spellbook/Scholar's Pack/Rod,2018-06-29T15:37:47Z,0,0.0
+739,7604,Dayne,12,0,0,0,0,0,0,,Elf,Druid,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+740,7609,Raygar Redhammer,26,14,14,14,8,9,13,,Dwarf,Barbarian,3,Path of the Storm Herald,,,3,,"Handaxe/Handaxe/Javelin/Greataxe/Clothes, Fine/Signet Ring/Explorer's Pack/Disguise Kit",2021-07-05T08:04:27Z,18,0.0
+741,7610,Wayne,12,15,14,15,8,10,8,Soldier,Dragonborn,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+742,7613,VengefulOne's Character,12,0,0,0,0,0,0,,Dwarf,Cleric,4,Life Domain,,,4,,,2018-06-29T15:37:47Z,0,0.0
+743,7617,Ake,12,15,13,14,8,12,10,,Human,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+744,7620,UFUGU,29,14,9,10,13,14,14,Sage,Aarakocra,Barbarian,3,Path of the Berserker,Druid,Circle of the Land (Mountain),5,,,2018-06-29T15:37:47Z,0,0.0
+745,7629,Hunk Buffguy,26,16,14,15,7,8,10,Criminal / Spy,Half-Orc,Barbarian,3,Path of the Berserker,,,3,,Sling/Sling Bullets,2019-07-27T05:26:46.74Z,141,0.0
+746,7630,Gundar Titslammer,12,8,14,12,10,13,15,Folk Hero,Dwarf,Bard,1,,,,1,,"Studded Leather/Crossbow, hand/Battleaxe/Brewer's Supplies/Bagpipes",2018-06-29T15:37:47Z,0,0.0
+747,7636,Cortland,17,10,14,12,15,12,13,Folk Hero,Dwarf,Bard,3,College of Lore,Ranger/Warlock/Barbarian,Hunter/The Fiend/Path of the Berserker,7,,,2018-06-29T15:37:47Z,0,0.0
+748,7638,RazorTrash's Character,12,12,15,14,8,0,8,Acolyte,Tiefling,Ranger,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+749,7641,Elina Shaporov,12,13,15,14,8,10,12,Folk Hero,Half-Elf,Barbarian,1,,,,1,,Greatsword,2018-06-29T15:37:47Z,0,0.0
+750,7657,Spazz's Character,12,0,0,0,0,0,0,,Human,Cleric,8,,,,8,,,2018-06-29T15:37:47Z,0,0.0
+751,7658,Nesryn,12,10,15,14,13,12,8,Criminal / Spy,Elf,Rogue,1,,,,1,,"Bag of Holding/Studded Leather, +3/Rapier, +3/Cartographer's Tools/Thieves' Tools",2018-06-29T15:37:47Z,4,1611.0
+752,7668,Ygritte the blazeborn,12,8,14,15,12,14,8,,Genasi,Cleric,1,,Wizard,,10,,,2018-06-29T15:37:47Z,0,0.0
+753,7671,Makalaka,28,12,13,14,10,15,8,Sage,Goliath,Druid,5,Circle of the Land (Mountain),,,5,,Leather,2018-06-29T15:37:47Z,0,0.0
+754,7674,Deldrok Blessedbrow,13,14,10,16,12,17,10,Acolyte,Dwarf,Cleric,2,Life Domain,,,2,,Shield/Chain Mail/Warhammer,2018-06-29T15:37:47Z,0,0.0
+755,7677,Grofurth,12,14,12,14,10,12,11,,Goliath,Barbarian,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+756,7680,Vsteele's Character,12,10,13,11,10,12,15,,Tiefling,Bard,3,College of Lore,,,3,,,2018-06-29T15:37:47Z,0,0.0
+757,7681,DonJezra's Character,12,11,12,14,10,14,12,Acolyte,Dwarf,Cleric,3,,,,3,,,2018-06-29T15:37:47Z,0,0.0
+758,7692,Lelia,63,11,10,13,12,11,11,Sage,Tiefling,Sorcerer,20,Draconic Bloodline,,,20,Grappler/Svirfneblin Magic,,2018-06-29T15:37:47Z,0,0.0
+759,7694,Lifosa Windhager,58,17,10,13,12,13,14,,Half-Elf,Paladin,9,Oath of Devotion,,,9,,,2018-06-29T15:37:47Z,0,0.0
+760,7695,Seth,12,10,0,0,0,0,0,,Gnome,Wizard,3,,,,3,,,2018-06-29T15:37:47Z,0,0.0
+761,7696,Xenrot,8,13,8,14,10,15,12,Acolyte,Dwarf,Cleric,1,Life Domain,,,1,,"Shield/Chain Mail/Dagger/Mace/Crossbow, light/Crossbow Bolts/Priest's Pack/Reliquary",2018-06-29T15:37:47Z,0,0.0
+762,7698,Norudil,12,0,0,0,0,0,0,,Elf,Druid,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+763,7701,Shayra Xetris,12,16,16,18,10,15,13,,Elf,Ranger,1,,,,1,,"Studded Leather/Rapier/Longbow/Clothes, Traveler's/Hunting Trap",2018-06-29T15:37:47Z,0,10.0
+764,7705,Rand,12,12,15,14,8,13,10,,Human,Fighter,1,,,,1,Grappler,,2018-06-29T15:37:47Z,0,0.0
+765,7714,TehSidley's Character,12,15,9,15,9,9,13,,Human,Barbarian,10,Path of the Berserker,,,10,,,2018-06-29T15:37:47Z,0,0.0
+766,7715,Captal88's Character,12,18,16,18,8,10,12,Folk Hero,Dwarf,Barbarian,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+767,7719,Euphemia Octavia deVries,12,0,0,0,0,0,0,,Human,Bard,5,College of Lore,,,5,,,2018-06-29T15:37:47Z,0,0.0
+768,7722,GrownupHaircut's Character,12,0,0,0,0,0,0,,Half-Elf,Warlock,4,The Fiend,,,4,,,2018-06-29T15:37:47Z,0,0.0
+769,7725,Rifky Fogbrooke,21,10,15,13,10,15,8,,Half-Elf,Monk,3,Way of the Open Hand,,,3,,Quarterstaff/Dart/Shortsword/Explorer's Pack,2018-06-29T15:37:47Z,0,0.0
+770,7738,Ketsael,62,16,10,6,12,11,8,Sage,Gnome,Bard,10,College of Lore,,,10,,,2018-06-29T15:37:47Z,0,0.0
+771,7743,Hirp's Character,12,0,0,0,0,0,0,,Human,Wizard,1,,,,1,Grappler,,2018-06-29T15:37:47Z,0,0.0
+772,7758,Morden,20,11,16,12,11,12,15,Criminal / Spy,Tiefling,Rogue,3,,,,3,,Rapier,2018-06-29T15:37:47Z,0,0.0
+773,7761,Leon the Protector,70,15,10,15,8,8,14,Folk Hero,Human,Fighter,6,Champion,Warlock,The Great Old One,12,Mobile/Shield Master,"War Pick, +2/War Pick, +2/Shield/Chain Mail/Plate/Longsword/Backpack/Bedroll/Mess Kit/Rations (1 day)/Rope, Hempen (50 feet)/Tinderbox/Torch/Waterskin",2019-02-20T11:21:43.57Z,2882,157.0
+774,7762,Fenxalim,100,13,8,11,10,13,13,Folk Hero,Gnome,Fighter,4,Champion,Monk,Way of the Open Hand,15,Grappler/Svirfneblin Magic,,2018-06-29T15:37:47Z,0,0.0
+775,7763,Valar Brightsteel,12,13,12,12,10,15,11,,Human,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+776,7768,therubberquacklord's Character,12,8,15,15,8,15,8,,Elf,Monk,5,,,,5,,,2018-06-29T15:37:47Z,0,0.0
+777,7786,DanGaston's Character,12,8,15,12,10,11,15,,Elf,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+778,7789,Shintu,12,0,0,0,0,0,0,,Dragonborn,Sorcerer,1,Draconic Bloodline,,,1,,,2018-06-29T15:37:47Z,0,0.0
+779,7801,Artemis,68,15,11,17,13,9,18,,Aasimar,Warlock,10,,,,10,,"Ring of Telekinesis/Wand of the War Mage, +3",2020-08-21T11:33:15Z,0,0.0
+780,7802,Rosisys,12,0,0,0,0,0,0,,Aarakocra,Monk,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+781,7812,MorganTheMad's Character,12,0,0,0,0,0,0,,Human,Warlock,1,The Fiend,,,1,,,2018-06-29T15:37:47Z,0,0.0
+782,7814,Niffel,12,0,0,0,0,0,0,,Genasi,Cleric,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+783,7815,Salandra,8,8,13,14,12,10,15,Sage,Tiefling,Warlock,1,The Fiend,,,1,,"Leather/Dagger/Dagger/Quarterstaff/Crossbow, light/Crossbow Bolts/Scholar's Pack/Rod",2018-06-29T15:37:47Z,0,0.0
+784,7816,Ramox,12,15,14,13,8,12,10,Soldier,Human,Barbarian,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+785,7818,Nakki Skaldear,12,8,14,12,13,10,15,Noble,Dragonborn,Warlock,20,The Fiend,,,20,,Leather/Dagger/Quarterstaff,2018-06-29T15:37:47Z,0,0.0
+786,7826,Henry,12,15,10,12,8,13,14,,Human,Paladin,1,,,,1,Grappler,Shield/Chain Mail/Longsword/Javelin,2018-06-29T15:37:47Z,0,0.0
+787,7831,Tousi's Character,12,15,10,13,8,12,14,Folk Hero,Half-Elf,Paladin,3,,,,3,,,2018-06-29T15:37:47Z,0,0.0
+788,7839,Alms Wide Open,12,12,15,14,10,13,8,Folk Hero,Human,Monk,1,,,,1,Grappler,Shortsword/Wooden Staff,2018-06-29T15:37:47Z,0,0.0
+789,7840,Gnulash's Character,12,0,0,0,0,0,0,,Dwarf,Warlock,1,The Fiend,,,1,,,2018-06-29T15:37:47Z,0,0.0
+790,7850,Flauros's Character,12,8,8,10,14,15,15,Sage,Tiefling,Warlock,1,The Fiend,,,1,,,2018-06-29T15:37:47Z,0,0.0
+791,7856,Azarac,38,10,14,10,14,14,18,Noble,Half-Orc,Warlock,7,The Fiend,,,7,,Cloak of Protection/Mace of Terror/Rod of Rulership/Studded Leather,2018-06-29T15:37:47Z,0,0.0
+792,7858,Gundar Titslammer,12,15,8,14,10,8,15,Soldier,Dwarf,Bard,1,,,,1,,Chain Mail,2018-06-29T15:37:47Z,0,0.0
+793,7863,Heageth's Character,12,0,0,0,0,0,0,,Dwarf,Cleric,1,Life Domain,,,1,,,2018-06-29T15:37:47Z,0,0.0
+794,7867,Caritas,12,10,14,12,13,0,0,,Tiefling,Paladin,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+795,7869,Greaek Stronghammer,12,18,13,16,16,13,8,Soldier,Dwarf,Fighter,7,,Barbarian,,8,,"Belt of Dwarvenkind/Longsword, +1/Chain Mail/Greataxe/Maul",2018-06-29T15:37:47Z,0,0.0
+796,7870,Biznark,24,13,10,6,18,10,8,Noble,Goliath,Rogue,3,Thief,Sorcerer/Monk,Draconic Bloodline/Way of the Open Hand,10,,,2018-06-29T15:37:47Z,0,0.0
+797,7872,Wynne,24,17,16,4,16,14,13,Noble,Genasi,Wizard,7,School of Evocation,,,7,Grappler,,2018-06-29T15:37:47Z,0,0.0
+798,7874,Merek,12,0,0,0,0,0,0,,Human,Monk,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+799,7878,Sirpaticus's Character,12,8,14,14,15,10,10,,Genasi,Wizard,1,,,,1,,Dagger/Spellbook/Scholar's Pack/Wand,2018-06-29T15:37:47Z,0,0.0
+800,7879,Augusta,12,8,12,10,13,15,14,Sage,Elf,Bard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+801,7892,Rurik Rumnaheim,12,12,13,15,14,10,8,Sage,Dwarf,Wizard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+802,7893,Francis Underwood,12,0,0,0,0,0,0,,Half-Elf,Warlock,1,The Fiend,,,1,,,2018-06-29T15:37:47Z,0,0.0
+803,7896,Brother Oakley,12,8,15,13,10,14,12,Noble,Human,Paladin,3,,,,3,,Shortsword,2018-06-29T15:37:47Z,0,0.0
+804,7897,Ignis,12,0,0,0,0,0,0,,Tiefling,Warlock,1,The Fiend,,,1,,,2018-06-29T15:37:47Z,0,0.0
+805,7898,Roc,10,15,13,14,10,12,8,Soldier,Half-Orc,Fighter,1,,,,1,,Shield/Chain Mail/Longsword/Handaxe/Handaxe/Explorer's Pack,2019-11-13T05:47:14.16Z,0,0.0
+806,7910,Angral's Character,12,0,0,0,0,0,0,,Human,Wizard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+807,7912,Misthiel,12,15,13,14,12,10,8,Acolyte,Human,Fighter,1,,,,1,Grappler,,2018-06-29T15:37:47Z,0,0.0
+808,7915,Aree-k (Charlie),12,0,0,0,0,0,0,,Aarakocra,Druid,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+809,7916,Torie Nado,12,10,13,13,15,11,11,Folk Hero,Human,Wizard,1,,,,1,,Dagger/Component Pouch/Spellbook,2018-06-29T15:37:47Z,0,0.0
+810,7919,Nalden,12,10,15,14,10,13,10,Folk Hero,Human,Ranger,10,Hunter,,,10,,"Adamantine Breastplate/Shortsword, +1/Longsword",2018-06-29T15:37:47Z,0,0.0
+811,7920,Einoch,12,10,15,14,11,10,17,Criminal / Spy,Human,Warlock,1,The Fiend,,,1,Svirfneblin Magic,,2018-06-29T15:37:47Z,0,0.0
+812,7921,Bloom,12,10,16,16,10,16,14,Criminal / Spy,Dwarf,Monk,6,Way of the Open Hand,Rogue/Warlock,Thief/The Fiend,13,Svirfneblin Magic,"Boots of Elvenkind/Cloak of Elvenkind/Leather, +3/Leather, +3/Dagger, +3/Dagger, +3",2018-06-29T15:37:47Z,0,0.0
+813,7923,Gosu,40,10,13,9,10,10,16,Acolyte,Genasi,Paladin,4,Oath of Devotion,,,4,Svirfneblin Magic,,2018-06-29T15:37:47Z,0,0.0
+814,7933,wilfred,22,11,14,11,10,11,14,Sage,Tiefling,Barbarian,2,,,,2,,,2018-06-29T15:37:47Z,0,0.0
+815,7936,Erxalim,12,8,15,10,14,14,10,,Elf,Rogue,20,Thief,,,20,,,2018-06-29T15:37:47Z,0,0.0
+816,7939,sadwolfman513's Character,12,10,15,13,10,14,10,,Elf,Ranger,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+817,7942,Oridar Beivalur,72,4,12,13,12,10,16,Sage,Half-Elf,Warlock,12,The Fiend,,,12,Keen Mind/Eldritch Adept,"Wand of Fear/Potion of Healing (Greater)/Wand of the War Mage, +2/Tabard of Defense/Studded Leather/Baumwoll Umhang/Mithril Amulet der weißen Palme/Seltene Tinte/Heiltrank ""001""/Unbekannte Karte (geklaut)/Taschenwärmer/Buch der Zeit/Schriftrollen/Pouch/Clothes, Common/Orb/Book/Ink Pen/Parchment (one sheet)/Disguise Kit/Bedroll/Club/Backpack/Small Knife/Little Bag of Sand/Ink (1 ounce bottle)/Holy Water (flask)/Potion of Healing/Rations (1 day)/Dog Tag/Heiltrank ""003""/Stylische Sonnenbrille/Clothes, Costume/Ink (1 ounce bottle)/Ink Pen/Bedroll/Clothes, Common/Mess Kit/Rations (1 day)/Rope, Hempen (50 feet)/Tinderbox/Torch/Waterskin/Vestments",2022-09-11T13:17:22.9Z,1431,7484.0
+818,7945,Ferrah,60,12,16,16,15,10,10,Soldier,Elf,Fighter,5,Eldritch Knight,Wizard,School of Divination,10,Sharpshooter,"Bag of Holding/Bracers of Archery/Gauntlets of Ogre Power/Potion of Water Breathing/Potion of Healing (Greater)/Potion of Healing (Superior)/Conch of Teleportation/Conch of Teleportation/Potion of Giant Size/Long Bow of the Ild Rune/Katana, +2/Studded Leather/Dagger/Whip/Rapier",2022-07-08T11:18:49.893Z,2722,561.0
+819,7951,Ariadin,12,12,8,13,15,10,14,Soldier,Dwarf,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+820,7953,Guert Le Vindicateur,70,18,9,17,10,13,15,Sailor,Human,Paladin,11,Oath of Vengeance,,,11,Polearm Master/Sentinel,"Cloak of Elvenkind/Belt of Stone Giant Strength/Potion of Healing (Greater)/Spell Scroll (1st Level)/Clé de Grimnir/Shield/Plate/Crossbow, light/Whip/Backpack/Bedroll/Clothes, Common/Mess Kit/Tinderbox/Torch/Waterskin/Rope, Hempen (50 feet)/Holy Symbol/Rope, Silk (50 feet)/Potion of Healing/Rations (1 day)/Diamond",2020-01-19T12:45:18.52Z,414,1779.8
+821,7957,Taroven Greyhawk,12,0,0,0,0,0,0,,Elf,Wizard,9,School of Evocation,,,9,,,2018-06-29T15:37:47Z,0,0.0
+822,7961,Imaarythos,12,0,0,0,0,0,0,,Dragonborn,Sorcerer,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+823,7965,Killerdsd's Character,12,0,0,0,0,0,0,,Elf,Druid,10,,,,10,,,2018-06-29T15:37:47Z,0,0.0
+824,7974,Mel-Anne,12,14,14,12,10,13,10,Folk Hero,Aarakocra,Barbarian,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+825,7977,gcook725's Character,12,8,13,14,15,10,12,Sage,Elf,Wizard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+826,7980,DenmarkAPH's Character,12,9,17,17,13,9,18,,Human,Sorcerer,2,,,,2,,,2018-06-29T15:37:47Z,0,0.0
+827,7981,Brunmor Blackriver,12,12,12,12,10,16,11,Noble,Dwarf,Cleric,1,Life Domain,,,1,,,2018-06-29T15:37:47Z,0,0.0
+828,7987,Priyra,12,0,0,0,0,0,0,,Elf,Wizard,15,School of Evocation,,,15,,,2022-09-22T02:19:26.723Z,0,0.0
+829,7990,Tuelo Oakleak,12,10,13,12,11,15,12,Sage,Human,Druid,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+830,7998,Elmir Ahtnamas,12,0,0,0,0,0,0,,Half-Elf,Bard,3,,,,3,,,2018-06-29T15:37:47Z,0,0.0
+831,8002,Ragnir,12,16,12,16,12,8,10,,Dwarf,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+832,8007,Elan Stormbringer,6,8,13,14,15,10,12,Sage,Human,Wizard,1,,,,1,,Quarterstaff/Spellbook/Scholar's Pack/Rod,2018-06-29T15:37:47Z,0,0.0
+833,8008,Ravemage,12,10,14,14,10,10,14,,Half-Elf,Warlock,1,The Fiend,,,1,,,2018-06-29T15:37:47Z,0,0.0
+834,8012,Brinan,12,0,0,0,0,0,0,,Dwarf,Paladin,5,Oath of Devotion,,,5,,,2018-06-29T15:37:47Z,0,0.0
+835,8014,Rycroft,12,0,0,0,0,0,0,,Human,Wizard,1,,,,1,Grappler,,2018-06-29T15:37:47Z,0,0.0
+836,8024,dman's Character,12,0,0,0,0,0,0,,Human,Cleric,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+837,8025,Rorhim Sunseeker,52,14,12,14,8,12,15,Soldier,Dragonborn,Paladin,6,,Warlock,,12,,"Gauntlets of Ogre Power/Longsword, +2/Plate/Javelin",2018-06-29T15:37:47Z,78,0.0
+838,8031,Varely's Character,12,0,0,0,0,0,0,,Genasi,Wizard,20,,,,20,,,2018-06-29T15:37:47Z,0,0.0
+839,8040,Horace Metzger,12,8,15,12,10,13,14,Soldier,Human,Paladin,1,,,,1,,Shield/Leather/Dagger/Whip/Explorer's Pack,2018-06-29T15:37:47Z,0,0.0
+840,8054,StillwaterBADquestingCo's Character,12,0,0,0,0,0,0,,Half-Elf,Wizard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+841,8056,Ghibli,23,14,8,14,11,15,9,Sage,Dwarf,Cleric,5,Forge Domain,,,5,,"Shield/Hide/Handaxe/Handaxe/Mace/Battleaxe/Backpack/Bedroll/Blanket/Candle/Clothes, Common/Mess Kit/Rations (1 day)/Amulet/Tinderbox/Alms Box/Block of Incense/Censer/Vestments/Waterskin/Emblem/Torch/Rope, Hempen (50 feet)/Brewer's Supplies",2018-10-23T14:28:34.897Z,97,2455.9
+842,8064,Kildrak,93,14,10,13,12,15,8,Acolyte,Dwarf,Cleric,18,Tempest Domain,,,18,Shield Master/War Caster/Chef,"Breastplate, +1/Boots of Striding and Springing/Cape of the Mountebank/Gauntlets of Ogre Power/Javelin of Lightning/Plate, +1/Shield, +2/Mace, +1/Necklace of Lightning Orb/Shield/Chain Mail/Plate/Crossbow, light/Warhammer/Crossbow Bolts/Backpack/Blanket/Candle/Tinderbox/Rations (1 day)/Waterskin/Clothes, Common/Component Pouch/Crowbar/Hammer/Piton/Torch/Rope, Hempen (50 feet)/Flask or Tankard/Grappling Hook/Oil (flask)/Pick, Miner's/Potion of Healing/Sack/Smith's Tools/Spikes, Iron (10)/Backpack/Backpack/Sack/Alms Box/Block of Incense/Censer/Vestments/Emblem/Holy Symbol/Alms Box",2022-06-26T06:19:32.9Z,50,5325.0
+843,8074,Red wizard,19,12,15,12,13,10,16,Noble,Elf,Wizard,4,School of Evocation,Druid/Cleric,Circle of the Land (Coast)/Life Domain,7,,,2018-06-29T15:37:47Z,0,0.0
+844,8075,Tommee's Character,12,14,13,14,9,11,12,,Dwarf,Barbarian,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+845,8076,Nedree,12,8,15,14,13,12,10,Noble,Half-Elf,Ranger,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+846,8093,SurfaceDetail's Character,12,8,15,13,15,12,8,Criminal / Spy,Genasi,Rogue,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+847,8094,Solbog's Character,12,14,8,13,10,15,12,Noble,Half-Orc,Cleric,1,Life Domain,,,1,,,2018-06-29T15:37:47Z,0,0.0
+848,8096,Ashlotte Dubois,12,14,17,15,9,16,15,Criminal / Spy,Human,Monk,1,,,,1,Grappler,,2018-06-29T15:37:47Z,0,0.0
+849,8097,Pekk-a Töp'öhäntä,12,16,14,11,9,9,16,Criminal / Spy,Human,Warlock,1,The Fiend,,,1,Svirfneblin Magic,,2018-06-29T15:37:47Z,0,0.0
+850,8105,Reginald VonKrampus,12,0,0,0,0,0,0,,Human,Bard,1,,,,1,,,2022-03-15T06:13:55.273Z,0,0.0
+851,8107,Vichomin,12,12,14,13,10,13,12,,Aarakocra,Monk,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+852,8108,Torment,12,8,14,10,15,10,14,Sage,Tiefling,Bard,14,College of Lore,,,14,,,2018-06-29T15:37:47Z,0,0.0
+853,8115,syst3mshoq's Character,12,0,0,0,0,0,0,,Dwarf,Cleric,5,,,,5,,,2018-06-29T15:37:47Z,0,0.0
+854,8116,Vicky,45,15,8,10,8,12,12,Soldier,Elf,Barbarian,4,Path of the Berserker,,,4,,,2018-06-29T15:37:47Z,0,0.0
+855,8118,Pen Bellasiel,12,12,14,13,10,14,10,Urchin,Elf,Monk,1,,,,1,,"Dart/Shortsword/Backpack/Case, Map or Scroll/Clothes, Common/Small Knife/Bedroll/Mess Kit/Rations (1 day)/Rope, Hempen (50 feet)/Tinderbox/Torch/Waterskin",2021-08-23T16:05:44Z,47,17.0
+856,8120,damianthegreat7's Character,12,0,0,0,0,0,0,,Human,Sorcerer,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+857,8122,Marcus Allrealious,58,15,12,15,10,10,8,Gladiator,Human,Fighter,9,Battle Master,,,9,Shield Master,"Bag of Holding/Potion of Animal Friendship/Potion of Growth/Robe of Useful Items/Shield, +1/Potion of Healing (Greater)/Longsword, +1/Mithral Plate/Longsword/Crossbow, heavy/Net/Explorer's Pack",2018-06-29T15:37:47Z,0,3809.0
+858,8129,Tristan of Fisherholme,52,13,10,12,8,14,15,Soldier,Human,Paladin,8,Oath of Devotion,,,8,,,2018-06-29T15:37:47Z,0,0.0
+859,8138,Winslow Kryllius Lockheart,12,0,0,0,0,0,0,,Human,Wizard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+860,8139,Nyscoria,12,15,8,13,10,12,14,Noble,Dragonborn,Paladin,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+861,8143,Brian Boru,12,16,11,14,12,10,6,Folk Hero,Genasi,Barbarian,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+862,8153,Origretor,13,6,11,11,14,11,14,Sage,Half-Elf,Wizard,1,,Fighter,Champion,3,,,2018-06-29T15:37:47Z,0,0.0
+863,8155,Zalzor,12,11,13,11,12,13,11,Criminal / Spy,Elf,Barbarian,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+864,8157,Ezra Vall,20,12,18,12,17,17,4,,Elf,Rogue,3,,Cleric,,4,,,2018-06-29T15:37:47Z,0,0.0
+865,8162,Oskar_NP's Character,12,0,0,0,0,0,0,,Elf,Wizard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+866,8164,Barakus Black-Hand,12,12,15,13,8,14,10,,Tiefling,Rogue,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+867,8185,Test,8,11,6,12,9,15,15,Criminal / Spy,Tiefling,Warlock,1,The Fiend,,,1,,,2018-06-29T15:37:47Z,0,0.0
+868,8189,Test-Raistlin,44,9,14,14,16,10,10,Acolyte,Tiefling,Wizard,8,School of Evocation,,,8,,,2018-06-29T15:37:47Z,0,0.0
+869,8191,Rohutar,12,0,0,0,0,0,0,,Aarakocra,Cleric,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+870,8194,Dome,32,9,10,14,5,9,14,Sage,Elf,Warlock,4,The Fiend,,,4,Grappler,,2018-06-29T15:37:47Z,0,0.0
+871,8195,Varus,10,15,13,14,10,12,8,Soldier,Human,Fighter,1,,,,1,Grappler,Shield/Chain Mail/Longsword/Handaxe/Handaxe/Explorer's Pack,2018-06-29T15:37:47Z,0,0.0
+872,8203,LiquidXI's Character,12,0,0,0,0,0,0,,Half-Elf,Bard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+873,8210,Olokian,50,9,9,3,11,9,13,Criminal / Spy,Halfling,Barbarian,20,Path of the Berserker,,,20,,"Bag of Holding/Belt of Dwarvenkind/Boots of Speed/Dagger of Venom/Potion of Healing/Potion of Healing/Armor of Thunder Resistance, Padded/Potion of Healing (Greater)/Potion of Healing (Greater)/Potion of Healing (Greater)/Vicious Dagger",2018-06-29T15:37:47Z,0,0.0
+874,8212,Ro´yah (Buscar Equilibrio),13,8,14,12,14,15,8,Folk Hero,Lizardfolk,Druid,2,Circle of the Shepherd,,,2,,"Shield/Human fingers /Broken dagger from Oberon house/Galduricos/Ring with sapphire/Quarterstaff/Scimitar/Backpack/Bedroll/Clothes, Common/Mess Kit/Pot, Iron/Rations (1 day)/Tinderbox/Torch/Waterskin/Rope, Hempen (50 feet)/Druidic Focus/Shovel/Leatherworker's Tools",2022-10-06T16:30:26.857Z,689,8.9
+875,8222,Raggrum,12,15,10,14,12,13,8,Folk Hero,Genasi,Paladin,1,,,,1,,"Shield/Chain Mail/Longsword/Shortbow/Clothes, Common/Pot, Iron/Pouch/Shovel/Explorer's Pack/Painter's Supplies",2018-06-29T15:37:47Z,0,110.0
+876,8228,Rinn Nailo,10,7,17,13,11,16,15,Criminal / Spy,Elf,Ranger,2,,,,2,,"Leather/Dagger/Dagger/Longbow/Arrows/Clothes, Common/Pouch/Explorer's Pack",2018-06-29T15:37:47Z,0,85.2
+877,8229,Terry_the_Deathcleric's Character,12,14,12,12,13,15,8,,Human,Cleric,6,,,,6,,Mace of Disruption/Mithral Plate/Shield/Longsword,2018-06-29T15:37:47Z,0,0.0
+878,8235,Ayylamo,12,0,0,0,0,0,0,,Dwarf,Monk,5,Way of the Open Hand,,,5,,,2018-06-29T15:37:47Z,0,0.0
+879,8241,tuffnerd's Character,12,18,16,12,11,16,9,,Human,Ranger,7,,,,7,,,2018-06-29T15:37:47Z,0,0.0
+880,8254,Aleks Branh,50,11,17,13,14,14,10,Soldier,Tiefling,Warlock,11,The Fiend,Monk/Fighter,Way of the Open Hand/Champion,14,Svirfneblin Magic,,2018-06-29T15:37:47Z,0,0.0
+881,8257,idealjetsam's Character,12,0,0,0,0,0,0,,Human,Rogue,4,,,,4,,,2018-06-29T15:37:47Z,0,0.0
+882,8267,Edgar (Tharviol),6,10,16,14,18,16,11,Sage,Elf,Wizard,10,School of Evocation,,,10,,Bag of Holding/Cloak of Displacement/Potion of Hill Giant Strength/Potion of Invisibility/Ring of Protection/Libro de nigromancia/Fragmento de bastón mágico/Quarterstaff/Spellbook/Scholar's Pack/Rod/Wooden Staff,2021-12-04T18:14:09.31Z,4,0.0
+883,8268,Conzor,12,12,15,13,10,14,8,,Human,Monk,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+884,8270,Rinald,12,14,12,15,10,13,8,,Goliath,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+885,8272,Xenon,12,10,14,15,13,11,16,Criminal / Spy,Tiefling,Sorcerer,1,Draconic Bloodline,,,1,,,2018-06-29T15:37:47Z,0,0.0
+886,8273,Aspar,12,0,0,0,0,0,0,,Human,Cleric,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+887,8280,WerQ's Character,12,15,14,10,8,8,15,,Dragonborn,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+888,8285,Marcelle,36,10,14,13,12,13,14,Noble,Dwarf,Cleric,5,Life Domain,,,5,Grappler,,2018-06-29T15:37:47Z,0,0.0
+889,8286,Impossibeard's Character,12,14,10,15,8,14,10,Folk Hero,Goliath,Fighter,5,Champion,,,5,Grappler,,2018-06-29T15:37:47Z,0,0.0
+890,8290,Havira,13,10,13,13,10,9,10,Sage,Goliath,Warlock,1,The Fiend,Druid,Circle of the Land (Forest),3,,,2018-06-29T15:37:47Z,0,0.0
+891,8292,bearaxe's Character,12,15,13,14,8,12,10,Sage,Dwarf,Fighter,1,,,,1,,Adamantine Breastplate/Vicious Warhammer,2018-06-29T15:37:47Z,0,0.0
+892,8295,Monolith,58,14,8,13,11,11,6,Criminal / Spy,Genasi,Fighter,9,Champion,,,9,,,2018-06-29T15:37:47Z,0,0.0
+893,8296,Aito Mordenwolfe,12,9,16,15,11,14,8,Noble,Human,Monk,7,Way of the Open Hand,,,7,,"Boots of Speed/Giant Slayer Handaxe/Berserker Handaxe/Vicious Handaxe/Handaxe, +3/Abacus/Dungeoneer's Pack",2018-06-29T15:37:47Z,191,0.0
+894,8303,Gunther il Petroso,12,15,12,13,12,12,9,Outlander,Goliath,Fighter,5,Champion,,,5,,Shield/Plate/Dagger/Longsword/Javelin/Mace/Climber's Kit,2020-01-29T15:59:12.883Z,0,0.0
+895,8306,MerryAdock's Character,12,13,15,10,8,12,14,Criminal / Spy,Genasi,Rogue,6,,,,6,,,2018-06-29T15:37:47Z,0,0.0
+896,8324,Mish'ra,12,9,14,13,13,8,15,Acolyte,Tiefling,Warlock,5,The Fiend,,,5,,Amulet of the Planes,2018-06-29T15:37:47Z,0,0.0
+897,8325,Gaerdithas,12,8,15,12,13,14,10,Sage,Half-Elf,Monk,1,,,,1,,Quarterstaff,2018-06-29T15:37:47Z,4,0.0
+898,8326,ChrisTheCorpse's Character,10,18,19,14,9,5,5,Acolyte,Dwarf,Fighter,1,,,,1,,"Shield/Chain Mail/Longsword/Handaxe/Handaxe/Backpack/Clothes, Common/Crowbar/Hammer/Piton/Rations (1 day)/Rope, Hempen (50 feet)/Tinderbox/Torch/Waterskin/Amulet",2021-07-20T06:18:52Z,43,15.0
+899,8327,Faernaar,12,13,15,14,8,10,12,Folk Hero,Halfling,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+900,8333,Dewey,12,14,10,15,8,10,14,Acolyte,Half-Orc,Paladin,1,,,,1,,Shield/Chain Mail/Battleaxe/Explorer's Pack,2018-06-29T15:37:47Z,0,15.0
+901,8339,Oritorin,88,9,11,11,10,13,11,Sage,Halfling,Monk,11,Way of the Open Hand,,,11,,,2018-06-29T15:37:47Z,0,0.0
+902,8340,Ruach Ariph,6,12,15,13,10,14,8,Acolyte,Human,Sorcerer,1,Draconic Bloodline,,,1,,Dart/Shortsword/Chain (10 feet)/Explorer's Pack,2022-02-12T23:53:49.103Z,0,0.0
+903,8345,Briar,12,0,0,0,0,0,0,,Human,Druid,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+904,8347,Lydia,12,10,14,8,8,15,8,,Human,Druid,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+905,8348,Maylor Bo Tayle,58,14,10,14,13,9,17,Charlatan,Human,Warlock,14,The Great Old One,,,14,,"Studded Leather Armor +1/Potion of Fire Resistance/Wand of the War Mage, +2/Dagger, +3/Cloak of Billowing/Hat of Wizardry/Orb of Time/Scarf of Neverending Depths/Wedding Band/Raurin arrowhead/Book of Gods/Book on the plane of Limbo/Dagger/Dagger/Disguise Kit/Clothes, Fine/Forgery Kit/Dungeoneer's Pack/Component Pouch/Amulet/Clothes, Common/Spyglass/Ball Bearings (bag of 1,000)/Rations (1 day)/Alchemist's Fire (flask)/Riding Horse/Waterskin/Perfume (vial)/Stake (Wooden)/Bomb",2021-10-14T23:29:16.623Z,8814,1983.93
+906,8350,Rohkozur,8,9,9,7,12,10,12,Soldier,Dwarf,Cleric,1,Life Domain,,,1,,,2018-06-29T15:37:47Z,0,0.0
+907,8351,Juan Julio Rodriguez,12,12,13,15,8,10,14,,Goliath,Paladin,1,,,,1,,Apparatus of the Crab,2018-09-09T05:47:52.217Z,0,0.0
+908,8352,Lybon,12,8,10,12,13,14,15,Soldier,Tiefling,Warlock,1,The Fiend,,,1,,,2018-06-29T15:37:47Z,0,0.0
+909,8353,Xantano,34,8,14,14,10,15,10,Soldier,Elf,Cleric,5,Life Domain,,,5,,"Shield, +1/Warhammer, +1/Splint/Crossbow, light/Crossbow Bolts/Clothes, Common/Pouch/Explorer's Pack",2020-08-21T08:14:49.993Z,0,0.0
+910,8354,Liamo,12,0,0,0,0,0,0,,Human,Druid,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+911,8366,yoseph220's Character,12,0,0,0,0,0,0,,Dragonborn,Sorcerer,1,Draconic Bloodline,,,1,,,2018-06-29T15:37:47Z,0,0.0
+912,8367,James,8,12,15,13,10,14,8,Acolyte,Human,Monk,1,,,,1,,Dart/Shortsword/Explorer's Pack,2018-06-29T15:37:47Z,0,0.0
+913,8368,Wilnan Forander,12,9,14,10,17,13,11,Sage,Half-Elf,Wizard,1,,,,1,,"Dagger/Ink (1 ounce bottle)/Ink Pen/Clothes, Common/Spellbook/Explorer's Pack",2018-06-29T15:37:47Z,0,26.0
+914,8374,Lester,22,8,13,12,14,10,15,Sage,Human,Sorcerer,5,Draconic Bloodline,,,5,"Spell Sniper (Bard, Sorcerer, Warlock)","Potion of Invisibility/Potion of Poison Resistance/Edge of Malice/Belt of Returning/Potion of Fire Breathing/Crossbow, hand/Dagger/Dagger/Quarterstaff/Crossbow Bolts/Ink (1 ounce bottle)/Ink Pen/Bedroll/Candle/Rations (1 day)/Potion of Healing/Torch/Waterskin",2018-06-29T15:37:47Z,309,479.94
+915,8386,Pandyman's Character,43,8,14,14,9,14,13,Criminal / Spy,Halfling,Rogue,2,,Warlock/Monk,,8,,Cloak of Elvenkind/Dagger/Shortbow/Arrows,2018-06-29T15:37:47Z,0,0.0
+916,8391,Leliana,6,8,13,14,12,10,15,Sage,Elf,Sorcerer,1,Draconic Bloodline,,,1,,"Dagger/Dagger/Crossbow, light/Crossbow Bolts/Explorer's Pack/Rod",2018-06-29T15:37:47Z,0,0.0
+917,8395,Cleobis,12,0,0,0,0,0,0,,Human,Cleric,1,Life Domain,,,1,,,2018-06-29T15:37:47Z,0,0.0
+918,8397,Sir Bealor Breakspear,12,16,15,14,12,14,12,,Half-Elf,Paladin,8,Oath of Devotion,,,8,,"Dragon Slayer Greatsword/Belt of Stone Giant Strength/Armor of Fire Resistance, Plate/Shield, +2/Longsword",2018-06-29T15:37:47Z,0,0.0
+919,8398,Liamo,8,8,13,14,10,15,12,Sage,Human,Druid,1,,,,1,Grappler,Shield/Leather/Scimitar/Explorer's Pack/Sprig of Mistletoe,2018-06-29T15:37:47Z,0,0.0
+920,8399,Nicodemus,12,9,17,16,13,15,16,Folk Hero,Tiefling,Warlock,5,The Fiend,,,5,,Dagger/Dagger/Club,2018-06-29T15:37:47Z,35,0.0
+921,8408,Rifampin,12,8,15,13,10,12,14,Criminal / Spy,Half-Elf,Sorcerer,1,Draconic Bloodline,Warlock,The Fiend,3,,,2018-07-06T13:28:41.513Z,0,4.0
+922,8411,Wroroe,12,15,14,13,10,12,8,Folk Hero,Human,Barbarian,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+923,8421,Vograg Weaponstealer,23,14,11,13,13,16,10,Noble,Dwarf,Cleric,4,Life Domain,,,4,,Potion of Climbing/Robe of Useful Items/Leather/Dagger/Dagger/Handaxe/Warhammer,2021-04-22T11:39:46.343Z,0,0.0
+924,8432,Kaz,12,0,0,0,0,0,0,,Dwarf,Druid,8,,,,8,,,2018-06-29T15:37:47Z,0,0.0
+925,8434,Thamrin,12,12,15,14,10,8,13,Criminal / Spy,Halfling,Rogue,1,,,,1,,Leather/Scimitar/Scimitar/Thieves' Tools,2018-06-29T15:37:47Z,4,15.0
+926,8435,Barnel,13,14,8,18,13,13,14,Criminal / Spy,Halfling,Sorcerer,1,Draconic Bloodline,Druid/Monk/Bard,Circle of the Land (Desert)/Way of the Open Hand/College of Lore,5,,,2018-06-29T15:37:47Z,0,0.0
+927,8436,Alrik Vedra,12,0,0,0,0,0,0,,Half-Orc,Warlock,1,The Fiend,,,1,,,2018-06-29T15:37:47Z,0,0.0
+928,8437,Kelcie Ironseeker,28,14,8,13,10,15,12,Soldier,Dwarf,Cleric,5,Life Domain,,,5,Grappler,"Bag of Holding/Adamantine Splint/Warhammer, +1/Shield/Splint/Handaxe/Handaxe/Crossbow, light/Crossbow Bolts/Explorer's Pack",2020-07-16T11:23:04Z,11,0.0
+929,8438,Johan,23,9,15,10,11,11,15,Criminal / Spy,Human,Bard,4,College of Lore,,,4,,"Studded Leather/Crossbow, hand/Dagger/Rapier/Drum/Flute/Lute",2018-06-29T15:37:47Z,0,17.0
+930,8445,Jackohass's Character,12,0,0,0,0,0,0,,Human,Cleric,3,,,,3,Grappler,,2018-06-29T15:37:47Z,0,0.0
+931,8447,Halminar,12,14,13,13,10,11,13,Soldier,Half-Elf,Paladin,2,,,,2,,"Shield/Chain Mail/Javelin/Warhammer/Clothes, Common/Explorer's Pack/Dice Set",2018-06-29T15:37:47Z,0,0.0
+932,8448,Alfonse Damonar Ku,39,10,11,11,15,15,11,Sage,Gnome,Wizard,7,School of Illusion,,,7,Keen Mind,"Bag of Holding/Wand of Magic Missiles/Arcane Bracer/Clockwork Frog/Runic Book/Book in unknown language/Letter from General to Lich/Bag of Holding Money/Case, Map or Scroll/Clothes, Common/Pearl/Potion of Climbing/Small pouch of sugar/Ink (1 ounce bottle)/Ink Pen/Flask or Tankard/Healer's Kit/Potion of Healing/Rations (1 day)/Spellbook/Explorer's Pack/Tinker's Tools",2022-04-03T22:24:27.11Z,571,2915.06
+933,8459,Paegan's Character,12,9,10,14,15,12,12,,Human,Warlock,1,The Fiend,,,1,,,2018-06-29T15:37:47Z,0,0.0
+934,8460,Gurdn's Character,12,0,0,0,0,0,0,,Elf,Cleric,1,Life Domain,,,1,,,2018-06-29T15:37:47Z,0,0.0
+935,8472,Riniel Amastacia ,12,0,0,0,0,0,0,,Elf,Druid,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+936,8473,KidChrome's Character,12,0,0,0,0,0,0,,Elf,Wizard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+937,8476,Rolen Te'Glendel,42,13,14,12,15,10,8,Knight of the Order,Elf,Wizard,9,Bladesinging,,,9,,"Amulet of Health/Longsword, +1/Studded Leather/Dagger/Longbow/Spellbook/Alchemist's Supplies",2018-09-26T16:59:39.8Z,617,0.0
+938,8477,Solan,8,10,14,12,13,8,15,Entertainer,Human,Bard,1,,,,1,Svirfneblin Magic,Leather/Dagger/Rapier/Entertainer's Pack /Lute,2018-06-29T15:37:47Z,0,0.0
+939,8483,KlemStanley's Character,12,0,0,0,0,0,0,,Human,Warlock,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+940,8485,Candels,12,0,0,0,0,0,0,,Half-Elf,Rogue,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+941,8489,Rex'valan ,12,12,15,10,8,13,14,Acolyte,Genasi,Monk,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+942,8490,PirateDevon's Character,12,0,0,0,0,0,0,Soldier,Human,Rogue,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+943,8501,Soulafein,12,10,18,14,18,15,14,Sage,Elf,Wizard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+944,8503,TheNibelungen's Character,12,0,0,0,0,0,0,,Dragonborn,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+945,8506,Rusty,12,0,0,0,0,0,0,Soldier,Human,Fighter,1,,,,1,Svirfneblin Magic,,2018-06-29T15:37:47Z,0,0.0
+946,8510,Jeska,8,10,14,12,9,14,13,Criminal / Spy,Half-Elf,Bard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+947,8525,"Molybdenym ""Moly"" Mossback",70,9,14,12,11,11,7,Outlander,Elf,Ranger,11,Horizon Walker,,,11,,"Shortsword, +1/Studded Leather/Shield/Dagger/Halberd/Shortsword/Whip/Longbow/Arrows/Lamp/Quiver/Explorer's Pack",2022-07-21T06:33:37.257Z,732,10.0
+948,8536,Teleporno,43,0,0,0,0,0,0,,Elf,Druid,8,,,,8,,,2018-06-29T15:37:47Z,0,0.0
+949,8537,Ox Gildenhide,10,15,10,13,8,12,14,Noble,Human,Paladin,1,,,,1,,Shield/Chain Mail/Longsword/Javelin/Explorer's Pack/Reliquary,2018-06-29T15:37:47Z,0,0.0
+950,8539,Marble,12,15,13,14,8,10,12,Soldier,Genasi,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+951,8547,Elani Neriath,10,15,10,13,8,12,14,Noble,Elf,Paladin,1,,,,1,,Shield/Chain Mail/Longsword/Javelin/Explorer's Pack/Reliquary,2018-06-29T15:37:47Z,0,25.0
+952,8553,Borg,14,6,11,9,6,9,10,Folk Hero,Dragonborn,Rogue,2,,,,2,,,2018-06-29T15:37:47Z,0,0.0
+953,8555,Sauriel,12,0,0,0,0,0,0,,Dwarf,Cleric,1,Life Domain,,,1,,,2018-06-29T15:37:47Z,0,0.0
+954,8559,Wheels's Character,12,0,0,0,0,0,0,,Half-Elf,Sorcerer,1,Draconic Bloodline,,,1,,,2018-06-29T15:37:47Z,0,0.0
+955,8563,Stormrage's Character,12,14,17,16,8,16,13,Acolyte,Human,Monk,2,,Barbarian,,5,,"Handaxe, +1/Dart/Explorer's Pack",2018-06-29T15:37:47Z,0,0.0
+956,8566,Bilbar,12,15,10,14,12,13,8,,Human,Barbarian,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+957,8569,Merkebah's Character,12,14,14,15,8,11,9,,Dragonborn,Barbarian,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+958,8574,Jerry Jenkins,82,9,11,11,15,13,13,Cloistered Scholar,Human,Wizard,20,School of Conjuration,,,20,Durable/Resilient (Constitution)/Prodigy,"Quarterstaff/Ink (1 ounce bottle)/Parchment (one sheet)/Backpack/Bedroll/Component Pouch/Mess Kit/Rations (1 day)/Rope, Hempen (50 feet)/Spellbook/Tinderbox/Torch/Waterskin",2021-10-28T14:08:57.023Z,114,10.0
+959,8578,Ford,12,8,15,13,12,14,10,Folk Hero,Human,Ranger,3,Hunter,,,3,Grappler,,2018-06-29T15:37:47Z,0,0.0
+960,8588,Tronom,12,8,8,8,8,8,8,,Dwarf,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+961,8589,Ivelios Galondel,12,10,13,14,15,12,8,Sage,Elf,Wizard,1,,,,1,,Alchemist's Fire (flask),2022-06-07T18:42:17.617Z,0,0.0
+962,8593,SeeUrDeath's Character,12,10,16,16,12,14,20,,Half-Elf,Bard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+963,8594,Balthazar of Tourment,103,8,14,12,10,13,15,Outlander,Tiefling,Warlock,20,The Fiend,,,20,War Caster/Elemental Adept (Fire)/Infernal Constitution,"Eyes of Charming/Pipes of Haunting/Staff of Frost/Staff of the Magi/Ioun Stone of Fortitude/Potion of Healing (Greater)/Wingwear/Rod of the Pact Keeper, +3",2021-08-07T05:41:41Z,0,212160.07
+964,8602,Orsik,12,0,0,0,0,0,0,,Dwarf,Paladin,9,,,,9,,,2018-06-29T15:37:47Z,0,0.0
+965,8605,Geralt Wyndhelm,55,16,10,15,11,12,16,Soldier,Human,Paladin,5,Oath of Devotion,,,5,,Bag of Holding/Mithral Splint/Shield/Longsword/Club/Club/Javelin/Greataxe/Scimitar/Shortsword/Warhammer/Hunting Trap/Explorer's Pack/Staff/Bagpipes,2018-06-29T15:37:47Z,147,262.0
+966,8606,Kaius,26,14,11,11,8,13,12,Sage,Tiefling,Cleric,4,Life Domain,,,4,,"Scale Mail/Shield/Crossbow, hand/Mace/Ink (1 ounce bottle)/Ink Pen/Pouch/Priest's Pack/Amulet",2018-06-29T15:37:47Z,118,22.0
+967,8607,Doqrin,26,10,11,13,16,12,11,Sage,Dragonborn,Paladin,5,Oath of Devotion,,,5,,,2018-06-29T15:37:47Z,0,0.0
+968,8608,Zanston,12,10,15,11,12,14,10,Sage,Elf,Monk,5,Way of the Open Hand,,,5,,"Quarterstaff, +1/Dart/Dungeoneer's Pack/Jeweler's Tools",2018-06-29T15:37:47Z,0,22.0
+969,8612,Walyeras,12,15,10,15,10,10,11,Noble,Half-Elf,Fighter,1,,,,1,,Chain Mail,2018-06-29T15:37:47Z,0,0.0
+970,8622,shortshit,10,15,10,13,8,12,14,Noble,Dwarf,Paladin,1,,,,1,,Shield/Chain Mail/Longsword/Javelin/Explorer's Pack/Reliquary,2018-06-29T15:37:47Z,0,0.0
+971,8624,Thorim,12,15,13,14,10,12,8,Folk Hero,Dwarf,Barbarian,1,,,,1,,Handaxe/Javelin/Greataxe/Explorer's Pack,2018-06-29T15:37:47Z,0,0.0
+972,8654,lameth22's Character,12,8,14,12,15,10,13,,Elf,Wizard,5,School of Evocation,,,5,,,2018-06-29T15:37:47Z,0,0.0
+973,8657,Roc,12,14,10,15,8,12,13,,Aarakocra,Paladin,1,,,,1,,Shield/Hide/Longsword/Javelin/Priest's Pack,2018-06-29T15:37:47Z,0,0.0
+974,8658,Pathak Dawnleader,12,13,15,16,8,18,12,Folk Hero,Goliath,Ranger,1,,,,1,,Scale Mail/Handaxe/Handaxe/Longbow,2018-06-29T15:37:47Z,0,0.0
+975,8660,Mulle,12,12,15,13,14,10,8,,Gnome,Rogue,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+976,8665,Morthos Vicelord,12,14,12,15,8,10,13,Soldier,Tiefling,Paladin,3,,,,3,,Shield/Chain Mail/Handaxe/Battleaxe/Explorer's Pack,2018-06-29T15:37:47Z,828,10.0
+977,8668,Grajen,12,15,13,14,8,12,10,Soldier,Goliath,Barbarian,1,,,,1,,Battleaxe,2018-06-29T15:37:47Z,0,0.0
+978,8674,Madcat,12,0,0,0,0,0,0,,Human,Cleric,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+979,8675,Rafqarim,12,14,8,14,10,12,14,,Genasi,Fighter,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+980,8677,Flutter,44,14,9,11,11,13,14,Acolyte,Genasi,Druid,10,Circle of the Land (Mountain),,,10,,,2018-06-29T15:37:47Z,0,0.0
+981,8684,apemasterr's Character,12,0,0,0,0,0,0,,Dragonborn,Sorcerer,5,Draconic Bloodline,,,5,,,2018-06-29T15:37:47Z,0,0.0
+982,8686,UncleB's Character,12,8,14,14,15,10,10,Sage,Elf,Wizard,5,School of Evocation,,,5,,Dagger/Quarterstaff/Longbow/Scholar's Pack,2018-06-29T15:37:47Z,0,0.0
+983,8689,n1993468's Character,12,0,0,0,0,0,0,,Tiefling,Warlock,3,The Fiend,,,3,,,2018-06-29T15:37:47Z,0,0.0
+984,8704,Itsuki Naruhime,12,8,15,12,10,13,14,Criminal / Spy,Human,Monk,1,,Bard,,2,,"Dart/Shortsword/Clothes, Common/Crowbar/Pouch/Dungeoneer's Pack",2018-06-29T15:37:47Z,0,0.0
+985,8708,Makalaka,28,14,10,13,12,15,8,Sage,Goliath,Druid,5,Circle of the Land (Mountain),,,5,,,2018-06-29T15:37:47Z,0,0.0
+986,8709,E'grodar,8,11,10,13,5,12,15,Noble,Dragonborn,Rogue,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+987,8710,Belvon,12,8,15,14,13,12,10,Soldier,Human,Ranger,7,,,,7,Svirfneblin Magic,,2018-06-29T15:37:47Z,0,0.0
+988,8720,Irogalyn,12,19,15,15,10,10,18,,Human,Fighter,5,Champion,Paladin,Oath of Devotion,13,Grappler/Svirfneblin Magic,,2018-06-29T15:37:47Z,0,0.0
+989,8727,dimidimi192's Character,12,0,0,0,0,0,0,,Halfling,Bard,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+990,8728,Verdell,12,15,14,12,10,13,8,Soldier,Aarakocra,Fighter,1,,,,1,,Shortsword/Shortsword,2018-06-29T15:37:47Z,0,0.0
+991,8737,Hallither,20,8,15,14,15,15,14,Folk Hero,Elf,Ranger,2,,,,2,,Studded Leather/Shield/Leather/Dagger/Longsword/Handaxe/Shortbow/Scimitar/Scimitar/Scimitar/Shortsword/Longbow/Caltrops (bag of 20)/Chain (10 feet)/Lock/Potion of Healing/Quiver/Manacles/Grappling Hook/Hunting Trap,2022-08-17T06:38:28.473Z,0,179.0
+992,8738,RSBorisov's Character,12,8,18,14,13,12,16,Criminal / Spy,Halfling,Rogue,1,,,,1,,Leather,2018-06-29T15:37:47Z,0,0.0
+993,8740,Arnal Swetz,76,20,13,15,11,12,11,Soldier,Half-Orc,Fighter,3,Champion,Barbarian,Path of the Berserker,10,,Shield/Half Plate/Longsword/Greataxe/Longbow/Arrows,2018-06-29T15:37:47Z,0,0.0
+994,8746,Cassandra Schwanensang,28,10,13,13,9,13,15,Folk Hero,Half-Elf,Bard,4,,Sorcerer,Draconic Bloodline,5,,,2018-06-29T15:37:47Z,0,0.0
+995,8747,Markas Marivaldi,12,16,8,10,10,12,16,,Human,Paladin,3,,,,3,,,2018-06-29T15:37:47Z,0,0.0
+996,8755,Xilthana,12,9,14,12,15,10,12,,Elf,Wizard,8,,,,8,,,2018-06-29T15:37:47Z,0,0.0
+997,8761,Orben Nesjhaj,28,6,11,8,13,10,6,Folk Hero,Dwarf,Cleric,5,Life Domain,,,5,,,2018-06-29T15:37:47Z,0,0.0
+998,8768,Arun Teteke,10,15,16,14,12,16,12,Sage,Human,Monk,4,,,,4,,Spear/Shortsword/Dungeoneer's Pack,2018-06-29T15:37:47Z,0,0.0
+999,8769,Milo,12,0,0,0,0,0,0,,Gnome,Druid,1,,,,1,,,2018-06-29T15:37:47Z,0,0.0
+1000,8772,vontrom,12,13,14,10,12,13,12,Sage,Dwarf,Monk,1,,,,1,,"Shortbow/Shortsword/Case, Map or Scroll/Clothes, Common/Explorer's Pack",2018-06-29T15:37:47Z,889,0.0

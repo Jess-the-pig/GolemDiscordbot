@@ -1,0 +1,126 @@
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+<changeSet id="8_create_characters_table" author="jessthepig">
+    <createTable tableName="characters">
+        <!-- Identité -->
+        <column name="id" type="BIGINT" autoIncrement="true">
+            <constraints primaryKey="true" nullable="false"/>
+        </column>
+        <column name="player_name" type="VARCHAR(255)"/>
+        <column name="character_name" type="VARCHAR(255)"/>
+        <column name="race" type="VARCHAR(100)"/>
+        <column name="subrace" type="VARCHAR(100)"/>
+        <column name="background" type="VARCHAR(100)"/>
+        <column name="alignment" type="VARCHAR(50)"/>
+        <column name="class" type="VARCHAR(100)"/>
+        <column name="subclass" type="VARCHAR(100)"/>
+        <column name="level" type="INT"/>
+        <column name="experience_points" type="INT"/>
+
+        <!-- Caractéristiques principales -->
+        <column name="strength" type="INT"/>
+        <column name="dexterity" type="INT"/>
+        <column name="constitution" type="INT"/>
+        <column name="intelligence" type="INT"/>
+        <column name="wisdom" type="INT"/>
+        <column name="charisma" type="INT"/>
+
+        <!-- Bonus de caractéristiques -->
+        <column name="strength_mod" type="INT"/>
+        <column name="dexterity_mod" type="INT"/>
+        <column name="constitution_mod" type="INT"/>
+        <column name="intelligence_mod" type="INT"/>
+        <column name="wisdom_mod" type="INT"/>
+        <column name="charisma_mod" type="INT"/>
+
+        <!-- Sauvegardes -->
+        <column name="save_strength" type="BOOLEAN"/>
+        <column name="save_dexterity" type="BOOLEAN"/>
+        <column name="save_constitution" type="BOOLEAN"/>
+        <column name="save_intelligence" type="BOOLEAN"/>
+        <column name="save_wisdom" type="BOOLEAN"/>
+        <column name="save_charisma" type="BOOLEAN"/>
+
+        <!-- Compétences -->
+        <column name="acrobatics" type="BOOLEAN"/>
+        <column name="animal_handling" type="BOOLEAN"/>
+        <column name="arcana" type="BOOLEAN"/>
+        <column name="athletics" type="BOOLEAN"/>
+        <column name="deception" type="BOOLEAN"/>
+        <column name="history" type="BOOLEAN"/>
+        <column name="insight" type="BOOLEAN"/>
+        <column name="intimidation" type="BOOLEAN"/>
+        <column name="investigation" type="BOOLEAN"/>
+        <column name="medicine" type="BOOLEAN"/>
+        <column name="nature" type="BOOLEAN"/>
+        <column name="perception" type="BOOLEAN"/>
+        <column name="performance" type="BOOLEAN"/>
+        <column name="persuasion" type="BOOLEAN"/>
+        <column name="religion" type="BOOLEAN"/>
+        <column name="sleight_of_hand" type="BOOLEAN"/>
+        <column name="stealth" type="BOOLEAN"/>
+        <column name="survival" type="BOOLEAN"/>
+
+        <!-- Capacités de combat -->
+        <column name="armor_class" type="INT"/>
+        <column name="initiative" type="INT"/>
+        <column name="speed" type="VARCHAR(50)"/>
+        <column name="max_hp" type="INT"/>
+        <column name="current_hp" type="INT"/>
+        <column name="temporary_hp" type="INT"/>
+        <column name="hit_dice" type="VARCHAR(20)"/>
+        <column name="death_saves_successes" type="INT"/>
+        <column name="death_saves_failures" type="INT"/>
+
+        <!-- Attaques -->
+        <column name="attacks_and_spellcasting" type="TEXT"/>
+
+        <!-- Magie -->
+        <column name="spellcasting_class" type="VARCHAR(100)"/>
+        <column name="spell_save_dc" type="INT"/>
+        <column name="spell_attack_bonus" type="INT"/>
+        <column name="known_spells" type="TEXT"/>
+        <column name="spell_slots_level_1" type="INT"/>
+        <column name="spell_slots_level_2" type="INT"/>
+        <column name="spell_slots_level_3" type="INT"/>
+        <column name="spell_slots_level_4" type="INT"/>
+        <column name="spell_slots_level_5" type="INT"/>
+        <column name="spell_slots_level_6" type="INT"/>
+        <column name="spell_slots_level_7" type="INT"/>
+        <column name="spell_slots_level_8" type="INT"/>
+        <column name="spell_slots_level_9" type="INT"/>
+
+        <!-- Équipement et finances -->
+        <column name="equipment" type="TEXT"/>
+        <column name="currency_cp" type="INT"/>
+        <column name="currency_sp" type="INT"/>
+        <column name="currency_ep" type="INT"/>
+        <column name="currency_gp" type="INT"/>
+        <column name="currency_pp" type="INT"/>
+
+        <!-- Traits, Langues, Infos perso -->
+        <column name="traits" type="TEXT"/>
+        <column name="features_and_traits" type="TEXT"/>
+        <column name="languages" type="VARCHAR(1000)"/>
+        <column name="personality_traits" type="VARCHAR(1000)"/>
+        <column name="ideals" type="VARCHAR(1000)"/>
+        <column name="bonds" type="VARCHAR(1000)"/>
+        <column name="flaws" type="VARCHAR(1000)"/>
+        <column name="backstory" type="TEXT"/>
+
+        <!-- Divers -->
+        <column name="notes" type="VARCHAR(2000)"/>
+        <column name="proficiencies" type="VARCHAR(2000)"/>
+        <column name="inspiration" type="BOOLEAN"/>
+        <column name="proficiency_bonus" type="INT"/>
+        <column name="passive_perception" type="INT"/>
+        <column name="date_created" type="DATETIME"/>
+        <column name="last_updated" type="DATETIME"/>
+    </createTable>
+</changeSet>
+
+    </databaseChangeLog>

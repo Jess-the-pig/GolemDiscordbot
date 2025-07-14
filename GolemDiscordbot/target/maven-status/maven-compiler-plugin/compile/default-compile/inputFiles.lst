@@ -1,7 +1,7 @@
 /opt/apps/app/src/main/java/Golem/api/ApiApplication.java
 /opt/apps/app/src/main/java/Golem/api/SimpleBot.java
+/opt/apps/app/src/main/java/Golem/api/commands/ICommand.java
 /opt/apps/app/src/main/java/Golem/api/commands/helloCommand.java
-/opt/apps/app/src/main/java/Golem/api/commands/interface/ICommand.java
 /opt/apps/app/src/main/java/Golem/api/commands/pingCommand.java
 /opt/apps/app/src/main/java/Golem/api/configurations/CommandConfig.java
 /opt/apps/app/src/main/java/Golem/api/services/CommandDispatcher.java
