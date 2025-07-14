@@ -1,5 +1,6 @@
-package Golem.api.commands;
+package Golem.api.commands.implementation;
 
+import Golem.api.commands.ICommand;
 import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
 import reactor.core.publisher.Mono;
 
