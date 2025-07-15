@@ -9,14 +9,19 @@ import org.springframework.stereotype.Service;
 @Service
 public class RegisterSlashCommands {
 
-  // Enregistre les commandes Slash à partir du Map des commandes
   public void registerSlashCommands(GatewayDiscordClient client, Map<String, ICommand> commands) {
     for (ICommand command : commands.values()) {
-      ApplicationCommandRequest request =
+
+      var builder =
           ApplicationCommandRequest.builder()
-              .name(command.getName()) // Nom de la commande, p. ex. "ping"
-              .description("Command description for " + command.getName()) // Description dynamique
-              .build();
+              .name(command.getName())
+              .description("Command description for " + command.getName());
+
+      if (!command.getOptions().isEmpty()) {
+        builder.options(command.getOptions());
+      }
+
+      ApplicationCommandRequest request = builder.build();
 
       client
           .getRestClient()

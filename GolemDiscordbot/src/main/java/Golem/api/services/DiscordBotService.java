@@ -46,6 +46,7 @@ public class DiscordBotService {
             status = new BotStatus(client);
             status.online();
             registerSlashCommands.registerSlashCommands(client, dispatcher.getCommands());
+
             client.on(ChatInputInteractionEvent.class, dispatcher::handle).subscribe();
           }
         });
