@@ -4,29 +4,28 @@ import Golem.api.commands.ICommand;
 import discord4j.core.GatewayDiscordClient;
 import discord4j.discordjson.json.ApplicationCommandRequest;
 import java.util.Map;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+@Slf4j
 @Service
 public class RegisterSlashCommands {
 
   public void registerSlashCommands(GatewayDiscordClient client, Map<String, ICommand> commands) {
     for (ICommand command : commands.values()) {
-
+      log.info("j'enregistre la commande " + command.getName().toString());
       var builder =
           ApplicationCommandRequest.builder()
               .name(command.getName())
               .description("Command description for " + command.getName());
-
-      if (!command.getOptions().isEmpty()) {
-        builder.options(command.getOptions());
-      }
+      command.getOptions().ifPresent(builder::options);
 
       ApplicationCommandRequest request = builder.build();
 
       client
           .getRestClient()
           .getApplicationService()
-          .createGlobalApplicationCommand(client.getSelfId().asLong(), request)
+          .createGuildApplicationCommand(client.getSelfId().asLong(), 1385169398876344320L, request)
           .subscribe();
     }
   }

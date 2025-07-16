@@ -1,6 +1,7 @@
 package Golem.api.configurations;
 
 import Golem.api.services.LavaPlayerAudioProvider;
+import Golem.api.services.TrackScheduler;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayer;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
 import com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager;
@@ -19,6 +20,13 @@ public class LavaPlayerConfig {
   @Bean
   public LavaPlayerAudioProvider lavaPlayerAudioProvider(AudioPlayer player) {
     return new LavaPlayerAudioProvider(player);
+  }
+
+  @Bean
+  public TrackScheduler trackScheduler(AudioPlayer player) {
+    TrackScheduler scheduler = new TrackScheduler(player);
+    player.addListener(scheduler);
+    return scheduler;
   }
 
   @Bean

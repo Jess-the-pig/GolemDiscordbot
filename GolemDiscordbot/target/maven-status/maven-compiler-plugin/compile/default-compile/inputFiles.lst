@@ -2,7 +2,6 @@
 /opt/apps/app/src/main/java/Golem/api/commands/ICommand.java
 /opt/apps/app/src/main/java/Golem/api/commands/implementation/helloCommand.java
 /opt/apps/app/src/main/java/Golem/api/commands/implementation/joinCommand.java
-/opt/apps/app/src/main/java/Golem/api/commands/implementation/musicCommand.java
 /opt/apps/app/src/main/java/Golem/api/commands/implementation/pingCommand.java
 /opt/apps/app/src/main/java/Golem/api/commands/implementation/playCommand.java
 /opt/apps/app/src/main/java/Golem/api/configurations/CommandConfig.java

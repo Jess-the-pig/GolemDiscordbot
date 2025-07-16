@@ -14,12 +14,13 @@ ARG UID=1000
 ARG GID=1000
 ARG APP_PORT=8080
 
-# Install git
-RUN apt-get update && \
-    apt-get install -y wget git nano curl unzip && \
-    wget --output-document=/etc/bash_completion.d/git-completion.bash \
-        https://raw.githubusercontent.com/git/git/refs/heads/master/contrib/completion/git-completion.bash && \
-    echo "source /etc/bash_completion.d/git-completion.bash" >> /etc/bash.bashrc
+# Install git, Python, pip, ffmpeg, yt-dlp
+# Install git, Python 3, pip3, ffmpeg, yt-dlp
+RUN apt-get update && apt-get install -y wget git nano curl unzip python3 python3-pip ffmpeg
+RUN apt-get install -y yt-dlp
+RUN wget --output-document=/etc/bash_completion.d/git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+RUN echo "source /etc/bash_completion.d/git-completion.bash" >> /etc/bash.bashrc
+RUN python3 --version && pip3 --version && yt-dlp --version
 
 ENV GIT_EDITOR=nano
 
@@ -34,7 +35,6 @@ RUN arch=$(echo ${TARGETPLATFORM} | sed 's/.*\///') && \
 
 ENV JAVA_HOME="/usr/local/jdk-24"
 ENV PATH="$JAVA_HOME/bin:$PATH"
-
 
 # Download Maven
 RUN wget --output-document=/tmp/maven.tar.gz https://archive.apache.org/dist/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz && \

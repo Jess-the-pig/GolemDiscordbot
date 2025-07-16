@@ -43,7 +43,7 @@
 	  <dependency>
     <groupId>com.sedmelluq</groupId>
     <artifactId>lavaplayer</artifactId>
-    <version>1.3.78</version>
+    <version>1.3.77</version>
   </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -88,7 +88,8 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<optional>true</optional>
+			<version>1.18.28</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

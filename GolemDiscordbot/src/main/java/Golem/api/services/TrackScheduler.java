@@ -1,39 +1,37 @@
 package Golem.api.services;
 
-import com.sedmelluq.discord.lavaplayer.player.AudioLoadResultHandler;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayer;
-import com.sedmelluq.discord.lavaplayer.tools.FriendlyException;
-import com.sedmelluq.discord.lavaplayer.track.AudioPlaylist;
+import com.sedmelluq.discord.lavaplayer.player.event.AudioEventAdapter;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
+import com.sedmelluq.discord.lavaplayer.track.AudioTrackEndReason;
+import java.util.LinkedList;
+import java.util.Queue;
+import org.springframework.stereotype.Component;
 
-public final class TrackScheduler implements AudioLoadResultHandler {
-
+@Component
+public class TrackScheduler extends AudioEventAdapter {
   private final AudioPlayer player;
+  private final Queue<AudioTrack> queue;
 
-  public TrackScheduler(final AudioPlayer player) {
+  public TrackScheduler(AudioPlayer player) {
     this.player = player;
+    this.queue = new LinkedList<>();
   }
 
-  @Override
-  public void trackLoaded(final AudioTrack track) {
-    player.playTrack(track);
-  }
-
-  @Override
-  public void playlistLoaded(final AudioPlaylist playlist) {
-    // Optionnel : joue le premier titre de la playlist
-    if (!playlist.getTracks().isEmpty()) {
-      player.playTrack(playlist.getTracks().get(0));
+  public void queue(AudioTrack track) {
+    if (!player.startTrack(track, true)) {
+      queue.offer(track);
     }
   }
 
   @Override
-  public void noMatches() {
-    System.out.println("Aucun résultat trouvé !");
+  public void onTrackEnd(AudioPlayer player, AudioTrack track, AudioTrackEndReason endReason) {
+    if (endReason.mayStartNext) {
+      nextTrack();
+    }
   }
 
-  @Override
-  public void loadFailed(final FriendlyException exception) {
-    System.out.println("Échec du chargement : " + exception.getMessage());
+  private void nextTrack() {
+    player.startTrack(queue.poll(), false);
   }
 }
