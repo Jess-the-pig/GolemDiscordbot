@@ -37,8 +37,8 @@ public class playCommand implements ICommand {
     String query =
         event
             .getOption("url")
-            .flatMap(option -> option.getValue())
-            .map(value -> value.asString())
+            .flatMap(opt -> opt.getValue())
+            .map(val -> val.asString())
             .orElse(null);
 
     if (query == null || query.isBlank()) {
@@ -58,16 +58,40 @@ public class playCommand implements ICommand {
                       if (ffmpegProcess == null) {
                         return event.editReply("❌ Impossible de lancer yt-dlp + ffmpeg").then();
                       }
-
                       InputStream pcmStream = ffmpegProcess.getInputStream();
                       AudioProvider provider = new FFmpegAudioProvider(pcmStream);
 
                       return channel
                           .join(spec -> spec.setProvider(provider).setSelfDeaf(true))
                           .then(event.editReply("▶️ Lecture lancée !"));
-                    }))
+                    })
+                .switchIfEmpty(
+                    event.editReply("❌ Tu dois être dans un salon vocal pour lancer la musique")))
         .then()
         .onErrorResume(err -> event.editReply("❌ Erreur : " + err.getMessage()).then());
+  }
+
+  private Mono<Void> doJoinAndPlay(ChatInputInteractionEvent event, String query) {
+    return Mono.justOrEmpty(event.getInteraction().getMember())
+        .flatMap(Member::getVoiceState)
+        .flatMap(VoiceState::getChannel)
+        .ofType(VoiceChannel.class)
+        .flatMap(
+            channel -> {
+              Process ffmpegProcess = startFFmpegFromYtdlp(query);
+              if (ffmpegProcess == null) {
+                return event.editReply("❌ Impossible de lancer yt-dlp + ffmpeg").then();
+              }
+
+              InputStream pcmStream = ffmpegProcess.getInputStream();
+              AudioProvider provider = new FFmpegAudioProvider(pcmStream);
+
+              return channel
+                  .join(spec -> spec.setProvider(provider).setSelfDeaf(true))
+                  .then(event.editReply("▶️ Lecture lancée !").then());
+            })
+        .switchIfEmpty(
+            event.editReply("❌ Tu dois être dans un salon vocal pour lancer la musique").then());
   }
 
   /**
