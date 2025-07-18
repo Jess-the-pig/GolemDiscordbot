@@ -18,3 +18,5 @@ Golem/api/entities/Characters.class
 Golem/api/services/DiscordBotService.class
 Golem/api/commands/implementation/joinCommand.class
 Golem/api/commands/implementation/pingCommand.class
+Golem/api/utils/FFmpegAudioProvider.class
+Golem/api/services/YoutubeSearchService.class

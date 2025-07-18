@@ -5,7 +5,11 @@ import Golem.api.services.TrackScheduler;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayer;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
 import com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager;
-import com.sedmelluq.discord.lavaplayer.source.AudioSourceManagers;
+import com.sedmelluq.discord.lavaplayer.source.bandcamp.BandcampAudioSourceManager;
+import com.sedmelluq.discord.lavaplayer.source.local.LocalAudioSourceManager;
+import com.sedmelluq.discord.lavaplayer.source.twitch.TwitchStreamAudioSourceManager;
+import com.sedmelluq.discord.lavaplayer.source.vimeo.VimeoAudioSourceManager;
+import com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -31,8 +35,12 @@ public class LavaPlayerConfig {
 
   @Bean
   public AudioPlayerManager audioPlayerManager() {
-    AudioPlayerManager manager = new DefaultAudioPlayerManager();
-    AudioSourceManagers.registerRemoteSources(manager);
-    return manager;
+    DefaultAudioPlayerManager playerManager = new DefaultAudioPlayerManager();
+    playerManager.registerSourceManager(new YoutubeAudioSourceManager());
+    playerManager.registerSourceManager(new BandcampAudioSourceManager());
+    playerManager.registerSourceManager(new VimeoAudioSourceManager());
+    playerManager.registerSourceManager(new TwitchStreamAudioSourceManager());
+    playerManager.registerSourceManager(new LocalAudioSourceManager());
+    return playerManager;
   }
 }

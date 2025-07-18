@@ -36,6 +36,7 @@ RUN arch=$(echo ${TARGETPLATFORM} | sed 's/.*\///') && \
 ENV JAVA_HOME="/usr/local/jdk-24"
 ENV PATH="$JAVA_HOME/bin:$PATH"
 
+
 # Download Maven
 RUN wget --output-document=/tmp/maven.tar.gz https://archive.apache.org/dist/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz && \
     tar --extract --verbose --file=/tmp/maven.tar.gz --directory=/usr/local && \

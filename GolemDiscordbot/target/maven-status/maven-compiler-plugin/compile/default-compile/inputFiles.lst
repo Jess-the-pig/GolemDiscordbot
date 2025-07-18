@@ -17,4 +17,6 @@
 /opt/apps/app/src/main/java/Golem/api/services/LavaPlayerAudioProvider.java
 /opt/apps/app/src/main/java/Golem/api/services/RegisterSlashCommands.java
 /opt/apps/app/src/main/java/Golem/api/services/TrackScheduler.java
+/opt/apps/app/src/main/java/Golem/api/services/YoutubeSearchService.java
 /opt/apps/app/src/main/java/Golem/api/utils/BotStatus.java
+/opt/apps/app/src/main/java/Golem/api/utils/FFmpegAudioProvider.java

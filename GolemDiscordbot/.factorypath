@@ -62,7 +62,10 @@
     <factorypathentry kind="VARJAR" id="M2_REPO/com/discord4j/discord4j-core/3.2.8/discord4j-core-3.2.8.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.18.3/jackson-datatype-jsr310-2.18.3.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/discord4j/discord-json/1.6.25/discord-json-1.6.25.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/com/discord4j/discord-json-api/1.6.25/discord-json-api-1.6.25.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/com/discord4j/discord-json/discord-json/1.6.25/discord-json-1.6.25.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/com/discord4j/discord-json/discord-json-api/1.6.25/discord-json-api-1.6.25.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/com/discord4j/discord-json/discord-json-encoding/1.6.25/discord-json-encoding-1.6.25.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/immutables/encode/2.10.1/encode-2.10.1.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/discord4j/discord4j-rest/3.2.8/discord4j-rest-3.2.8.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/discord4j/discord4j-common/3.2.8/discord4j-common-3.2.8.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/io/projectreactor/netty/reactor-netty-http/1.2.5/reactor-netty-http-1.2.5.jar" enabled="true" runInBatchMode="false"/>
@@ -153,4 +156,5 @@
     <factorypathentry kind="VARJAR" id="M2_REPO/com/mysema/commons/mysema-commons-lang/0.2.4/mysema-commons-lang-0.2.4.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/github/jaredmdobson/concentus/1.0.2/concentus-1.0.2.jar" enabled="true" runInBatchMode="false"/>
 </factorypath>

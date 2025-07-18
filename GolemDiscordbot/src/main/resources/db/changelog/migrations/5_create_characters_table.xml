@@ -46,24 +46,7 @@
         <column name="save_charisma" type="BOOLEAN"/>
 
         <!-- Compétences -->
-        <column name="acrobatics" type="BOOLEAN"/>
-        <column name="animal_handling" type="BOOLEAN"/>
-        <column name="arcana" type="BOOLEAN"/>
-        <column name="athletics" type="BOOLEAN"/>
-        <column name="deception" type="BOOLEAN"/>
-        <column name="history" type="BOOLEAN"/>
-        <column name="insight" type="BOOLEAN"/>
-        <column name="intimidation" type="BOOLEAN"/>
-        <column name="investigation" type="BOOLEAN"/>
-        <column name="medicine" type="BOOLEAN"/>
-        <column name="nature" type="BOOLEAN"/>
-        <column name="perception" type="BOOLEAN"/>
-        <column name="performance" type="BOOLEAN"/>
-        <column name="persuasion" type="BOOLEAN"/>
-        <column name="religion" type="BOOLEAN"/>
-        <column name="sleight_of_hand" type="BOOLEAN"/>
-        <column name="stealth" type="BOOLEAN"/>
-        <column name="survival" type="BOOLEAN"/>
+        <column name="compentences" type="TEXT"/>
 
         <!-- Capacités de combat -->
         <column name="armor_class" type="INT"/>
