@@ -1,11 +1,11 @@
 /opt/apps/app/src/main/java/Golem/api/ApiApplication.java
 /opt/apps/app/src/main/java/Golem/api/commands/ICommand.java
+/opt/apps/app/src/main/java/Golem/api/commands/implementation/connectCommand.java
 /opt/apps/app/src/main/java/Golem/api/commands/implementation/helloCommand.java
 /opt/apps/app/src/main/java/Golem/api/commands/implementation/joinCommand.java
 /opt/apps/app/src/main/java/Golem/api/commands/implementation/pingCommand.java
 /opt/apps/app/src/main/java/Golem/api/commands/implementation/playCommand.java
 /opt/apps/app/src/main/java/Golem/api/configurations/CommandConfig.java
-/opt/apps/app/src/main/java/Golem/api/configurations/LavaPlayerConfig.java
 /opt/apps/app/src/main/java/Golem/api/entities/Characters.java
 /opt/apps/app/src/main/java/Golem/api/entities/DiscordUser.java
 /opt/apps/app/src/main/java/Golem/api/entities/Equipments.java
@@ -14,9 +14,7 @@
 /opt/apps/app/src/main/java/Golem/api/entities/Spells.java
 /opt/apps/app/src/main/java/Golem/api/services/CommandDispatcher.java
 /opt/apps/app/src/main/java/Golem/api/services/DiscordBotService.java
-/opt/apps/app/src/main/java/Golem/api/services/LavaPlayerAudioProvider.java
 /opt/apps/app/src/main/java/Golem/api/services/RegisterSlashCommands.java
-/opt/apps/app/src/main/java/Golem/api/services/TrackScheduler.java
 /opt/apps/app/src/main/java/Golem/api/services/YoutubeSearchService.java
 /opt/apps/app/src/main/java/Golem/api/utils/BotStatus.java
-/opt/apps/app/src/main/java/Golem/api/utils/FFmpegAudioProvider.java
+/opt/apps/app/src/main/java/Golem/api/utils/QueuedAudioProvider.java

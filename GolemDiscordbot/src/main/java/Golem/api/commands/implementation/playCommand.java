@@ -1,13 +1,9 @@
 package Golem.api.commands.implementation;
 
 import Golem.api.commands.ICommand;
-import Golem.api.utils.FFmpegAudioProvider;
+import Golem.api.utils.QueuedAudioProvider;
 import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
-import discord4j.core.object.VoiceState;
-import discord4j.core.object.entity.Member;
-import discord4j.core.object.entity.channel.VoiceChannel;
 import discord4j.discordjson.json.ApplicationCommandOptionData;
-import discord4j.voice.AudioProvider;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -22,8 +18,10 @@ import reactor.core.publisher.Mono;
 public class playCommand implements ICommand {
 
   private static final Logger log = LoggerFactory.getLogger(playCommand.class);
+  private final QueuedAudioProvider pQueuedAudioProvider;
 
-  public playCommand() {
+  public playCommand(QueuedAudioProvider pQueuedAudioProvider) {
+    this.pQueuedAudioProvider = pQueuedAudioProvider;
     // Pas besoin de services LavaPlayer ici
   }
 
@@ -48,50 +46,16 @@ public class playCommand implements ICommand {
     return event
         .deferReply()
         .then(
-            Mono.justOrEmpty(event.getInteraction().getMember())
-                .flatMap(Member::getVoiceState)
-                .flatMap(VoiceState::getChannel)
-                .ofType(VoiceChannel.class)
-                .flatMap(
-                    channel -> {
-                      Process ffmpegProcess = startFFmpegFromYtdlp(query);
-                      if (ffmpegProcess == null) {
-                        return event.editReply("❌ Impossible de lancer yt-dlp + ffmpeg").then();
-                      }
-                      InputStream pcmStream = ffmpegProcess.getInputStream();
-                      AudioProvider provider = new FFmpegAudioProvider(pcmStream);
+            Mono.fromRunnable(
+                () -> {
+                  Process ffmpegProcess = startFFmpegFromYtdlp(query);
+                  InputStream pcmStream = ffmpegProcess.getInputStream();
 
-                      return channel
-                          .join(spec -> spec.setProvider(provider).setSelfDeaf(true))
-                          .then(event.editReply("▶️ Lecture lancée !"));
-                    })
-                .switchIfEmpty(
-                    event.editReply("❌ Tu dois être dans un salon vocal pour lancer la musique")))
+                  pQueuedAudioProvider.queueTrack(pcmStream);
+                }))
+        .then(event.editReply("▶️ Ajouté à la queue !"))
         .then()
         .onErrorResume(err -> event.editReply("❌ Erreur : " + err.getMessage()).then());
-  }
-
-  private Mono<Void> doJoinAndPlay(ChatInputInteractionEvent event, String query) {
-    return Mono.justOrEmpty(event.getInteraction().getMember())
-        .flatMap(Member::getVoiceState)
-        .flatMap(VoiceState::getChannel)
-        .ofType(VoiceChannel.class)
-        .flatMap(
-            channel -> {
-              Process ffmpegProcess = startFFmpegFromYtdlp(query);
-              if (ffmpegProcess == null) {
-                return event.editReply("❌ Impossible de lancer yt-dlp + ffmpeg").then();
-              }
-
-              InputStream pcmStream = ffmpegProcess.getInputStream();
-              AudioProvider provider = new FFmpegAudioProvider(pcmStream);
-
-              return channel
-                  .join(spec -> spec.setProvider(provider).setSelfDeaf(true))
-                  .then(event.editReply("▶️ Lecture lancée !").then());
-            })
-        .switchIfEmpty(
-            event.editReply("❌ Tu dois être dans un salon vocal pour lancer la musique").then());
   }
 
   /**
