@@ -22,10 +22,11 @@ public class Characters {
   private String playerName;
   private String characterName;
   private String race;
-  private String subrace;
-  private String background;
+
+  @Column(name = "class")
   private String class_; // ok de garder _ ici
-  private String subclass;
+
+  private String background;
   private int level;
   private int experiencePoints;
 
@@ -37,9 +38,6 @@ public class Characters {
 
   @Column(length = 1000)
   private String personalityTraits;
-
-  @Column(length = 2000)
-  private String notes;
 
   private LocalDateTime dateCreated;
   private LocalDateTime lastUpdated;

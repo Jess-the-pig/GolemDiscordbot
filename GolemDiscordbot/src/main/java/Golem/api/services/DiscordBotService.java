@@ -55,6 +55,8 @@ public class DiscordBotService {
             client.on(ButtonInteractionEvent.class, dispatcher::handleButton).subscribe();
             client.on(ChatInputInteractionEvent.class, dispatcher::handle).subscribe();
             client.on(MessageCreateEvent.class, characterService::handleMessageCreate).subscribe();
+            client.on(MessageCreateEvent.class, characterService::handleMessageModify).subscribe();
+            client.on(MessageCreateEvent.class, characterService::handleMessageConsult).subscribe();
           }
         });
   }

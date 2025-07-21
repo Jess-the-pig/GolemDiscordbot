@@ -1,11 +1,14 @@
 package Golem.api.services;
 
 import Golem.api.entities.Characters;
+import Golem.api.factories.ReplyFactory;
 import Golem.api.repositories.CharacterRepository;
+import Golem.api.utils.CreationSession;
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
 import discord4j.core.event.domain.message.MessageCreateEvent;
 import java.time.LocalDateTime;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
@@ -17,13 +20,11 @@ import reactor.core.publisher.Mono;
 @RequiredArgsConstructor
 public class CharacterService {
   private final Map<Long, CreationSession> creationSessions = new HashMap<>();
+  private final Map<Long, CreationSession> modificationSessions = new HashMap<>();
+  private final Map<Long, CreationSession> consultSessions = new HashMap<>();
+
   private final CharacterRepository characterRepository;
   private static final Logger logger = LoggerFactory.getLogger(CharacterService.class);
-
-  private static class CreationSession {
-    int step = 0;
-    Characters character = new Characters();
-  }
 
   public Mono<Void> handleCreate(ButtonInteractionEvent event) {
     long userId = event.getInteraction().getUser().getId().asLong();
@@ -37,18 +38,8 @@ public class CharacterService {
 
     creationSessions.put(userId, session);
 
-    return event
-        .deferReply()
-        .withEphemeral(true)
-        .then(
-            event
-                .getInteraction()
-                .getChannel()
-                .flatMap(
-                    channel ->
-                        channel.createMessage(
-                            "Création de personnage : Quel est le nom du personnage ?"))
-                .then());
+    return ReplyFactory.deferAndSend(
+        event, "Let's create our character! But first, What's his name ?");
   }
 
   public Mono<Void> handleMessageCreate(MessageCreateEvent event) {
@@ -67,99 +58,258 @@ public class CharacterService {
       case 0:
         session.character.setCharacterName(content);
         session.step = 1;
-        return event
-            .getMessage()
-            .getChannel()
-            .flatMap(channel -> channel.createMessage("Quelle est la race du personnage ?"))
-            .then();
+        return ReplyFactory.reply(event, "What's your character's race?");
 
       case 1:
         session.character.setRace(content);
         session.step = 2;
-        return event
-            .getMessage()
-            .getChannel()
-            .flatMap(channel -> channel.createMessage("Quelle est la classe du personnage ?"))
-            .then();
+        return ReplyFactory.reply(event, "Which class does it have?");
 
       case 2:
         session.character.setClass_(content);
         session.step = 3;
-        return event
-            .getMessage()
-            .getChannel()
-            .flatMap(
-                channel ->
-                    channel.createMessage("Quel est le niveau du personnage ? (nombre entier)"))
-            .then();
+        return ReplyFactory.reply(event, "What is your character's background?");
 
       case 3:
         try {
           int level = Integer.parseInt(content);
           session.character.setLevel(level);
         } catch (NumberFormatException e) {
-          // Redemander si ce n’est pas un nombre
-          return event
-              .getMessage()
-              .getChannel()
-              .flatMap(
-                  channel ->
-                      channel.createMessage(
-                          "Veuillez entrer un nombre entier valide pour le niveau."))
-              .then();
+          return ReplyFactory.reply(event, "What's his level?");
         }
         session.step = 4;
-        return event
-            .getMessage()
-            .getChannel()
-            .flatMap(
-                channel ->
-                    channel.createMessage("Combien d'expérience points a-t-il ? (nombre entier)"))
-            .then();
+        return ReplyFactory.reply(event, "How many experience points does your character have?");
 
       case 4:
         try {
           int xp = Integer.parseInt(content);
           session.character.setExperiencePoints(xp);
         } catch (NumberFormatException e) {
-          return event
-              .getMessage()
-              .getChannel()
-              .flatMap(
-                  channel ->
-                      channel.createMessage(
-                          "Veuillez entrer un nombre entier valide pour les points d'expérience."))
-              .then();
+          return ReplyFactory.reply(event, "Please enter a valid integer for experience points.");
         }
+        session.step = 5;
+        return ReplyFactory.reply(event, "What are your character's features and traits?");
 
-        // Remplissage des dates
+      case 5:
+        session.character.setFeaturesAndTraits(content);
+        session.step = 6;
+        return ReplyFactory.reply(event, "What languages does your character speak?");
+
+      case 6:
+        session.character.setLanguages(content);
+        session.step = 7;
+        return ReplyFactory.reply(event, "Describe your character's personality traits.");
+
+      case 7:
+        session.character.setPersonalityTraits(content);
+        session.step = 8;
+
         session.character.setDateCreated(LocalDateTime.now());
         session.character.setLastUpdated(LocalDateTime.now());
 
-        // Sauvegarder en base
+        // Persist to database
         characterRepository.save(session.character);
 
-        // Fin de la session
+        // Clear session
         creationSessions.remove(userId);
 
-        return event
-            .getMessage()
-            .getChannel()
-            .flatMap(channel -> channel.createMessage("Personnage créé avec succès !"))
-            .then();
+        return ReplyFactory.reply(event, "Character created successfully! 🎉");
 
       default:
         return Mono.empty();
     }
   }
 
-  // Modifier
   public Mono<Void> handleModify(ButtonInteractionEvent event) {
-    return event.reply("Ok, modification d'un personnage !").withEphemeral(true).then();
+    long userId = event.getInteraction().getUser().getId().asLong();
+    String username = event.getInteraction().getUser().getUsername();
+
+    logger.info("handleModify called for userId={}, username={}", userId, username);
+
+    CreationSession session = new CreationSession();
+    session.step = 0;
+    session.character.setPlayerName(username);
+
+    modificationSessions.put(userId, session);
+
+    List<Characters> allPlayerCharacters = characterRepository.findByPlayerName(username);
+    StringBuilder charactersList = new StringBuilder();
+    for (Characters c : allPlayerCharacters) {
+      charactersList.append("- ").append(c.getCharacterName()).append("\n");
+    }
+
+    return ReplyFactory.deferAndSend(
+        event,
+        "Let's modify your character!\nHere are your characters:\n"
+            + charactersList
+            + "\nWhich one do you want to modify?");
   }
 
-  // consulter
+  // Gère toute la logique conversationnelle
+  public Mono<Void> handleMessageModify(MessageCreateEvent event) {
+    long userId = event.getMessage().getAuthor().map(u -> u.getId().asLong()).orElse(-1L);
+    if (userId == -1) return Mono.empty();
+
+    if (!modificationSessions.containsKey(userId)) {
+      return Mono.empty();
+    }
+
+    CreationSession session = modificationSessions.get(userId);
+    String content = event.getMessage().getContent();
+    logger.info("handleMessageModify input: {}", content);
+
+    logger.info(
+        "userId={}, session exists={}, step={}",
+        userId,
+        session != null,
+        session != null ? session.step : "N/A");
+
+    switch (session.step) {
+      case 0:
+        Characters charToModify = characterRepository.findByCharacterName(content);
+        logger.info(content);
+        if (charToModify == null) {
+          return ReplyFactory.reply(event, "I couldn't find this character. Try again?");
+        }
+        session.character = charToModify;
+        session.step = 1;
+        return ReplyFactory.reply(event, "What do you want to update? (name, race, class, etc.)");
+
+      case 1:
+        if ("done".equalsIgnoreCase(content)) {
+          modificationSessions.remove(userId);
+          return ReplyFactory.reply(event, "All done! Character saved.");
+        }
+        session.lastField = content.toLowerCase();
+        session.step = 2;
+        return ReplyFactory.reply(
+            event, "What is the new value for **" + session.lastField + "** ?");
+
+      case 2:
+        String field = session.lastField;
+        switch (field) {
+          case "name":
+            session.character.setCharacterName(content);
+            break;
+          case "race":
+            session.character.setRace(content);
+            break;
+          case "class":
+            session.character.setClass_(content);
+            break;
+          case "background":
+            session.character.setBackground(content);
+            break;
+          case "level":
+            try {
+              int level = Integer.parseInt(content);
+              session.character.setLevel(level);
+            } catch (NumberFormatException e) {
+              return ReplyFactory.reply(event, "Please enter a valid integer for the level.");
+            }
+            break;
+          case "experiencepoints":
+            try {
+              int xp = Integer.parseInt(content);
+              session.character.setExperiencePoints(xp);
+            } catch (NumberFormatException e) {
+              return ReplyFactory.reply(
+                  event, "Please enter a valid integer for experience points.");
+            }
+            break;
+          case "featuresandtraits":
+            session.character.setFeaturesAndTraits(content);
+            break;
+          case "languages":
+            session.character.setLanguages(content);
+            break;
+          case "personalitytraits":
+            session.character.setPersonalityTraits(content);
+            break;
+          default:
+            return ReplyFactory.reply(event, "I don't know this field. Try again.");
+        }
+    }
+
+    session.character.setLastUpdated(LocalDateTime.now());
+    characterRepository.save(session.character); // adapter ici si asynchrone
+    session.step = 1; // Retour à l'étape choix du champ
+
+    return ReplyFactory.reply(
+        event, "Updated! Anything else? (name, race, class, etc.) Or type **done**.");
+  }
+
   public Mono<Void> handleConsult(ButtonInteractionEvent event) {
-    return event.reply("Ok, consultation des personnages !").withEphemeral(true).then();
+    long userId = event.getInteraction().getUser().getId().asLong();
+    String username = event.getInteraction().getUser().getUsername();
+
+    logger.info("handleModify called for userId={}, username={}", userId, username);
+
+    CreationSession session = new CreationSession();
+    session.step = 0;
+    session.character.setPlayerName(username);
+
+    consultSessions.put(userId, session);
+
+    List<Characters> allPlayerCharacters = characterRepository.findByPlayerName(username);
+    StringBuilder charactersList = new StringBuilder();
+    for (Characters c : allPlayerCharacters) {
+      charactersList.append("- ").append(c.getCharacterName()).append("\n");
+    }
+
+    return ReplyFactory.deferAndSend(
+        event,
+        "Let's consult one of your characters!\nHere are your characters:\n"
+            + charactersList
+            + "\nWhich one do you want to see?");
+  }
+
+  public Mono<Void> handleMessageConsult(MessageCreateEvent event) {
+    long userId = event.getMessage().getAuthor().map(u -> u.getId().asLong()).orElse(-1L);
+    if (userId == -1) return Mono.empty();
+
+    if (!consultSessions.containsKey(userId)) {
+      return Mono.empty();
+    }
+
+    CreationSession session = consultSessions.get(userId);
+    String content = event.getMessage().getContent();
+    logger.info("handleMessageModify input: {}", content);
+    logger.info(
+        "userId={}, session exists={}, step={}",
+        userId,
+        session != null,
+        session != null ? session.step : "N/A");
+
+    Characters characterConsult = characterRepository.findByCharacterName(content);
+
+    if (characterConsult == null) {
+      // Gestion si pas trouvé
+      return ReplyFactory.reply(event, "Character not found!");
+    }
+
+    StringBuilder characterDetails = new StringBuilder();
+    characterDetails.append("**Character Details:**\n");
+    characterDetails.append("Name: ").append(characterConsult.getCharacterName()).append("\n");
+    characterDetails.append("Race: ").append(characterConsult.getRace()).append("\n");
+    characterDetails.append("Class: ").append(characterConsult.getClass_()).append("\n");
+    characterDetails.append("Background: ").append(characterConsult.getBackground()).append("\n");
+    characterDetails.append("Level: ").append(characterConsult.getLevel()).append("\n");
+    characterDetails
+        .append("Experience Points: ")
+        .append(characterConsult.getExperiencePoints())
+        .append("\n");
+    characterDetails
+        .append("Features & Traits: ")
+        .append(characterConsult.getFeaturesAndTraits())
+        .append("\n");
+    characterDetails.append("Languages: ").append(characterConsult.getLanguages()).append("\n");
+    characterDetails
+        .append("Personality Traits: ")
+        .append(characterConsult.getPersonalityTraits())
+        .append("\n");
+    // Ajoute d'autres champs si besoin
+
+    return ReplyFactory.reply(event, characterDetails.toString());
   }
 }
