@@ -2,9 +2,6 @@ package Golem.api.commands.implementation;
 
 import Golem.api.commands.ICommand;
 import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
-import discord4j.discordjson.json.ApplicationCommandOptionData;
-import java.util.List;
-import java.util.Optional;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
 
@@ -19,10 +16,5 @@ public class pingCommand implements ICommand {
   @Override
   public Mono<Void> handle(ChatInputInteractionEvent event) {
     return event.reply("🏓Pong!");
-  }
-
-  @Override
-  public Optional<List<ApplicationCommandOptionData>> getOptions() {
-    return Optional.empty();
   }
 }

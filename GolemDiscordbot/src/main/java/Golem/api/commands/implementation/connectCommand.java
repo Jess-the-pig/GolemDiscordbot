@@ -6,9 +6,6 @@ import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
 import discord4j.core.object.VoiceState;
 import discord4j.core.object.entity.Member;
 import discord4j.core.object.entity.channel.VoiceChannel;
-import discord4j.discordjson.json.ApplicationCommandOptionData;
-import java.util.List;
-import java.util.Optional;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
 
@@ -42,10 +39,5 @@ public class connectCommand implements ICommand {
                   .then(event.reply("✅ Connecté au vocal !"));
             })
         .switchIfEmpty(event.reply("❌ Tu dois être dans un salon vocal pour me connecter."));
-  }
-
-  @Override
-  public Optional<List<ApplicationCommandOptionData>> getOptions() {
-    return Optional.empty();
   }
 }

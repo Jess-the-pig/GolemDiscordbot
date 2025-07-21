@@ -1,5 +1,6 @@
 package Golem.api.commands.implementation;
 
+import Golem.api.commands.HasOptions;
 import Golem.api.commands.ICommand;
 import Golem.api.utils.QueuedAudioProvider;
 import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
@@ -15,7 +16,7 @@ import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
 
 @Component
-public class playCommand implements ICommand {
+public class playCommand implements ICommand, HasOptions {
 
   private static final Logger log = LoggerFactory.getLogger(playCommand.class);
   private final QueuedAudioProvider pQueuedAudioProvider;

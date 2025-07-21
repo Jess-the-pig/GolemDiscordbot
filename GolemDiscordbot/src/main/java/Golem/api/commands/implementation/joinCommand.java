@@ -5,10 +5,7 @@ import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
 import discord4j.core.object.VoiceState;
 import discord4j.core.object.entity.Member;
 import discord4j.core.object.entity.channel.VoiceChannel;
-import discord4j.discordjson.json.ApplicationCommandOptionData;
 import discord4j.voice.AudioProvider;
-import java.util.List;
-import java.util.Optional;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
 
@@ -40,10 +37,5 @@ public class joinCommand implements ICommand {
                       spec.setSelfDeaf(true); // 👈 Ajoute ça !
                     }))
         .then();
-  }
-
-  @Override
-  public Optional<List<ApplicationCommandOptionData>> getOptions() {
-    return Optional.empty();
   }
 }

@@ -1,5 +1,6 @@
 package Golem.api.services;
 
+import Golem.api.commands.HasOptions;
 import Golem.api.commands.ICommand;
 import Golem.api.commands.implementation.playCommand;
 import discord4j.core.GatewayDiscordClient;
@@ -21,7 +22,10 @@ public class RegisterSlashCommands {
           ApplicationCommandRequest.builder()
               .name(command.getName())
               .description("Command description for " + command.getName());
-      command.getOptions().ifPresent(builder::options);
+      if (command instanceof HasOptions) {
+        HasOptions withOptions = (HasOptions) command;
+        withOptions.getOptions().ifPresent(builder::options);
+      }
 
       ApplicationCommandRequest request = builder.build();
 
