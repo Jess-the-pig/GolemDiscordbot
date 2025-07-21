@@ -3,7 +3,9 @@ package Golem.api.services;
 import Golem.api.utils.BotStatus;
 import discord4j.core.DiscordClient;
 import discord4j.core.GatewayDiscordClient;
+import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
 import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
+import discord4j.core.event.domain.message.MessageCreateEvent;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import java.util.concurrent.ExecutorService;
@@ -22,11 +24,15 @@ public class DiscordBotService {
   private GatewayDiscordClient client;
   private final CommandDispatcher dispatcher;
   private final RegisterSlashCommands registerSlashCommands;
+  private final CharacterService characterService;
 
   public DiscordBotService(
-      CommandDispatcher dispatcher, RegisterSlashCommands registerSlashCommands) {
+      CommandDispatcher dispatcher,
+      RegisterSlashCommands registerSlashCommands,
+      CharacterService characterService) {
     this.dispatcher = dispatcher;
     this.registerSlashCommands = registerSlashCommands;
+    this.characterService = characterService;
   }
 
   // Méthode appelée lors de l'initialisation du service (après la construction de l'objet)
@@ -46,8 +52,9 @@ public class DiscordBotService {
             status = new BotStatus(client);
             status.online();
             registerSlashCommands.registerSlashCommands(client, dispatcher.getCommands());
-
+            client.on(ButtonInteractionEvent.class, dispatcher::handleButton).subscribe();
             client.on(ChatInputInteractionEvent.class, dispatcher::handle).subscribe();
+            client.on(MessageCreateEvent.class, characterService::handleMessageCreate).subscribe();
           }
         });
   }

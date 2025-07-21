@@ -1,0 +1,21 @@
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+<changeSet id="8_create_characters_table" author="jessthepig">
+    <createTable tableName="compentences">
+        <!-- Identité -->
+        <column name="id" type="BIGINT" autoIncrement="true">
+            <constraints primaryKey="true" nullable="false"/>
+        </column>
+        <column name="name" type="VARCHAR(255)"/>
+        <column name="description" type="TEXT"/>
+        <column name="creation_date" type="DATETIME"/>
+        <column name="last_update" type="DATETIME"/>
+
+    </createTable>
+</changeSet>
+
+    </databaseChangeLog>

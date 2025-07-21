@@ -1,0 +1,37 @@
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+<changeSet id="6_create_feature_table" author="jessthepig">
+    <createTable tableName="features">
+        <!-- Identité -->
+        <column name="id" type="BIGINT" autoIncrement="true">
+            <constraints primaryKey="true" nullable="false"/>
+        </column>
+        <column name="character_id" type="BIGINT">
+        <constraints nullable="false"/></column>
+        <column name="name" type="VARCHAR(100)">
+        <constraints nullable="false"/></column>
+        <column name="value" type="VARCHAR(1000)">
+        <constraints nullable="false"/></column>
+        <column name="type" type="VARCHAR(100)">
+        <constraints nullable="false"/></column>
+        <column name="category_id" type="BIGINT">
+        <constraints nullable="false"/></column>
+        <column name="date_created" type="DATETIME">
+        <constraints nullable="false"/></column>
+        <column name="last_updated" type="DATETIME">
+        <constraints nullable="false"/></column>
+
+    </createTable>
+        <addForeignKeyConstraint 
+      baseTableName="features"
+      baseColumnNames="character_id"
+      referencedTableName="characters"
+      referencedColumnNames="id"
+      constraintName="fk_feature_character"/>
+</changeSet>
+
+    </databaseChangeLog>

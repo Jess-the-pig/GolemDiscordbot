@@ -1,6 +1,8 @@
 package Golem.api.services;
 
+import Golem.api.commands.HasButtons;
 import Golem.api.commands.ICommand;
+import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
 import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
 import java.util.HashMap;
 import java.util.List;
@@ -31,6 +33,19 @@ public class CommandDispatcher {
     }
 
     return event.reply("Commande inconnue").withEphemeral(true);
+  }
+
+  public Mono<Void> handleButton(ButtonInteractionEvent event) {
+    String customId = event.getCustomId();
+    String prefix = customId.split(":")[0];
+
+    ICommand command = commands.get(prefix);
+
+    if (command instanceof HasButtons) {
+      return ((HasButtons) command).handleButtonInteraction(event);
+    }
+
+    return event.reply("Aucun handler pour ce bouton.").withEphemeral(true);
   }
 
   // Méthode pour obtenir les commandes

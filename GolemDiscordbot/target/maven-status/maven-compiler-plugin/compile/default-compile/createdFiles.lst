@@ -2,7 +2,6 @@ Golem/api/entities/Equipments.class
 Golem/api/commands/implementation/playCommand.class
 Golem/api/ApiApplication.class
 Golem/api/commands/ICommand.class
-Golem/api/configurations/CommandConfig.class
 Golem/api/commands/implementation/helloCommand.class
 Golem/api/entities/Spells.class
 Golem/api/services/RegisterSlashCommands.class
