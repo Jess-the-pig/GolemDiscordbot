@@ -3,7 +3,7 @@ package Golem.api.services;
 import Golem.api.entities.Characters;
 import Golem.api.factories.ReplyFactory;
 import Golem.api.repositories.CharacterRepository;
-import Golem.api.utils.CreationSession;
+import Golem.api.utils.Session;
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
 import discord4j.core.event.domain.message.MessageCreateEvent;
 import java.time.LocalDateTime;
@@ -19,9 +19,9 @@ import reactor.core.publisher.Mono;
 @Service
 @RequiredArgsConstructor
 public class CharacterService {
-  private final Map<Long, CreationSession> creationSessions = new HashMap<>();
-  private final Map<Long, CreationSession> modificationSessions = new HashMap<>();
-  private final Map<Long, CreationSession> consultSessions = new HashMap<>();
+  private final Map<Long, Session<Characters>> creationSessions = new HashMap<>();
+  private final Map<Long, Session<Characters>> modificationSessions = new HashMap<>();
+  private final Map<Long, Session<Characters>> consultSessions = new HashMap<>();
 
   private final CharacterRepository characterRepository;
   private static final Logger logger = LoggerFactory.getLogger(CharacterService.class);
@@ -32,10 +32,10 @@ public class CharacterService {
 
     logger.info("handleCreate called for userId={}, username={}", userId, username);
 
-    CreationSession session = new CreationSession();
+    Session<Characters> session = new Session<>();
     session.step = 0;
-    session.character.setPlayerName(username);
-
+    session.entity = new Characters();
+    session.entity.setPlayerName(username);
     creationSessions.put(userId, session);
 
     return ReplyFactory.deferAndSend(
@@ -51,29 +51,29 @@ public class CharacterService {
       return Mono.empty();
     }
 
-    CreationSession session = creationSessions.get(userId);
+    Session<Characters> session = creationSessions.get(userId);
     String content = event.getMessage().getContent();
 
     switch (session.step) {
       case 0:
-        session.character.setCharacterName(content);
+        session.entity.setCharacterName(content);
         session.step = 1;
         return ReplyFactory.reply(event, "What's your character's race?");
 
       case 1:
-        session.character.setRace(content);
+        session.entity.setRace(content);
         session.step = 2;
         return ReplyFactory.reply(event, "Which class does it have?");
 
       case 2:
-        session.character.setClass_(content);
+        session.entity.setClass_(content);
         session.step = 3;
         return ReplyFactory.reply(event, "What is your character's background?");
 
       case 3:
         try {
           int level = Integer.parseInt(content);
-          session.character.setLevel(level);
+          session.entity.setLevel(level);
         } catch (NumberFormatException e) {
           return ReplyFactory.reply(event, "What's his level?");
         }
@@ -83,7 +83,7 @@ public class CharacterService {
       case 4:
         try {
           int xp = Integer.parseInt(content);
-          session.character.setExperiencePoints(xp);
+          session.entity.setExperiencePoints(xp);
         } catch (NumberFormatException e) {
           return ReplyFactory.reply(event, "Please enter a valid integer for experience points.");
         }
@@ -91,24 +91,24 @@ public class CharacterService {
         return ReplyFactory.reply(event, "What are your character's features and traits?");
 
       case 5:
-        session.character.setFeaturesAndTraits(content);
+        session.entity.setFeaturesAndTraits(content);
         session.step = 6;
         return ReplyFactory.reply(event, "What languages does your character speak?");
 
       case 6:
-        session.character.setLanguages(content);
+        session.entity.setLanguages(content);
         session.step = 7;
         return ReplyFactory.reply(event, "Describe your character's personality traits.");
 
       case 7:
-        session.character.setPersonalityTraits(content);
+        session.entity.setPersonalityTraits(content);
         session.step = 8;
 
-        session.character.setDateCreated(LocalDateTime.now());
-        session.character.setLastUpdated(LocalDateTime.now());
+        session.entity.setDateCreated(LocalDateTime.now());
+        session.entity.setLastUpdated(LocalDateTime.now());
 
         // Persist to database
-        characterRepository.save(session.character);
+        characterRepository.save(session.entity);
 
         // Clear session
         creationSessions.remove(userId);
@@ -126,9 +126,10 @@ public class CharacterService {
 
     logger.info("handleModify called for userId={}, username={}", userId, username);
 
-    CreationSession session = new CreationSession();
+    Session<Characters> session = new Session<>();
     session.step = 0;
-    session.character.setPlayerName(username);
+    session.entity = new Characters();
+    session.entity.setPlayerName(username);
 
     modificationSessions.put(userId, session);
 
@@ -154,7 +155,7 @@ public class CharacterService {
       return Mono.empty();
     }
 
-    CreationSession session = modificationSessions.get(userId);
+    Session<Characters> session = creationSessions.get(userId);
     String content = event.getMessage().getContent();
     logger.info("handleMessageModify input: {}", content);
 
@@ -171,7 +172,7 @@ public class CharacterService {
         if (charToModify == null) {
           return ReplyFactory.reply(event, "I couldn't find this character. Try again?");
         }
-        session.character = charToModify;
+        session.entity = charToModify;
         session.step = 1;
         return ReplyFactory.reply(event, "What do you want to update? (name, race, class, etc.)");
 
@@ -189,21 +190,21 @@ public class CharacterService {
         String field = session.lastField;
         switch (field) {
           case "name":
-            session.character.setCharacterName(content);
+            session.entity.setCharacterName(content);
             break;
           case "race":
-            session.character.setRace(content);
+            session.entity.setRace(content);
             break;
           case "class":
-            session.character.setClass_(content);
+            session.entity.setClass_(content);
             break;
           case "background":
-            session.character.setBackground(content);
+            session.entity.setBackground(content);
             break;
           case "level":
             try {
               int level = Integer.parseInt(content);
-              session.character.setLevel(level);
+              session.entity.setLevel(level);
             } catch (NumberFormatException e) {
               return ReplyFactory.reply(event, "Please enter a valid integer for the level.");
             }
@@ -211,28 +212,28 @@ public class CharacterService {
           case "experiencepoints":
             try {
               int xp = Integer.parseInt(content);
-              session.character.setExperiencePoints(xp);
+              session.entity.setExperiencePoints(xp);
             } catch (NumberFormatException e) {
               return ReplyFactory.reply(
                   event, "Please enter a valid integer for experience points.");
             }
             break;
           case "featuresandtraits":
-            session.character.setFeaturesAndTraits(content);
+            session.entity.setFeaturesAndTraits(content);
             break;
           case "languages":
-            session.character.setLanguages(content);
+            session.entity.setLanguages(content);
             break;
           case "personalitytraits":
-            session.character.setPersonalityTraits(content);
+            session.entity.setPersonalityTraits(content);
             break;
           default:
             return ReplyFactory.reply(event, "I don't know this field. Try again.");
         }
     }
 
-    session.character.setLastUpdated(LocalDateTime.now());
-    characterRepository.save(session.character); // adapter ici si asynchrone
+    session.entity.setLastUpdated(LocalDateTime.now());
+    characterRepository.save(session.entity); // adapter ici si asynchrone
     session.step = 1; // Retour à l'étape choix du champ
 
     return ReplyFactory.reply(
@@ -245,9 +246,10 @@ public class CharacterService {
 
     logger.info("handleModify called for userId={}, username={}", userId, username);
 
-    CreationSession session = new CreationSession();
+    Session<Characters> session = new Session<>();
     session.step = 0;
-    session.character.setPlayerName(username);
+    session.entity = new Characters();
+    session.entity.setPlayerName(username);
 
     consultSessions.put(userId, session);
 
@@ -272,7 +274,7 @@ public class CharacterService {
       return Mono.empty();
     }
 
-    CreationSession session = consultSessions.get(userId);
+    Session<Characters> session = creationSessions.get(userId);
     String content = event.getMessage().getContent();
     logger.info("handleMessageModify input: {}", content);
     logger.info(

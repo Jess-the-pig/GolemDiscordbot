@@ -1,10 +1,13 @@
 package Golem.api.entities;
 
+import Golem.api.entities.interfaces.Combatant;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import java.time.LocalDateTime;
 import lombok.Getter;
@@ -14,7 +17,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name = "characters")
-public class Characters {
+public class Characters implements Combatant {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
@@ -39,6 +42,15 @@ public class Characters {
   @Column(length = 1000)
   private String personalityTraits;
 
+  @ManyToOne
+  @JoinColumn(name = "campaign_id")
+  private Campaign campaign;
+
   private LocalDateTime dateCreated;
   private LocalDateTime lastUpdated;
+
+  @Override
+  public String getCombatantName() {
+    return characterName;
+  }
 }

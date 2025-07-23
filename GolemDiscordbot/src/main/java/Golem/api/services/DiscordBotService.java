@@ -10,10 +10,12 @@ import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service("discordBotServiceV2")
+@RequiredArgsConstructor
 public class DiscordBotService {
 
   @Value("MTM2MTQxMzA4MzEyMTMxOTkzNg.GsavBl.H7WmTwgtCri-b5DQOZ1rPIAusoP6uGRsaGIIUY") // Utilise
@@ -25,15 +27,7 @@ public class DiscordBotService {
   private final CommandDispatcher dispatcher;
   private final RegisterSlashCommands registerSlashCommands;
   private final CharacterService characterService;
-
-  public DiscordBotService(
-      CommandDispatcher dispatcher,
-      RegisterSlashCommands registerSlashCommands,
-      CharacterService characterService) {
-    this.dispatcher = dispatcher;
-    this.registerSlashCommands = registerSlashCommands;
-    this.characterService = characterService;
-  }
+  private final CampaignService campaignService;
 
   // Méthode appelée lors de l'initialisation du service (après la construction de l'objet)
   @PostConstruct
@@ -57,6 +51,7 @@ public class DiscordBotService {
             client.on(MessageCreateEvent.class, characterService::handleMessageCreate).subscribe();
             client.on(MessageCreateEvent.class, characterService::handleMessageModify).subscribe();
             client.on(MessageCreateEvent.class, characterService::handleMessageConsult).subscribe();
+            client.on(MessageCreateEvent.class, campaignService::handleMessageCreate).subscribe();
           }
         });
   }

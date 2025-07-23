@@ -2,17 +2,21 @@ package Golem.api.commands.implementation;
 
 import Golem.api.commands.HasOptions;
 import Golem.api.commands.ICommand;
+import Golem.api.services.RollService;
 import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
 import discord4j.core.object.command.ApplicationCommandInteractionOption;
 import discord4j.core.object.command.ApplicationCommandInteractionOptionValue;
 import discord4j.discordjson.json.ApplicationCommandOptionData;
 import java.util.List;
 import java.util.Optional;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
 
 @Component
+@RequiredArgsConstructor
 public class rollCommand implements ICommand, HasOptions {
+  private final RollService rollService;
 
   @Override
   public String getName() {
@@ -49,7 +53,7 @@ public class rollCommand implements ICommand, HasOptions {
     int totalCalc = 0;
 
     for (int i = 0; i < times; i++) {
-      int roll = (int) (Math.random() * sides) + 1;
+      int roll = rollService.rollDiceWithResult(sides);
       result.append(roll);
       if (i < times - 1) {
         result.append(" , ");

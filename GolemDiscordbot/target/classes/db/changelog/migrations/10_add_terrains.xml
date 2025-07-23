@@ -1,0 +1,79 @@
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+ <changeSet id="10_insert_terrains" author="jessthepig">
+        <insert tableName="terrains">
+            <column name="name" value="Plains"/>
+            <column name="description" value="Open, grassy terrain with few obstructions."/>
+            <column name="date_created" valueDate="NOW()"/>
+            <column name="last_updated" valueDate="NOW()"/>
+        </insert>
+
+        <insert tableName="terrains">
+            <column name="name" value="Forest"/>
+            <column name="description" value="Dense wooded area, home to diverse flora and fauna."/>
+            <column name="date_created" valueDate="NOW()"/>
+            <column name="last_updated" valueDate="NOW()"/>
+        </insert>
+
+        <insert tableName="terrains">
+            <column name="name" value="Swamp"/>
+            <column name="description" value="Wet, muddy terrain that can hinder movement."/>
+            <column name="date_created" valueDate="NOW()"/>
+            <column name="last_updated" valueDate="NOW()"/>
+        </insert>
+
+        <insert tableName="terrains">
+            <column name="name" value="Desert"/>
+            <column name="description" value="Arid, sandy expanse with extreme temperatures."/>
+            <column name="date_created" valueDate="NOW()"/>
+            <column name="last_updated" valueDate="NOW()"/>
+        </insert>
+
+        <insert tableName="terrains">
+            <column name="name" value="Mountain"/>
+            <column name="description" value="Rugged, rocky terrain with steep slopes."/>
+            <column name="date_created" valueDate="NOW()"/>
+            <column name="last_updated" valueDate="NOW()"/>
+        </insert>
+
+        <insert tableName="terrains">
+            <column name="name" value="Hill"/>
+            <column name="description" value="Gentle rises of land between plains and mountains."/>
+            <column name="date_created" valueDate="NOW()"/>
+            <column name="last_updated" valueDate="NOW()"/>
+        </insert>
+
+        <insert tableName="terrains">
+            <column name="name" value="Cave"/>
+            <column name="description" value="Natural underground chamber, dark and often perilous."/>
+            <column name="date_created" valueDate="NOW()"/>
+            <column name="last_updated" valueDate="NOW()"/>
+        </insert>
+
+        <insert tableName="terrains">
+            <column name="name" value="Coast"/>
+            <column name="description" value="Where land meets sea or a large lake."/>
+            <column name="date_created" valueDate="NOW()"/>
+            <column name="last_updated" valueDate="NOW()"/>
+        </insert>
+
+        <insert tableName="terrains">
+            <column name="name" value="Tundra"/>
+            <column name="description" value="Cold, open terrain often frozen most of the year."/>
+            <column name="date_created" valueDate="NOW()"/>
+            <column name="last_updated" valueDate="NOW()"/>
+        </insert>
+
+        <insert tableName="terrains">
+            <column name="name" value="Jungle"/>
+            <column name="description" value="Dense, tropical rainforest with rich biodiversity."/>
+            <column name="date_created" valueDate="NOW()"/>
+            <column name="last_updated" valueDate="NOW()"/>
+        </insert>
+    </changeSet>
+
+    </databaseChangeLog>

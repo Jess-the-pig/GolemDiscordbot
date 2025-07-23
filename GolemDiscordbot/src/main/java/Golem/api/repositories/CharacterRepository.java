@@ -10,4 +10,6 @@ public interface CharacterRepository extends JpaRepository<Characters, Long> {
   List<Characters> findByPlayerName(String playerName);
 
   Characters findByCharacterName(String characterName);
+
+  List<Characters> findByCampaignId(Long campaign_id);
 }
