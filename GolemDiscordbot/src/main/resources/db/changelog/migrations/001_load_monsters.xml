@@ -4,7 +4,7 @@
     xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
-    <changeSet id="0_create_monsters_table" author="jessthepig" runOnChange="true">
+    <changeSet id="001_create_monsters_table" author="jessthepig" runOnChange="true">
     <createTable tableName="monsters">
         <column name="id" type="BIGINT"></column>
         <column name="name" type="VARCHAR(255)"/>
@@ -54,7 +54,7 @@
     </createTable>
 </changeSet>
 
-    <changeSet id="1_load_monsters" author="jessthepig">
+    <changeSet id="002_load_monsters" author="jessthepig">
         <loadData
             tableName="monsters"
             file="db/changelog/migrations/data/cleaned_monsters_basic.csv"

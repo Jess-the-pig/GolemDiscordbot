@@ -4,7 +4,7 @@
     xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
-<changeSet id="8_create_campaign_table" author="jessthepig">
+<changeSet id="009_create_campaign_table" author="jessthepig">
 <createTable tableName="campaign">
   <column name="id" type="BIGINT" autoIncrement="true">
     <constraints primaryKey="true" nullable="false"/>
@@ -15,10 +15,8 @@
     <column name="description" type="TEXT">
     <constraints nullable="true"/>
   </column>
-  </column>
     <column name="player_creator" type="VARCHAR(100)">
     <constraints nullable="false"/>
-  </column>
   </column>
     <column name="dm" type="VARCHAR(100)">
     <constraints nullable="false"/>

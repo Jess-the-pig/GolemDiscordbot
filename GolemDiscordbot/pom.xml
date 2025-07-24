@@ -1,46 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.4.5</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
-	<groupId>henrotaym</groupId>
-	<artifactId>env</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>env</name>
-	<description>Environment variables in spring boot</description>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
-	<properties>
-		<java.version>24</java.version>
-		<querydsl.version>5.1.0</querydsl.version>
-	</properties>
-<repositories>
-  <repository>
-    <id>dv8tion</id>
-    <name>m2-dv8tion</name>
-    <url>https://m2.dv8tion.net/releases</url>
-  </repository>
-		<repository>
-		    <id>jitpack.io</id>
-		    <url>https://jitpack.io</url>
-		</repository>
-</repositories>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.4.5</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
+
+  <groupId>henrotaym</groupId>
+  <artifactId>env</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>env</name>
+  <description>Environment variables in spring boot</description>
+
+  <properties>
+    <java.version>24</java.version>
+    <querydsl.version>5.1.0</querydsl.version>
+  </properties>
+
+  <repositories>
+    <repository>
+      <id>dv8tion</id>
+      <name>m2-dv8tion</name>
+      <url>https://m2.dv8tion.net/releases</url>
+    </repository>
+    <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+    </repository>
+  </repositories>
 
 
 	<dependencies>
@@ -92,7 +85,7 @@
 <dependency>
   <groupId>org.projectlombok</groupId>
   <artifactId>lombok</artifactId>
-  <version>1.18.32</version> <!-- dernière version dispo en juillet 2025 -->
+  <version>1.18.38</version> 
   <scope>provided</scope>
 </dependency>
 
@@ -140,56 +133,43 @@
 	</dependencies>
 
 <build>
-  <plugins>
-    <plugin>
-      <groupId>org.apache.maven</groupId>
-      <artifactId>org-apache-maven</artifactId>
-      <version>3.9.10</version>
-      <configuration>
-        <source>${java.version}</source>
-        <target>${java.version}</target>
-        <annotationProcessorPaths>
-          <path>
-            <groupId>com.querydsl</groupId>
-            <artifactId>querydsl-apt</artifactId>
-            <classifier>jakarta</classifier>
-            <version>${querydsl.version}</version>
-          </path>
-          <path>
-            <groupId>jakarta.persistence</groupId>
-            <artifactId>jakarta.persistence-api</artifactId>
-            <version>3.1.0</version>
-          </path>
-          <path>
-            <groupId>jakarta.annotation</groupId>
-            <artifactId>jakarta.annotation-api</artifactId>
-            <version>2.1.1</version>
-          </path>
-          <path>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.30</version>
-          </path>
-        </annotationProcessorPaths>
-      </configuration>
-    </plugin>
-
-<plugin>
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-compiler-plugin</artifactId>
-  <version>3.11.0</version>
-  <configuration>
-    <annotationProcessorPaths>
-      <path>
-        <groupId>org.projectlombok</groupId>
-        <artifactId>lombok</artifactId>
-        <version>1.18.32</version>
-      </path>
-    </annotationProcessorPaths>
-  </configuration>
-</plugin>
-
-  </plugins>
-</build>
+    <plugins>
+      <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-compiler-plugin</artifactId>
+              <version>3.14.0</version>
+        <configuration>
+          <fork>true</fork>
+          <executable>${JAVA_HOME}/bin/javac</executable>
+          <release>24</release>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+          <annotationProcessorPaths>
+            <path>
+              <groupId>com.querydsl</groupId>
+              <artifactId>querydsl-apt</artifactId>
+              <classifier>jakarta</classifier>
+              <version>${querydsl.version}</version>
+            </path>
+            <path>
+              <groupId>jakarta.persistence</groupId>
+              <artifactId>jakarta.persistence-api</artifactId>
+              <version>3.1.0</version>
+            </path>
+            <path>
+              <groupId>jakarta.annotation</groupId>
+              <artifactId>jakarta.annotation-api</artifactId>
+              <version>2.1.1</version>
+            </path>
+            <path>
+              <groupId>org.projectlombok</groupId>
+              <artifactId>lombok</artifactId>
+              <version>1.18.38</version>
+            </path>
+          </annotationProcessorPaths>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 
 </project>

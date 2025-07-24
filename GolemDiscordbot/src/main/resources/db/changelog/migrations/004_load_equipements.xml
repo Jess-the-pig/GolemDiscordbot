@@ -4,7 +4,7 @@
     xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
-<changeSet id="6_create_equipments_table" author="jessthepig">
+<changeSet id="007_create_equipments_table" author="jessthepig">
     <createTable tableName="equipments">
         <column name="id" type="BIGINT" autoIncrement="true">
             <constraints primaryKey="true" nullable="false"/>
@@ -20,7 +20,7 @@
 
 
 
-    <changeSet id="7_load_equipements" author="jessthepig">
+    <changeSet id="008_load_equipements" author="jessthepig">
         <loadData
             tableName="equipments"
             file="db/changelog/migrations/data/dndbeyond_equips.csv"
