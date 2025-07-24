@@ -9,12 +9,14 @@ services:
         - UID=${UID}
         - GID=${GID}
         - APP_PORT=${APP_PORT}
-    command: /bin/sh -c "while sleep 1000; do :; done"
+    # Entrypoint safe pour debug (remplace "sleep infinity" par ta vraie commande quand c'est prêt)
+    entrypoint: ["sleep", "infinity"]
     ports:
       - "${APP_PORT_FORWARD}:${APP_PORT}"
     volumes:
       - ./:/opt/apps/app
       - mvn_deps:/opt/apps/maven/repository
+      - target_data:/opt/apps/app/target
     env_file:
       - .env
     networks:
@@ -24,6 +26,8 @@ services:
       - traefik.enable=true
       - traefik.http.routers.games.rule=Host(`games.henrotaym.ip-ddns.com`)
       - traefik.http.routers.games.tls=true
+    restart: unless-stopped
+
   mysql:
     image: "mysql/mysql-server:8.0"
     ports:
@@ -45,6 +49,7 @@ services:
       retries: 3
       timeout: 5s
     restart: unless-stopped
+
   kafka:
     image: confluentinc/cp-kafka:7.9.1
     ports:
@@ -75,6 +80,7 @@ networks:
     driver: bridge
   accessible:
     external: true
+
 volumes:
   mysql_data:
     driver: local
@@ -82,4 +88,5 @@ volumes:
     driver: local
   kafka_data:
     driver: local
-  
+  target_data:
+    driver: local

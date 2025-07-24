@@ -3,6 +3,9 @@
   "dockerComposeFile": "../docker-compose.yml",
   "service": "app",
   "workspaceFolder": "/opt/apps/app",
+  "runArgs": [
+    "--env", "DOPPLER_TOKEN=${localEnv:DOPPLER_TOKEN}"
+  ],
   "customizations": {
     "vscode": {
       "extensions": [

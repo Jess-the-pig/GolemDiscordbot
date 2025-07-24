@@ -24,6 +24,14 @@ RUN python3 --version && pip3 --version && yt-dlp --version
 
 ENV GIT_EDITOR=nano
 
+RUN curl -sLf --retry 3 --tlsv1.2 --proto "=https" https://packages.doppler.com/public/cli/gpg.DE2A7741A397C129.key | \
+    gpg --dearmor -o /usr/share/keyrings/doppler-archive-keyring.gpg && \
+    echo "deb [signed-by=/usr/share/keyrings/doppler-archive-keyring.gpg] https://packages.doppler.com/public/cli/deb/debian any-version main" | \
+    tee /etc/apt/sources.list.d/doppler-cli.list && \
+    apt-get update && \
+    apt-get install -y --no-install-recommends doppler && \
+    rm -rf /var/lib/apt/lists/*
+
 # Download Java JDK 24 binaries
 RUN arch=$(echo ${TARGETPLATFORM} | sed 's/.*\///') && \
     if [ "$arch" = "amd64" ]; then jdkArch="x64"; else jdkArch="aarch64"; fi && \

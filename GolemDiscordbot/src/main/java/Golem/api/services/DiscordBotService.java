@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class DiscordBotService {
 
-  @Value("MTM2MTQxMzA4MzEyMTMxOTkzNg.GsavBl.H7WmTwgtCri-b5DQOZ1rPIAusoP6uGRsaGIIUY") // Utilise
+  @Value("${DISCORD_BOT_TOKEN}") // Utilise
   private String token; // Le token de ton bot Discord
 
   private ExecutorService executorService;
