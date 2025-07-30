@@ -4,7 +4,7 @@
     xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
-  <changeSet id="2_create_npcs_table" author="jessthepig" runOnChange="true">
+  <changeSet id="003_create_npcs_table" author="jessthepig" runOnChange="true">
     <createTable tableName="npcs">
         <column name="id" type="BIGINT"/>
         <column name="char_id" type="VARCHAR(255)"/>
@@ -33,7 +33,7 @@
 </changeSet>
 
 
-    <changeSet id="3_load_npcs" author="jessthepig">
+    <changeSet id="004_load_npcs" author="jessthepig">
         <loadData
             tableName="npcs"
             file="db/changelog/migrations/data/over_one_mil_chars.csv"

@@ -4,7 +4,7 @@
     xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
-<changeSet id="6_create_feature_table" author="jessthepig">
+<changeSet id="011_create_feature_table" author="jessthepig">
     <createTable tableName="features">
         <!-- Identité -->
         <column name="id" type="BIGINT" autoIncrement="true">

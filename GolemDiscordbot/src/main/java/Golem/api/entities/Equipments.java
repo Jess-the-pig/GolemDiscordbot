@@ -4,9 +4,15 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
 @Table(name = "equipments")
 public class Equipments {
   @Id
@@ -19,53 +25,9 @@ public class Equipments {
   private int weight_lbs;
   private int price_golds;
 
+  @ManyToOne
+  @JoinColumn(name = "chest_id")
+  private Chest chest;
   // --- Getters and Setters ---
 
-  public Long getId() {
-    return id;
-  }
-
-  public void setId(Long id) {
-    this.id = id;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public String getType1() {
-    return type1;
-  }
-
-  public void setType1(String type1) {
-    this.type1 = type1;
-  }
-
-  public String getType2() {
-    return type2;
-  }
-
-  public void setType2(String type2) {
-    this.type2 = type2;
-  }
-
-  public int getWeight_lbs() {
-    return weight_lbs;
-  }
-
-  public void setWeight_lbs(int weight_lbs) {
-    this.weight_lbs = weight_lbs;
-  }
-
-  public int getPrice_golds() {
-    return price_golds;
-  }
-
-  public void setPrice_golds(int price_golds) {
-    this.price_golds = price_golds;
-  }
 }

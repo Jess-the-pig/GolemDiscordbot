@@ -6,7 +6,6 @@ import Golem.api.factories.ReplyFactory;
 import Golem.api.repositories.CampaignRepository;
 import Golem.api.repositories.CharacterRepository;
 import Golem.api.utils.Session;
-import com.austinv11.servicer.Service;
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
 import discord4j.core.event.domain.message.MessageCreateEvent;
 import java.time.LocalDateTime;
@@ -14,6 +13,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
 @RequiredArgsConstructor

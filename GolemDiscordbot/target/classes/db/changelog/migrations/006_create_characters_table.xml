@@ -4,7 +4,7 @@
     xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
-<changeSet id="8_create_characters_table" author="jessthepig">
+<changeSet id="010_create_characters_table" author="jessthepig">
     <createTable tableName="characters">
         <!-- Identité -->
         <column name="id" type="BIGINT" autoIncrement="true">
@@ -33,7 +33,7 @@
         <constraints nullable="true"/></column>
         <column name="personality_traits" type="VARCHAR(1000)">
         <constraints nullable="true"/></column>
-        <column name="campaign_id" type="INT">
+        <column name="campaign_id" type="BIGINT">
         <constraints nullable="true"/></column>
 
 

@@ -2,6 +2,7 @@ package Golem.api.factories;
 
 import Golem.api.entities.Monsters;
 import Golem.api.entities.TerrainMonster;
+import Golem.api.entities.Terrains;
 import Golem.api.enums.EncounterDifficulty;
 import Golem.api.enums.EncounterEnemySize;
 import Golem.api.repositories.TerrainMonsterRepository;
@@ -21,9 +22,9 @@ public class BiomeDistributionFactory {
   private final TerrainMonsterRepository terrainMonsterRepository;
 
   public List<Monsters> getBiomeDistributions(String terrainChoisis) {
-    Optional<String> terrain = terrainRepository.findByName(terrainChoisis);
+    Optional<Terrains> terrainOpt = terrainRepository.findByName(terrainChoisis);
 
-    // Clé : nom du terrain, Valeur : distribution des biomes pour ce terrain
+    Terrains terrain = terrainOpt.orElseThrow(() -> new RuntimeException("Terrain not found"));
 
     List<Monsters> distribution = new ArrayList<>();
     List<TerrainMonster> relations = terrainMonsterRepository.findByTerrain(terrain);

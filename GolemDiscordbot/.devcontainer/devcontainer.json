@@ -6,6 +6,8 @@
   "runArgs": [
     "--env", "DOPPLER_TOKEN=${localEnv:DOPPLER_TOKEN}"
   ],
+  "overrideCommand": true,
+  "postCreateCommand": "doppler run -- ./devops/start.sh",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -19,6 +21,7 @@
         "lcjuves.vscode-gjf"
       ],
       "settings": {
+        "git.safeDirectory": "/opt/apps/app",
         "vscode-gjf.execJarPath": "/usr/local/lib/google-java-format.jar",
         "[java]": {
           "editor.defaultFormatter": "lcjuves.vscode-gjf",
@@ -39,5 +42,6 @@
         "java.jdt.ls.java.home": "/usr/local/jdk-24"
       }
     }
-  }
+  },
+  "entrypoint": "/bin/bash"
 }

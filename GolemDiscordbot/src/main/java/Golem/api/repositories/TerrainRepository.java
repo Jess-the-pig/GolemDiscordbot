@@ -5,5 +5,5 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TerrainRepository extends JpaRepository<Terrains, Long> {
-  Optional<String> findByName(String name);
+  Optional<Terrains> findByName(String name);
 }

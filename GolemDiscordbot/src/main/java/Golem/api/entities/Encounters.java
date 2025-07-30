@@ -1,12 +1,12 @@
 package Golem.api.entities;
 
-import Golem.api.entities.interfaces.Combatant;
-import Golem.api.services.RollService;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import java.time.LocalDateTime;
@@ -26,11 +26,14 @@ public class Encounters {
   private Long id;
 
   @ManyToOne
-  @JoinColumn(name = "id")
+  @JoinColumn(name = "campaign_id")
   private Campaign campaignId;
 
-  @ManyToOne
-  @JoinColumn(name = "id")
+  @ManyToMany
+  @JoinTable(
+      name = "encounter_monsters",
+      joinColumns = @JoinColumn(name = "encounter_id"),
+      inverseJoinColumns = @JoinColumn(name = "monster_id"))
   private List<Monsters> monsters;
 
   private Boolean isFinished;
@@ -40,7 +43,10 @@ public class Encounters {
   private LocalDateTime dateCreated;
   private LocalDateTime lastUpdated;
 
-  private final RollService rollService;
-
-  private List<Combatant> combatant;
+  @ManyToMany
+  @JoinTable(
+      name = "encounter_characters",
+      joinColumns = @JoinColumn(name = "encounter_id"),
+      inverseJoinColumns = @JoinColumn(name = "character_id"))
+  private List<Characters> characters;
 }

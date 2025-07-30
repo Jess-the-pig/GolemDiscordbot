@@ -88,3 +88,7 @@ RUN chmod +x ./devops/*.sh
 EXPOSE ${APP_PORT}
 
 FROM app
+
+ENTRYPOINT ["doppler", "run", "--"]
+
+CMD ["./devops/start.sh"]

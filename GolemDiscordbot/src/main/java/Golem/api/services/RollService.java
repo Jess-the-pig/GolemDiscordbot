@@ -1,7 +1,7 @@
 package Golem.api.services;
 
-import com.austinv11.servicer.Service;
 import java.util.concurrent.ThreadLocalRandom;
+import org.springframework.stereotype.Service;
 
 @Service
 public class RollService {

@@ -9,8 +9,6 @@ services:
         - UID=${UID}
         - GID=${GID}
         - APP_PORT=${APP_PORT}
-    # Entrypoint safe pour debug (remplace "sleep infinity" par ta vraie commande quand c'est prêt)
-    entrypoint: ["sleep", "infinity"]
     ports:
       - "${APP_PORT_FORWARD}:${APP_PORT}"
     volumes:
@@ -19,6 +17,8 @@ services:
       - target_data:/opt/apps/app/target
     env_file:
       - .env
+    environment:
+      - DOPPLER_TOKEN=${DOPPLER_TOKEN}
     networks:
       - app
       - accessible

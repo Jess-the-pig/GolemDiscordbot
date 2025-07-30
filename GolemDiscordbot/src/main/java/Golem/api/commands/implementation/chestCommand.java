@@ -9,8 +9,10 @@ import discord4j.core.object.command.ApplicationCommandInteractionOptionValue;
 import discord4j.discordjson.json.ApplicationCommandOptionData;
 import java.util.List;
 import java.util.Optional;
+import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
 
+@Component
 public class chestCommand implements ICommand, HasOptions {
   private EquipementService equipementService;
 
