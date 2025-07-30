@@ -21,6 +21,7 @@ RUN apt-get install -y yt-dlp
 RUN wget --output-document=/etc/bash_completion.d/git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 RUN echo "source /etc/bash_completion.d/git-completion.bash" >> /etc/bash.bashrc
 RUN python3 --version && pip3 --version && yt-dlp --version
+RUN apt-get update && apt-get install -y redis-tools
 
 ENV GIT_EDITOR=nano
 
