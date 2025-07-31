@@ -5,6 +5,7 @@ import Golem.api.common.factories.ApplicationCommandOptionDataFactory;
 import Golem.api.common.interfaces.HasOptions;
 import Golem.api.common.interfaces.ICommand;
 import Golem.api.common.utils.CommandOptionReader;
+import Golem.api.rpg.dices.roll_dices.RollService;
 import Golem.api.rpg.dto.ReplyFactory;
 import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
 import discord4j.core.object.command.ApplicationCommandInteractionOptionValue;

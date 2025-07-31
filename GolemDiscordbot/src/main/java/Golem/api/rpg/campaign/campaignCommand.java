@@ -1,7 +1,7 @@
 package Golem.api.rpg.campaign;
 
-import Golem.api.common.commands.HasButtons;
-import Golem.api.common.commands.ICommand;
+import Golem.api.common.interfaces.HasButtons;
+import Golem.api.common.interfaces.ICommand;
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
 import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
 import discord4j.core.object.component.Button;

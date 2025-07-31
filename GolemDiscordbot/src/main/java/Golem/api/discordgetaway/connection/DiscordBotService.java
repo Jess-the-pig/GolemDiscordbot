@@ -1,16 +1,18 @@
 package Golem.api.discordgetaway.connection;
 
+import Golem.api.discordgetaway.DiscordEventHandler;
 import Golem.api.discordgetaway.slashcommands.CommandDispatcher;
 import Golem.api.discordgetaway.slashcommands.RegisterSlashCommands;
 import Golem.api.rpg.campaign.CampaignService;
-import Golem.api.rpg.characters.CharacterService;
+import Golem.api.rpg.characters.create_character.CharacterCreateService;
 import discord4j.core.DiscordClient;
 import discord4j.core.GatewayDiscordClient;
+import discord4j.core.event.domain.Event;
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
 import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
-import discord4j.core.event.domain.message.MessageCreateEvent;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
+import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import lombok.RequiredArgsConstructor;
@@ -29,34 +31,38 @@ public class DiscordBotService {
   private GatewayDiscordClient client;
   private final CommandDispatcher dispatcher;
   private final RegisterSlashCommands registerSlashCommands;
-  private final CharacterService characterService;
+  private final CharacterCreateService characterService;
   private final CampaignService campaignService;
 
   // Méthode appelée lors de l'initialisation du service (après la construction de l'objet)
   @PostConstruct
   public void startBot() {
-
     executorService = Executors.newSingleThreadExecutor();
-
     executorService.submit(
         () -> {
-          // Créer le client Discord avec le token
           DiscordClient discordClient = DiscordClient.create(token);
           client = discordClient.login().block();
 
-          // Si le client Discord est correctement connecté
           if (client != null) {
-            status = new BotStatus(client);
-            status.online();
             registerSlashCommands.registerSlashCommands(client, dispatcher.getCommands());
+            status.online();
+
+            // Handlers fixes
             client.on(ButtonInteractionEvent.class, dispatcher::handleButton).subscribe();
             client.on(ChatInputInteractionEvent.class, dispatcher::handle).subscribe();
-            client.on(MessageCreateEvent.class, characterService::handleMessageCreate).subscribe();
-            client.on(MessageCreateEvent.class, characterService::handleMessageModify).subscribe();
-            client.on(MessageCreateEvent.class, characterService::handleMessageConsult).subscribe();
-            client.on(MessageCreateEvent.class, campaignService::handleMessageCreate).subscribe();
+
+            // Regrouper tous les handlers dynamiquement
+            List<List<DiscordEventHandler<?>>> allHandlers =
+                List.of(characterService.getEventHandlers());
+
+            // Flatten + enregistrer
+            allHandlers.stream().flatMap(List::stream).forEach(handler -> registerHandler(handler));
           }
         });
+  }
+
+  private <T extends Event> void registerHandler(DiscordEventHandler<T> handler) {
+    client.on(handler.eventClass(), handler.listener()::handle).subscribe();
   }
 
   // Méthode pour gérer l'arrêt de l'exécution lorsque l'application Spring Boot se termine

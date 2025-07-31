@@ -6,6 +6,19 @@ import discord4j.core.event.domain.message.MessageCreateEvent;
 import reactor.core.publisher.Mono;
 
 public class ReplyFactory {
+  public static Mono<Void> reply(Object event, String message) {
+    if (event instanceof MessageCreateEvent) {
+      return reply((MessageCreateEvent) event, message);
+    } else if (event instanceof ButtonInteractionEvent) {
+      return reply((ButtonInteractionEvent) event, message);
+    } else if (event instanceof ChatInputInteractionEvent) {
+      return reply((ChatInputInteractionEvent) event, message);
+    } else {
+      return Mono.error(
+          new IllegalArgumentException("Unsupported event type: " + event.getClass()));
+    }
+  }
+
   public static Mono<Void> reply(MessageCreateEvent event, String message) {
     return event
         .getMessage()

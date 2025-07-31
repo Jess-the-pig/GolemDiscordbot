@@ -1,4 +1,4 @@
-package Golem.api.rpg.dices;
+package Golem.api.rpg.dices.roll_dices;
 
 import java.util.List;
 

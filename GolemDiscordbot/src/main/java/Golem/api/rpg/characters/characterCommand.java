@@ -1,7 +1,10 @@
 package Golem.api.rpg.characters;
 
-import Golem.api.common.commands.HasButtons;
-import Golem.api.common.commands.ICommand;
+import Golem.api.common.interfaces.HasButtons;
+import Golem.api.common.interfaces.ICommand;
+import Golem.api.rpg.characters.consult_character.CharacterConsultService;
+import Golem.api.rpg.characters.create_character.CharacterCreateService;
+import Golem.api.rpg.characters.modify_character.CharacterModifyService;
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
 import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
 import discord4j.core.object.component.Button;
@@ -13,7 +16,9 @@ import reactor.core.publisher.Mono;
 @RequiredArgsConstructor
 public class characterCommand implements ICommand, HasButtons {
 
-  private final CharacterService characterService;
+  private final CharacterConsultService characterConsultService;
+  private final CharacterCreateService characterCreateService;
+  private final CharacterModifyService characterModifyService;
 
   @Override
   public String getName() {
@@ -38,11 +43,11 @@ public class characterCommand implements ICommand, HasButtons {
 
     switch (customId) {
       case "character:create":
-        return characterService.handleCreate(event);
+        return characterCreateService.handleMessageCreate(event);
       case "character:modify":
-        return characterService.handleModify(event);
+        return characterModifyService.handleModify(event);
       case "character:consult":
-        return characterService.handleConsult(event);
+        return characterConsultService.handleConsult(event);
       default:
         return Mono.empty();
     }

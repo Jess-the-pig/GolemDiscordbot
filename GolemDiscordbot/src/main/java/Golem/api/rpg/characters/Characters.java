@@ -1,6 +1,7 @@
 package Golem.api.rpg.characters;
 
 import Golem.api.common.entity.Combatant;
+import Golem.api.common.interfaces.TimeStampedEntity;
 import Golem.api.rpg.campaign.Campaign;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -18,7 +19,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name = "characters")
-public class Characters implements Combatant {
+public class Characters implements Combatant, TimeStampedEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
@@ -53,5 +54,15 @@ public class Characters implements Combatant {
   @Override
   public String getCombatantName() {
     return characterName;
+  }
+
+  @Override
+  public void setDateCreated(LocalDateTime date) {
+    this.dateCreated = date;
+  }
+
+  @Override
+  public void setLastUpdated(LocalDateTime date) {
+    this.lastUpdated = date;
   }
 }

@@ -1,7 +1,7 @@
 package Golem.api.rpg.loot.generatechest;
 
-import Golem.api.common.commands.HasOptions;
-import Golem.api.common.commands.ICommand;
+import Golem.api.common.interfaces.HasOptions;
+import Golem.api.common.interfaces.ICommand;
 import Golem.api.rpg.loot.generateeuipements.EquipementService;
 import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
 import discord4j.core.object.command.ApplicationCommandInteractionOption;
