@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
 
 @Component
-public class helloCommand implements Golem.api.common.commands.ICommand {
+public class helloCommand implements Golem.api.common.interfaces.ICommand {
 
   @Override
   public String getName() {

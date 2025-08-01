@@ -1,4 +1,4 @@
-package Golem.api.common.commands;
+package Golem.api.common.interfaces;
 
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
 import reactor.core.publisher.Mono;

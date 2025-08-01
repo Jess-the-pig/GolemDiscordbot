@@ -1,26 +1,25 @@
 package Golem.api.discordgetaway.connection;
 
-import Golem.api.discordgetaway.DiscordEventHandler;
 import Golem.api.discordgetaway.slashcommands.CommandDispatcher;
 import Golem.api.discordgetaway.slashcommands.RegisterSlashCommands;
 import Golem.api.rpg.campaign.CampaignService;
+import Golem.api.rpg.characters.consult_characters.CharacterConsultService;
 import Golem.api.rpg.characters.create_character.CharacterCreateService;
 import discord4j.core.DiscordClient;
 import discord4j.core.GatewayDiscordClient;
-import discord4j.core.event.domain.Event;
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
 import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
-import java.util.List;
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service("discordBotServiceV2")
 @RequiredArgsConstructor
+@Slf4j
 public class DiscordBotService {
 
   @Value("${DISCORD_TOKEN}") // Utilise
@@ -33,36 +32,27 @@ public class DiscordBotService {
   private final RegisterSlashCommands registerSlashCommands;
   private final CharacterCreateService characterService;
   private final CampaignService campaignService;
+  private final CharacterConsultService characterConsultService;
+  private final CharacterCreateService characterCreateService;
 
   // Méthode appelée lors de l'initialisation du service (après la construction de l'objet)
+
   @PostConstruct
   public void startBot() {
-    executorService = Executors.newSingleThreadExecutor();
-    executorService.submit(
-        () -> {
-          DiscordClient discordClient = DiscordClient.create(token);
-          client = discordClient.login().block();
+    DiscordClient discordClient = DiscordClient.create(token);
+    client = discordClient.login().block();
 
-          if (client != null) {
-            registerSlashCommands.registerSlashCommands(client, dispatcher.getCommands());
-            status.online();
+    if (client != null) {
+      log.info("Bot connected as: {}", client.getSelf().block().getUsername());
 
-            // Handlers fixes
-            client.on(ButtonInteractionEvent.class, dispatcher::handleButton).subscribe();
-            client.on(ChatInputInteractionEvent.class, dispatcher::handle).subscribe();
+      registerSlashCommands.registerSlashCommands(client, dispatcher.getCommands());
 
-            // Regrouper tous les handlers dynamiquement
-            List<List<DiscordEventHandler<?>>> allHandlers =
-                List.of(characterService.getEventHandlers());
+      client.on(ButtonInteractionEvent.class, dispatcher::handleButton).subscribe();
+      client.on(ChatInputInteractionEvent.class, dispatcher::handle).subscribe();
 
-            // Flatten + enregistrer
-            allHandlers.stream().flatMap(List::stream).forEach(handler -> registerHandler(handler));
-          }
-        });
-  }
-
-  private <T extends Event> void registerHandler(DiscordEventHandler<T> handler) {
-    client.on(handler.eventClass(), handler.listener()::handle).subscribe();
+      // Bloque jusqu'à ce que le bot se déconnecte
+      client.onDisconnect().block();
+    }
   }
 
   // Méthode pour gérer l'arrêt de l'exécution lorsque l'application Spring Boot se termine

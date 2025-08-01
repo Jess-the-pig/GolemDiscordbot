@@ -1,4 +1,4 @@
-package Golem.api.rpg.characters.consult_character;
+package Golem.api.rpg.characters.consult_characters;
 
 import Golem.api.common.utils.Session;
 import Golem.api.db.CharacterRepository;

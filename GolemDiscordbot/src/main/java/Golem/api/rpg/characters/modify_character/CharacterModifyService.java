@@ -10,11 +10,11 @@ import Golem.api.rpg.characters.Characters;
 import Golem.api.rpg.dto.ReplyFactory;
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
 import discord4j.core.event.domain.message.MessageCreateEvent;
-import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.BiConsumer;
+import java.util.function.Function;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
@@ -29,15 +29,17 @@ public class CharacterModifyService {
   private final Map<Long, Session<Characters>> modificationSessions = new HashMap<>();
 
   // Déclaration de la map avant l'utilisation
-  private static final Map<String, BiConsumer<Characters, String>> STRING_FIELD_SETTERS =
+  Map<String, BiConsumer<Characters, Object>> characterSetters =
       Map.of(
-          "name", Characters::setCharacterName,
-          "race", Characters::setRace,
-          "class", Characters::setClass_,
-          "background", Characters::setBackground,
-          "featuresandtraits", Characters::setFeaturesAndTraits,
-          "languages", Characters::setLanguages,
-          "personalitytraits", Characters::setPersonalityTraits);
+          "Name", (c, v) -> c.setCharacterName((String) v),
+          "Race", (c, v) -> c.setRace((String) v),
+          "Class", (c, v) -> c.setClass_((String) v),
+          "Background", (c, v) -> c.setBackground((String) v),
+          "Level", (c, v) -> c.setLevel(Integer.parseInt(v.toString())),
+          "Experience Points", (c, v) -> c.setExperiencePoints(Integer.parseInt(v.toString())),
+          "Features and Traits", (c, v) -> c.setFeaturesAndTraits((String) v),
+          "Languages", (c, v) -> c.setLanguages((String) v));
+  ;
 
   private final List<StepHandler<Characters, ContentCarrier>> modificationSteps;
 
@@ -45,9 +47,10 @@ public class CharacterModifyService {
     this.characterRepository = characterRepository;
     this.modificationSteps =
         List.of(
-            new SelectCharacterStepHandler(characterRepository),
-            new ChooseFieldStepHandler(characterRepository, STRING_FIELD_SETTERS),
-            new UpdateFieldStepHandler(characterRepository, STRING_FIELD_SETTERS));
+            new SelectEntityStepHandler<Characters>(characterRepository::findByCharacterName),
+            new ChooseFieldStepHandler<Characters>(
+                name -> characterRepository.findByCharacterName(name), characterSetters),
+            new UpdateFieldStepHandler<Characters>(characterRepository::save, characterSetters));
   }
 
   public Mono<Void> handleModify(ButtonInteractionEvent event) {
@@ -99,34 +102,5 @@ public class CharacterModifyService {
     ContentCarrier carrier = new MessageCreateEventWrapper(event);
 
     return handler.handle(carrier, session);
-  }
-
-  private Mono<Void> applyFieldUpdate(
-      MessageCreateEvent event, Session<Characters> session, String newValue) {
-    String field = session.lastField;
-
-    if (STRING_FIELD_SETTERS.containsKey(field)) {
-      STRING_FIELD_SETTERS.get(field).accept(session.entity, newValue);
-    } else if ("level".equals(field)) {
-      try {
-        session.entity.setLevel(Integer.parseInt(newValue));
-      } catch (NumberFormatException e) {
-        return Mono.error(
-            new IllegalArgumentException("Please enter a valid integer for the level."));
-      }
-    } else if ("experiencepoints".equals(field)) {
-      try {
-        session.entity.setExperiencePoints(Integer.parseInt(newValue));
-      } catch (NumberFormatException e) {
-        return Mono.error(
-            new IllegalArgumentException("Please enter a valid integer for experience points."));
-      }
-    } else {
-      return Mono.error(new IllegalArgumentException("I don't know this field. Try again."));
-    }
-
-    session.entity.setLastUpdated(LocalDateTime.now());
-    characterRepository.save(session.entity);
-    return ReplyFactory.reply(event, "Updated! Anything else? Or type **done**.");
   }
 }

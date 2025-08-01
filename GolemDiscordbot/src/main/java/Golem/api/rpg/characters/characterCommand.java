@@ -2,7 +2,7 @@ package Golem.api.rpg.characters;
 
 import Golem.api.common.interfaces.HasButtons;
 import Golem.api.common.interfaces.ICommand;
-import Golem.api.rpg.characters.consult_character.CharacterConsultService;
+import Golem.api.rpg.characters.consult_characters.CharacterConsultService;
 import Golem.api.rpg.characters.create_character.CharacterCreateService;
 import Golem.api.rpg.characters.modify_character.CharacterModifyService;
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;

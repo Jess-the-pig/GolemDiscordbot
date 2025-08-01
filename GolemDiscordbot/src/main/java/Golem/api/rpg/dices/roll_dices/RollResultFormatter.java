@@ -1,7 +1,9 @@
 package Golem.api.rpg.dices.roll_dices;
 
 import java.util.List;
+import org.springframework.stereotype.Component;
 
+@Component
 public class RollResultFormatter {
 
   public String format(RollResult result, boolean showTotal) {

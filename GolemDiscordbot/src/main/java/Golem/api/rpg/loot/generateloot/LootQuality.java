@@ -1,4 +1,4 @@
-package Golem.api.enums;
+package Golem.api.rpg.loot.generateloot;
 
 public enum LootQuality {
   VERY_LOW,

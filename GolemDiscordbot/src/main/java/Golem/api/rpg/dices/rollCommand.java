@@ -5,6 +5,8 @@ import Golem.api.common.factories.ApplicationCommandOptionDataFactory;
 import Golem.api.common.interfaces.HasOptions;
 import Golem.api.common.interfaces.ICommand;
 import Golem.api.common.utils.CommandOptionReader;
+import Golem.api.rpg.dices.roll_dices.RollResult;
+import Golem.api.rpg.dices.roll_dices.RollResultFormatter;
 import Golem.api.rpg.dices.roll_dices.RollService;
 import Golem.api.rpg.dto.ReplyFactory;
 import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
@@ -13,10 +15,12 @@ import discord4j.discordjson.json.ApplicationCommandOptionData;
 import java.util.List;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
 
 @Component
+@Slf4j
 @RequiredArgsConstructor
 public class rollCommand implements ICommand, HasOptions {
   private final RollService rollService;
@@ -29,7 +33,8 @@ public class rollCommand implements ICommand, HasOptions {
 
   @Override
   public Mono<Void> handle(ChatInputInteractionEvent event) {
-
+    log.info("ButtonInteractionEvent received: {}", event);
+    log.info("Roll event handled");
     CommandOptionReader reader = new CommandOptionReader(event);
     Long times =
         reader.getOptionOrDefault("times", ApplicationCommandInteractionOptionValue::asLong, 1L);

@@ -1,6 +1,6 @@
 package Golem.api.discordgetaway.getresponse;
 
-import Golem.api.common.commands.ICommand;
+import Golem.api.common.interfaces.ICommand;
 import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
 import discord4j.core.object.VoiceState;
 import discord4j.core.object.entity.Member;

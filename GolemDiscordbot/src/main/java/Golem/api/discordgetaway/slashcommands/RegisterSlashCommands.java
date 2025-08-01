@@ -1,7 +1,7 @@
 package Golem.api.discordgetaway.slashcommands;
 
-import Golem.api.common.commands.HasOptions;
-import Golem.api.common.commands.ICommand;
+import Golem.api.common.interfaces.HasOptions;
+import Golem.api.common.interfaces.ICommand;
 import Golem.api.music.play.playCommand;
 import discord4j.core.GatewayDiscordClient;
 import discord4j.discordjson.json.ApplicationCommandRequest;

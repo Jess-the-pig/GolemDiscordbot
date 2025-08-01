@@ -1,4 +1,4 @@
-package Golem.api.commands;
+package Golem.api.common.interfaces;
 
 import discord4j.discordjson.json.ApplicationCommandOptionData;
 import java.util.List;

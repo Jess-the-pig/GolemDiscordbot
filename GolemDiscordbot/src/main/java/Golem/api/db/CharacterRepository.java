@@ -1,6 +1,6 @@
-package Golem.api.repositories;
+package Golem.api.db;
 
-import Golem.api.entities.Characters;
+import Golem.api.rpg.characters.Characters;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

@@ -1,16 +1,18 @@
 package Golem.api.discordgetaway.slashcommands;
 
-import Golem.api.common.commands.HasButtons;
-import Golem.api.common.commands.ICommand;
+import Golem.api.common.interfaces.HasButtons;
+import Golem.api.common.interfaces.ICommand;
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
 import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
 @Service
+@Slf4j
 public class CommandDispatcher {
 
   private final Map<String, ICommand> commands = new HashMap<>();
@@ -23,7 +25,9 @@ public class CommandDispatcher {
   }
 
   public Mono<Void> handle(ChatInputInteractionEvent event) {
+    log.info("ButtonInteractionEvent received: {}", event);
     String name = event.getCommandName();
+    log.info("chargement du handler" + name);
 
     // Recherche de la commande dans la Map
     ICommand command = commands.get(name);
@@ -36,6 +40,7 @@ public class CommandDispatcher {
   }
 
   public Mono<Void> handleButton(ButtonInteractionEvent event) {
+    log.info("ButtonInteractionEvent received: {}", event);
     String customId = event.getCustomId();
     String prefix = customId.split(":")[0];
 

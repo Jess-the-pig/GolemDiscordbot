@@ -1,39 +1,37 @@
-package Golem.api.rpg.characters;
+package Golem.api.rpg.characters.modify_character;
 
 import Golem.api.common.interfaces.ContentCarrier;
 import Golem.api.common.interfaces.StepHandler;
+import Golem.api.common.interfaces.TimeStampedEntity;
 import Golem.api.common.utils.Session;
-import Golem.api.db.CharacterRepository;
 import Golem.api.rpg.dto.ReplyFactory;
 import java.util.Map;
 import java.util.function.BiConsumer;
+import java.util.function.Function;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
 
-public class ChooseFieldStepHandler implements StepHandler<Characters, ContentCarrier> {
+@RequiredArgsConstructor
+public class ChooseFieldStepHandler<T extends TimeStampedEntity>
+    implements StepHandler<T, ContentCarrier> {
 
-  private final CharacterRepository characterRepository;
-  private final Map<String, BiConsumer<Characters, String>> stringFieldSetters;
-
-  public ChooseFieldStepHandler(
-      CharacterRepository repo, Map<String, BiConsumer<Characters, String>> setters) {
-    this.characterRepository = repo;
-    this.stringFieldSetters = setters;
-  }
+  private final Function<String, T> entityFinder;
+  private final Map<String, BiConsumer<T, Object>> fieldSetters;
 
   @Override
-  public Mono<Void> handle(ContentCarrier event, Session<Characters> session) {
+  public Mono<Void> handle(ContentCarrier event, Session<T> session) {
     String content = event.getContent().trim();
 
     if ("done".equalsIgnoreCase(content)) {
-      characterRepository.save(session.entity);
-      return ReplyFactory.reply(event.getDelegate(), "All done! Character saved.");
+      entityFinder.apply("").setLastUpdated(java.time.LocalDateTime.now());
+      // Persiste : à ajuster selon ton pattern repo
+      return ReplyFactory.reply(event.getDelegate(), "All done! Entity saved.");
     }
 
     String field = content.toLowerCase();
 
-    if (!stringFieldSetters.containsKey(field)
-        && !"level".equals(field)
-        && !"experiencepoints".equals(field)) {
+    if (!fieldSetters.containsKey(field)) {
       return ReplyFactory.reply(event.getDelegate(), "Unknown field. Try again.");
     }
 

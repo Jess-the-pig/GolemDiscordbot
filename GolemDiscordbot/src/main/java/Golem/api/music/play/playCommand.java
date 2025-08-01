@@ -1,7 +1,9 @@
 package Golem.api.music.play;
 
-import Golem.api.common.commands.HasOptions;
-import Golem.api.common.commands.ICommand;
+import Golem.api.common.enums.DiscordOptionType;
+import Golem.api.common.factories.ApplicationCommandOptionDataFactory;
+import Golem.api.common.interfaces.HasOptions;
+import Golem.api.common.interfaces.ICommand;
 import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
 import discord4j.discordjson.json.ApplicationCommandOptionData;
 import java.io.IOException;
@@ -101,11 +103,7 @@ public class playCommand implements ICommand, HasOptions {
   public Optional<List<ApplicationCommandOptionData>> getOptions() {
     return Optional.of(
         List.of(
-            ApplicationCommandOptionData.builder()
-                .name("url")
-                .description("URL ou mots-clés de recherche")
-                .type(3)
-                .required(true)
-                .build()));
+            ApplicationCommandOptionDataFactory.option(
+                DiscordOptionType.STRING, "url", "URL or search query", true)));
   }
 }

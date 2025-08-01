@@ -1,7 +1,7 @@
-package Golem.api.rpg.encounters;
+/*package Golem.api.rpg.encounters;
 
-import Golem.api.common.commands.HasOptions;
-import Golem.api.common.commands.ICommand;
+import Golem.api.common.interfaces.HasOptions;
+import Golem.api.common.interfaces.ICommand;
 import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
 import discord4j.discordjson.json.ApplicationCommandOptionData;
 import java.util.List;
@@ -28,4 +28,4 @@ public class encounterCommand implements ICommand, HasOptions {
     // TODO Auto-generated method stub
     throw new UnsupportedOperationException("Unimplemented method 'handle'");
   }
-}
+}*/

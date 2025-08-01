@@ -1,6 +1,6 @@
 package Golem.api.music.connecttovoice;
 
-import Golem.api.common.commands.ICommand;
+import Golem.api.common.interfaces.ICommand;
 import Golem.api.music.play.QueuedAudioProvider;
 import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
 import discord4j.core.object.VoiceState;

@@ -1,11 +1,13 @@
 package Golem.api.rpg.npcs;
 
 import Golem.api.common.entity.Combatant;
+import Golem.api.common.interfaces.TimeStampedEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import java.time.LocalDateTime;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,7 +15,7 @@ import lombok.Setter;
 @Table(name = "npcs")
 @Getter
 @Setter
-public class Npcs implements Combatant {
+public class Npcs implements Combatant, TimeStampedEntity {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -40,9 +42,21 @@ public class Npcs implements Combatant {
   private String inventory;
   private String date_modified;
   private int notes_len;
+  private LocalDateTime dateCreated;
+  private LocalDateTime lastUpdated;
 
   @Override
   public String getCombatantName() {
     return name;
+  }
+
+  @Override
+  public void setDateCreated(LocalDateTime date) {
+    this.dateCreated = date;
+  }
+
+  @Override
+  public void setLastUpdated(LocalDateTime date) {
+    this.lastUpdated = date;
   }
 }
