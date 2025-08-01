@@ -43,7 +43,7 @@ public class characterCommand implements ICommand, HasButtons {
 
     switch (customId) {
       case "character:create":
-        return characterCreateService.handleMessageCreate(event);
+        return characterCreateService.startCreationSession(event);
       case "character:modify":
         return characterModifyService.handleModify(event);
       case "character:consult":

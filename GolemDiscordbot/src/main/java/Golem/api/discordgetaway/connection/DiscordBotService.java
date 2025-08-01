@@ -9,6 +9,7 @@ import discord4j.core.DiscordClient;
 import discord4j.core.GatewayDiscordClient;
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
 import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
+import discord4j.core.event.domain.message.MessageCreateEvent;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import java.util.concurrent.ExecutorService;
@@ -49,6 +50,7 @@ public class DiscordBotService {
 
       client.on(ButtonInteractionEvent.class, dispatcher::handleButton).subscribe();
       client.on(ChatInputInteractionEvent.class, dispatcher::handle).subscribe();
+      client.on(MessageCreateEvent.class, characterCreateService::handleMessageCreate).subscribe();
 
       // Bloque jusqu'à ce que le bot se déconnecte
       client.onDisconnect().block();

@@ -6,11 +6,12 @@ import Golem.api.common.utils.FinalStepHandler;
 import Golem.api.common.utils.GenericValidatedStepHandler;
 import Golem.api.common.utils.Session;
 import Golem.api.common.wrappers.ButtonInteractionEventWrapper;
+import Golem.api.common.wrappers.MessageCreateEventWrapper;
 import Golem.api.db.CharacterRepository;
-import Golem.api.discordgetaway.DiscordEventHandler;
 import Golem.api.rpg.characters.Characters;
 import Golem.api.rpg.dto.ReplyFactory;
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
+import discord4j.core.event.domain.message.MessageCreateEvent;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -68,17 +69,13 @@ public class CharacterCreateService {
                 "Character created successfully! 🎉"));
   }
 
-  public List<DiscordEventHandler<?>> getEventHandlers() {
-    return List.of(
-        new DiscordEventHandler<>(ButtonInteractionEvent.class, this::handleMessageCreate));
-  }
-
-  public Mono<Void> handleMessageCreate(ButtonInteractionEvent event) {
-    long userId = event.getInteraction().getUser().getId().asLong();
-    if (userId == -1) return Mono.empty();
+  public Mono<Void> handleMessageCreate(MessageCreateEvent event) {
+    long userId = event.getMessage().getUserData().id().asLong();
 
     Session<Characters> session = creationSessions.get(userId);
-    if (session == null) return Mono.empty();
+    if (session == null) {
+      return Mono.empty();
+    }
 
     if (session.step >= creationSteps.size()) {
       creationSessions.remove(userId);
@@ -87,7 +84,8 @@ public class CharacterCreateService {
 
     StepHandler<Characters, ContentCarrier> handler = creationSteps.get(session.step);
 
-    ContentCarrier wrappedEvent = new ButtonInteractionEventWrapper(event);
+    ContentCarrier wrappedEvent =
+        new MessageCreateEventWrapper(event); // ⚠️ Bien un WRAPPER pour ton event TEXTE
 
     Mono<Void> result = handler.handle(wrappedEvent, session);
 
@@ -96,5 +94,20 @@ public class CharacterCreateService {
     }
 
     return result;
+  }
+
+  public Mono<Void> startCreationSession(ButtonInteractionEvent event) {
+    long userId = event.getInteraction().getUser().getId().asLong();
+
+    Session<Characters> session = new Session<>();
+    session.entity = new Characters();
+    session.step = 0;
+
+    creationSessions.put(userId, session);
+
+    StepHandler<Characters, ContentCarrier> handler = creationSteps.get(0);
+    ContentCarrier wrappedEvent = new ButtonInteractionEventWrapper(event);
+
+    return handler.handle(wrappedEvent, session);
   }
 }
