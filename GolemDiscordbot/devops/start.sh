@@ -1,16 +1,29 @@
 #!/usr/bin/env bash
 
-profiles="-Dspring-boot.run.profiles"
+baseProfile="http"
+additionalProfile="redis"
+
 case "$1" in
   --queue)
-    profiles="$profiles=queue"
+    additionalProfile="queue"
     ;;
   --scheduler)
-    profiles="$profiles=scheduler"
+    additionalProfile="scheduler"
+    ;;
+  --redis)
+    additionalProfile="redis"
     ;;
   *)
-    profiles="$profiles=http"
+    additionalProfile=""
     ;;
 esac
 
-mvn spring-boot:run $profiles
+if [ -n "$additionalProfile" ]; then
+  profiles="$baseProfile,$additionalProfile"
+else
+  profiles="$baseProfile"
+fi
+
+echo "Using Spring Boot profiles: $profiles"
+
+mvn spring-boot:run -Dspring-boot.run.profiles=$profiles

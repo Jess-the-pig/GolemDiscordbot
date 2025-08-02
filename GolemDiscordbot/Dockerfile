@@ -23,6 +23,7 @@ RUN echo "source /etc/bash_completion.d/git-completion.bash" >> /etc/bash.bashrc
 RUN python3 --version && pip3 --version && yt-dlp --version
 RUN apt-get update && apt-get install -y redis-tools
 
+
 ENV GIT_EDITOR=nano
 
 RUN curl -sLf --retry 3 --tlsv1.2 --proto "=https" https://packages.doppler.com/public/cli/gpg.DE2A7741A397C129.key | \

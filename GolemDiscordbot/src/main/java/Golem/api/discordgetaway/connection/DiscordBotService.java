@@ -9,13 +9,14 @@ import discord4j.core.DiscordClient;
 import discord4j.core.GatewayDiscordClient;
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
 import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
-import discord4j.core.event.domain.message.MessageCreateEvent;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
-import java.util.concurrent.ExecutorService;
+import java.util.Map;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.redis.core.StreamOperations;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
 @Service("discordBotServiceV2")
@@ -23,20 +24,18 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class DiscordBotService {
 
-  @Value("${DISCORD_TOKEN}") // Utilise
-  private String token; // Le token de ton bot Discord
+  @Value("${DISCORD_TOKEN}")
+  private String token;
 
-  private ExecutorService executorService;
-  private BotStatus status;
   private GatewayDiscordClient client;
+
   private final CommandDispatcher dispatcher;
   private final RegisterSlashCommands registerSlashCommands;
-  private final CharacterCreateService characterService;
+  private final CharacterCreateService characterCreateService; // Garde un seul service
   private final CampaignService campaignService;
   private final CharacterConsultService characterConsultService;
-  private final CharacterCreateService characterCreateService;
 
-  // Méthode appelée lors de l'initialisation du service (après la construction de l'objet)
+  private final StringRedisTemplate redisTemplate; // Injection correcte
 
   @PostConstruct
   public void startBot() {
@@ -48,16 +47,32 @@ public class DiscordBotService {
 
       registerSlashCommands.registerSlashCommands(client, dispatcher.getCommands());
 
-      client.on(ButtonInteractionEvent.class, dispatcher::handleButton).subscribe();
-      client.on(ChatInputInteractionEvent.class, dispatcher::handle).subscribe();
-      client.on(MessageCreateEvent.class, characterCreateService::handleMessageCreate).subscribe();
+      client.on(ButtonInteractionEvent.class, dispatcher::handleButton).subscribe(event -> {});
 
-      // Bloque jusqu'à ce que le bot se déconnecte
+      client
+          .on(ChatInputInteractionEvent.class)
+          .subscribe(
+              event -> {
+                String content = event.getCommandName(); // nom de la commande
+                String author =
+                    event
+                        .getInteraction()
+                        .getUser()
+                        .getUsername(); // récupère directement le username
+
+                publishToRedisStream(
+                    "discord-events", Map.of("author", author, "command", content));
+              });
+      // Bloque jusqu'à déconnexion
       client.onDisconnect().block();
     }
   }
 
-  // Méthode pour gérer l'arrêt de l'exécution lorsque l'application Spring Boot se termine
+  private void publishToRedisStream(String streamKey, Map<String, String> message) {
+    StreamOperations<String, String, String> streamOps = redisTemplate.opsForStream();
+    streamOps.add(streamKey, message);
+  }
+
   @PreDestroy
   public void shutdown() {
     if (client != null) {

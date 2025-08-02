@@ -20,6 +20,8 @@ services:
       - .env
     environment:
       - DOPPLER_TOKEN=${DOPPLER_TOKEN}
+      - SPRING_REDIS_HOST=redis
+      - SPRING_REDIS_PORT=6379
     networks:
       - app
       - accessible
