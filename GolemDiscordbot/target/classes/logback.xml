@@ -1,24 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration scan="true">
+<configuration>
 
-    <!-- Logs we care about -->
-    <logger name="io.netty" level="INFO"/>
-    <logger name="reactor" level="INFO"/>
-    <logger name="proxy" level="INFO"/>
-    <logger name="reactor.retry" level="DEBUG"/>
-    <logger name="discord4j.core" level="INFO"/>
-    <logger name="discord4j.gateway" level="INFO"/>
-    <logger name="discord4j.gateway.client" level="INFO"/>
+  <!-- Console output, standard -->
+  <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
 
-    <!-- Appenders -->
-    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder>
-            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
-        </encoder>
-    </appender>
+  <!-- Ton fichier de log dédié -->
+  <appender name="DISCORD_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>logs/discord-events.log</file>
 
-    <!-- Assigning default appenders -->
-    <root level="INFO">
-        <appender-ref ref="CONSOLE"/>
-    </root>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <!-- Nouveau fichier chaque jour -->
+      <fileNamePattern>logs/discord-events.%d{yyyy-MM-dd}.log</fileNamePattern>
+      <maxHistory>30</maxHistory>
+    </rollingPolicy>
+
+    <encoder>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <!-- ROOT logger (stdout par défaut) -->
+  <root level="INFO">
+    <appender-ref ref="CONSOLE" />
+  </root>
+
+  <!-- Logger spécifique pour ta classe -->
+  <logger name="Golem.api.security" level="INFO" additivity="false">
+    <appender-ref ref="DISCORD_FILE" />
+    <appender-ref ref="CONSOLE" />
+  </logger>
+
 </configuration>
