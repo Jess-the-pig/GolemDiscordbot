@@ -10,6 +10,15 @@ import java.util.function.Function;
 import lombok.RequiredArgsConstructor;
 import reactor.core.publisher.Mono;
 
+/**
+ * Étape générique pour supprimer une entité dans une session interactive.
+ *
+ * <p>Cette classe est utilisée dans les services de suppression de personnages ou de playlists.
+ * Elle : - Cherche l'entité à supprimer à partir d'un nom fourni par l'utilisateur - Supprime
+ * l'entité via le Consumer fourni - Fournit un retour à l'utilisateur via Discord
+ *
+ * @param <T> type d'entité à supprimer, doit implémenter TimeStampedEntity
+ */
 @RequiredArgsConstructor
 public class DeleteEntityStepHandler<T extends TimeStampedEntity>
     implements StepHandler<T, ContentCarrier> {
@@ -17,6 +26,16 @@ public class DeleteEntityStepHandler<T extends TimeStampedEntity>
   private final Function<String, T> entityFinder;
   private final Consumer<T> deleteAction;
 
+  /**
+   * Gère la suppression de l'entité à partir de l'entrée utilisateur.
+   *
+   * <p>Si l'utilisateur tape "done", la session se termine. Sinon : - l'entité est recherchée - si
+   * elle existe, elle est supprimée - l'utilisateur reçoit un message de confirmation
+   *
+   * @param event événement contenant le contenu utilisateur
+   * @param session session en cours
+   * @return Mono<Void> représentant le traitement asynchrone
+   */
   @Override
   public Mono<Void> handle(ContentCarrier event, Session<T> session) {
     String content = event.getContent().trim();

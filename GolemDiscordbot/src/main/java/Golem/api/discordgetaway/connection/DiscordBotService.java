@@ -19,6 +19,12 @@ import org.springframework.data.redis.core.StreamOperations;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
+/**
+ * Service Spring pour gérer le bot Discord.
+ *
+ * <p>Démarre le bot, enregistre les commandes slash, gère les interactions et publie les événements
+ * dans Redis. Fournit également un mécanisme de shutdown propre.
+ */
 @Service("discordBotServiceV2")
 @RequiredArgsConstructor
 @Slf4j
@@ -37,6 +43,12 @@ public class DiscordBotService {
 
   private final StringRedisTemplate redisTemplate; // Injection correcte
 
+  /**
+   * Démarre le bot Discord après l'initialisation du service Spring.
+   *
+   * <p>Connecte le bot, enregistre les commandes, gère les événements de bouton et de commande, et
+   * publie les événements dans Redis.
+   */
   @PostConstruct
   public void startBot() {
     DiscordClient discordClient = DiscordClient.create(token);
@@ -68,11 +80,18 @@ public class DiscordBotService {
     }
   }
 
+  /**
+   * Publie un message dans un stream Redis.
+   *
+   * @param streamKey la clé du stream Redis
+   * @param message le message à publier sous forme de map
+   */
   private void publishToRedisStream(String streamKey, Map<String, String> message) {
     StreamOperations<String, String, String> streamOps = redisTemplate.opsForStream();
     streamOps.add(streamKey, message);
   }
 
+  /** Effectue un arrêt propre du bot lors de la destruction du service. */
   @PreDestroy
   public void shutdown() {
     if (client != null) {

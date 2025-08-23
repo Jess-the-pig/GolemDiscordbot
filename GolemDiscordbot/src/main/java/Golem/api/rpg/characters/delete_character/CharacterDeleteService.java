@@ -13,11 +13,17 @@ import discord4j.core.event.domain.message.MessageCreateEvent;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
+/**
+ * Service pour supprimer un personnage de manière interactive via Discord.
+ *
+ * <p>Fonctionnalités principales : - Démarrage d'une session de suppression via bouton Discord -
+ * Liste des personnages disponibles pour l'utilisateur - Gestion de la sélection et suppression
+ * finale d'un personnage
+ */
 @Service
 @Slf4j
 public class CharacterDeleteService {
@@ -30,6 +36,12 @@ public class CharacterDeleteService {
         new DiscordEventHandler<>(ButtonInteractionEvent.class, this::handleMessageDelete));
   }
 
+  /**
+   * Démarre la session de suppression lorsqu'un utilisateur clique sur le bouton Discord.
+   *
+   * @param event événement ButtonInteractionEvent
+   * @return Mono<Void> représentant le traitement asynchrone
+   */
   public Mono<Void> handleMessageDelete(ButtonInteractionEvent event) {
     long userId = event.getInteraction().getUser().getId().asLong();
     String username = event.getInteraction().getUser().getUsername();
@@ -56,6 +68,12 @@ public class CharacterDeleteService {
             + "\nWhich one do you want to delete?");
   }
 
+  /**
+   * Gère les messages texte reçus pendant la session de suppression.
+   *
+   * @param event événement MessageCreateEvent
+   * @return Mono<Void> représentant le traitement asynchrone
+   */
   public CharacterDeleteService(CharacterRepository characterRepository) {
     this.characterRepository = characterRepository;
     this.deletionSteps =

@@ -10,9 +10,17 @@ import java.util.Map;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
 
+/**
+ * Étape de modification permettant de mettre à jour un champ spécifique d'une entité sélectionnée.
+ *
+ * <p>Cette étape récupère la valeur saisie par l'utilisateur et applique le setter correspondant
+ * depuis {@code fieldSetters}. Après la mise à jour, l'entité est enregistrée via {@code
+ * saveAction}.
+ *
+ * @param <T> type de l'entité modifiable, doit implémenter TimeStampedEntity
+ */
 @RequiredArgsConstructor
 public class UpdateFieldStepHandler<T extends TimeStampedEntity>
     implements StepHandler<T, ContentCarrier> {
@@ -20,6 +28,17 @@ public class UpdateFieldStepHandler<T extends TimeStampedEntity>
   private final Consumer<T> saveAction;
   private final Map<String, BiConsumer<T, Object>> fieldSetters;
 
+  /**
+   * Gère la saisie utilisateur pour mettre à jour un champ de l'entité.
+   *
+   * <p>Si le champ est inconnu, renvoie un message d'erreur. Sinon, applique la valeur, met à jour
+   * la date de dernière modification, sauvegarde l'entité, et permet à l'utilisateur de modifier
+   * d'autres champs.
+   *
+   * @param event événement contenant le contenu utilisateur
+   * @param session session courante de l'utilisateur
+   * @return Mono<Void> représentant le traitement asynchrone
+   */
   @Override
   public Mono<Void> handle(ContentCarrier event, Session<T> session) {
     String newValue = event.getContent().trim();
@@ -39,7 +58,7 @@ public class UpdateFieldStepHandler<T extends TimeStampedEntity>
 
     session.entity.setLastUpdated(LocalDateTime.now());
     saveAction.accept(session.entity);
-    session.step = 1; // retour au choix du champ
+    session.step = 1;
     return ReplyFactory.reply(event.getDelegate(), "Updated! Anything else? Or type **done**.");
   }
 }

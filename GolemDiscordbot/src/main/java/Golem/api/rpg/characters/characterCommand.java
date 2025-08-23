@@ -12,6 +12,15 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
 
+/**
+ * Commande principale pour gérer les actions sur les personnages d'un joueur.
+ *
+ * <p>Elle permet de créer, modifier ou consulter un personnage via des boutons Discord. Chaque
+ * bouton déclenche un service spécifique correspondant à l'action.
+ *
+ * <p>Implémente ICommand pour être utilisée comme commande Discord et HasButtons pour gérer les
+ * interactions avec les boutons.
+ */
 @Component
 @RequiredArgsConstructor
 public class characterCommand implements ICommand, HasButtons {
@@ -25,6 +34,13 @@ public class characterCommand implements ICommand, HasButtons {
     return "character";
   }
 
+  /**
+   * Gère l'interaction de type chat (commande slash) et propose les options de création,
+   * modification ou consultation via boutons.
+   *
+   * @param event événement d'interaction du type ChatInputInteractionEvent
+   * @return Mono<Void> représentant le traitement asynchrone
+   */
   @Override
   public Mono<Void> handle(ChatInputInteractionEvent event) {
     return event
@@ -37,6 +53,17 @@ public class characterCommand implements ICommand, HasButtons {
         .then();
   }
 
+  /**
+   * Gère l'interaction avec les boutons.
+   *
+   * <p>Selon le bouton cliqué, appelle le service approprié :
+   *
+   * <p>"character:create" → CharacterCreateService "character:modify" → CharacterModifyService
+   * "character:consult" → CharacterConsultService
+   *
+   * @param event événement de type ButtonInteractionEvent
+   * @return Mono<Void> représentant le traitement asynchrone
+   */
   @Override
   public Mono<Void> handleButtonInteraction(ButtonInteractionEvent event) {
     String customId = event.getCustomId();

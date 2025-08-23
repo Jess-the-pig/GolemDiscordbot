@@ -2,6 +2,7 @@ package Golem.api.rpg.monsters;
 
 import Golem.api.common.entity.Combatant;
 import Golem.api.common.interfaces.TimeStampedEntity;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,7 +23,6 @@ public class Monsters implements Combatant, TimeStampedEntity {
 
   private Long userid;
   private String username;
-  private String playerName;
 
   private String name;
   private String url;
@@ -36,11 +36,23 @@ public class Monsters implements Combatant, TimeStampedEntity {
   private String align;
   private boolean legendary;
   private String source;
+
+  @Column(name = "str")
   private int strScore;
+
+  @Column(name = "dex")
   private int dexScore;
+
+  @Column(name = "con")
   private int conScore;
+
+  @Column(name = "int")
   private int intScore;
+
+  @Column(name = "wis")
   private int wisScore;
+
+  @Column(name = "cha")
   private int chaScore;
 
   private LocalDateTime dateCreated;

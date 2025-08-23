@@ -15,21 +15,25 @@ import discord4j.core.event.domain.message.MessageCreateEvent;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.function.Function;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
+/**
+ * Service pour créer un personnage de manière interactive via Discord.
+ *
+ * <p>Fonctionnalités principales : - Démarrage d'une session de création via bouton Discord -
+ * Gestion de plusieurs étapes pour renseigner les attributs du personnage - Validation des valeurs
+ * et sauvegarde finale du personnage dans la base de données
+ */
 @Service
 @Slf4j
 public class CharacterCreateService {
-  // Creation de la session
+
   private final Map<Long, Session<Characters>> creationSessions = new HashMap<>();
 
-  // Log et lien db
   private final CharacterRepository characterRepository;
 
-  // Pas des
   private final List<StepHandler<Characters, ContentCarrier>> creationSteps;
 
   public CharacterCreateService(CharacterRepository characterRepository) {
@@ -38,28 +42,37 @@ public class CharacterCreateService {
     this.creationSteps =
         List.of(
             new GenericValidatedStepHandler<Characters, ContentCarrier, String>(
-                Function.identity(), Characters::setCharacterName, "What's your race?", ""),
+                carrier -> carrier.getContent(), // 👈 transforme le ContentCarrier en String
+                Characters::setCharacterName,
+                "What's your race?",
+                ""),
             new GenericValidatedStepHandler<Characters, ContentCarrier, String>(
-                Function.identity(), Characters::setRace, "Which class does it have?", ""),
+                carrier -> carrier.getContent(),
+                Characters::setRace,
+                "Which class does it have?",
+                ""),
             new GenericValidatedStepHandler<Characters, ContentCarrier, String>(
-                Function.identity(), Characters::setClass_, "What is your character's level?", ""),
+                carrier -> carrier.getContent(),
+                Characters::setClass_,
+                "What is your character's level?",
+                ""),
             new GenericValidatedStepHandler<>(
-                Integer::parseInt,
+                carrier -> Integer.parseInt(carrier.getContent()),
                 Characters::setLevel,
                 "How many experience points?",
                 "Please enter a valid number for the level."),
             new GenericValidatedStepHandler<>(
-                Integer::parseInt,
+                carrier -> Integer.parseInt(carrier.getContent()),
                 Characters::setExperiencePoints,
                 "What are your character's features and traits",
                 "Please enter a valid integer for XP."),
             new GenericValidatedStepHandler<Characters, ContentCarrier, String>(
-                Function.identity(),
+                carrier -> carrier.getContent(),
                 Characters::setFeaturesAndTraits,
                 "What languages does your character speak?",
                 ""),
             new GenericValidatedStepHandler<Characters, ContentCarrier, String>(
-                Function.identity(),
+                carrier -> carrier.getContent(),
                 Characters::setLanguages,
                 "Describe your character's personality traits.",
                 ""),
@@ -69,6 +82,12 @@ public class CharacterCreateService {
                 "Character created successfully! 🎉"));
   }
 
+  /**
+   * Gère les messages texte reçus pendant la session de création.
+   *
+   * @param event événement MessageCreateEvent
+   * @return Mono<Void> représentant le traitement asynchrone
+   */
   public Mono<Void> handleMessageCreate(MessageCreateEvent event) {
     long userId = event.getMessage().getUserData().id().asLong();
 
@@ -96,6 +115,12 @@ public class CharacterCreateService {
     return result;
   }
 
+  /**
+   * Démarre une session de création de personnage à partir d'un bouton Discord.
+   *
+   * @param event événement ButtonInteractionEvent
+   * @return Mono<Void> représentant le traitement asynchrone
+   */
   public Mono<Void> startCreationSession(ButtonInteractionEvent event) {
     long userId = event.getInteraction().getUser().getId().asLong();
 

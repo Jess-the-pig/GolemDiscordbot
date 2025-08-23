@@ -1,8 +1,11 @@
 package Golem.api.rpg.encounters;
 
+import Golem.api.common.interfaces.TimeStampedEntity;
 import Golem.api.rpg.campaign.Campaign;
 import Golem.api.rpg.characters.Characters;
 import Golem.api.rpg.monsters.Monsters;
+import Golem.api.rpg.npcs.Npcs;
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,6 +17,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Map;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -24,13 +28,18 @@ import lombok.Setter;
 @Table(name = "encounters")
 @RequiredArgsConstructor
 public class Encounters {
+
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
   @ManyToOne
   @JoinColumn(name = "campaign_id")
-  private Campaign campaignId;
+  private Campaign campaign;
+
+  private Boolean isFinished = false;
+
+  @ElementCollection private List<Map<Long, TimeStampedEntity>> initiative;
 
   @ManyToMany
   @JoinTable(
@@ -39,17 +48,20 @@ public class Encounters {
       inverseJoinColumns = @JoinColumn(name = "monster_id"))
   private List<Monsters> monsters;
 
-  private Boolean isFinished;
-
-  private List<Integer> initiative;
-
-  private LocalDateTime dateCreated;
-  private LocalDateTime lastUpdated;
-
   @ManyToMany
   @JoinTable(
       name = "encounter_characters",
       joinColumns = @JoinColumn(name = "encounter_id"),
       inverseJoinColumns = @JoinColumn(name = "character_id"))
   private List<Characters> characters;
+
+  @ManyToMany
+  @JoinTable(
+      name = "encounter_npcs",
+      joinColumns = @JoinColumn(name = "encounter_id"),
+      inverseJoinColumns = @JoinColumn(name = "npc_id"))
+  private List<Npcs> npcs;
+
+  private LocalDateTime dateCreated = LocalDateTime.now();
+  private LocalDateTime lastUpdated = LocalDateTime.now();
 }

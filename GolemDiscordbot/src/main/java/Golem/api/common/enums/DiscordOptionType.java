@@ -1,5 +1,6 @@
 package Golem.api.common.enums;
 
+/** Enum représentant les types d'options disponibles dans Discord. */
 public enum DiscordOptionType {
   STRING(3),
   INTEGER(4),
@@ -13,6 +14,11 @@ public enum DiscordOptionType {
     this.code = code;
   }
 
+  /**
+   * Retourne le code numérique associé au type d'option.
+   *
+   * @return le code du type d'option
+   */
   public int getCode() {
     return code;
   }

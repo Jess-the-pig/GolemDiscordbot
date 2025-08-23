@@ -1,4 +1,4 @@
-package Golem.api.music.play;
+package Golem.api.music.play_song;
 
 import Golem.api.common.enums.DiscordOptionType;
 import Golem.api.common.factories.ApplicationCommandOptionDataFactory;
@@ -16,6 +16,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
 
+/**
+ * Commande Discord pour jouer un morceau ou une URL dans un canal vocal.
+ *
+ * <p>Utilise yt-dlp et ffmpeg pour streamer et convertir l'audio en PCM 16 bits 48kHz stéréo avant
+ * de le passer au {@link QueuedAudioProvider}.
+ */
 @Component
 public class playCommand implements ICommand, HasOptions {
 
@@ -32,6 +38,12 @@ public class playCommand implements ICommand, HasOptions {
     return "play";
   }
 
+  /**
+   * Gère l'exécution de la commande play.
+   *
+   * @param event l'événement d'interaction contenant les options
+   * @return un {@link Mono} indiquant la complétion du traitement
+   */
   @Override
   public Mono<Void> handle(ChatInputInteractionEvent event) {
     String query =
@@ -63,6 +75,9 @@ public class playCommand implements ICommand, HasOptions {
   /**
    * Lance yt-dlp en pipe pour récupérer le meilleur audio, puis passe la sortie vers ffmpeg qui
    * convertit le flux en PCM 16 bits 48kHz stéréo.
+   *
+   * @param query l'URL ou la recherche du track
+   * @return le processus ffmpeg produisant le flux PCM
    */
   private Process startFFmpegFromYtdlp(String query) {
     try {
@@ -99,6 +114,11 @@ public class playCommand implements ICommand, HasOptions {
     }
   }
 
+  /**
+   * Retourne les options de commande pour Discord.
+   *
+   * @return une {@link Optional} contenant la liste des {@link ApplicationCommandOptionData}
+   */
   @Override
   public Optional<List<ApplicationCommandOptionData>> getOptions() {
     return Optional.of(

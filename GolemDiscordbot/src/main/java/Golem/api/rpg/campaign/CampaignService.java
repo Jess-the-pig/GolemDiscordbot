@@ -15,6 +15,18 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
+/**
+ * Service gérant la création des campagnes RPG.
+ *
+ * <p>Cette classe permet de guider un utilisateur dans la création d'une campagne étape par étape
+ * via des interactions Discord.
+ *
+ * <p>Étapes de création :
+ *
+ * <p>0 – Définir le nom de la campagne 1 – Définir le Dungeon Master (DM) 2 – Ajouter les joueurs
+ * (séparés par virgules) jusqu’à validation avec "done" Une fois la campagne finalisée, elle est
+ * sauvegardée dans la base de données.
+ */
 @RequiredArgsConstructor
 @Service
 public class CampaignService {
@@ -36,6 +48,13 @@ public class CampaignService {
     return ReplyFactory.deferAndSend(event, "Let's create our campaign ! What's the name ?");
   }
 
+  /**
+   * Gère les messages envoyés par l’utilisateur pendant la création d’une campagne. Chaque message
+   * fait progresser le flux de création ou ajoute des joueurs à la campagne en cours.
+   *
+   * @param event événement de message créé
+   * @return un flux réactif de traitement du message
+   */
   public Mono<Void> handleMessageCreate(MessageCreateEvent event) {
 
     Long campaignId = event.getMessage().getChannelId().asLong();
@@ -77,7 +96,7 @@ public class CampaignService {
               "Campaign created successfully with players! 🎉 You can now use /chest, /loot,"
                   + " /encounter commands in this chat.");
         } else {
-          // Ajouter les joueurs listés (séparés par virgule)
+
           String[] playerNames = content.split(",");
 
           if (session.entity.getCharacters() == null) {
@@ -96,7 +115,6 @@ public class CampaignService {
             }
           }
 
-          // Rester à l'étape 2 pour ajouter d'autres joueurs
           return ReplyFactory.reply(
               event, "Players added! Add more or type **done** to finish the campaign creation.");
         }

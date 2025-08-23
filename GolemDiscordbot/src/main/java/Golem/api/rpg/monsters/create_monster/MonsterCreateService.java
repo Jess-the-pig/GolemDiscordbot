@@ -14,8 +14,6 @@ import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.function.Function;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
@@ -37,63 +35,66 @@ public class MonsterCreateService {
     this.creationSteps =
         List.of(
             new GenericValidatedStepHandler<Monsters, ContentCarrier, String>(
-                Function.identity(), Monsters::setName, "What's his image url?", ""),
+                carrier -> carrier.getContent(), Monsters::setName, "What's his image url?", ""),
             new GenericValidatedStepHandler<Monsters, ContentCarrier, String>(
-                Function.identity(), Monsters::setUrl, "What's his cr ?", ""),
+                carrier -> carrier.getContent(), Monsters::setUrl, "What's his cr ?", ""),
             new GenericValidatedStepHandler<Monsters, ContentCarrier, String>(
-                Function.identity(), Monsters::setCr, "What's his type?", ""),
+                carrier -> carrier.getContent(), Monsters::setCr, "What's his type?", ""),
             new GenericValidatedStepHandler<Monsters, ContentCarrier, String>(
-                Function.identity(), Monsters::setType, "What's his size?", ""),
+                carrier -> carrier.getContent(), Monsters::setType, "What's his size?", ""),
             new GenericValidatedStepHandler<Monsters, ContentCarrier, String>(
-                Function.identity(), Monsters::setSize, "What's his ac?", ""),
+                carrier -> carrier.getContent(), Monsters::setSize, "What's his ac?", ""),
             new GenericValidatedStepHandler<Monsters, ContentCarrier, Integer>(
-                Integer::parseInt,
+                carrier -> Integer.parseInt(carrier.getContent()),
                 Monsters::setAc,
                 "What's his hp?",
                 "Please enter a valid number."),
             new GenericValidatedStepHandler<Monsters, ContentCarrier, Integer>(
-                Integer::parseInt,
+                carrier -> Integer.parseInt(carrier.getContent()),
                 Monsters::setHp,
                 "What's his speed?",
                 "Please enter a valid number."),
             new GenericValidatedStepHandler<Monsters, ContentCarrier, String>(
-                Function.identity(), Monsters::setSpeed, "What's his alignement?", ""),
+                carrier -> carrier.getContent(), Monsters::setSpeed, "What's his alignement?", ""),
             new GenericValidatedStepHandler<Monsters, ContentCarrier, String>(
-                Function.identity(), Monsters::setAlign, "Is he legendary ?", ""),
+                carrier -> carrier.getContent(), Monsters::setAlign, "Is he legendary ?", ""),
             new GenericValidatedStepHandler<Monsters, ContentCarrier, Boolean>(
-                Boolean::parseBoolean,
+                carrier -> Boolean.parseBoolean(carrier.getContent().trim()),
                 Monsters::setLegendary,
                 "What's his source?",
                 "Please enter a valid value"),
             new GenericValidatedStepHandler<Monsters, ContentCarrier, String>(
-                Function.identity(), Monsters::setSource, "What is his strength?", ""),
+                carrier -> carrier.getContent(), Monsters::setSource, "What is his strength?", ""),
             new GenericValidatedStepHandler<>(
-                Integer::parseInt,
+                carrier -> Integer.parseInt(carrier.getContent()),
                 Monsters::setStrScore,
                 "What's his dexterity?",
                 "Please enter a valid number."),
             new GenericValidatedStepHandler<>(
-                Integer::parseInt,
+                carrier -> Integer.parseInt(carrier.getContent()),
                 Monsters::setDexScore,
                 "What's his constitution ?",
                 "Please enter a valid number."),
             new GenericValidatedStepHandler<>(
-                Integer::parseInt,
+                carrier -> Integer.parseInt(carrier.getContent()),
                 Monsters::setConScore,
                 "What's his intelligence ?",
                 "Please enter a valid number."),
             new GenericValidatedStepHandler<>(
-                Integer::parseInt,
+                carrier -> Integer.parseInt(carrier.getContent()),
                 Monsters::setIntScore,
                 "What's his wisdom ?",
                 "Please enter a valid number."),
             new GenericValidatedStepHandler<>(
-                Integer::parseInt,
+                carrier -> Integer.parseInt(carrier.getContent()),
                 Monsters::setWisScore,
                 "What's his charisma ?",
                 "Please enter a valid number."),
             new GenericValidatedStepHandler<>(
-                Integer::parseInt, Monsters::setChaScore, "", "Please enter a valid number."),
+                carrier -> Integer.parseInt(carrier.getContent()),
+                Monsters::setChaScore,
+                "",
+                "Please enter a valid number."),
             new FinalStepHandler<>(
                 (m, s) -> {}, // rien à setter
                 monsterRepository::save,

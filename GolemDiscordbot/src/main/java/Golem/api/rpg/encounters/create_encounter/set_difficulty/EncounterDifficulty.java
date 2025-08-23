@@ -1,4 +1,4 @@
-package Golem.api.rpg.encounters;
+package Golem.api.rpg.encounters.create_encounter.set_difficulty;
 
 public enum EncounterDifficulty {
   EASY(0.5),

@@ -15,6 +15,13 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
+/**
+ * Service permettant à un utilisateur de consulter ses personnages.
+ *
+ * <p>Fonctionnalités principales : - Démarrage d'une session de consultation via un bouton Discord
+ * - Gestion de la sélection de personnage par nom - Affichage des détails complets du personnage
+ * sélectionné
+ */
 @Service
 @RequiredArgsConstructor
 @Slf4j
@@ -27,6 +34,14 @@ public class CharacterConsultService {
     return List.of(new DiscordEventHandler<>(MessageCreateEvent.class, this::handleMessageConsult));
   }
 
+  /**
+   * Démarre une session de consultation pour un utilisateur à partir d'un bouton Discord.
+   *
+   * <p>Affiche la liste des personnages de l'utilisateur et invite à choisir lequel consulter.
+   *
+   * @param event événement de type ButtonInteractionEvent
+   * @return Mono<Void> représentant le traitement asynchrone
+   */
   public Mono<Void> handleConsult(ButtonInteractionEvent event) {
     long userId = event.getInteraction().getUser().getId().asLong();
     String username = event.getInteraction().getUser().getUsername();
@@ -56,6 +71,14 @@ public class CharacterConsultService {
             + "\nWhich one do you want to see?");
   }
 
+  /**
+   * Gère les messages texte pendant une session de consultation.
+   *
+   * <p>Si l'utilisateur fournit un nom de personnage valide, affiche ses détails.
+   *
+   * @param event événement MessageCreateEvent
+   * @return Mono<Void> représentant le traitement asynchrone
+   */
   public Mono<Void> handleMessageConsult(MessageCreateEvent event) {
     long userId = event.getMessage().getAuthor().map(u -> u.getId().asLong()).orElse(-1L);
     if (userId == -1) return Mono.empty();
@@ -90,6 +113,12 @@ public class CharacterConsultService {
     return Mono.empty();
   }
 
+  /**
+   * Construit une chaîne de texte contenant les informations détaillées d'un personnage.
+   *
+   * @param c le personnage à afficher
+   * @return texte contenant le résumé du personnage
+   */
   private String buildCharacterDetails(Characters c) {
     return new StringBuilder()
         .append("**Character Details:**\n")

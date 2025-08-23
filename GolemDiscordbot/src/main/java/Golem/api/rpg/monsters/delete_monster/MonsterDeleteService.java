@@ -14,7 +14,6 @@ import discord4j.core.event.domain.message.MessageCreateEvent;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
@@ -52,7 +51,7 @@ public class MonsterDeleteService {
 
     return ReplyFactory.deferAndSend(
         event,
-        "Let's delete your character!\nHere are your characters:\n"
+        "Let's delete your monster!\nHere are your monsters:\n"
             + monstersList
             + "\nWhich one do you want to delete?");
   }

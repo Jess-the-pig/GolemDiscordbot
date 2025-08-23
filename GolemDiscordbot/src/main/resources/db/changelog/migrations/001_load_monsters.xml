@@ -6,58 +6,30 @@
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
     <changeSet id="001_create_monsters_table" author="jessthepig" runOnChange="true">
     <createTable tableName="monsters">
-        <column name="id" type="BIGINT"></column>
         <column name="name" type="VARCHAR(255)"/>
-        <column name="size" type="VARCHAR(50)"/>
-        <column name="monster_type" type="VARCHAR(100)"/>
-        <column name="alignment" type="VARCHAR(100)"/>
-        <column name="ac" type="INT"/>
-        <column name="hp" type="INT"/>
-        <column name="strength" type="INT"/>
-        <column name="str_mod" type="INT"/>
-        <column name="dex" type="INT"/>
-        <column name="dex_mod" type="INT"/>
-        <column name="con" type="INT"/>
-        <column name="con_mod" type="INT"/>
-        <column name="intel" type="INT"/>
-        <column name="int_mod" type="INT"/>
-        <column name="wis" type="INT"/>
-        <column name="wis_mod" type="INT"/>
-        <column name="cha" type="INT"/>
-        <column name="cha_mod" type="INT"/>
-        <column name="senses" type="VARCHAR(255)"/>
-        <column name="languages" type="VARCHAR(255)"/>
-        <column name="cr" type="VARCHAR(20)"/>
-        <column name="str_save" type="INT"/>
-        <column name="dex_save" type="INT"/>
-        <column name="con_save" type="INT"/>
-        <column name="int_save" type="INT"/>
-        <column name="wis_save" type="INT"/>
-        <column name="cha_save" type="INT"/>
-        <column name="speed" type="INT"/>
-        <column name="swim" type="INT"/>
-        <column name="fly" type="INT"/>
-        <column name="climb" type="INT"/>
-        <column name="burrow" type="INT"/>
-        <column name="number_legendary_actions" type="INT"/>
-        <column name="history" type="INT"/>
-        <column name="perception" type="INT"/>
-        <column name="stealth" type="INT"/>
-        <column name="persuasion" type="INT"/>
-        <column name="insight" type="INT"/>
-        <column name="deception" type="INT"/>
-        <column name="arcana" type="INT"/>
-        <column name="religion" type="INT"/>
-        <column name="acrobatics" type="INT"/>
-        <column name="athletics" type="INT"/>
-        <column name="intimidation" type="INT"/>
+        <column name="url" type="VARCHAR(255)"/>
+        <column name="cr" type="VARCHAR(100)"/>
+        <column name="type" type="VARCHAR(100)"/>
+        <column name="size" type="VARCHAR(100)"/>
+        <column name="ac" type="VARCHAR(100)"/>
+        <column name="hp" type="VARCHAR(100)"/>
+        <column name="speed" type="VARCHAR(100)"/>
+        <column name="align" type="VARCHAR(100)"/>
+        <column name="legendary" type="VARCHAR(100)"/>
+        <column name="source" type="VARCHAR(100)"/>
+        <column name="str" type="VARCHAR(100)"/>
+        <column name="dex" type="VARCHAR(100)"/>
+        <column name="con" type="VARCHAR(100)"/>
+        <column name="int" type="VARCHAR(100)"/>
+        <column name="wis" type="VARCHAR(100)"/>
+        <column name="cha" type="VARCHAR(100)"/>
     </createTable>
 </changeSet>
 
     <changeSet id="002_load_monsters" author="jessthepig">
         <loadData
             tableName="monsters"
-            file="db/changelog/migrations/data/cleaned_monsters_basic.csv"
+            file="db/changelog/migrations/data/dnd_monsters.csv"
             separator=","
             encoding="UTF-8"/>
     </changeSet>

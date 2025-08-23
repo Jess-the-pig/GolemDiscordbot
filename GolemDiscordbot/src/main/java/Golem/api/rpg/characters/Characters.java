@@ -28,10 +28,11 @@ public class Characters implements Combatant, TimeStampedEntity {
   private String characterName;
   private String race;
 
+  private String background;
+
   @Column(name = "class")
   private String class_; // ok de garder _ ici
 
-  private String background;
   private int level;
   private int experiencePoints;
 

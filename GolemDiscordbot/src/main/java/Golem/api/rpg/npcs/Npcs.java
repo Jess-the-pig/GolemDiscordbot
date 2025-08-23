@@ -43,7 +43,8 @@ public class Npcs implements Combatant, TimeStampedEntity {
   private String date_modified;
   private int notes_len;
   private LocalDateTime dateCreated;
-  private LocalDateTime lastUpdated;
+  private Long userid;
+  private String username;
 
   @Override
   public String getCombatantName() {
@@ -57,6 +58,6 @@ public class Npcs implements Combatant, TimeStampedEntity {
 
   @Override
   public void setLastUpdated(LocalDateTime date) {
-    this.lastUpdated = date;
+    this.date_modified = date.toString();
   }
 }

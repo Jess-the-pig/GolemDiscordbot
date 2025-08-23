@@ -9,9 +9,17 @@ import java.util.Map;
 import java.util.function.BiConsumer;
 import java.util.function.Function;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
 
+/**
+ * Étape de modification d'un personnage permettant à l'utilisateur de choisir quel champ il
+ * souhaite modifier.
+ *
+ * <p>Le handler attend que l'utilisateur envoie le nom du champ à modifier. Si le champ existe dans
+ * la map {@code fieldSetters}, la session passe à l'étape suivante pour fournir la nouvelle valeur.
+ *
+ * @param <T> type de l'entité modifiable, doit implémenter TimeStampedEntity
+ */
 @RequiredArgsConstructor
 public class ChooseFieldStepHandler<T extends TimeStampedEntity>
     implements StepHandler<T, ContentCarrier> {

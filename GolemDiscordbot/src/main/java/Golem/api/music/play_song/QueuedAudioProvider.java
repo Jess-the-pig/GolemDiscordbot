@@ -1,4 +1,4 @@
-package Golem.api.music.play;
+package Golem.api.music.play_song;
 
 import discord4j.voice.AudioProvider;
 import io.github.jaredmdobson.concentus.OpusApplication;
@@ -11,6 +11,14 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * Fournisseur audio pour Discord4J basé sur un système de queue de flux PCM.
+ *
+ * <p>Les pistes sont envoyées sous forme de {@link InputStream} PCM (16 bits, 48kHz, stéréo), qui
+ * sont encodées en Opus avant d'être transmises à Discord.
+ *
+ * <p>Si la queue est vide, un frame de silence est envoyé (RFC 7845).
+ */
 @Configuration
 public class QueuedAudioProvider extends AudioProvider {
 
@@ -22,9 +30,12 @@ public class QueuedAudioProvider extends AudioProvider {
   private final byte[] opusBuffer = new byte[4096];
   private static final byte[] SILENCE_FRAME = new byte[] {(byte) 0xF8, (byte) 0xFF, (byte) 0xFE};
 
-  // ✅ Nouveau champ pour l'état de connexion
   private volatile boolean connected = false;
 
+  /**
+   * Constructeur du fournisseur audio. Initialise l’encodeur Opus en mode {@link
+   * OpusApplication#OPUS_APPLICATION_AUDIO}.
+   */
   public QueuedAudioProvider() {
     super(ByteBuffer.allocate(DEFAULT_BUFFER_SIZE));
     try {
@@ -47,6 +58,15 @@ public class QueuedAudioProvider extends AudioProvider {
     queue.add(pcmStream);
   }
 
+  /**
+   * Fournit le prochain frame Opus à envoyer à Discord.
+   *
+   * <p>- Si aucun flux n’est en cours, essaie d’en récupérer un dans la queue. - Si la queue est
+   * vide, envoie un frame de silence. - Si un flux est actif, encode le prochain paquet PCM en
+   * Opus. - Si le flux est terminé, passe au suivant.
+   *
+   * @return true si un buffer valide a été préparé, false sinon
+   */
   @Override
   public boolean provide() {
     try {

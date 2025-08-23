@@ -4,6 +4,10 @@ import Golem.api.common.interfaces.ContentCarrier;
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
 import lombok.RequiredArgsConstructor;
 
+/**
+ * Wrapper pour un {@link ButtonInteractionEvent} implémentant {@link ContentCarrier}. Fournit un
+ * accès au contenu et à l'événement délégué.
+ */
 @RequiredArgsConstructor
 public class ButtonInteractionEventWrapper implements ContentCarrier {
   private final ButtonInteractionEvent event;

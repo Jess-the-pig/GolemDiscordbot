@@ -14,11 +14,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.BiConsumer;
-import java.util.function.Function;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
+/**
+ * Service pour la modification des personnages existants.
+ *
+ * <p>Ce service permet : - de démarrer une session de modification via un bouton Discord - de gérer
+ * les messages texte pendant la session - de modifier les champs d'un personnage de façon
+ * interactive
+ */
 @Service
 @Slf4j
 public class CharacterModifyService {
@@ -53,6 +59,12 @@ public class CharacterModifyService {
             new UpdateFieldStepHandler<Characters>(characterRepository::save, characterSetters));
   }
 
+  /**
+   * Démarre une session de modification via un bouton Discord.
+   *
+   * @param event événement du bouton
+   * @return Mono<Void> représentant le traitement asynchrone
+   */
   public Mono<Void> handleModify(ButtonInteractionEvent event) {
     long userId = event.getInteraction().getUser().getId().asLong();
     String username = event.getInteraction().getUser().getUsername();
@@ -83,6 +95,12 @@ public class CharacterModifyService {
     return List.of(new DiscordEventHandler<>(MessageCreateEvent.class, this::handleMessageModify));
   }
 
+  /**
+   * Gère les messages texte pendant la session de modification.
+   *
+   * @param event événement du message
+   * @return Mono<Void> représentant le traitement asynchrone
+   */
   public Mono<Void> handleMessageModify(MessageCreateEvent event) {
     long userId = event.getMessage().getAuthor().map(u -> u.getId().asLong()).orElse(-1L);
     if (userId == -1) return Mono.empty();

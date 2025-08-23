@@ -1,4 +1,4 @@
-package Golem.api.rpg.encounters;
+package Golem.api.rpg.encounters.create_encounter;
 
 import Golem.api.common.entity.Combatant;
 

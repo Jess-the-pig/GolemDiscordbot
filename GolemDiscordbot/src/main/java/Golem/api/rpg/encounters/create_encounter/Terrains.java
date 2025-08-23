@@ -1,25 +1,27 @@
-package Golem.api.rpg.encounters;
+package Golem.api.rpg.encounters.create_encounter;
 
-import Golem.api.rpg.monsters.Monsters;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import java.time.LocalDateTime;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-@Table(name = "terrainmonsters")
-public class TerrainMonster {
+@Table(name = "terrains")
+public class Terrains {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  @ManyToOne private Terrains terrain;
+  private String name;
 
-  @ManyToOne private Monsters monster;
+  private String description;
+
+  private LocalDateTime dateCreated;
+  private LocalDateTime lastUpdated;
 }

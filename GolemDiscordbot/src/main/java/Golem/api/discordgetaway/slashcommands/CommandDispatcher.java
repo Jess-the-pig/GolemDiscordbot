@@ -11,25 +11,40 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
+/**
+ * Service pour dispatcher les commandes et gérer les interactions avec Discord.
+ *
+ * <p>Mappe les noms de commandes aux instances {@link ICommand} et gère les interactions des
+ * commandes slash ainsi que les boutons.
+ */
 @Service
 @Slf4j
 public class CommandDispatcher {
 
   private final Map<String, ICommand> commands = new HashMap<>();
 
-  // Initialisation du Map à partir de la List<ICommand>
+  /**
+   * Initialise le dispatcher à partir d'une liste de commandes.
+   *
+   * @param commandList la liste des commandes à enregistrer
+   */
   public CommandDispatcher(List<ICommand> commandList) {
     for (ICommand cmd : commandList) {
       commands.put(cmd.getName(), cmd);
     }
   }
 
+  /**
+   * Traite une interaction de commande slash.
+   *
+   * @param event l'événement d'interaction de commande
+   * @return un {@link Mono} indiquant la complétion du traitement
+   */
   public Mono<Void> handle(ChatInputInteractionEvent event) {
     log.info("ButtonInteractionEvent received: {}", event);
     String name = event.getCommandName();
     log.info("chargement du handler" + name);
 
-    // Recherche de la commande dans la Map
     ICommand command = commands.get(name);
 
     if (command != null) {
@@ -39,6 +54,12 @@ public class CommandDispatcher {
     return event.reply("Commande inconnue").withEphemeral(true);
   }
 
+  /**
+   * Traite une interaction de bouton.
+   *
+   * @param event l'événement d'interaction de bouton
+   * @return un {@link Mono} indiquant la complétion du traitement
+   */
   public Mono<Void> handleButton(ButtonInteractionEvent event) {
     log.info("ButtonInteractionEvent received: {}", event);
     String customId = event.getCustomId();
@@ -53,7 +74,11 @@ public class CommandDispatcher {
     return event.reply("Aucun handler pour ce bouton.").withEphemeral(true);
   }
 
-  // Méthode pour obtenir les commandes
+  /**
+   * Retourne la map des commandes enregistrées.
+   *
+   * @return la map des noms de commandes vers les handlers {@link ICommand}
+   */
   public Map<String, ICommand> getCommands() {
     return commands;
   }

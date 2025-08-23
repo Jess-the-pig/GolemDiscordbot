@@ -1,4 +1,4 @@
-package Golem.api.rpg.encounters;
+package Golem.api.rpg.encounters.create_encounter.set_difficulty;
 
 import java.util.concurrent.ThreadLocalRandom;
 
