@@ -2,6 +2,7 @@ package Golem.api.rpg.npcs;
 
 import Golem.api.common.entity.Combatant;
 import Golem.api.common.interfaces.TimeStampedEntity;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -40,11 +41,15 @@ public class Npcs implements Combatant, TimeStampedEntity {
   private int total_level;
   private String feats;
   private String inventory;
-  private String date_modified;
   private int notes_len;
-  private LocalDateTime dateCreated;
   private Long userid;
   private String username;
+
+  @Column(name = "date_created", nullable = false)
+  private LocalDateTime dateCreated;
+
+  @Column(name = "last_updated", nullable = false)
+  private LocalDateTime lastUpdated;
 
   @Override
   public String getCombatantName() {
@@ -58,6 +63,6 @@ public class Npcs implements Combatant, TimeStampedEntity {
 
   @Override
   public void setLastUpdated(LocalDateTime date) {
-    this.date_modified = date.toString();
+    this.lastUpdated = date;
   }
 }

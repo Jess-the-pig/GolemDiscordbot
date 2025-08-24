@@ -4,6 +4,7 @@ import Golem.api.common.interfaces.HasButtons;
 import Golem.api.common.interfaces.ICommand;
 import Golem.api.rpg.characters.consult_characters.CharacterConsultService;
 import Golem.api.rpg.characters.create_character.CharacterCreateService;
+import Golem.api.rpg.characters.delete_character.CharacterDeleteService;
 import Golem.api.rpg.characters.modify_character.CharacterModifyService;
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
 import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
@@ -26,6 +27,8 @@ import reactor.core.publisher.Mono;
 @Component
 @RequiredArgsConstructor
 public class characterCommand implements ICommand, HasButtons {
+
+  private final CharacterDeleteService characterDeleteService;
 
   private final CharacterConsultService characterConsultService;
   private final CharacterCreateService characterCreateService;
@@ -51,13 +54,14 @@ public class characterCommand implements ICommand, HasButtons {
             ActionRow.of(
                 Button.primary("create", "Créer"),
                 Button.secondary("modify", "Modifier"),
-                Button.success("consult", "Consulter")))
+                Button.success("consult", "Consulter"),
+                Button.danger("delete", "Supprimer")))
         .then();
   }
 
   @Override
   public List<String> getCustomIds() {
-    return List.of("create", "modify", "consult");
+    return List.of("create", "modify", "consult", "delete");
   }
 
   /**
@@ -82,6 +86,8 @@ public class characterCommand implements ICommand, HasButtons {
         return characterModifyService.handleModify(event);
       case "consult":
         return characterConsultService.handleConsult(event);
+      case "delete":
+        return characterDeleteService.handleMessageDelete(event);
       default:
         return Mono.empty();
     }

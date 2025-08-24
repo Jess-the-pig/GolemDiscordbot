@@ -3,14 +3,14 @@ package Golem.api.rpg.campaign;
 import Golem.api.common.interfaces.ContentCarrier;
 import Golem.api.common.interfaces.StepHandler;
 import Golem.api.common.utils.AddPlayersStepHandler;
+import Golem.api.common.utils.FinalStepHandler;
 import Golem.api.common.utils.FinalStepHandlerSimple;
 import Golem.api.common.utils.GenericValidatedStepHandler;
 import Golem.api.common.utils.Session;
+import Golem.api.common.wrappers.ButtonInteractionEventWrapper;
 import Golem.api.common.wrappers.MessageCreateEventWrapper;
 import Golem.api.db.CampaignRepository;
 import Golem.api.db.CharacterRepository;
-import Golem.api.discordgetaway.DiscordEventHandler;
-import Golem.api.discordgetaway.DiscordEventHandlerProvider;
 import Golem.api.rpg.dto.ReplyFactory;
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
 import discord4j.core.event.domain.message.MessageCreateEvent;
@@ -23,7 +23,7 @@ import reactor.core.publisher.Mono;
 
 @Service
 @Slf4j
-public class CampaignService implements DiscordEventHandlerProvider {
+public class CampaignService {
 
   private final CampaignRepository campaignRepository;
   private final CharacterRepository characterRepository;
@@ -72,51 +72,50 @@ public class CampaignService implements DiscordEventHandlerProvider {
     return ReplyFactory.deferAndSend(event, "Campaign creation started! Please answer below 👇");
   }
 
-  @Override
-  public List<DiscordEventHandler<?>> getEventHandlers() {
-    log.info("[CampaignService] Registering MessageCreateEvent handler");
-    return List.of(
-        new DiscordEventHandler<>(MessageCreateEvent.class, this::handleCampaignMessage));
-  }
-
-  /** Gère les messages pour la création de campagne, étape par étape. */
   public Mono<Void> handleCampaignMessage(MessageCreateEvent event) {
-    // Ignore les messages du bot lui-même
-    if (event.getMessage().getAuthor().map(user -> user.isBot()).orElse(false)) {
-      return Mono.empty();
-    }
-
     long channelId = event.getMessage().getChannelId().asLong();
-    Session<Campaign> session = creationSessions.get(channelId);
 
-    // Si aucune session n'existe, on ignore
+    Session<Campaign> session = creationSessions.get(channelId);
     if (session == null) {
-      log.info("[CampaignService] No active session for channel {}", channelId);
+      // aucune session active → on ignore
       return Mono.empty();
     }
 
-    // Si toutes les étapes sont terminées, on supprime la session
     if (session.step >= creationSteps.size()) {
+      // normalement déjà fini, on supprime pour être sûr
       creationSessions.remove(channelId);
-      log.info("[CampaignService] Campaign creation finished for channel {}", channelId);
       return ReplyFactory.reply(event, "All done!");
     }
 
     StepHandler<Campaign, ContentCarrier> handler = creationSteps.get(session.step);
     ContentCarrier wrappedEvent = new MessageCreateEventWrapper(event);
 
-    log.info("[CampaignService] Handling step {} for channel {}", session.step, channelId);
-    log.info("Current campaign state: {}", session.entity.getName());
-    log.info("Current campaign state: {}", session.entity.getDm());
-
     return handler
         .handle(wrappedEvent, session)
-        .doOnSuccess(
-            v -> {
-              if (session.step >= creationSteps.size()) {
-                creationSessions.remove(channelId);
-                log.info("[CampaignService] Campaign session removed for channel {}", channelId);
-              }
-            });
+        .then(
+            Mono.defer(
+                () -> {
+                  // ✅ si c’est le dernier handler (= sauvegarde),
+                  // on supprime définitivement la session
+                  if (handler instanceof FinalStepHandler) {
+                    creationSessions.remove(channelId);
+                  }
+                  return Mono.empty();
+                }));
+  }
+
+  public Mono<Void> startCampaignSession(ButtonInteractionEvent event) {
+    long channelId = event.getInteraction().getChannelId().asLong();
+
+    Session<Campaign> session = new Session<>();
+    session.entity = new Campaign();
+    session.step = 0;
+
+    creationSessions.put(channelId, session);
+
+    StepHandler<Campaign, ContentCarrier> handler = creationSteps.get(0);
+    ContentCarrier wrappedEvent = new ButtonInteractionEventWrapper(event);
+
+    return handler.handle(wrappedEvent, session);
   }
 }

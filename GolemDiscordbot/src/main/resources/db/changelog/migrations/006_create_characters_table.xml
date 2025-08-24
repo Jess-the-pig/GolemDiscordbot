@@ -10,7 +10,7 @@
         <column name="id" type="BIGINT" autoIncrement="true">
             <constraints primaryKey="true" nullable="false"/>
         </column>
-        <column name="player_name" type="VARCHAR(255)">
+        <column name="user_id" type="BIGINT">
         <constraints nullable="false"/>
         </column>
         <column name="character_name" type="VARCHAR(255)">

@@ -24,7 +24,9 @@ public class Characters implements Combatant, TimeStampedEntity {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  private String playerName;
+  @Column(name = "user_id")
+  private Long userId;
+
   private String characterName;
   private String race;
 

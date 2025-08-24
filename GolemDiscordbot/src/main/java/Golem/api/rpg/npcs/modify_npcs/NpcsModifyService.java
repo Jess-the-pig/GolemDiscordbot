@@ -6,7 +6,6 @@ import Golem.api.common.utils.Session;
 import Golem.api.common.wrappers.MessageCreateEventWrapper;
 import Golem.api.db.CampaignNpcRepository;
 import Golem.api.db.NpcsRepository;
-import Golem.api.discordgetaway.DiscordEventHandler;
 import Golem.api.rpg.campaign.CampaignNpc;
 import Golem.api.rpg.characters.modify_character.ChooseFieldStepHandler;
 import Golem.api.rpg.characters.modify_character.SelectEntityStepHandler;
@@ -81,10 +80,6 @@ public class NpcsModifyService {
 
     return ReplyFactory.deferAndSend(
         event, "Voici les PNJ disponibles :\n" + npcsList + "\nLequel veux-tu modifier ?");
-  }
-
-  public List<DiscordEventHandler<?>> getEventHandlers() {
-    return List.of(new DiscordEventHandler<>(MessageCreateEvent.class, this::handleMessageModify));
   }
 
   public Mono<Void> handleMessageModify(MessageCreateEvent event) {

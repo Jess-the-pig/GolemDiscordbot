@@ -5,7 +5,6 @@ import Golem.api.common.interfaces.StepHandler;
 import Golem.api.common.utils.Session;
 import Golem.api.common.wrappers.MessageCreateEventWrapper;
 import Golem.api.db.CharacterRepository;
-import Golem.api.discordgetaway.DiscordEventHandler;
 import Golem.api.rpg.characters.Characters;
 import Golem.api.rpg.dto.ReplyFactory;
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
@@ -31,11 +30,6 @@ public class CharacterDeleteService {
   private final Map<Long, Session<Characters>> deleteSessions = new HashMap<>();
   private final List<StepHandler<Characters, ContentCarrier>> deletionSteps;
 
-  public List<DiscordEventHandler<?>> getEventHandlers() {
-    return List.of(
-        new DiscordEventHandler<>(ButtonInteractionEvent.class, this::handleMessageDelete));
-  }
-
   /**
    * Démarre la session de suppression lorsqu'un utilisateur clique sur le bouton Discord.
    *
@@ -44,14 +38,13 @@ public class CharacterDeleteService {
    */
   public Mono<Void> handleMessageDelete(ButtonInteractionEvent event) {
     long userId = event.getInteraction().getUser().getId().asLong();
-    String username = event.getInteraction().getUser().getUsername();
 
     Session<Characters> session = new Session<>();
     session.step = 0;
     session.entity = null; // Pas encore choisi
     deleteSessions.put(userId, session);
 
-    List<Characters> allPlayerCharacters = characterRepository.findByPlayerName(username);
+    List<Characters> allPlayerCharacters = characterRepository.findByuserId(userId);
     if (allPlayerCharacters.isEmpty()) {
       return ReplyFactory.deferAndSend(event, "You don't have any characters to delete.");
     }

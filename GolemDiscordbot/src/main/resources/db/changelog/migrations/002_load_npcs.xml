@@ -30,6 +30,11 @@
         <column name="notes_len" type="INT"/>
         <column name="gold" type="DECIMAL(10,2)"/>
     </createTable>
+
+    <addUniqueConstraint 
+    tableName="npcs" 
+    columnNames="id" 
+    constraintName="uk_npcs_id"/>
 </changeSet>
 
 

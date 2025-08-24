@@ -23,7 +23,7 @@ import lombok.Setter;
  * création et de dernière mise à jour.
  */
 @Entity
-@Table(name = "campaign_npcs")
+@Table(name = "campaign_npc")
 @Getter
 @Setter
 public class CampaignNpc implements TimeStampedEntity {

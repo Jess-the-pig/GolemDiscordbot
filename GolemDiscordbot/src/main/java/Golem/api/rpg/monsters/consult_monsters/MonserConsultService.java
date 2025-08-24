@@ -2,7 +2,6 @@ package Golem.api.rpg.monsters.consult_monsters;
 
 import Golem.api.common.utils.Session;
 import Golem.api.db.MonsterRepository;
-import Golem.api.discordgetaway.DiscordEventHandler;
 import Golem.api.rpg.dto.ReplyFactory;
 import Golem.api.rpg.monsters.Monsters;
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
@@ -21,11 +20,6 @@ import reactor.core.publisher.Mono;
 public class MonserConsultService {
   private final Map<Long, Session<Monsters>> consultSessions = new HashMap<>();
   private final MonsterRepository monsterRepository;
-
-  public List<DiscordEventHandler<?>> getEventHandlers() {
-    log.info("MonsterCOnsultService loaded");
-    return List.of(new DiscordEventHandler<>(MessageCreateEvent.class, this::handleMessageConsult));
-  }
 
   public Mono<Void> handleConsult(ButtonInteractionEvent event) {
     long userId = event.getInteraction().getUser().getId().asLong();

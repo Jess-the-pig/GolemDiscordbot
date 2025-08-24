@@ -5,7 +5,6 @@ import Golem.api.common.interfaces.StepHandler;
 import Golem.api.common.utils.Session;
 import Golem.api.common.wrappers.MessageCreateEventWrapper;
 import Golem.api.db.MonsterRepository;
-import Golem.api.discordgetaway.DiscordEventHandler;
 import Golem.api.rpg.characters.delete_character.DeleteEntityStepHandler;
 import Golem.api.rpg.dto.ReplyFactory;
 import Golem.api.rpg.monsters.Monsters;
@@ -25,11 +24,6 @@ public class MonsterDeleteService {
   private final Map<Long, Session<Monsters>> deleteSessions = new HashMap<>();
   private final List<StepHandler<Monsters, ContentCarrier>> deletionSteps;
 
-  public List<DiscordEventHandler<?>> getEventHandlers() {
-    return List.of(
-        new DiscordEventHandler<>(ButtonInteractionEvent.class, this::handleMessageDelete));
-  }
-
   public Mono<Void> handleMessageDelete(ButtonInteractionEvent event) {
     long userId = event.getInteraction().getUser().getId().asLong();
     String username = event.getInteraction().getUser().getUsername();
@@ -39,7 +33,7 @@ public class MonsterDeleteService {
     session.entity = null; // Pas encore choisi
     deleteSessions.put(userId, session);
 
-    List<Monsters> allPlayerMonsters = monsterRepository.findByPlayerName(username);
+    List<Monsters> allPlayerMonsters = monsterRepository.findByUsername(username);
     if (allPlayerMonsters.isEmpty()) {
       return ReplyFactory.deferAndSend(event, "You don't have any characters to delete.");
     }

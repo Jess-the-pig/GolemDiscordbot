@@ -5,7 +5,6 @@ import Golem.api.common.interfaces.StepHandler;
 import Golem.api.common.utils.Session;
 import Golem.api.common.wrappers.MessageCreateEventWrapper;
 import Golem.api.db.MonsterRepository;
-import Golem.api.discordgetaway.DiscordEventHandler;
 import Golem.api.rpg.characters.modify_character.ChooseFieldStepHandler;
 import Golem.api.rpg.characters.modify_character.SelectEntityStepHandler;
 import Golem.api.rpg.characters.modify_character.UpdateFieldStepHandler;
@@ -113,10 +112,6 @@ public class MonsterModifyService {
         "Let's modify your monster !\nHere are your characters:\n"
             + monstersList
             + "\nWhich one do you want to modify?");
-  }
-
-  public List<DiscordEventHandler<?>> getEventHandlers() {
-    return List.of(new DiscordEventHandler<>(MessageCreateEvent.class, this::handleMessageModify));
   }
 
   public Mono<Void> handleMessageModify(MessageCreateEvent event) {

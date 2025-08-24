@@ -40,7 +40,7 @@ public class campaignCommand implements ICommand, HasButtons {
     switch (customId) {
       case "campaign_create":
         return campaignService.startCampaignCreation(event);
-      case "npc_add": // 👈 on route vers CampaignService
+      case "npc_add_campaign": // 👈 on route vers CampaignService
         return addNpcToCampaignService.handleAdd(event);
       default:
         return Mono.empty();
@@ -54,7 +54,7 @@ public class campaignCommand implements ICommand, HasButtons {
 
   @Override
   public List<String> getCustomIds() {
-    return List.of("campaign_create", "npc_add");
+    return List.of("campaign_create", "npc_add_campaign");
   }
 
   /**
@@ -71,7 +71,7 @@ public class campaignCommand implements ICommand, HasButtons {
         .withComponents(
             ActionRow.of(
                 Button.primary("campaign_create", "Create a campaign"),
-                Button.primary("npc_add", "Add NPC to campaign") // 👈 nouveau bouton
+                Button.primary("npc_add_campaign", "Add NPC to campaign") // 👈 nouveau bouton
                 ))
         .then();
   }

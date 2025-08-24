@@ -7,7 +7,6 @@ import Golem.api.common.utils.GenericValidatedStepHandler;
 import Golem.api.common.utils.Session;
 import Golem.api.common.wrappers.ButtonInteractionEventWrapper;
 import Golem.api.db.NpcsRepository;
-import Golem.api.discordgetaway.DiscordEventHandler;
 import Golem.api.rpg.dto.ReplyFactory;
 import Golem.api.rpg.npcs.Npcs;
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
@@ -104,11 +103,6 @@ public class NpcCreateService {
                 (m, s) -> {}, // rien à setter
                 npcsRepository::save,
                 "Npc created successfully! 🎉"));
-  }
-
-  public List<DiscordEventHandler<?>> getEventHandlers() {
-    return List.of(
-        new DiscordEventHandler<>(ButtonInteractionEvent.class, this::handleMessageCreate));
   }
 
   public Mono<Void> handleMessageCreate(ButtonInteractionEvent event) {

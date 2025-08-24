@@ -2,7 +2,6 @@ package Golem.api.rpg.npcs.consult_npcs;
 
 import Golem.api.common.utils.Session;
 import Golem.api.db.NpcsRepository;
-import Golem.api.discordgetaway.DiscordEventHandler;
 import Golem.api.rpg.dto.ReplyFactory;
 import Golem.api.rpg.npcs.Npcs;
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
@@ -22,11 +21,6 @@ public class NpcConsultService {
 
   private final Map<Long, Session<Npcs>> consultSessions = new HashMap<>();
   private final NpcsRepository npcsRepository;
-
-  public List<DiscordEventHandler<?>> getEventHandlers() {
-    log.info("NpcsConsultService loaded");
-    return List.of(new DiscordEventHandler<>(MessageCreateEvent.class, this::handleMessageConsult));
-  }
 
   public Mono<Void> handleConsult(ButtonInteractionEvent event) {
     long userId = event.getInteraction().getUser().getId().asLong();

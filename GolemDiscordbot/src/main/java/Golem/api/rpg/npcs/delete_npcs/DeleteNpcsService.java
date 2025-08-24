@@ -5,7 +5,6 @@ import Golem.api.common.interfaces.StepHandler;
 import Golem.api.common.utils.Session;
 import Golem.api.common.wrappers.MessageCreateEventWrapper;
 import Golem.api.db.NpcsRepository;
-import Golem.api.discordgetaway.DiscordEventHandler;
 import Golem.api.rpg.characters.delete_character.DeleteEntityStepHandler;
 import Golem.api.rpg.dto.ReplyFactory;
 import Golem.api.rpg.npcs.Npcs;
@@ -25,11 +24,6 @@ public class DeleteNpcsService {
   private final NpcsRepository npcsRepository;
   private final Map<Long, Session<Npcs>> deleteSessions = new HashMap<>();
   private final List<StepHandler<Npcs, ContentCarrier>> deletionSteps;
-
-  public List<DiscordEventHandler<?>> getEventHandlers() {
-    return List.of(
-        new DiscordEventHandler<>(ButtonInteractionEvent.class, this::handleMessageDelete));
-  }
 
   public Mono<Void> handleMessageDelete(ButtonInteractionEvent event) {
     long userId = event.getInteraction().getUser().getId().asLong();

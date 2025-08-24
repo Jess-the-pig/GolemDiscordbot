@@ -4,20 +4,14 @@
     xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
- <changeSet id="015_insert_terrains" author="jessthepig">
-        <addColumn tableName="monsters">
-        <column name="id" type="BIGINT" autoIncrement="true">
-            <constraints primaryKey="true" nullable="false"/>
-        </column>
-        <column name="userid" type="BIGINT"/>
-        <column name="username" type="VARCHAR(255)"/>
-                <column name="date_created" type="DATETIME" defaultValueComputed="CURRENT_TIMESTAMP">
+<changeSet id="018_add_timestamps_to_npcs" author="jessthepig">
+    <addColumn tableName="npcs">
+        <column name="date_created" type="DATETIME" defaultValueComputed="CURRENT_TIMESTAMP">
             <constraints nullable="false"/>
         </column>
         <column name="last_updated" type="DATETIME" defaultValueComputed="CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP">
             <constraints nullable="false"/>
         </column>
     </addColumn>
-    </changeSet>
-
+</changeSet>
     </databaseChangeLog>

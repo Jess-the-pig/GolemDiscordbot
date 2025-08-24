@@ -2,41 +2,41 @@
     xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
-    xsi:schemaLocation="
-        http://www.liquibase.org/xml/ns/dbchangelog
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
         http://www.liquibase.org/xml/ns/dbchangelog-ext
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
-    <changeSet id="009_create_campaign_table" author="jessthepig">
-        <createTable tableName="campaign">
+    <changeSet id="019_create_playlist_table" author="jessthepig">
+        <createTable tableName="playlist">
             <column name="id" type="BIGINT" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
 
-            <column name="name" type="VARCHAR(100)">
-                <constraints nullable="false" unique="true"/>
-            </column>
-
-            <column name="campaign_id" type="BIGINT">
+            <column name="name" type="VARCHAR(255)">
                 <constraints nullable="false"/>
             </column>
 
-            <column name="player_creator" type="VARCHAR(100)">
+            <column name="url" type="TEXT">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="userplaylist" type="BIGINT">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="user_id" type="BIGINT">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="date_created" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP">
                 <constraints nullable="false"/>
             </column>
 
-            <column name="dm" type="VARCHAR(100)">
-                <constraints nullable="false"/>
-            </column>
-
-            <column name="date_created" type="DATETIME">
-                <constraints nullable="false"/>
-            </column>
-
-            <column name="last_updated" type="DATETIME">
+            <column name="last_updated" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP">
                 <constraints nullable="false"/>
             </column>
         </createTable>
     </changeSet>
+
 </databaseChangeLog>

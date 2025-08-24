@@ -17,7 +17,7 @@ public interface CharacterRepository extends JpaRepository<Characters, Long> {
    * @param playerName le nom du joueur
    * @return la liste des personnages appartenant au joueur
    */
-  List<Characters> findByPlayerName(String playerName);
+  List<Characters> findByuserId(Long userId);
 
   /**
    * Récupère un personnage par son nom.

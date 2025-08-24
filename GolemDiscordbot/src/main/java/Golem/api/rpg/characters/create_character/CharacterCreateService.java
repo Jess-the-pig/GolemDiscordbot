@@ -43,6 +43,11 @@ public class CharacterCreateService {
         List.of(
             new GenericValidatedStepHandler<Characters, ContentCarrier, String>(
                 carrier -> carrier.getContent(), // 👈 transforme le ContentCarrier en String
+                null,
+                "What's your name?",
+                ""),
+            new GenericValidatedStepHandler<Characters, ContentCarrier, String>(
+                carrier -> carrier.getContent(), // 👈 transforme le ContentCarrier en String
                 Characters::setCharacterName,
                 "What's your race?",
                 ""),
@@ -89,6 +94,9 @@ public class CharacterCreateService {
    * @return Mono<Void> représentant le traitement asynchrone
    */
   public Mono<Void> handleMessageCreate(MessageCreateEvent event) {
+    if (event.getMessage().getAuthor().map(user -> user.isBot()).orElse(false)) {
+      return Mono.empty();
+    }
     long userId = event.getMessage().getUserData().id().asLong();
 
     Session<Characters> session = creationSessions.get(userId);
@@ -102,17 +110,19 @@ public class CharacterCreateService {
     }
 
     StepHandler<Characters, ContentCarrier> handler = creationSteps.get(session.step);
+    ContentCarrier wrappedEvent = new MessageCreateEventWrapper(event);
 
-    ContentCarrier wrappedEvent =
-        new MessageCreateEventWrapper(event); // ⚠️ Bien un WRAPPER pour ton event TEXTE
-
-    Mono<Void> result = handler.handle(wrappedEvent, session);
-
-    if (handler instanceof FinalStepHandler) {
-      creationSessions.remove(userId);
-    }
-
-    return result;
+    return handler
+        .handle(wrappedEvent, session)
+        .then(
+            Mono.defer(
+                () -> {
+                  // Si on est sur le dernier handler, on termine
+                  if (handler instanceof FinalStepHandler) {
+                    creationSessions.remove(userId);
+                  }
+                  return Mono.empty();
+                }));
   }
 
   /**
@@ -126,13 +136,14 @@ public class CharacterCreateService {
 
     Session<Characters> session = new Session<>();
     session.entity = new Characters();
+    session.entity.setUserId(userId); // <-- Ici, on fixe userId dès le début
     session.step = 0;
 
     creationSessions.put(userId, session);
 
-    StepHandler<Characters, ContentCarrier> handler = creationSteps.get(0);
+    StepHandler<Characters, ContentCarrier> firstStep = creationSteps.get(0);
     ContentCarrier wrappedEvent = new ButtonInteractionEventWrapper(event);
 
-    return handler.handle(wrappedEvent, session);
+    return firstStep.handle(wrappedEvent, session);
   }
 }

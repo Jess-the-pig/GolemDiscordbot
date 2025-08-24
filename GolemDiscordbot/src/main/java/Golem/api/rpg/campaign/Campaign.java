@@ -27,7 +27,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "campaigns")
+@Table(name = "campaign")
 public class Campaign implements TimeStampedEntity {
 
   @Id

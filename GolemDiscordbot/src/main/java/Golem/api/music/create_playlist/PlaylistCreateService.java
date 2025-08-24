@@ -5,7 +5,6 @@ import Golem.api.common.interfaces.StepHandler;
 import Golem.api.common.utils.Session;
 import Golem.api.common.wrappers.MessageCreateEventWrapper;
 import Golem.api.db.PlaylistRepository;
-import Golem.api.discordgetaway.DiscordEventHandler;
 import Golem.api.music.Playlist;
 import Golem.api.rpg.dto.ReplyFactory;
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
@@ -65,15 +64,6 @@ public class PlaylistCreateService {
 
     return ReplyFactory.deferAndSend(
         event, "Let's create a playlist. Send track URLs one by one. Type **done** when finished.");
-  }
-
-  /**
-   * Retourne les handlers d'événements Discord pour gérer la création de playlist.
-   *
-   * @return la liste des {@link DiscordEventHandler}
-   */
-  public List<DiscordEventHandler<?>> getEventHandlers() {
-    return List.of(new DiscordEventHandler<>(MessageCreateEvent.class, this::handleMessageCreate));
   }
 
   /**

@@ -7,7 +7,6 @@ import Golem.api.common.utils.GenericValidatedStepHandler;
 import Golem.api.common.utils.Session;
 import Golem.api.common.wrappers.ButtonInteractionEventWrapper;
 import Golem.api.db.MonsterRepository;
-import Golem.api.discordgetaway.DiscordEventHandler;
 import Golem.api.rpg.dto.ReplyFactory;
 import Golem.api.rpg.monsters.Monsters;
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
@@ -99,11 +98,6 @@ public class MonsterCreateService {
                 (m, s) -> {}, // rien à setter
                 monsterRepository::save,
                 "Monster created successfully! 🎉"));
-  }
-
-  public List<DiscordEventHandler<?>> getEventHandlers() {
-    return List.of(
-        new DiscordEventHandler<>(ButtonInteractionEvent.class, this::handleMessageCreate));
   }
 
   public Mono<Void> handleMessageCreate(ButtonInteractionEvent event) {

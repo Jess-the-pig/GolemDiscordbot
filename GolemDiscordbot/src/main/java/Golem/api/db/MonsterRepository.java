@@ -25,5 +25,5 @@ public interface MonsterRepository extends JpaRepository<Monsters, Long> {
    * @param username le nom du joueur
    * @return la liste des monstres appartenant au joueur
    */
-  public List<Monsters> findByPlayerName(String username);
+  public List<Monsters> findByUsername(String username);
 }

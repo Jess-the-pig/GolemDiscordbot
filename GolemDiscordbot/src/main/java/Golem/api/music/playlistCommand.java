@@ -35,13 +35,13 @@ public class playlistCommand implements ICommand, HasButtons {
   private final PlayPlaylistService playPlaylistService;
 
   @Override
-  public List<String> getCustomIds() {
-    return List.of("create", "delete", "play");
+  public String getName() {
+    return "playlist";
   }
 
   @Override
-  public String getName() {
-    return "playlist";
+  public List<String> getCustomIds() {
+    return List.of("playlist_create", "playlist_delete", "playlist_play");
   }
 
   /**
@@ -57,9 +57,9 @@ public class playlistCommand implements ICommand, HasButtons {
         .reply("Que veux-tu faire ?")
         .withComponents(
             ActionRow.of(
-                Button.primary("create", "Créer"),
-                Button.secondary("delete", "Supprimer"),
-                Button.success("play", "Lancer")))
+                Button.primary("playlist_create", "Créer"),
+                Button.secondary("playlist_delete", "Supprimer"),
+                Button.success("playlist_play", "Lancer")))
         .then();
   }
 

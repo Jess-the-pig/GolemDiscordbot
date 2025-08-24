@@ -2,7 +2,6 @@ package Golem.api.rpg.characters.consult_characters;
 
 import Golem.api.common.utils.Session;
 import Golem.api.db.CharacterRepository;
-import Golem.api.discordgetaway.DiscordEventHandler;
 import Golem.api.rpg.characters.Characters;
 import Golem.api.rpg.dto.ReplyFactory;
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
@@ -30,10 +29,6 @@ public class CharacterConsultService {
   private final Map<Long, Session<Characters>> consultSessions = new HashMap<>();
   private final CharacterRepository characterRepository;
 
-  public List<DiscordEventHandler<?>> getEventHandlers() {
-    return List.of(new DiscordEventHandler<>(MessageCreateEvent.class, this::handleMessageConsult));
-  }
-
   /**
    * Démarre une session de consultation pour un utilisateur à partir d'un bouton Discord.
    *
@@ -44,9 +39,8 @@ public class CharacterConsultService {
    */
   public Mono<Void> handleConsult(ButtonInteractionEvent event) {
     long userId = event.getInteraction().getUser().getId().asLong();
-    String username = event.getInteraction().getUser().getUsername();
 
-    log.info("handleConsult called for userId={}, username={}", userId, username);
+    log.info("handleConsult called for userId={}", userId);
 
     // On démarre la session, étape 0 : choisir personnage
     Session<Characters> session = new Session<>();
@@ -55,7 +49,7 @@ public class CharacterConsultService {
 
     consultSessions.put(userId, session);
 
-    List<Characters> allPlayerCharacters = characterRepository.findByPlayerName(username);
+    List<Characters> allPlayerCharacters = characterRepository.findByuserId(userId);
     if (allPlayerCharacters.isEmpty()) {
       return ReplyFactory.deferAndSend(event, "You don't have any characters to consult.");
     }

@@ -2,18 +2,15 @@ package Golem.api.rpg.campaign.add_npc;
 
 import Golem.api.common.interfaces.ContentCarrier;
 import Golem.api.common.interfaces.StepHandler;
+import Golem.api.common.utils.AddNpcsStepHandler;
 import Golem.api.common.utils.FinalStepHandler;
-import Golem.api.common.utils.GenericValidatedStepHandler;
 import Golem.api.common.utils.Session;
-import Golem.api.common.wrappers.ButtonInteractionEventWrapper;
 import Golem.api.common.wrappers.MessageCreateEventWrapper;
 import Golem.api.db.CampaignNpcRepository;
 import Golem.api.db.CampaignRepository;
 import Golem.api.db.NpcsRepository;
-import Golem.api.rpg.campaign.Campaign;
 import Golem.api.rpg.campaign.CampaignNpc;
 import Golem.api.rpg.dto.ReplyFactory;
-import Golem.api.rpg.npcs.Npcs;
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
 import discord4j.core.event.domain.message.MessageCreateEvent;
 import java.util.HashMap;
@@ -40,15 +37,8 @@ public class AddNpcToCampaignService {
   private final NpcsRepository npcsRepository;
 
   private final Map<Long, Session<CampaignNpc>> creationSessions = new HashMap<>();
-  private final List<StepHandler<CampaignNpc, ContentCarrier>> steps;
+  private final List<StepHandler<CampaignNpc, ContentCarrier>> creationSteps;
 
-  /**
-   * Constructeur. Initialise les étapes interactives d'ajout de NPC à une campagne.
-   *
-   * @param campaignRepository repository pour accéder aux campagnes
-   * @param campaignNpcRepository repository pour gérer les associations campagne-NPC
-   * @param npcsRepository repository pour accéder aux NPCs
-   */
   public AddNpcToCampaignService(
       CampaignRepository campaignRepository,
       CampaignNpcRepository campaignNpcRepository,
@@ -57,85 +47,62 @@ public class AddNpcToCampaignService {
     this.campaignNpcRepository = campaignNpcRepository;
     this.npcsRepository = npcsRepository;
 
-    this.steps =
+    this.creationSteps =
         List.of(
-            new GenericValidatedStepHandler<CampaignNpc, ContentCarrier, Long>(
-                carrier -> Long.parseLong(carrier.getContent()), // 👈
-                (npc, id) -> {
-                  Campaign c =
-                      campaignRepository
-                          .findById(id)
-                          .orElseThrow(() -> new IllegalArgumentException("❌ Campaign not found"));
-                  npc.setCampaign(c);
-                },
-                "Quel est l'ID de la campagne ?",
-                "Campagne introuvable. Essaie encore."),
-            new GenericValidatedStepHandler<CampaignNpc, ContentCarrier, String>(
-                carrier -> carrier.getContent(), // 👈 ici, explicite
-                (npc, npcName) -> {
-                  Npcs found = npcsRepository.findByName(npcName);
-                  if (found == null) {
-                    throw new IllegalArgumentException("❌ NPC introuvable");
-                  }
-                  npc.setNpc(found);
-                },
-                "Quel NPC veux-tu ajouter ? (nom exact du NPC)",
-                "NPC introuvable. Essaie encore."),
-            new FinalStepHandler<CampaignNpc, ContentCarrier>(
+            new AddNpcsStepHandler(npcsRepository),
+            new FinalStepHandler<>(
                 (npc, ignored) -> {},
                 campaignNpcRepository::save,
-                "✅ NPC ajouté à la campagne avec succès ! 🎉"));
+                "✅ Tous les NPCs ont été ajoutés à la campagne avec succès ! 🎉"));
   }
 
-  /**
-   * Démarre une nouvelle session d'ajout de NPC à une campagne lorsqu'un utilisateur clique sur un
-   * bouton.
-   *
-   * @param event événement d'interaction bouton Discord
-   * @return un Mono vide une fois l'étape initiale traitée
-   */
+  /** Démarre une nouvelle session d'ajout de NPC à une campagne */
   public Mono<Void> handleAdd(ButtonInteractionEvent event) {
-    long userId = event.getInteraction().getUser().getId().asLong();
+    long channelId = event.getInteraction().getChannelId().asLong();
 
-    Session<CampaignNpc> session = new Session<>();
-    session.entity = new CampaignNpc();
-    session.step = 0;
-
-    creationSessions.put(userId, session);
-
-    StepHandler<CampaignNpc, ContentCarrier> handler = steps.get(0);
-    ContentCarrier wrappedEvent = new ButtonInteractionEventWrapper(event);
-
-    return handler.handle(wrappedEvent, session);
+    return Mono.fromCallable(() -> campaignRepository.findByCampaignId(channelId))
+        .flatMap(
+            optionalCampaign -> {
+              if (optionalCampaign.isEmpty()) {
+                // Répond une seule fois, pas de double reply possible
+                return ReplyFactory.deferAndSend(
+                    event,
+                    "⚠️ Aucune campagne n'est liée à ce salon. Impossible d'ajouter un NPC.");
+              }
+              // Première réponse unique et definitive (deferAndSend)
+              Session<CampaignNpc> session = new Session<>();
+              session.entity = new CampaignNpc();
+              session.entity.setCampaign(optionalCampaign.get());
+              session.step = 0;
+              creationSessions.put(channelId, session);
+              return ReplyFactory.deferAndSend(
+                  event, "✅ Session d'ajout de NPC démarrée ! Quel NPC veux-tu ajouter ?");
+            });
   }
 
-  /**
-   * Gère les messages texte envoyés par un utilisateur durant une session d'ajout de NPC à une
-   * campagne.
-   *
-   * @param event événement de création de message Discord
-   * @return un Mono vide après le traitement de l'étape courante
-   */
+  /** Gère les messages envoyés pendant une session */
   public Mono<Void> handleMessageCreate(MessageCreateEvent event) {
-    long userId = event.getMessage().getUserData().id().asLong();
 
-    Session<CampaignNpc> session = creationSessions.get(userId);
-    if (session == null) {
+    if (event.getMessage().getAuthor().map(user -> user.isBot()).orElse(false)) {
       return Mono.empty();
     }
 
-    if (session.step >= steps.size()) {
-      creationSessions.remove(userId);
-      return ReplyFactory.reply(event, "All done!");
+    long channelId = event.getMessage().getChannelId().asLong();
+
+    // On récupère la session existante
+    Session<CampaignNpc> session = creationSessions.get(channelId);
+    if (session == null) {
+      return Mono.empty(); // aucune session en cours pour ce channel
     }
 
-    StepHandler<CampaignNpc, ContentCarrier> handler = steps.get(session.step);
+    StepHandler<CampaignNpc, ContentCarrier> handler = creationSteps.get(session.step);
     ContentCarrier wrappedEvent = new MessageCreateEventWrapper(event);
 
     Mono<Void> result = handler.handle(wrappedEvent, session);
 
+    // Si on est arrivé à la fin, on nettoie la session
     if (handler instanceof FinalStepHandler) {
-      creationSessions.remove(userId);
+      creationSessions.remove(channelId);
     }
 
     return result;

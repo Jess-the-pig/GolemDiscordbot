@@ -5,7 +5,6 @@ import Golem.api.common.interfaces.StepHandler;
 import Golem.api.common.utils.Session;
 import Golem.api.common.wrappers.MessageCreateEventWrapper;
 import Golem.api.db.CharacterRepository;
-import Golem.api.discordgetaway.DiscordEventHandler;
 import Golem.api.rpg.characters.Characters;
 import Golem.api.rpg.dto.ReplyFactory;
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
@@ -67,14 +66,13 @@ public class CharacterModifyService {
    */
   public Mono<Void> handleModify(ButtonInteractionEvent event) {
     long userId = event.getInteraction().getUser().getId().asLong();
-    String username = event.getInteraction().getUser().getUsername();
 
     Session<Characters> session = new Session<>();
     session.step = 0;
     session.entity = null; // Pas encore choisi
     modificationSessions.put(userId, session);
 
-    List<Characters> allPlayerCharacters = characterRepository.findByPlayerName(username);
+    List<Characters> allPlayerCharacters = characterRepository.findByuserId(userId);
     if (allPlayerCharacters.isEmpty()) {
       return ReplyFactory.deferAndSend(event, "You don't have any characters to modify.");
     }
@@ -89,10 +87,6 @@ public class CharacterModifyService {
         "Let's modify your character!\nHere are your characters:\n"
             + charactersList
             + "\nWhich one do you want to modify?");
-  }
-
-  public List<DiscordEventHandler<?>> getEventHandlers() {
-    return List.of(new DiscordEventHandler<>(MessageCreateEvent.class, this::handleMessageModify));
   }
 
   /**

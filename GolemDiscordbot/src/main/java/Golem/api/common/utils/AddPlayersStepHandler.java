@@ -33,10 +33,9 @@ public class AddPlayersStepHandler implements StepHandler<Campaign, ContentCarri
     }
 
     if ("done".equalsIgnoreCase(content)) {
-      // On termine cette étape
-      session.step += 1;
       return ReplyFactory.reply(
-          event.getDelegate(), "All players added! Campaign creation can now continue.");
+              event.getDelegate(), "All players added! Tap enter to end campaign creation")
+          .doOnSuccess(v -> session.step += 1);
     }
 
     // Split par virgules pour gérer plusieurs joueurs à la fois

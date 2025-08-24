@@ -4,7 +4,6 @@ import Golem.api.common.interfaces.ContentCarrier;
 import Golem.api.common.interfaces.StepHandler;
 import Golem.api.common.utils.Session;
 import Golem.api.db.PlaylistRepository;
-import Golem.api.discordgetaway.DiscordEventHandler;
 import Golem.api.music.Playlist;
 import Golem.api.music.play_song.QueuedAudioProvider;
 import Golem.api.rpg.dto.ReplyFactory;
@@ -65,15 +64,6 @@ public class PlayPlaylistService {
 
     return ReplyFactory.deferAndSend(
         event, "Which playlist do you want to play?\nHere are your playlists:\n" + playlistList);
-  }
-
-  /**
-   * Retourne les handlers d'événements Discord pour gérer la lecture de playlists.
-   *
-   * @return la liste des {@link DiscordEventHandler}
-   */
-  public List<DiscordEventHandler<?>> getEventHandlers() {
-    return List.of(new DiscordEventHandler<>(MessageCreateEvent.class, this::handleMessageSelect));
   }
 
   /**

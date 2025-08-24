@@ -5,7 +5,6 @@ import Golem.api.common.interfaces.StepHandler;
 import Golem.api.common.utils.Session;
 import Golem.api.common.wrappers.MessageCreateEventWrapper;
 import Golem.api.db.PlaylistRepository;
-import Golem.api.discordgetaway.DiscordEventHandler;
 import Golem.api.music.Playlist;
 import Golem.api.rpg.characters.delete_character.DeleteEntityStepHandler;
 import Golem.api.rpg.dto.ReplyFactory;
@@ -40,16 +39,6 @@ public class PlaylistDeleteService {
         List.of(
             new DeleteEntityStepHandler<>(
                 name -> playlistRepository.findByName(name), playlistRepository::delete));
-  }
-
-  /**
-   * Retourne les handlers d'événements Discord pour gérer la suppression de playlists.
-   *
-   * @return la liste des {@link DiscordEventHandler}
-   */
-  public List<DiscordEventHandler<?>> getEventHandlers() {
-    return List.of(
-        new DiscordEventHandler<>(ButtonInteractionEvent.class, this::handleMessageDelete));
   }
 
   /**
