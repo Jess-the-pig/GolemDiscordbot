@@ -37,9 +37,9 @@
         <constraints nullable="true"/></column>
 
 
-        <column name="datecreated" type="DATETIME">
+        <column name="date_created" type="DATETIME">
         <constraints nullable="false"/></column>
-        <column name="lastupdated" type="DATETIME">
+        <column name="last_updated" type="DATETIME">
         <constraints nullable="false"/></column>
 
 

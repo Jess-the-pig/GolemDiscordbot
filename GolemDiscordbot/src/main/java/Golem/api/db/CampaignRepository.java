@@ -1,8 +1,6 @@
 package Golem.api.db;
 
 import Golem.api.rpg.campaign.Campaign;
-import Golem.api.rpg.campaign.CampaignNpc;
-import java.util.List;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -28,11 +26,4 @@ public interface CampaignRepository extends JpaRepository<Campaign, Long> {
    * @return un {@link Optional} contenant la campagne si trouvée
    */
   public Optional<Campaign> findByCampaignId(Long campaignId);
-
-  /**
-   * Récupère la liste des {@link CampaignNpc} associés à toutes les campagnes.
-   *
-   * @return la liste des NPCs liés aux campagnes
-   */
-  public List<CampaignNpc> findCampaignNpcs();
 }

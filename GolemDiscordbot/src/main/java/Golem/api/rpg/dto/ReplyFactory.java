@@ -46,4 +46,23 @@ public class ReplyFactory {
                 .flatMap(channel -> channel.createMessage(message))
                 .then());
   }
+
+  public static Mono<Void> replyEphemeral(Object event, String message) {
+    if (event instanceof ButtonInteractionEvent) {
+      ButtonInteractionEvent btn = (ButtonInteractionEvent) event;
+      return btn.deferReply()
+          .withEphemeral(true) // ⚡ affiche "thinking"
+          .then(btn.getInteraction().getChannel().flatMap(ch -> ch.createMessage(message)).then());
+    } else if (event instanceof ChatInputInteractionEvent) {
+      ChatInputInteractionEvent slash = (ChatInputInteractionEvent) event;
+      return slash
+          .deferReply()
+          .withEphemeral(true)
+          .then(
+              slash.getInteraction().getChannel().flatMap(ch -> ch.createMessage(message)).then());
+    } else {
+      return Mono.error(
+          new IllegalArgumentException("Unsupported event type: " + event.getClass()));
+    }
+  }
 }

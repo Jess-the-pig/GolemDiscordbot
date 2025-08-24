@@ -41,7 +41,7 @@ public class encounterCommand implements ICommand, HasOptions {
             "terrain", ApplicationCommandInteractionOptionValue::asString, "forest");
     String enemySizeStr =
         reader.getOptionOrDefault(
-            "enemy_size", ApplicationCommandInteractionOptionValue::asString, "SMALL");
+            "enemysize", ApplicationCommandInteractionOptionValue::asString, "SMALL");
 
     EncounterDifficulty encounterDifficulty =
         EncounterDifficulty.valueOf(difficultyStr.toUpperCase());
@@ -63,7 +63,7 @@ public class encounterCommand implements ICommand, HasOptions {
                 DiscordOptionType.STRING, "terrain", "plains, forest , swamp or other?", true),
             ApplicationCommandOptionDataFactory.option(
                 DiscordOptionType.STRING,
-                "enemy size",
+                "enemysize",
                 "champion, escoude, detachement or other ?",
                 true)));
   }

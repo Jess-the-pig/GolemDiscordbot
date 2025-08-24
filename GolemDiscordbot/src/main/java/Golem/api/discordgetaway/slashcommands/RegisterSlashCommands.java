@@ -2,7 +2,6 @@ package Golem.api.discordgetaway.slashcommands;
 
 import Golem.api.common.interfaces.HasOptions;
 import Golem.api.common.interfaces.ICommand;
-import Golem.api.music.play_song.playCommand;
 import discord4j.core.GatewayDiscordClient;
 import discord4j.discordjson.json.ApplicationCommandRequest;
 import java.util.Map;
@@ -18,7 +17,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class RegisterSlashCommands {
 
-  private static final Logger log = LoggerFactory.getLogger(playCommand.class); // 👈 Logger manuel
+  private static final Logger log =
+      LoggerFactory.getLogger(RegisterSlashCommands.class); // 👈 Logger manuel
 
   /**
    * Enregistre les commandes slash auprès de Discord pour une guild spécifique.

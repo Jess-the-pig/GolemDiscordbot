@@ -5,7 +5,9 @@ import Golem.api.common.interfaces.ICommand;
 import Golem.api.rpg.campaign.add_npc.AddNpcToCampaignService;
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
 import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
+import discord4j.core.object.component.ActionRow;
 import discord4j.core.object.component.Button;
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
@@ -36,9 +38,9 @@ public class campaignCommand implements ICommand, HasButtons {
   public Mono<Void> handleButtonInteraction(ButtonInteractionEvent event) {
     String customId = event.getCustomId();
     switch (customId) {
-      case "character:create":
-        return campaignService.handleCreate(event);
-      case "npc:add": // 👈 on route vers CampaignService
+      case "campaign_create":
+        return campaignService.startCampaignCreation(event);
+      case "npc_add": // 👈 on route vers CampaignService
         return addNpcToCampaignService.handleAdd(event);
       default:
         return Mono.empty();
@@ -48,6 +50,11 @@ public class campaignCommand implements ICommand, HasButtons {
   @Override
   public String getName() {
     return "campaign";
+  }
+
+  @Override
+  public List<String> getCustomIds() {
+    return List.of("campaign_create", "npc_add");
   }
 
   /**
@@ -62,9 +69,9 @@ public class campaignCommand implements ICommand, HasButtons {
     return event
         .reply("Que veux-tu faire ?")
         .withComponents(
-            discord4j.core.object.component.ActionRow.of(
-                Button.primary("character:create", "Create a campaign"),
-                Button.primary("npc:add", "Add NPC to campaign") // 👈 nouveau bouton
+            ActionRow.of(
+                Button.primary("campaign_create", "Create a campaign"),
+                Button.primary("npc_add", "Add NPC to campaign") // 👈 nouveau bouton
                 ))
         .then();
   }

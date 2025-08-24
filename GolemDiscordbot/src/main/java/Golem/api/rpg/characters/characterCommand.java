@@ -7,7 +7,9 @@ import Golem.api.rpg.characters.create_character.CharacterCreateService;
 import Golem.api.rpg.characters.modify_character.CharacterModifyService;
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
 import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
+import discord4j.core.object.component.ActionRow;
 import discord4j.core.object.component.Button;
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
@@ -46,11 +48,16 @@ public class characterCommand implements ICommand, HasButtons {
     return event
         .reply("Que veux-tu faire ?")
         .withComponents(
-            discord4j.core.object.component.ActionRow.of(
-                Button.primary("character:create", "Créer"),
-                Button.secondary("character:modify", "Modifier"),
-                Button.success("character:consult", "Consulter")))
+            ActionRow.of(
+                Button.primary("create", "Créer"),
+                Button.secondary("modify", "Modifier"),
+                Button.success("consult", "Consulter")))
         .then();
+  }
+
+  @Override
+  public List<String> getCustomIds() {
+    return List.of("create", "modify", "consult");
   }
 
   /**
@@ -69,11 +76,11 @@ public class characterCommand implements ICommand, HasButtons {
     String customId = event.getCustomId();
 
     switch (customId) {
-      case "character:create":
+      case "create":
         return characterCreateService.startCreationSession(event);
-      case "character:modify":
+      case "modify":
         return characterModifyService.handleModify(event);
-      case "character:consult":
+      case "consult":
         return characterConsultService.handleConsult(event);
       default:
         return Mono.empty();

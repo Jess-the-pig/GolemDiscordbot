@@ -34,6 +34,7 @@ public class Playlist implements TimeStampedEntity {
 
   private List<String> url;
   private Long userplaylist;
+  private Long userId;
 
   public void setUserPlaylist(Long userId) {
     this.userplaylist = userId;

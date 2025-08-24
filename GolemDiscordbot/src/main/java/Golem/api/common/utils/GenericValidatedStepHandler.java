@@ -23,18 +23,10 @@ public class GenericValidatedStepHandler<T extends TimeStampedEntity, E extends 
     implements StepHandler<T, E> {
 
   private final Function<E, R> validator;
-  private final BiConsumer<T, R> setter;
+  private final BiConsumer<T, R> setter; // Peut être null
   private final String nextPrompt;
   private final String errorPrompt;
 
-  /**
-   * Crée un gestionnaire d'étape avec validation.
-   *
-   * @param validator la fonction de validation prenant l'événement
-   * @param setter la fonction appliquant la valeur validée à l'entité
-   * @param nextPrompt le message à envoyer en cas de succès
-   * @param errorPrompt le message à envoyer en cas d'erreur
-   */
   public GenericValidatedStepHandler(
       Function<E, R> validator, BiConsumer<T, R> setter, String nextPrompt, String errorPrompt) {
     this.validator = validator;
@@ -43,20 +35,22 @@ public class GenericValidatedStepHandler<T extends TimeStampedEntity, E extends 
     this.errorPrompt = errorPrompt;
   }
 
-  /**
-   * Traite l'étape en appliquant la validation et en envoyant le message approprié.
-   *
-   * @param event l'événement contenant le contenu
-   * @param session la session contenant l'entité et l'état de l'étape
-   * @return un {@link Mono} indiquant la complétion du traitement
-   */
   @Override
   public Mono<Void> handle(E event, Session<T> session) {
     try {
-      R value = validator.apply(event); // ⚡ on passe tout le carrier
-      setter.accept(session.entity, value);
+      R value = validator.apply(event);
+
+      if (setter != null) {
+        setter.accept(session.entity, value); // Applique seulement si setter défini
+      }
+
       session.step += 1;
-      return ReplyFactory.reply(event.getDelegate(), nextPrompt);
+
+      if (nextPrompt != null && !nextPrompt.isEmpty()) {
+        return ReplyFactory.reply(event.getDelegate(), nextPrompt);
+      }
+
+      return Mono.empty();
     } catch (Exception e) {
       return ReplyFactory.reply(event.getDelegate(), errorPrompt);
     }

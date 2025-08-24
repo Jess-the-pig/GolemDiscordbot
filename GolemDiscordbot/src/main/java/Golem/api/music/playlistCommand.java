@@ -9,6 +9,7 @@ import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
 import discord4j.core.event.domain.interaction.ChatInputInteractionEvent;
 import discord4j.core.object.component.ActionRow;
 import discord4j.core.object.component.Button;
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
@@ -34,6 +35,11 @@ public class playlistCommand implements ICommand, HasButtons {
   private final PlayPlaylistService playPlaylistService;
 
   @Override
+  public List<String> getCustomIds() {
+    return List.of("create", "delete", "play");
+  }
+
+  @Override
   public String getName() {
     return "playlist";
   }
@@ -51,9 +57,9 @@ public class playlistCommand implements ICommand, HasButtons {
         .reply("Que veux-tu faire ?")
         .withComponents(
             ActionRow.of(
-                Button.primary("Create", "Créer"),
-                Button.secondary("Delete", "Supprimer"),
-                Button.success("Play", "Lancer")))
+                Button.primary("create", "Créer"),
+                Button.secondary("delete", "Supprimer"),
+                Button.success("play", "Lancer")))
         .then();
   }
 
@@ -74,11 +80,11 @@ public class playlistCommand implements ICommand, HasButtons {
     String customId = event.getCustomId();
 
     switch (customId) {
-      case "Create":
+      case "create":
         return playlistCreateService.handleCreate(event);
-      case "Delete":
+      case "delete":
         return playlistDeleteService.handleMessageDelete(event);
-      case "Play":
+      case "play":
         return playPlaylistService.playPlaylist(event);
       default:
         return Mono.empty();

@@ -10,6 +10,7 @@ public class Session<T> {
   public int step;
   public T entity;
   public String lastField;
+  public String data;
 
   /**
    * Crée une session avec des valeurs initiales.

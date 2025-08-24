@@ -1,11 +1,10 @@
 package Golem.api.rpg.encounters;
 
-import Golem.api.common.interfaces.TimeStampedEntity;
 import Golem.api.rpg.campaign.Campaign;
 import Golem.api.rpg.characters.Characters;
 import Golem.api.rpg.monsters.Monsters;
 import Golem.api.rpg.npcs.Npcs;
-import jakarta.persistence.ElementCollection;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,10 +13,10 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Map;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -39,7 +38,8 @@ public class Encounters {
 
   private Boolean isFinished = false;
 
-  @ElementCollection private List<Map<Long, TimeStampedEntity>> initiative;
+  @OneToMany(mappedBy = "encounter", cascade = CascadeType.ALL, orphanRemoval = true)
+  private List<Initiative> initiative;
 
   @ManyToMany
   @JoinTable(

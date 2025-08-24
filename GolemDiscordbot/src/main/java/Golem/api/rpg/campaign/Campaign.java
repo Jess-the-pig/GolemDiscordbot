@@ -1,5 +1,6 @@
 package Golem.api.rpg.campaign;
 
+import Golem.api.common.interfaces.TimeStampedEntity;
 import Golem.api.rpg.characters.Characters;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -27,7 +28,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name = "campaigns")
-public class Campaign {
+public class Campaign implements TimeStampedEntity {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)

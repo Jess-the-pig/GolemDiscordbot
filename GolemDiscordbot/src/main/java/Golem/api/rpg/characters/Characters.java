@@ -49,7 +49,10 @@ public class Characters implements Combatant, TimeStampedEntity {
   @JoinColumn(name = "campaign_id")
   private Campaign campaign;
 
+  @Column(name = "date_created")
   private LocalDateTime dateCreated;
+
+  @Column(name = "last_updated")
   private LocalDateTime lastUpdated;
 
   @Override
