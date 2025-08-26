@@ -12,91 +12,89 @@ import Golem.api.rpg.characters.modify_character.SelectEntityStepHandler;
 import Golem.api.rpg.characters.modify_character.UpdateFieldStepHandler;
 import Golem.api.rpg.dto.ReplyFactory;
 import Golem.api.rpg.npcs.Npcs;
+
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
 import discord4j.core.event.domain.message.MessageCreateEvent;
+
+import lombok.extern.slf4j.Slf4j;
+
+import org.springframework.stereotype.Service;
+
+import reactor.core.publisher.Mono;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.BiConsumer;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
-import reactor.core.publisher.Mono;
 
 @Service
 @Slf4j
 public class NpcsModifyService {
-  private final NpcsRepository npcsRepository;
-  private final CampaignNpcRepository campaignNpcRepository;
+    private final NpcsRepository npcsRepository;
+    private final CampaignNpcRepository campaignNpcRepository;
 
-  private final Map<Long, Session<Npcs>> modificationSessions = new HashMap<>();
+    private final Map<Long, Session<Npcs>> modificationSessions = new HashMap<>();
 
-  // Setters adaptés à l'entité Npcs
-  private final Map<String, BiConsumer<Npcs, Object>> npcsSetters = NpcsFieldSetters.SETTERS;
+    // Setters adaptés à l'entité Npcs
+    private final Map<String, BiConsumer<Npcs, Object>> npcsSetters = NpcsFieldSetters.SETTERS;
 
-  private final List<StepHandler<Npcs, ContentCarrier>> modificationSteps;
+    private final List<StepHandler<Npcs, ContentCarrier>> modificationSteps;
 
-  public NpcsModifyService(
-      NpcsRepository npcsRepository, CampaignNpcRepository campaignNpcRepository) {
-    this.npcsRepository = npcsRepository;
-    this.campaignNpcRepository = campaignNpcRepository;
+    public NpcsModifyService(
+            NpcsRepository npcsRepository, CampaignNpcRepository campaignNpcRepository) {
+        this.npcsRepository = npcsRepository;
+        this.campaignNpcRepository = campaignNpcRepository;
 
-    this.modificationSteps =
-        List.of(
-            new SelectEntityStepHandler<>(npcsRepository::findByName),
-            new ChooseFieldStepHandler<>(name -> npcsRepository.findByName(name), npcsSetters),
-            new UpdateFieldStepHandler<>(npcsRepository::save, npcsSetters));
-  }
-
-  public Mono<Void> handleModify(ButtonInteractionEvent event, Long campaignId) {
-    long userId = event.getInteraction().getUser().getId().asLong();
-
-    Session<Npcs> session = new Session<>();
-    session.step = 0;
-    session.entity = null;
-    modificationSessions.put(userId, session);
-
-    List<Npcs> npcs;
-
-    if (campaignId != null) {
-      // Récupère uniquement les NPC liés à la campagne
-      npcs =
-          campaignNpcRepository.findByCampaignId(campaignId).stream()
-              .map(CampaignNpc::getNpc)
-              .toList();
-    } else {
-      // Sinon : tous les NPC universels accessibles au joueur
-      npcs =
-          npcsRepository.findAll().stream()
-              .filter(m -> m.getUserid() == null || m.getUserid().equals(userId))
-              .toList();
+        this.modificationSteps =
+                List.of(
+                        new SelectEntityStepHandler<>(npcsRepository::findByName),
+                        new ChooseFieldStepHandler<>(
+                                name -> npcsRepository.findByName(name), npcsSetters),
+                        new UpdateFieldStepHandler<>(npcsRepository::save, npcsSetters));
     }
 
-    if (npcs.isEmpty()) {
-      return event.reply("❌ Aucun PNJ trouvé.").withEphemeral(true).then();
+    public Mono<Void> handleModify(ButtonInteractionEvent event) {
+        long userId = event.getInteraction().getUser().getId().asLong();
+
+        Session<Npcs> session = new Session<>();
+        session.step = 0;
+        session.entity = null;
+        modificationSessions.put(userId, session);
+
+        List<Npcs> npcs;
+
+        // Sinon : tous les NPC universels accessibles au joueur
+        npcs =
+                npcsRepository.findAll().stream()
+                        .filter(m -> m.getUserid() == null || m.getUserid().equals(userId))
+                        .toList();
+
+        if (npcs.isEmpty()) {
+            return event.reply("❌ Aucun PNJ trouvé.").withEphemeral(true).then();
+        }
+
+        StringBuilder npcsList = new StringBuilder();
+        npcs.forEach(m -> npcsList.append("- ").append(m.getName()).append("\n"));
+
+        return ReplyFactory.deferAndSend(
+                event, "Voici les PNJ disponibles :\n" + npcsList + "\nLequel veux-tu modifier ?");
     }
 
-    StringBuilder npcsList = new StringBuilder();
-    npcs.forEach(m -> npcsList.append("- ").append(m.getName()).append("\n"));
+    public Mono<Void> handleMessageModify(MessageCreateEvent event) {
+        long userId = event.getMessage().getAuthor().map(u -> u.getId().asLong()).orElse(-1L);
+        if (userId == -1) return Mono.empty();
 
-    return ReplyFactory.deferAndSend(
-        event, "Voici les PNJ disponibles :\n" + npcsList + "\nLequel veux-tu modifier ?");
-  }
+        Session<Npcs> session = modificationSessions.get(userId);
+        if (session == null) return Mono.empty();
 
-  public Mono<Void> handleMessageModify(MessageCreateEvent event) {
-    long userId = event.getMessage().getAuthor().map(u -> u.getId().asLong()).orElse(-1L);
-    if (userId == -1) return Mono.empty();
+        if (session.step >= modificationSteps.size()) {
+            modificationSessions.remove(userId);
+            return ReplyFactory.reply(event, "✅ Modification terminée !");
+        }
 
-    Session<Npcs> session = modificationSessions.get(userId);
-    if (session == null) return Mono.empty();
+        StepHandler<Npcs, ContentCarrier> handler = modificationSteps.get(session.step);
+        ContentCarrier carrier = new MessageCreateEventWrapper(event);
 
-    if (session.step >= modificationSteps.size()) {
-      modificationSessions.remove(userId);
-      return ReplyFactory.reply(event, "✅ Modification terminée !");
+        return handler.handle(carrier, session);
     }
-
-    StepHandler<Npcs, ContentCarrier> handler = modificationSteps.get(session.step);
-    ContentCarrier carrier = new MessageCreateEventWrapper(event);
-
-    return handler.handle(carrier, session);
-  }
 }

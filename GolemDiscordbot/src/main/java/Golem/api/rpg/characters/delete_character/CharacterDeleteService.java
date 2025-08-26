@@ -1,5 +1,11 @@
 package Golem.api.rpg.characters.delete_character;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.stereotype.Service;
+
 import Golem.api.common.interfaces.ContentCarrier;
 import Golem.api.common.interfaces.StepHandler;
 import Golem.api.common.utils.Session;
@@ -9,11 +15,7 @@ import Golem.api.rpg.characters.Characters;
 import Golem.api.rpg.dto.ReplyFactory;
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
 import discord4j.core.event.domain.message.MessageCreateEvent;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
 /**
@@ -76,7 +78,7 @@ public class CharacterDeleteService {
                 characterRepository::delete));
   }
 
-  public Mono<Void> handleMessageModify(MessageCreateEvent event) {
+  public Mono<Void> handleMessageDelete(MessageCreateEvent event) {
     long userId = event.getMessage().getAuthor().map(u -> u.getId().asLong()).orElse(-1L);
     if (userId == -1) return Mono.empty();
 
