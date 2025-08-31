@@ -102,7 +102,9 @@ public class DiscordBotService {
 
             // Enregistre toutes les commandes slash
             registerSlashCommands.registerSlashCommands(client, dispatcher.getCommands());
-
+            // Encounters
+            client.on(MessageCreateEvent.class, playlistCreateService::handleMessageCreate)
+                    .subscribe();
             // Playlists
             client.on(MessageCreateEvent.class, playlistCreateService::handleMessageCreate)
                     .subscribe();
@@ -132,6 +134,7 @@ public class DiscordBotService {
 
             client.on(MessageCreateEvent.class, npcsModifyService::handleMessageModify).subscribe();
             // Campaign
+            client.on(MessageCreateEvent.class, campaignService::handleCampaignMessage).subscribe();
             client.on(MessageCreateEvent.class, addNpcToCampaignService::handleMessageCreate)
                     .subscribe();
             client.on(MessageCreateEvent.class, playPlaylistService::handleMessageSelect)

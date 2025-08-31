@@ -2,74 +2,77 @@ package Golem.api.rpg.monsters;
 
 import Golem.api.common.entity.Combatant;
 import Golem.api.common.interfaces.TimeStampedEntity;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import java.time.LocalDateTime;
+
 import lombok.Getter;
 import lombok.Setter;
+
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "monsters")
 @Getter
 @Setter
 public class Monsters implements Combatant, TimeStampedEntity {
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-  private Long userid;
-  private String username;
+    private Long userid;
+    private String username;
 
-  private String name;
-  private String url;
-  // TODO: adapter les valeurs dans le dnd_monsters.csv
-  private String cr;
-  private String type;
-  private String size;
-  private int ac;
-  private int hp;
-  private String speed;
-  private String align;
-  private boolean legendary;
-  private String source;
+    private String name;
+    private String url;
+    // TODO: adapter les valeurs dans le dnd_monsters.csv
+    private String cr;
+    private String type;
+    private String size;
+    private int ac;
+    private int hp;
+    private String speed;
+    private String align;
+    private String legendary;
+    private String source;
 
-  @Column(name = "str")
-  private int strScore;
+    @Column(name = "str")
+    private int strScore;
 
-  @Column(name = "dex")
-  private int dexScore;
+    @Column(name = "dex")
+    private int dexScore;
 
-  @Column(name = "con")
-  private int conScore;
+    @Column(name = "con")
+    private int conScore;
 
-  @Column(name = "int")
-  private int intScore;
+    @Column(name = "int")
+    private int intScore;
 
-  @Column(name = "wis")
-  private int wisScore;
+    @Column(name = "wis")
+    private int wisScore;
 
-  @Column(name = "cha")
-  private int chaScore;
+    @Column(name = "cha")
+    private int chaScore;
 
-  private LocalDateTime dateCreated;
-  private LocalDateTime lastUpdated;
+    private LocalDateTime dateCreated;
+    private LocalDateTime lastUpdated;
 
-  @Override
-  public String getCombatantName() {
-    return name;
-  }
+    @Override
+    public String getCombatantName() {
+        return name;
+    }
 
-  @Override
-  public void setDateCreated(LocalDateTime date) {
-    this.dateCreated = date;
-  }
+    @Override
+    public void setDateCreated(LocalDateTime date) {
+        this.dateCreated = date;
+    }
 
-  @Override
-  public void setLastUpdated(LocalDateTime date) {
-    this.lastUpdated = date;
-  }
+    @Override
+    public void setLastUpdated(LocalDateTime date) {
+        this.lastUpdated = date;
+    }
 }

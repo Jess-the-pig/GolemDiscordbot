@@ -2,6 +2,7 @@ package Golem.api.rpg.campaign;
 
 import Golem.api.common.interfaces.TimeStampedEntity;
 import Golem.api.rpg.characters.Characters;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,10 +11,12 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-import java.time.LocalDateTime;
-import java.util.List;
+
 import lombok.Getter;
 import lombok.Setter;
+
+import java.time.LocalDateTime;
+import java.util.List;
 
 /**
  * Entité représentant une campagne RPG.
@@ -30,25 +33,25 @@ import lombok.Setter;
 @Table(name = "campaign")
 public class Campaign implements TimeStampedEntity {
 
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-  private String name;
+    private String name;
 
-  private Long campaignId;
+    private Long campaignId;
 
-  private String playerCreator;
+    private String playerCreator;
 
-  private String dm;
+    private String dm;
 
-  @OneToMany
-  @JoinColumn(name = "campaign_id")
-  private List<Characters> characters;
+    @OneToMany
+    @JoinColumn(name = "campaign_id")
+    private List<Characters> characters;
 
-  @OneToMany(mappedBy = "campaign", cascade = CascadeType.ALL, orphanRemoval = true)
-  private List<CampaignNpc> campaignNpcs;
+    @OneToMany(mappedBy = "campaign", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<CampaignNpc> campaignNpcs;
 
-  private LocalDateTime dateCreated;
-  private LocalDateTime lastUpdated;
+    private LocalDateTime dateCreated;
+    private LocalDateTime lastUpdated;
 }

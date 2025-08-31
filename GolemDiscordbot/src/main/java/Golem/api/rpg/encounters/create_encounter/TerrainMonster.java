@@ -15,11 +15,11 @@ import lombok.Setter;
 @Setter
 @Table(name = "terrainmonsters")
 public class TerrainMonster {
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-  @ManyToOne private Terrains terrain;
+    @ManyToOne private Terrains terrain;
 
-  @ManyToOne private Monsters monster;
+    @ManyToOne private Monsters monster;
 }
