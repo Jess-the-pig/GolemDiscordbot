@@ -36,7 +36,7 @@
         <column name="level" type="VARCHAR(100)">
             <constraints nullable="true"/>
         </column>
-        <column name="range" type="VARCHAR(100)">
+        <column name="range" type="VARCHAR(255)">
             <constraints nullable="true"/>
         </column>
         <column name="range_area" type="VARCHAR(100)">

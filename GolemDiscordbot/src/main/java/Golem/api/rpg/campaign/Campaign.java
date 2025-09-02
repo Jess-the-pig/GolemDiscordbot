@@ -4,6 +4,7 @@ import Golem.api.common.interfaces.TimeStampedEntity;
 import Golem.api.rpg.characters.Characters;
 
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -39,6 +40,7 @@ public class Campaign implements TimeStampedEntity {
 
     private String name;
 
+    @Column(name = "campaign_id")
     private Long campaignId;
 
     private String playerCreator;
@@ -46,7 +48,7 @@ public class Campaign implements TimeStampedEntity {
     private String dm;
 
     @OneToMany
-    @JoinColumn(name = "campaign_id")
+    @JoinColumn(name = "campaign")
     private List<Characters> characters;
 
     @OneToMany(mappedBy = "campaign", cascade = CascadeType.ALL, orphanRemoval = true)
