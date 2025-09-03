@@ -17,19 +17,19 @@
         <column name="align" type="VARCHAR(100)"/>
         <column name="legendary" type="VARCHAR(100)"/>
         <column name="source" type="VARCHAR(100)"/>
-        <column name="str" type="VARCHAR(100)"/>
-        <column name="dex" type="VARCHAR(100)"/>
-        <column name="con" type="VARCHAR(100)"/>
-        <column name="int" type="VARCHAR(100)"/>
-        <column name="wis" type="VARCHAR(100)"/>
-        <column name="cha" type="VARCHAR(100)"/>
+        <column name="str" type="INTEGER"/>
+        <column name="dex" type="INTEGER"/>
+        <column name="con" type="INTEGER"/>
+        <column name="int" type="INTEGER"/>
+        <column name="wis" type="INTEGER"/>
+        <column name="cha" type="INTEGER"/>
     </createTable>
 </changeSet>
 
     <changeSet id="002_load_monsters" author="jessthepig">
         <loadData
             tableName="monsters"
-            file="db/changelog/migrations/data/dnd_monsters.csv"
+            file="db/changelog/migrations/data/dnd_monster.csv"
             separator=","
             encoding="UTF-8"/>
     </changeSet>

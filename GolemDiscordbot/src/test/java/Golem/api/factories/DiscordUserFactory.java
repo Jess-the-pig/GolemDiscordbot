@@ -1,11 +1,10 @@
 package Golem.api.factories;
 
+import org.mockito.Mockito;
+
 import discord4j.common.util.Snowflake;
 import discord4j.core.object.entity.User;
-
 import net.datafaker.Faker;
-
-import org.mockito.Mockito;
 
 public class DiscordUserFactory {
 
@@ -16,16 +15,19 @@ public class DiscordUserFactory {
     }
 
     public static User createMockUser(String username, long id) {
-        User mockUser = Mockito.mock(User.class);
+        // Création d’un mock lenient
+        User mockUser = Mockito.mock(User.class, Mockito.withSettings().lenient());
 
         // Valeurs de base
-        Mockito.when(mockUser.getUsername()).thenReturn(username);
-        Mockito.when(mockUser.getId()).thenReturn(Snowflake.of(id));
-        Mockito.when(mockUser.getMention()).thenReturn("<@" + id + ">");
-        Mockito.when(mockUser.isBot()).thenReturn(false);
+        Mockito.lenient().when(mockUser.getUsername()).thenReturn(username);
+        Mockito.lenient().when(mockUser.getId()).thenReturn(Snowflake.of(id));
 
-        // Avatar fictif
-        Mockito.when(mockUser.getAvatarUrl())
+        // Ces valeurs ne sont peut-être pas utilisées dans tes tests,
+        // mais on les garde lenient pour éviter l’exception
+        Mockito.lenient().when(mockUser.getMention()).thenReturn("<@" + id + ">");
+        Mockito.lenient().when(mockUser.isBot()).thenReturn(false);
+        Mockito.lenient()
+                .when(mockUser.getAvatarUrl())
                 .thenReturn("https://cdn.discordapp.com/avatars/" + id + "/avatar.png");
 
         return mockUser;

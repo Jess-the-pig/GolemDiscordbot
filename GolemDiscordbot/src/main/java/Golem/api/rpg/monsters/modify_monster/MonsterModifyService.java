@@ -1,5 +1,12 @@
 package Golem.api.rpg.monsters.modify_monster;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.function.BiConsumer;
+
+import org.springframework.stereotype.Service;
+
 import Golem.api.common.interfaces.ContentCarrier;
 import Golem.api.common.interfaces.StepHandler;
 import Golem.api.common.utils.Session;
@@ -10,20 +17,10 @@ import Golem.api.rpg.characters.modify_character.SelectEntityStepHandler;
 import Golem.api.rpg.characters.modify_character.UpdateFieldStepHandler;
 import Golem.api.rpg.dto.ReplyFactory;
 import Golem.api.rpg.monsters.Monsters;
-
 import discord4j.core.event.domain.interaction.ButtonInteractionEvent;
 import discord4j.core.event.domain.message.MessageCreateEvent;
-
 import lombok.extern.slf4j.Slf4j;
-
-import org.springframework.stereotype.Service;
-
 import reactor.core.publisher.Mono;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.function.BiConsumer;
 
 @Service
 @Slf4j

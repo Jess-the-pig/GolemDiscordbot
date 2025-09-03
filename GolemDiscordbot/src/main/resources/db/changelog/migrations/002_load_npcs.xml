@@ -24,8 +24,8 @@
         <column name="class_other" type="VARCHAR(255)"/>
         <column name="subclass_other" type="VARCHAR(255)"/>
         <column name="total_level" type="INT"/>
-        <column name="feats" type="VARCHAR(1024)"/>
-        <column name="inventory" type="LONGTEXT"/>
+        <column name="feats" type="VARCHAR(2000)"/>
+        <column name="inventory" type="VARCHAR(2000)"/>
         <column name="date_modified" type="VARCHAR(255)"/>
         <column name="notes_len" type="INT"/>
         <column name="gold" type="DECIMAL(10,2)"/>

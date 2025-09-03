@@ -1,0 +1,21 @@
+name,url,cr,type,size,ac,hp,speed,align,legendary,source,str,dex,con,int,wis,cha
+Goblin,http://example.com/goblin,1/4,Humanoid,Small,15,7,30 ft,Neutral Evil,No,Monster Manual,8,14,10,10,8,8
+Orc,http://example.com/orc,1/2,Humanoid,Medium,13,15,30 ft,Chaotic Evil,No,Monster Manual,16,12,16,7,11,10
+Kobold,http://example.com/kobold,1/8,Humanoid,Small,12,5,30 ft,Lawful Evil,No,Monster Manual,7,15,9,8,7,8
+Troll,http://example.com/troll,5, Giant,Large,15,84,30 ft,Chaotic Evil,No,Monster Manual,18,13,20,7,9,7
+Dragon Wyrmling,http://example.com/dragon_wyrmling,2,Dragon,Medium,17,45,30 ft,Chaotic Good,No,Monster Manual,17,10,15,12,11,14
+Skeleton,http://example.com/skeleton,1/4,Undead,Medium,13,13,30 ft,Lawful Evil,No,Monster Manual,10,14,15,6,8,5
+Zombie,http://example.com/zombie,1/4,Undead,Medium,8,22,20 ft,Neutral Evil,No,Monster Manual,13,6,16,3,6,5
+Giant Spider,http://example.com/giant_spider,1,Beast,Large,14,26,40 ft,Neutral Evil,No,Monster Manual,14,16,12,2,10,4
+Owlbear,http://example.com/owlbear,3,Monstrosity,Large,13,59,40 ft,Unaligned,No,Monster Manual,20,12,17,3,12,7
+Mimic,http://example.com/mimic,2,Monstrosity,Medium,12,58,15 ft,Unaligned,No,Monster Manual,17,12,15,5,13,8
+Gelatinous Cube,http://example.com/gelatinous_cube,2,Ooze,Large,6,84,15 ft,Unaligned,No,Monster Manual,14,3,14,1,1,1
+Displacer Beast,http://example.com/displacer_beast,3,Monstrosity,Large,13,85,40 ft,Unaligned,No,Monster Manual,16,15,14,7,12,8
+Hobgoblin,http://example.com/hobgoblin,1/2,Humanoid,Medium,18,11,30 ft,Lawful Evil,No,Monster Manual,13,12,12,10,10,9
+Giant,http://example.com/giant,7,Giant,Huge,15,105,40 ft,Chaotic Evil,No,Monster Manual,23,10,21,9,12,12
+Vampire,http://example.com/vampire,13,Undead,Medium,16,144,30 ft,Chaotic Evil,Yes,Monster Manual,18,18,18,17,15,18
+Beholder,http://example.com/beholder,13,Aberration,Large,18,180,0 ft,Lawful Evil,Yes,Monster Manual,10,14,18,17,15,17
+Mind Flayer,http://example.com/mind_flayer,7,Abberation,Medium,15,71,30 ft,Lawful Evil,No,Monster Manual,11,12,12,19,17,17
+Lich,http://example.com/lich,21,Undead,Medium,17,135,30 ft,Any Evil,Yes,Monster Manual,11,16,16,20,14,16
+Cockatrice,http://example.com/cockatrice,1/2,Monstrosity,Small,13,27,20 ft,Unaligned,No,Monster Manual,12,15,13,2,11,5
+Hippogriff,http://example.com/hippogriff,1,Monstrosity,Large,11,19,40 ft,Unaligned,No,Monster Manual,17,13,13,2,12,8
